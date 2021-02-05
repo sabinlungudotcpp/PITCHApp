@@ -1,6 +1,6 @@
-const GUIDELINE_DATA = [
+const GUIDELINE_DATA = [ // Array of JSON objects to store the guideline data
     {
-        "guideline_id": 1,
+        "guideline_id": 1, // Unqiue guideline ID
         "title": "Good practice guidelines",
         "sub_heading": "All personnel should be encouraged to demonstrate exemplary behavior in order to promote children's welfare and reduce the likelihood of allegations being made. The following are common sense examples of how to create a positive culture and climate",
         "image": "../assets/Images/ImageGuidelines.jpg",
@@ -43,7 +43,17 @@ const GUIDELINE_DATA = [
 
             {
                 "description_id": 1008,
-                "description": "8. Keeping up to date with technical skills, qualifications and insurance in sport"
+                "description": "8. Keeping up to date with technical skills, qualifications and insurance in sport."
+            },
+
+            {
+                "description_id": 1009,
+                "description": "9. Involving parents/carers wherever possible. For example, encouraging them to take responsibility for their children in the changing rooms."
+            },
+
+            {
+                "description_id": 1010,
+                "description": "10. If groups have to be supervised in the changing rooms, always ensure parents, teachers, coaches or officials work in pairs"
             }
         ],
 

@@ -28,4 +28,4 @@ const INTRODUCTION_DATA = [
     }
 ]
 
-export default INTRODUCTION_DATA;
+export default INTRODUCTION_DATA; // Export the data for the policy introduction
