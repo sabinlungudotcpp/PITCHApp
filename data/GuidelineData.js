@@ -113,6 +113,13 @@ const GUIDELINE_DATA = [ // Array of JSON objects to store the guideline data
 
     {
         "guideline_id": 2,
-        "title_avoid": "Practices to be avoided"
+        "title_avoid": "Practices to be avoided",
+        "sub_heading_avoid": "The following should be avoided except in emergencies. If cases arise where these sitautions are unavoidable it should be with the full knowledge and consent of someone in charge in the organization or the child's parents. For example, a child sustains an injury and needs to go to hospital, or a parent fails to arrive to pick up a child at the end of a session:",
+        "practice_avoid_descriptions": [
+            {
+                "description_id": 1019,
+                "description_avoid": ""
+            }
+        ]
     }
 ];
