@@ -17,9 +17,17 @@ const HomeScreen = ({props, state, navigation}) => {
             <Text style = {style.subText}>Changing lives for disadvantaged adults </Text>
         </View>
 
-    <TouchableOpacity>
-       
-    </TouchableOpacity>
+        <TouchableOpacity>
+            <View style = {style.btnContainer}>
+                <Button title = "Register" color = "black"></Button>
+            </View>
+
+            <View style = {style.loginContainer}>
+                 <Button title = "Login" color = "black"></Button>
+            </View>
+            
+      
+        </TouchableOpacity>
 </View>
 
     
@@ -34,7 +42,6 @@ HomeScreen.navigationOptions = {
 
 const style = StyleSheet.create({
 
-
     mainHeader: {
         alignItems: 'center',
         flex: 1,
@@ -44,13 +51,14 @@ const style = StyleSheet.create({
     mainText: {
         marginVertical: 300,
         marginBottom: 50,
-        fontSize: 35
+        fontSize: 35,
+        color: 'orange'
     },
 
     subText: {
         marginLeft: 40,
         fontSize: 20,
-        color: 'orange',
+        color: 'black',
         marginTop: -20
     },
 
@@ -60,27 +68,35 @@ const style = StyleSheet.create({
 
     btnContainer: {
         backgroundColor: 'orange',
-        borderRadius: 25,
-        width: 120,
+        borderRadius: 20,
+        width: 130,
         padding: -100,
         marginLeft: 50,
         marginTop: 30,
-        flexDirection: 'row'
+        textAlign: 'center',
+        flexDirection: 'row',
+        display: 'flex',
+        justifyContent: 'center'
     },
 
     registerBtn: {
-        fontSize: 20,
+        fontSize: 30,
         color: 'black',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        textAlign: 'center',
+        marginLeft: 50
     },
 
     loginContainer: {
         backgroundColor: 'orange',
         borderRadius: 20,
-        width: 120,
+        width: 130,
         padding: -50,
         marginLeft: 50,
-        marginTop: 30
+        marginTop: 30,
+        justifyContent: 'center',
+        flexDirection: 'row',
+        flex: 1
     },
 
     loginBtn: {
