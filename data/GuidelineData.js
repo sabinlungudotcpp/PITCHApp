@@ -38,7 +38,12 @@ const GUIDELINE_DATA = [
 
             {
                 "description_id": 1007,
-                "description": ""
+                "description": "7. Ensuring that if any form of manual/physical support is required, it should be provided openly and according to guidelines provided by the Coach Education Programme. Care is needed, as it is difficult to maintain hand positions when the child is constantly moving. Young people and their parents should always be conslted and their agreement gained"
+            },
+
+            {
+                "description_id": 1008,
+                "description": "8. Keeping up to date with technical skills, qualifications and insurance in sport"
             }
         ],
 

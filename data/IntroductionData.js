@@ -10,8 +10,8 @@ const INTRODUCTION_DATA = [
     },
 
     {
-        "id": 2,
-        "title": "Policy Statements",
+        "id": 2, // Policy ID
+        "title": "Policy Statements", // Title of the policy
         "description": "Slum Soccer has a duty of care to safeguard all children involved in Slum Soccer from harm. All children have a right to protection, and the needs of disabled children and others who may be particularly vulnerable must be taken into account.",
         "main_sub_description": "Slum Soccer will ensure the safety and protection of all children involved in Slum Soccer through adherence to the Child Protection guidelines adopted by Slum Soccer",
         "second_sub_description": "A child is defined as a person under the age of 18",
