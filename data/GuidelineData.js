@@ -21,12 +21,14 @@ const GUIDELINE_DATA = [ // Array of JSON objects to store the guideline data
 
             {
                 "description_id": 1003,
-                "description": "3. Always putting the welfare of each young person first, before winning or achieving goals"
+                "description": "3. Always putting the welfare of each young person first, before winning or achieving goals",
+                "canBeModified": false
             },
 
             {
                 "description_id": 1004,
-                "description": "4. Maintaining a safe and appropriate distance with players (e.g it's not appropriate for staff or volunteers to have an intimate relationship with a child or to share a room with them)."
+                "description": "4. Maintaining a safe and appropriate distance with players (e.g it's not appropriate for staff or volunteers to have an intimate relationship with a child or to share a room with them).",
+                "canBeModified": false
             },
 
             {
