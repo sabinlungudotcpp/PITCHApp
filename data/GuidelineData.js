@@ -33,27 +33,32 @@ const GUIDELINE_DATA = [ // Array of JSON objects to store the guideline data
 
             {
                 "description_id": 1005,
-                "description": "5. Building balanced relationships based on mutual trust with empowers children to share in the decision-making process"
+                "description": "5. Building balanced relationships based on mutual trust with empowers children to share in the decision-making process",
+                "canBeModified": false
             },
 
             {
                 "description_id": 1006,
-                "description": "6. Making sport fun, enjoyable and promoting fair play"
+                "description": "6. Making sport fun, enjoyable and promoting fair play",
+                "canBeModified": false
             },
 
             {
                 "description_id": 1007,
-                "description": "7. Ensuring that if any form of manual/physical support is required, it should be provided openly and according to guidelines provided by the Coach Education Programme. Care is needed, as it is difficult to maintain hand positions when the child is constantly moving. Young people and their parents should always be conslted and their agreement gained"
+                "description": "7. Ensuring that if any form of manual/physical support is required, it should be provided openly and according to guidelines provided by the Coach Education Programme. Care is needed, as it is difficult to maintain hand positions when the child is constantly moving. Young people and their parents should always be conslted and their agreement gained",
+                "canBeModified": false
             },
 
             {
                 "description_id": 1008,
-                "description": "8. Keeping up to date with technical skills, qualifications and insurance in sport."
+                "description": "8. Keeping up to date with technical skills, qualifications and insurance in sport.",
+                "canBeModified": false
             },
 
             {
                 "description_id": 1009,
-                "description": "9. Involving parents/carers wherever possible. For example, encouraging them to take responsibility for their children in the changing rooms."
+                "description": "9. Involving parents/carers wherever possible. For example, encouraging them to take responsibility for their children in the changing rooms.",
+                "canBeModified": false
             },
 
             {
@@ -73,7 +78,32 @@ const GUIDELINE_DATA = [ // Array of JSON objects to store the guideline data
 
             {
                 "description_id": 1013,
-                "description": "13."
+                "description": "13. Being an excellent role model - this includes not smoking or drinking alcohol in the company of young people."
+            },
+
+            {
+                "description_id": 1014,
+                "description": "14. Giving enthusiastic and constructive feedback rather than negative criticism."
+            },
+
+            {
+                "description_id": 1015,
+                "description": "15. Recognising the developmental needs and capacity of young people and disabled adults - avoiding excessive training or competition and not pushing them against their will."
+            },
+
+            {
+                "description_id": 1016,
+                "description": "16. Securing parental consent in writing to act in loco parentis, if the needs arise to administer emergency first aid and/or other medical treatment"
+            },
+
+            {
+                "description_id": 1017,
+                "description": "17. Keeping a written record of any injury that occurs, along with the details of any treatment given"
+            },
+
+            {
+                "description_id": 1018,
+                "description": "Requesting writing parental consent if officials are required to transport young people in their cars."
             }
         ],
 
