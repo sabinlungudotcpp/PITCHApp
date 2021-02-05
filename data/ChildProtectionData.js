@@ -18,26 +18,41 @@ const CHILD_PROTECTION_DATA = [
         "guidelines": [
 
           {
-              "guideline_id": 1,
+              "guideline_id": 1001,
               "description": "1. Always working in an open environment (e.g avoiding private or unobserved situations and encouraging open communication with no secrets",
               "canBeModified": false
           },
 
           {
-              "guideline_id": 2,
+              "guideline_id": 1002,
               "description": "2. Treating all young people/disabled adults equally, and with respect and dignity",
               "canBeModified": false
           },
 
           {
-              "guideline_id": 3,
+              "guideline_id": 1003,
               "description": "3. Always putting the welfare of each young person first, before winning or achieving goals",
               "canBeModified": false
           },
 
           {
-              "guideline_id": 4,
+              "guideline_id": 1004,
               "description": "4. Maintaining a safe and appropriate distance with players (e.g it's not appropriate for staff or volunteers to have an intimate relationship with a child or to share a room with them)."
+          },
+
+          {
+              "guideline_id": 1005,
+              "description": "5. Building balanced relationships based on mutual trust with empowers children to share in the decision-making process"
+          },
+
+          {
+              "guideline_id": 1006,
+              "description": ""
+          },
+
+          {
+              "guideline_id": 1007,
+              "description": ""
           }
 
 
