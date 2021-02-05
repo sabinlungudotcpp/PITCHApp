@@ -8,10 +8,6 @@ const ChildProtectionHomeScreen = ({props, navigation}) => {
     )
 }
 
-ChildProtectionHomeScreen.navigationOptions = {
-    
-}
-
 const styles = StyleSheet.create({
 
 })

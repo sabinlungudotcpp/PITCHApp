@@ -14,7 +14,35 @@ const CHILD_PROTECTION_DATA = [
     {
         "id": 2,
         "title": "Good practice guidelines",
-        "image": "",
-        "description": ""
+        "image": "../assets/Images/ImageGoodPractice.jpg",
+        "guidelines": [
+
+          {
+              "guideline_id": 1,
+              "description": "1. Always working in an open environment (e.g avoiding private or unobserved situations and encouraging open communication with no secrets",
+              "canBeModified": false
+          },
+
+          {
+              "guideline_id": 2,
+              "description": "2. Treating all young people/disabled adults equally, and with respect and dignity",
+              "canBeModified": false
+          },
+
+          {
+              "guideline_id": 3,
+              "description": "3. Always putting the welfare of each young person first, before winning or achieving goals",
+              "canBeModified": false
+          },
+
+          {
+              "guideline_id": 4,
+              "description": "4. Maintaining a safe and appropriate distance with players (e.g it's not appropriate for staff or volunteers to have an intimate relationship with a child or to share a room with them)."
+          }
+
+
+        ]
     }
 ]
+
+export default CHILD_PROTECTION_DATA; // Export the data
