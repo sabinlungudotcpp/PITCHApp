@@ -4,6 +4,7 @@ import {View, StyleSheet, Text, SafeAreaView, ImageBackground} from 'react-nativ
 const HomeScreen = () => {
     return (
         <View>
+            <ImageBackground />
             <Text>PITCH Home Screen</Text>
         </View>
     )

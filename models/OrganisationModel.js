@@ -21,7 +21,7 @@ const organisationSchema = new mongoose.Schema({ // The organisation schema when
         unique: true
     },
 
-    country: {
+    country: { // The organisation country
         type: String,
         required: true,
         unique: false
