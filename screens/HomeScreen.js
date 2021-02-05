@@ -3,11 +3,13 @@ import {useSelector} from 'react-redux';
 import {View, StyleSheet, Text, SafeAreaView, ImageBackground, FlatList, Image, ScrollView} from 'react-native';
 import {Button} from 'react-native';
 import introData from '../data/IntroductionData';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const HomeScreen = ({props, state, navigation}) => {
     return (
         <ScrollView>
-        <View style = {style.mainHeader}>
+            <View style = {style.main}>
+            <View style = {style.mainHeader}>
             <Text style = {style.mainText}>PITCH</Text>
         </View>
 
@@ -15,9 +17,12 @@ const HomeScreen = ({props, state, navigation}) => {
             <Text style = {style.subText}>Changing lives for disadvantaged adults </Text>
         </View>
 
-        <View style = {style.btnContainer}>
-            <Button color = 'black' style = "bold" style = {style.registerBtn} title = "Register" />
-        </View>
+    <TouchableOpacity>
+       
+    </TouchableOpacity>
+</View>
+
+    
     </ScrollView>
         
     )
@@ -29,10 +34,11 @@ HomeScreen.navigationOptions = {
 
 const style = StyleSheet.create({
 
+
     mainHeader: {
         alignItems: 'center',
         flex: 1,
-        marginTop: -60
+        marginTop: -80
     },
 
     mainText: {
@@ -48,17 +54,39 @@ const style = StyleSheet.create({
         marginTop: -20
     },
 
+    btnMain: {
+        flexDirection: 'row'
+    },
+
     btnContainer: {
         backgroundColor: 'orange',
-        borderRadius: 20,
-        padding: -20,
-        marginLeft: 30,
-        marginTop: 30
+        borderRadius: 25,
+        width: 120,
+        padding: -100,
+        marginLeft: 50,
+        marginTop: 30,
+        flexDirection: 'row'
     },
 
     registerBtn: {
         fontSize: 20,
-        color: 'black'
+        color: 'black',
+        flexDirection: 'row'
+    },
+
+    loginContainer: {
+        backgroundColor: 'orange',
+        borderRadius: 20,
+        width: 120,
+        padding: -50,
+        marginLeft: 50,
+        marginTop: 30
+    },
+
+    loginBtn: {
+        fontSize: 20,
+        color: 'black',
+        marginLeft: 30
     }
 
 });
