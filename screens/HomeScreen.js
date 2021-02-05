@@ -1,7 +1,7 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 import {View, StyleSheet, Text, SafeAreaView, ImageBackground, FlatList, Image, ScrollView} from 'react-native';
-import {Button} from 'react-native-elements';
+import {Button} from 'react-native';
 import introData from '../data/IntroductionData';
 
 const HomeScreen = ({props, state, navigation}) => {
@@ -15,8 +15,8 @@ const HomeScreen = ({props, state, navigation}) => {
             <Text style = {style.subText}>Changing lives for disadvantaged adults </Text>
         </View>
 
-        <View>
-            <Button style = {style.registerBtn} title = "Register" />
+        <View style = {style.btnContainer}>
+            <Button color = 'black' style = "bold" style = {style.registerBtn} title = "Register" />
         </View>
     </ScrollView>
         
@@ -48,13 +48,19 @@ const style = StyleSheet.create({
         marginTop: -20
     },
 
+    btnContainer: {
+        backgroundColor: 'orange',
+        borderRadius: 20,
+        padding: -20,
+        marginLeft: 30,
+        marginTop: 30
+    },
+
     registerBtn: {
-        padding: 150,
-        marginTop: -125,
-        paddingLeft: 150,
-        alignItems: 'center',
-        justifyContent: 'center'
+        fontSize: 20,
+        color: 'black'
     }
+
 });
 
 export default HomeScreen;
