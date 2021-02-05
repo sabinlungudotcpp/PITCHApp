@@ -1,5 +1,12 @@
 const INTRODUCTION_DATA = [
     {
+        "id": 0,
+        "module_title": "Child Protection",
+        "module_image": "../assets/Images/ImageChildProtection.jpg",
+        "module_text": "Child Protection is very important for Slum Soccer because it ensures the utmost privacy for our players"
+    },
+
+    {
         "id": 1,
         "title_intro": "Introduction",
         "description_intro": "Through this policy, Slum Soccer recognizes that",
