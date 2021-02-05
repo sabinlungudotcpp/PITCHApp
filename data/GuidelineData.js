@@ -8,12 +8,15 @@ const GUIDELINE_DATA = [ // Array of JSON objects to store the guideline data
         "guideline_descriptions": [
             {
                 "description_id": 1001,
-                "description": "1. Always working in an open environment (e.g avoiding private or unobserved situations and encouraging open communication with no secrets"
+                "description": "1. Always working in an open environment (e.g avoiding private or unobserved situations and encouraging open communication with no secrets",
+                "canBeModified": false,
+                "createdAt": Date.now()
             },
 
             {
                 "description_id": 1002,
-                "description": "2. Treating all young people/disabled adults equally, and with respect and dignity"
+                "description": "2. Treating all young people/disabled adults equally, and with respect and dignity",
+                "canBeModified": false
             },
 
             {
@@ -63,7 +66,12 @@ const GUIDELINE_DATA = [ // Array of JSON objects to store the guideline data
 
             {
                 "description_id": 1012,
-                "description": "12. "
+                "description": "12. Ensuring that at tournaments or residential events, adults should not enter in children's rooms or invite children into their rooms"
+            },
+
+            {
+                "description_id": 1013,
+                "description": "13."
             }
         ],
 
