@@ -58,12 +58,12 @@ const GUIDELINE_DATA = [ // Array of JSON objects to store the guideline data
 
             {
                 "description_id": 1011,
-                "description": "11. Ensuring that if mixed teams"
+                "description": "11. Ensuring that if mixed teams are taken away, they should always be accomopanied by a mal and a female member of staff. However, remember that same gender abuse can also occur"
             },
 
             {
                 "description_id": 1012,
-                "description": ""
+                "description": "12. "
             }
         ],
 
