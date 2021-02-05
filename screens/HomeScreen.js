@@ -1,18 +1,35 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
-import {View, StyleSheet, Text, SafeAreaView, ImageBackground, FlatList} from 'react-native';
+import {View, StyleSheet, Text, SafeAreaView, ImageBackground, FlatList, Image, ScrollView} from 'react-native';
+import introData from '../data/IntroductionData';
 
-const HomeScreen = ({state, props, navigation}) => {
-    const introData = useSelector(state.introData.introductionData);
+const HomeScreen = ({props, state, navigation}) => {
     return (
-        <View>
-           <FlatList style = {style.listStyle} keyExtractor = {item => item.id} renderItem = {} />
+        <ScrollView>
+                <View>
+            <Text style = {style.text}>{introData.map(data => data.module_text)}</Text>
+            <Image style = {style.imageStyle} source = {require('../assets/Images/ImageEnquiries.jpg')} />
         </View>
+    </ScrollView>
+        
     )
 }
 
-const styles = StyleSheet.create({
+HomeScreen.navigationOptions = {
+    headerTitle: 'Introduction'
+}
 
+const style = StyleSheet.create({
+    text: {
+        textAlign: 'center',
+        marginVertical: 100
+    },
+
+    imageStyle: {
+        height: 300,
+        width: 300,
+        marginLeft: 50
+    }
 });
 
 export default HomeScreen;
