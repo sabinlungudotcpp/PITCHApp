@@ -13,7 +13,7 @@ const CHILD_PROTECTION_DATA = [
 
     {
         "id": 2,
-        "title": ""
+        "title": "Practices to avoid"
     }
 ]
 
