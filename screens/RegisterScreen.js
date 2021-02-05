@@ -9,14 +9,16 @@ import {Button, Input} from 'react-native-elements';
 
 const RegisterScreen = ({props}) => {
     return (
-        <View>
+        <View style = {styles.mainView}>
             <Text>Register Screen</Text>
         </View>
     )
 };
 
 const styles = StyleSheet.create({
-
+    mainView: {
+        
+    }
 });
 
 export default RegisterScreen;
