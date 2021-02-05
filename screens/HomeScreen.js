@@ -1,11 +1,12 @@
 import React from 'react';
-import {View, StyleSheet, Text, SafeAreaView, ImageBackground} from 'react-native';
+import {useSelector} from 'react-redux';
+import {View, StyleSheet, Text, SafeAreaView, ImageBackground, FlatList} from 'react-native';
 
-const HomeScreen = () => {
+const HomeScreen = ({state, props, navigation}) => {
+    const introData = useSelector(state.introData.introductionData);
     return (
         <View>
-            <ImageBackground />
-            <Text>PITCH Home Screen</Text>
+           <FlatList style = {style.listStyle} keyExtractor = {item => item.id} renderItem = {} />
         </View>
     )
 }
