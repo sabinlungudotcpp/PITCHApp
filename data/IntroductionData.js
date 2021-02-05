@@ -21,6 +21,11 @@ const INTRODUCTION_DATA = [
     {
         "id": 3,
         "title": "Policy Aims",
-        "description": ""
+        "description": "The aim of the Slum Soccer Child Protection Policy is to promote good practice",
+        "main_sub_description": "Providing children and young people with appropriate safety and protection whilst in the care of Slum Soccer",
+        "second_sub_description": "Allow all staff/volunteers to make informed and confident responses to specific child protection issues",
+        "canBeModified": false
     }
 ]
+
+export default INTRODUCTION_DATA;
