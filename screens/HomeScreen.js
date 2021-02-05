@@ -4,9 +4,12 @@ import {View, StyleSheet, Text, SafeAreaView, ImageBackground, FlatList, Image, 
 import {Button} from 'react-native';
 import introData from '../data/IntroductionData';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Dimensions } from 'react-native';
 
 const HomeScreen = ({props, state, navigation}) => {
     return (
+    <ImageBackground style = {style.backImg} source = {require('../assets/Images/ImageEnquiries.jpg')}>
+        
         <ScrollView>
             <View style = {style.main}>
             <View style = {style.mainHeader}>
@@ -17,21 +20,18 @@ const HomeScreen = ({props, state, navigation}) => {
             <Text style = {style.subText}>Changing lives for disadvantaged adults </Text>
         </View>
 
-        <TouchableOpacity>
-            <View style = {style.btnContainer}>
-                <Button title = "Register" color = "black"></Button>
-            </View>
-
-            <View style = {style.loginContainer}>
+        <View>
+               
+         </View>
+         
+          <View style = {{flexDirection: 'row', justifyContent: 'center', flex: 1}}>
                  <Button title = "Login" color = "black"></Button>
             </View>
-            
-      
-        </TouchableOpacity>
-</View>
+        </View>
 
-    
     </ScrollView>
+    </ImageBackground>
+       
         
     )
 }
@@ -41,6 +41,11 @@ HomeScreen.navigationOptions = {
 }
 
 const style = StyleSheet.create({
+
+    backImg: {
+        width: 450,
+        height: 900
+    },
 
     mainHeader: {
         alignItems: 'center',
