@@ -25,6 +25,18 @@ const organisationSchema = new mongoose.Schema({ // The organisation schema when
         type: String,
         required: true,
         unique: false
+    },
+
+    city: {
+        type: String,
+        required: true,
+        unique: false
+    },
+
+    password: {
+        type: String,
+        required: true,
+        unique: false
     }
 });
 
