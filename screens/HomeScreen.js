@@ -4,7 +4,7 @@ import {View, StyleSheet, Text, ScrollView, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import {CustomHeaderButtons, Item} from '../components/CustomHeaderButton';
-import { DrawerActions } from 'react-navigation-drawer';
+import {DrawerActions} from 'react-navigation-drawer';
 
 const HomeScreen = ({navigation}) => { // Home Screen
     return (
@@ -20,7 +20,6 @@ const HomeScreen = ({navigation}) => { // Home Screen
 
           <View style = {style.btnContainers}>
             <Button color = 'black' buttonStyle = {{backgroundColor: 'orange', theme: 'dark', borderRadius: 200}} style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('RegisterScreen')}/>
-               
             <Button buttonStyle = {{backgroundColor: 'orange', borderRadius: 200}} color = 'black' title = "Login" style = {style.loginBtn} onPress = {() => navigation.navigate('LoginScreen')} />
         </View>
 
@@ -32,11 +31,8 @@ const HomeScreen = ({navigation}) => { // Home Screen
 HomeScreen.navigationOptions = ({navigation}) => {
     return {
         headerTitle: 'PITCH',
-        headerLeft: () => <CustomHeaderButtons>
-        <TouchableOpacity>
-        <Item title = "Contents" iconName = 'menu-outline' onPress = {() => navigation.dispatch(DrawerActions.openDrawer())}/>
-        </TouchableOpacity>
-       
+        headerLeft: () => <CustomHeaderButtons navigate = {navigation.navigate}>
+            <Item title = "Contents" iconName = 'menu-outline' onPress = {() => {}}/>
     </CustomHeaderButtons>
     }
     
