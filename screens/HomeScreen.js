@@ -1,7 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Text, FlatList, Image, ScrollView} from 'react-native';
 import {Button} from 'react-native-elements';
-import introData from '../data/IntroductionData';
 
 const HomeScreen = ({navigation}) => { // Home Screen
     return (
@@ -16,8 +15,9 @@ const HomeScreen = ({navigation}) => { // Home Screen
         </View>
 
           <View style = {style.btnContainers}>
-            <Button buttonStyle = {{backgroundColor: 'orange', fontSize: 10}} color = 'black' style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('RegisterScreen')}/>
-            <Button buttonStyle = {{backgroundColor: 'orange'}} color = 'black' title = "Login" style = {style.loginBtn} onPress = {() => navigation.navigate('LoginScreen')} />
+            <Button color = 'black' buttonStyle = {{backgroundColor: 'orange', theme: 'dark', borderRadius: 200}} style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('RegisterScreen')}/>
+               
+            <Button buttonStyle = {{backgroundColor: 'orange', borderRadius: 200}} color = 'black' title = "Login" style = {style.loginBtn} onPress = {() => navigation.navigate('LoginScreen')} />
         </View>
 
         </View>
@@ -61,13 +61,14 @@ const style = StyleSheet.create({
         height: 42,
         textAlign: 'center',
         borderRadius: 200,
-        marginLeft: 80,
+        marginLeft: 60,
         marginTop: 30,
         paddingHorizontal: -20,
         justifyContent: 'space-between',
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
+        paddingRight: 10,
     },
 
     registerBtn: {
@@ -75,15 +76,21 @@ const style = StyleSheet.create({
         borderRadius: 200,
         color: 'black',
         paddingLeft: 10,
+        textAlign: 'center',
+        alignSelf: 'center',
+        alignContent: 'center',
         color: 'black',
+        left: 10,
         paddingLeft: 10,
         paddingHorizontal: 20,
         marginLeft: -20
      },
 
      loginBtn: {
-         width: 120,
-         marginLeft: 10
+         width: 130,
+         marginLeft: 15,
+         color: 'black',
+         textAlign: 'center'
      }
 });
 
