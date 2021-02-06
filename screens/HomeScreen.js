@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Text, FlatList, Image, ScrollView} from 'react-native';
-import {Button} from 'react-native-elements';
+import {Button} from 'react-native';
 import introData from '../data/IntroductionData';
 
 const HomeScreen = ({navigation}) => { // Home Screen
@@ -17,8 +17,8 @@ const HomeScreen = ({navigation}) => { // Home Screen
 
 
           <View style = {style.btnContainers}>
-                <Button style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('RegisterScreen')} />
-                <Button style = {style.loginBtn} title = "Login" onPress = {() => navigation.navigate('LoginScreen')} />
+                <Button color = 'black' style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('RegisterScreen')} />
+                <Button color = 'black' style = {style.loginBtn} title = "Login" onPress = {() => navigation.navigate('LoginScreen')} />
             </View>
         </View>
     </ScrollView>
@@ -65,16 +65,23 @@ const style = StyleSheet.create({
         flex: 1,
         margin: 20,
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        borderColor: 'black',
+        backgroundColor:'#F7B500',
     },
 
     registerBtn: {
-        width: 110
+        width: 110,
+        color: 'black',
+        paddingLeft: 10,
+        color: 'black',
+        backgroundColor:'#1E6738',
     },
 
     loginBtn: {
        marginLeft: 40,
-       width: 110
+       width: 110,
+       padding: 30
     }
 });
 

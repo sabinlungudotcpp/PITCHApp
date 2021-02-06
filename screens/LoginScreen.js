@@ -5,7 +5,7 @@ import {Input, Button} from 'react-native-elements';
 const LoginScreen = ({props, navigation}) => { // Login Screen component
     return (
         <View style = {style.mainView}>
-            <Text>Login Screen</Text>
+           
         </View>
     )
 }
