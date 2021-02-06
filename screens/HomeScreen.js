@@ -17,7 +17,8 @@ const HomeScreen = ({navigation}) => { // Home Screen
 
 
           <View style = {style.btnContainers}>
-                <Button style = {style.loginBtn} title = "Register" onPress = {() => navigation.navigate('RegisterScreen')} />
+                <Button style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('RegisterScreen')} />
+                <Button style = {style.loginBtn} title = "Login" onPress = {() => navigation.navigate('LoginScreen')} />
             </View>
         </View>
     </ScrollView>
@@ -25,7 +26,7 @@ const HomeScreen = ({navigation}) => { // Home Screen
 }
 
 HomeScreen.navigationOptions = {
-    headerTitle: 'Home'
+    headerTitle: 'PITCH'
 }
 
 const style = StyleSheet.create({
@@ -57,13 +58,23 @@ const style = StyleSheet.create({
 
     btnContainers: {
         width: 150,
-        marginLeft: 20,
+        marginLeft: 80,
+        marginRight: 30,
         marginTop: 30,
-        backgroundColor: 'orange'
+        justifyContent: 'space-between',
+        flex: 1,
+        margin: 20,
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+
+    registerBtn: {
+        width: 110
     },
 
     loginBtn: {
-
+       marginLeft: 40,
+       width: 110
     }
 });
 
