@@ -17,7 +17,7 @@ const HomeScreen = ({navigation}) => { // Home Screen
 
 
           <View style = {style.btnContainers}>
-                
+                <Button title = "Login" onPress = {() => navigation.navigate('RegisterScreen')} />
             </View>
         </View>
     </ScrollView>

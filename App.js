@@ -3,20 +3,22 @@ import { StyleSheet, Text, View, Platform } from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from './screens/HomeScreen';
-import Navigator from './navigation/StackNavigator';
 import BottomNavigation from './navigation/BottomNavigation';
-
+import MainStackNavigator from './navigation/StackNavigator';
 
 export default function App() {
   return (
-
-     <BottomNavigation>
-
-    <HomeScreen/>
-  </BottomNavigation>
-       
-      
+    <NavigationContainer>
+           <MainStackNavigator>
+             <BottomNavigation>
+               <Text>AFHHAFHAFH</Text>
+             </BottomNavigation>
+        <HomeScreen/>
+      </MainStackNavigator>
+    
    
+    </NavigationContainer>
+     
   );
 }
 

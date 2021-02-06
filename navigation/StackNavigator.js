@@ -2,18 +2,22 @@ import {createStackNavigator} from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
 import {Platform} from 'react-native'; // Determines which platform is used (Android / iOS)
 import HomeScreen from '../screens/HomeScreen'; // Import the Product Overview Screen
+import RegisterScreen from '../screens/RegisterScreen';
+import LoginScreen from '../screens/LoginScreen';
 
-const StackNavigator = createStackNavigator({
-    HomeScreen: HomeScreen 
+const HomeNavigator = createStackNavigator({
+    HomeScreen: HomeScreen,
+    RegisterScreen: RegisterScreen,
+    LoginScreen: LoginScreen
 }, {
     defaultNavigationOptions: {
         backgroundColor: 'transparent',
         headerStyle: {
-            backgroundColor: Platform.OS === 'android' ? '' : 'orange'
+            backgroundColor: Platform.OS === 'android' ? 'white' : 'orange'
         },
 
-        headerTintColor: Platform.OS === 'android' ? 'orange' : 'black'
+        headerTintColor: Platform.OS === 'android' ? 'white' : ''
     }
 });
 
-export default createAppContainer(StackNavigator); // Creates an app container out of the product navigator
+export default createAppContainer(HomeNavigator); // Creates an app container out of the product navigator

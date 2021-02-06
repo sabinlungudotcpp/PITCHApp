@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, ActivityIndicator, SafeAreaView, ScrollView} from 'react-native';
+import {View, StyleSheet, ActivityIndicator, SafeAreaView, ScrollView, Text} from 'react-native';
 import {Button, Input} from 'react-native-elements';
 
 // Author of file: Sabin Constantin Lungu
