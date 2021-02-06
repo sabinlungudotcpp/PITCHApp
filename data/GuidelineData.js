@@ -6,12 +6,11 @@ const GUIDELINE_DATA = [ // Array of JSON objects to store the guideline data
         "image_practice": "../assets/Images/ImageGuidelines.jpg",
         "guideline_sub_title_practice": "Good practice means:",
 
-        "good_practice_descriptions": [
+        "good_practice_descriptions": [ // Descriptions for good practice
             {
                 "description_id": 1001,
                 "description_practice": "1. Always working in an open environment (e.g avoiding private or unobserved situations and encouraging open communication with no secrets",
-                "canBeModified": false,
-                "createdAt": Date.now()
+                "canBeModified": false
             },
 
             {

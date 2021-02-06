@@ -1,7 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View, Platform } from 'react-native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from './screens/HomeScreen';
-import Navigator from './navigation/Navigation';
+import Navigator from './navigation/StackNavigator';
+
 
 export default function App() {
   return (
