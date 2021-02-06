@@ -1,9 +1,13 @@
 import React from 'react';
-import {View, StyleSheet, Text, ScrollView} from 'react-native';
+import {View, StyleSheet, Text, ScrollView, SafeAreaView} from 'react-native';
 import {Button} from 'react-native-elements';
 import {CustomHeaderButtons, Item} from '../components/CustomHeaderButton';
+import {DrawerActions} from 'react-navigation-drawer';
 
-const HomeScreen = ({navigation}) => { // Home Screen
+const HomeScreen = ({navigation, props}) => { // Home Screen
+
+    
+
     return (
         <ScrollView>
             <View style = {style.main}>
@@ -29,7 +33,7 @@ HomeScreen.navigationOptions = ({navigation}) => {
     return {
         headerTitle: 'PITCH',
         headerLeft: () => <CustomHeaderButtons navigate = {navigation.navigate}>
-            <Item title = "Contents" iconName = 'menu-outline' onPress = {() => {}}/>
+            <Item title = "Contents" iconName = 'menu-outline' onPress = {() => navigation.navigate('LoginScreen')}/>
     </CustomHeaderButtons>
     }
     
