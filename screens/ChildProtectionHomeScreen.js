@@ -4,7 +4,9 @@ import {Button} from 'react-native-elements';
 
 const ChildProtectionHomeScreen = ({props, navigation}) => {
     return (
-        <FlatList style = {} data = {} keyExtractor = {}/>
+        <View>
+            <FlatList />
+        </View>
     )
 }
 

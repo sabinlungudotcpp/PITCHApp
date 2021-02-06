@@ -7,28 +7,17 @@ import { NavigationContainer } from '@react-navigation/native';
 import {Platform} from 'react-native';
 import HomeScreen from '../screens/HomeScreen';
 import LoginScreen from '../screens/LoginScreen';
+import ChildProtectionHomeScreen from '../screens/ChildProtectionHomeScreen';
 
 const TabNavigator = createBottomTabNavigator();
 
-const TabCustomBar = ({accessibilityState, children, onPress}) => {
-    let isSelected = accessibilityState.isSelected;
-
-    if(isSelected) {
-
-    }
-
-    else {
-        return <View>
-
-        </View>
-    }
-}
 
 const Tabs = () => {
 
     return <NavigationContainer>
         <TabNavigator.Navigator>
-        <TabNavigator.Screen onPress = {() => navigation.navigate('LoginScreen')} name = "Slum Soccer" component = {HomeScreen} />
+        <TabNavigator.Screen name = "Home" component = {HomeScreen} />
+        <TabNavigator.Screen onPress = {() => navigation.navigate('LoginScreen')} name = "Slum Soccer" component = {ChildProtectionHomeScreen} />
         <TabNavigator.Screen name = "Street Soccer" component = {HomeScreen} />
     </TabNavigator.Navigator>
     </NavigationContainer>
