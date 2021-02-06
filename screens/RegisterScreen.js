@@ -7,12 +7,12 @@ const RegisterScreen = ({navigation}) => {
     return (
         <ScrollView>
     <Text style = {styles.registerStyle}>Register</Text>
-        <Input leftIcon = {{name: 'name', marginTop: 18, color: '#F7B500', marginLeft: 12}} placeholder = 'Organisation Name' style = {styles.organisationNameContainer}/>
+        <Input leftIcon = {{name: 'home', marginTop: 18, color: '#F7B500', marginLeft: 12}} placeholder = 'Organisation Name' style = {styles.organisationNameContainer}/>
         <Input leftIcon = {{name: 'email', paddingTop: 21, color: '#F7B500', marginLeft: 10}} placeholder = 'E-mail' style = {styles.organisationNameContainer}/>
-        <Input placeholder = 'Mobile Number' style = {styles.organisationNameContainer}/>
-        <Input placeholder = 'Country' style = {styles.organisationNameContainer}/>
-        <Input placeholder = 'City' style = {styles.organisationNameContainer}/>
-        <Input placeholder = 'Password' style = {styles.organisationNameContainer}/>
+        <Input leftIcon = {{name: 'phone', paddingTop: 18, color: '#F7B500', marginLeft: 10}} placeholder = 'Mobile Number' style = {styles.organisationNameContainer}/>
+        <Input leftIcon = {{name: 'cloud', paddingTop: 18, marginLeft: 10, color: '#F7B500'}} placeholder = 'Country' style = {styles.organisationNameContainer}/>
+        <Input leftIcon = {{name: ''}} placeholder = 'City' style = {styles.organisationNameContainer}/>
+        <Input leftIcon = {{name: ''}} placeholder = 'Password' style = {styles.organisationNameContainer}/>
 
     <View>
         <TouchableOpacity onPress = {() => navigation.navigate('LoginScreen')}>
@@ -20,7 +20,7 @@ const RegisterScreen = ({navigation}) => {
         </TouchableOpacity>  
 
         <View>
-            <Button style = {{marginTop: 30}} title = "Register" />
+            <Button style = {styles.registerBtn} title = "Register" />
         </View>
     </View>
         </ScrollView>
@@ -56,6 +56,12 @@ const styles = StyleSheet.create({
     alreadyText: {
         fontSize: 20,
         textAlign: 'center'
+    },
+
+    registerBtn: {
+        width: 100,
+        marginLeft: 145,
+        marginTop: 25
     }
 });
 

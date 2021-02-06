@@ -18,7 +18,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 // Connect to MongoDB server to store the organisation data
-
 app.listen(port, (error) => {
     if(!error) {
         return console.log(`Listening for requests on port ${port}`);
@@ -27,4 +26,4 @@ app.listen(port, (error) => {
     else {
         return console.error(error.message);
     }
-})
+});

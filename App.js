@@ -20,10 +20,9 @@ export default function App() {
   return (
     <NavigationContainer>
           <MainStackNavigator>
-       <App2/> 
+           <HomeScreen/>
       </MainStackNavigator>
     
-   
     </NavigationContainer>
      
   );
