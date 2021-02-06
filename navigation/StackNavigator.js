@@ -1,17 +1,19 @@
 import React from 'react';
 import {createStackNavigator} from 'react-navigation-stack';
 import {Platform} from 'react-native'; // Determines which platform is used (Android / iOS)
+import { createAppContainer } from 'react-navigation';
 import HomeScreen from '../screens/HomeScreen'; // Import the Product Overview Screen
 import ChildProtection from '../screens/ChildProtectionHomeScreen';
 import RegisterScreen from '../screens/RegisterScreen';
 import LoginScreen from '../screens/LoginScreen';
-import { createAppContainer } from 'react-navigation';
+import ContentsScreen from '../screens/ContentsScreen';
 
 const HomeStack = createStackNavigator({
     HomeScreen: HomeScreen,
     RegisterScreen: RegisterScreen,
     LoginScreen: LoginScreen,
-    ChildProtection: ChildProtection
+    ChildProtection: ChildProtection,
+    ContentsScreen: ContentsScreen
 }, {
     defaultNavigationOptions: {
         backgroundColor: 'transparent',
