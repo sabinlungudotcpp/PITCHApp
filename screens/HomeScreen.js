@@ -1,10 +1,7 @@
-import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import {View, StyleSheet, Text, ScrollView, Platform} from 'react-native';
+import {View, StyleSheet, Text, ScrollView} from 'react-native';
 import {Button} from 'react-native-elements';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import {CustomHeaderButtons, Item} from '../components/CustomHeaderButton';
-import {DrawerActions} from 'react-navigation-drawer';
 
 const HomeScreen = ({navigation}) => { // Home Screen
     return (

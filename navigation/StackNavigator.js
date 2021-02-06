@@ -3,20 +3,15 @@ import {createStackNavigator} from 'react-navigation-stack';
 import {Platform} from 'react-native'; // Determines which platform is used (Android / iOS)
 import HomeScreen from '../screens/HomeScreen'; // Import the Product Overview Screen
 import ChildProtection from '../screens/ChildProtectionHomeScreen';
+import RegisterScreen from '../screens/RegisterScreen';
+import LoginScreen from '../screens/LoginScreen';
+import { createAppContainer } from 'react-navigation';
 
-const screens = {
-    SlumSoccer: {
-        screen: ChildProtection,
-        navigationOptions: {
-            title: 'Child Protection Screen'
-        }
-    }
-}
-
-const HomeNavigator = createStackNavigator(screens, {
+const HomeNavigator = createStackNavigator({
     HomeScreen: HomeScreen,
     RegisterScreen: RegisterScreen,
-    LoginScreen: LoginScreen
+    LoginScreen: LoginScreen,
+    ChildProtection: ChildProtection
 }, {
     defaultNavigationOptions: {
         backgroundColor: 'transparent',
@@ -29,4 +24,4 @@ const HomeNavigator = createStackNavigator(screens, {
     }
 });
 
-export default HomeNavigator;
+export default createAppContainer(HomeNavigator);
