@@ -1,6 +1,9 @@
 import React from 'react';
-import {View, StyleSheet, Text, FlatList, Image, ScrollView} from 'react-native';
+import {View, StyleSheet, Text, ScrollView, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
+import {HeaderButtons, Item} from 'react-navigation-header-buttons';
+import {HeaderButton} from '../components/HeaderButton';
+import Ionicons from '@expo/vector-icons';
 
 const HomeScreen = ({navigation}) => { // Home Screen
     return (
@@ -26,8 +29,12 @@ const HomeScreen = ({navigation}) => { // Home Screen
 }
 
 HomeScreen.navigationOptions = {
-    headerTitle: 'PITCH'
-}
+    headerTitle: 'PITCH',
+    headerLeft: () => <HeaderButtons HeaderButtonComponent = {HeaderButton}>
+        <Item title = "Contents" iconName = {Platform.OS === 'android' ? 'grid-outline' : 'md-menu'}
+        onPress = {() => {}} />
+    </HeaderButtons>
+};
 
 const style = StyleSheet.create({
 
