@@ -15,11 +15,11 @@ const HomeScreen = ({navigation}) => { // Home Screen
             <Text style = {style.subText}>Changing lives for disadvantaged adults </Text>
         </View>
 
-
           <View style = {style.btnContainers}>
-                <Button color = 'black' style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('RegisterScreen')} />
-                <Button color = 'black' style = {style.loginBtn} title = "Login" onPress = {() => navigation.navigate('LoginScreen')} />
+            <Button color = 'black' style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('RegisterScreen')} />
             </View>
+
+
         </View>
     </ScrollView>
     )
@@ -57,31 +57,32 @@ const style = StyleSheet.create({
     },
 
     btnContainers: {
-        width: 150,
+        width: 110,
+        height: 42,
+        textAlign: 'center',
+        borderRadius: 200,
         marginLeft: 80,
-        marginRight: 30,
         marginTop: 30,
-        justifyContent: 'space-between',
+        paddingHorizontal: -20,
+        justifyContent: 'center',
         flex: 1,
-        margin: 20,
         flexDirection: 'row',
         alignItems: 'center',
         borderColor: 'black',
         backgroundColor:'#F7B500',
+        left: -40,
+        right: 30,
+        position: 'relative',
+        marginStart: 100,
+        letterSpacing: 30,
+        alignContent: 'center'
     },
 
     registerBtn: {
-        width: 110,
+        width: 120,
         color: 'black',
         paddingLeft: 10,
-        color: 'black',
-        backgroundColor:'#1E6738',
-    },
-
-    loginBtn: {
-       marginLeft: 40,
-       width: 110,
-       padding: 30
+        color: 'black'
     }
 });
 
