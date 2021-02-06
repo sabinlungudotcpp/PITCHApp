@@ -10,6 +10,10 @@ const LoginScreen = ({props, navigation}) => { // Login Screen component
     )
 }
 
+LoginScreen.navigationOptions = {
+    headerTitle: 'Login'
+}
+
 const style = StyleSheet.create({
     mainView: {
         flex: 1

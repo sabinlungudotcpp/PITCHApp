@@ -15,6 +15,10 @@ const RegisterScreen = ({props}) => {
     )
 };
 
+RegisterScreen.navigationOptions = {
+    headerTitle: 'Register'
+}
+
 const styles = StyleSheet.create({
     mainView: {
         

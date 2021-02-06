@@ -17,16 +17,15 @@ const HomeScreen = ({navigation}) => { // Home Screen
 
 
           <View style = {style.btnContainers}>
-                <Button title = "Login" onPress = {() => navigation.navigate('RegisterScreen')} />
+                <Button style = {style.loginBtn} title = "Login" onPress = {() => navigation.navigate('LoginScreen')} />
             </View>
         </View>
     </ScrollView>
     )
 }
 
-
 HomeScreen.navigationOptions = {
-    headerTitle: 'PITCH'
+    headerTitle: 'Home'
 }
 
 const style = StyleSheet.create({

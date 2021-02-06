@@ -16,6 +16,8 @@ const HomeNavigator = createStackNavigator({
             backgroundColor: Platform.OS === 'android' ? 'white' : 'orange'
         },
 
+        headerBackTitle: 'Back',
+
         headerTintColor: Platform.OS === 'android' ? 'white' : ''
     }
 });
