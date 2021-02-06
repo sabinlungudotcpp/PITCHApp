@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Text, FlatList, Image, ScrollView} from 'react-native';
-import {Button} from 'react-native';
+import {Button} from 'react-native-elements';
 import introData from '../data/IntroductionData';
 
 const HomeScreen = ({navigation}) => { // Home Screen
@@ -16,8 +16,8 @@ const HomeScreen = ({navigation}) => { // Home Screen
         </View>
 
           <View style = {style.btnContainers}>
-            <Button color = 'black' style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('RegisterScreen')}/>
-            <Button title = "Login" style = {style.loginBtn} />
+            <Button buttonStyle = {{backgroundColor: 'orange', fontSize: 10}} color = 'black' style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('RegisterScreen')}/>
+            <Button buttonStyle = {{backgroundColor: 'orange'}} color = 'black' title = "Login" style = {style.loginBtn} onPress = {() => navigation.navigate('LoginScreen')} />
         </View>
 
 
@@ -69,18 +69,23 @@ const style = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        borderColor: 'black',
-        display: 'flex',
-        flexBasis: '45%'
     },
 
     registerBtn: {
-        width: 120,
+        width: 160,
+        borderRadius: 200,
         color: 'black',
         paddingLeft: 10,
         color: 'black',
-        backgroundColor: 'red'
-    }
+        paddingLeft: 10,
+        paddingHorizontal: 20,
+        marginLeft: -20
+     },
+
+     loginBtn: {
+         width: 120,
+         marginLeft: 10
+     }
 });
 
 export default HomeScreen;
