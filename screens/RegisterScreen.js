@@ -1,8 +1,9 @@
 import React from 'react';
 import {View, StyleSheet, ScrollView, Text} from 'react-native';
 import {Button, Input} from 'react-native-elements';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const RegisterScreen = () => {
+const RegisterScreen = ({navigation}) => {
     return (
         <ScrollView>
     <Text style = {styles.registerStyle}>Register</Text>
@@ -12,6 +13,12 @@ const RegisterScreen = () => {
         <Input placeholder = 'Country' style = {styles.organisationNameContainer}/>
         <Input placeholder = 'City' style = {styles.organisationNameContainer}/>
         <Input placeholder = 'Password' style = {styles.organisationNameContainer}/>
+
+        <View>
+            <TouchableOpacity onPress = {() => navigation.navigate('LoginScreen')}>
+            <Text style = {styles.alreadyText}>Already have an account? Sign In</Text>
+            </TouchableOpacity>  
+        </View>
         </ScrollView>
       
     )
@@ -35,7 +42,10 @@ const styles = StyleSheet.create({
         width: 50,
         lineHeight: 20,
         borderBottomWidth: null,
+    },
 
+    alreadyText: {
+        fontSize: 20
     }
 });
 
