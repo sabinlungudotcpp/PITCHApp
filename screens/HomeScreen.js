@@ -17,7 +17,7 @@ const HomeScreen = ({navigation}) => { // Home Screen
 
 
           <View style = {style.btnContainers}>
-                <Button style = {style.loginBtn} title = "Login" onPress = {() => navigation.navigate('LoginScreen')} />
+                <Button style = {style.loginBtn} title = "Register" onPress = {() => navigation.navigate('RegisterScreen')} />
             </View>
         </View>
     </ScrollView>
@@ -53,6 +53,17 @@ const style = StyleSheet.create({
         fontSize: 20,
         color: 'black',
         marginTop: -20
+    },
+
+    btnContainers: {
+        width: 150,
+        marginLeft: 20,
+        marginTop: 30,
+        backgroundColor: 'orange'
+    },
+
+    loginBtn: {
+
     }
 });
 
