@@ -14,11 +14,11 @@ const RegisterScreen = ({navigation}) => {
         <Input placeholder = 'City' style = {styles.organisationNameContainer}/>
         <Input placeholder = 'Password' style = {styles.organisationNameContainer}/>
 
-        <View>
-            <TouchableOpacity onPress = {() => navigation.navigate('LoginScreen')}>
+    <View>
+        <TouchableOpacity onPress = {() => navigation.navigate('LoginScreen')}>
             <Text style = {styles.alreadyText}>Already have an account? Sign In</Text>
-            </TouchableOpacity>  
-        </View>
+        </TouchableOpacity>  
+    </View>
         </ScrollView>
       
     )
@@ -42,10 +42,16 @@ const styles = StyleSheet.create({
         width: 50,
         lineHeight: 20,
         borderBottomWidth: null,
+        textTransform: 'uppercase',
+        height: 10,
+        margin: 10,
+        left: -10,
+        color: 'black'
     },
 
     alreadyText: {
-        fontSize: 20
+        fontSize: 20,
+        textAlign: 'center'
     }
 });
 
