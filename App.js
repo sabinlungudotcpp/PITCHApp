@@ -1,16 +1,22 @@
 import React from 'react';
 import { StyleSheet, Text, View, Platform } from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from './screens/HomeScreen';
 import Navigator from './navigation/StackNavigator';
+import BottomNavigation from './navigation/BottomNavigation';
 
 
 export default function App() {
   return (
-     
-    <Navigator>
-      <HomeScreen/>
-    </Navigator>
+
+     <BottomNavigation>
+
+    <HomeScreen/>
+  </BottomNavigation>
+       
+      
+   
   );
 }
 

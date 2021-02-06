@@ -2,10 +2,11 @@ import React from 'react';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator, BottomTabBar} from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from '@react-navigation/native';
 import {Platform} from 'react-native';
 import HomeScreen from '../screens/HomeScreen';
 
-const TabNaigator = createBottomTabNavigator();
+const TabNavigator = createBottomTabNavigator();
 
 const TabCustomBar = ({accessibilityState, children, onPress}) => {
     let isSelected = accessibilityState.isSelected;
@@ -22,12 +23,14 @@ const TabCustomBar = ({accessibilityState, children, onPress}) => {
 }
 
 const Tabs = () => {
-    return <TabNaigator.Navigator>
-        <TabNaigator.Screen name = "Slum Soccer" component = {HomeScreen} />
-        <TabNaigator.Screen name = "Street Soccer" component = {HomeScreen} />
-    </TabNaigator.Navigator>
-}
 
+    return <NavigationContainer>
+        <TabNavigator.Navigator>
+        <TabNavigator.Screen name = "Slum Soccer" component = {HomeScreen} />
+        <TabNavigator.Screen name = "Street Soccer" component = {HomeScreen} />
+    </TabNavigator.Navigator>
+    </NavigationContainer>
+}
 
 
 export default Tabs;
