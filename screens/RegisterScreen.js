@@ -1,12 +1,14 @@
 import React from 'react';
-import {View, StyleSheet, ActivityIndicator, SafeAreaView, ScrollView, Text} from 'react-native';
+import {View, StyleSheet, ScrollView, Text} from 'react-native';
 import {Button, Input} from 'react-native-elements';
 
-const RegisterScreen = ({props}) => {
+const RegisterScreen = () => {
     return (
-        <View style = {styles.mainView}>
-            
-        </View>
+        <ScrollView>
+                      <Text style = {styles.registerStyle}>Register</Text>
+        <Input placeholder = 'Organisation'/>
+        </ScrollView>
+      
     )
 };
 
@@ -15,8 +17,11 @@ RegisterScreen.navigationOptions = {
 }
 
 const styles = StyleSheet.create({
-    mainView: {
-        
+    registerStyle: {
+        fontSize: 30,
+        marginTop: 80,
+        color: '#F7B500',
+        marginLeft: 145
     }
 });
 
