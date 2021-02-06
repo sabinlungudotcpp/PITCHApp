@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, Image, StyleSheet, FlatList} from 'react-native';
+import {Text, Image, StyleSheet, FlatList, View} from 'react-native';
 import {Button} from 'react-native-elements';
 
 const GoodPracticeScreen = ({props, navigation}) => {
