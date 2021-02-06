@@ -1,12 +1,9 @@
 import React from 'react';
-import {View, StyleSheet, Text, ScrollView, SafeAreaView} from 'react-native';
+import {View, StyleSheet, Text, ScrollView} from 'react-native';
 import {Button} from 'react-native-elements';
 import {CustomHeaderButtons, Item} from '../components/CustomHeaderButton';
-import {DrawerActions} from 'react-navigation-drawer';
 
-const HomeScreen = ({navigation, props}) => { // Home Screen
-
-    
+const HomeScreen = ({navigation}) => { // Home Screen
 
     return (
         <ScrollView>
