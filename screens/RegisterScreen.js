@@ -2,12 +2,13 @@ import React from 'react';
 import {View, StyleSheet, ScrollView, Text} from 'react-native';
 import {Button, Input} from 'react-native-elements';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import {Icon} from 'react-native-elements';
 
 const RegisterScreen = ({navigation}) => {
     return (
         <ScrollView>
     <Text style = {styles.registerStyle}>Register</Text>
-        <Input placeholder = 'Organisation Name' style = {styles.organisationNameContainer}/>
+        <Input leftIcon = {{name: 'email', marginTop: 18}} placeholder = 'Organisation Name' style = {styles.organisationNameContainer}/>
         <Input placeholder = 'E-mail' style = {styles.organisationNameContainer}/>
         <Input placeholder = 'Mobile Number' style = {styles.organisationNameContainer}/>
         <Input placeholder = 'Country' style = {styles.organisationNameContainer}/>
