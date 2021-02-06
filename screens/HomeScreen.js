@@ -16,8 +16,9 @@ const HomeScreen = ({navigation}) => { // Home Screen
         </View>
 
           <View style = {style.btnContainers}>
-            <Button color = 'black' style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('RegisterScreen')} />
-            </View>
+            <Button color = 'black' style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('RegisterScreen')}/>
+            <Button title = "Login" style = {style.loginBtn} />
+        </View>
 
 
         </View>
@@ -64,25 +65,21 @@ const style = StyleSheet.create({
         marginLeft: 80,
         marginTop: 30,
         paddingHorizontal: -20,
-        justifyContent: 'center',
+        justifyContent: 'space-between',
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
         borderColor: 'black',
-        backgroundColor:'#F7B500',
-        left: -40,
-        right: 30,
-        position: 'relative',
-        marginStart: 100,
-        letterSpacing: 30,
-        alignContent: 'center'
+        display: 'flex',
+        flexBasis: '45%'
     },
 
     registerBtn: {
         width: 120,
         color: 'black',
         paddingLeft: 10,
-        color: 'black'
+        color: 'black',
+        backgroundColor: 'red'
     }
 });
 
