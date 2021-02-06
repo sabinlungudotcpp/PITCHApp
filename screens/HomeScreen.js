@@ -1,9 +1,10 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {View, StyleSheet, Text, ScrollView, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
-import {HeaderButtons, Item} from 'react-navigation-header-buttons';
-import {HeaderButton} from '../components/HeaderButton';
-import Ionicons from '@expo/vector-icons';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import {CustomHeaderButtons, Item} from '../components/CustomHeaderButton';
+import { DrawerActions } from 'react-navigation-drawer';
 
 const HomeScreen = ({navigation}) => { // Home Screen
     return (
@@ -28,12 +29,17 @@ const HomeScreen = ({navigation}) => { // Home Screen
     )
 }
 
-HomeScreen.navigationOptions = {
-    headerTitle: 'PITCH',
-    headerLeft: () => <HeaderButtons HeaderButtonComponent = {HeaderButton}>
-        <Item title = "Contents" iconName = {Platform.OS === 'android' ? 'grid-outline' : 'md-menu'}
-        onPress = {() => {}} />
-    </HeaderButtons>
+HomeScreen.navigationOptions = ({navigation}) => {
+    return {
+        headerTitle: 'PITCH',
+        headerLeft: () => <CustomHeaderButtons>
+        <TouchableOpacity>
+        <Item title = "Contents" iconName = 'menu-outline' onPress = {() => navigation.dispatch(DrawerActions.openDrawer())}/>
+        </TouchableOpacity>
+       
+    </CustomHeaderButtons>
+    }
+    
 };
 
 const style = StyleSheet.create({
