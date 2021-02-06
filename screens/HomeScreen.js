@@ -20,7 +20,6 @@ const HomeScreen = ({navigation}) => { // Home Screen
             <Button buttonStyle = {{backgroundColor: 'orange'}} color = 'black' title = "Login" style = {style.loginBtn} onPress = {() => navigation.navigate('LoginScreen')} />
         </View>
 
-
         </View>
     </ScrollView>
     )
