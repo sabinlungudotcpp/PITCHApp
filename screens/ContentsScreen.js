@@ -4,10 +4,16 @@ import {View, StyleSheet, Text} from 'react-native';
 const ContentsScreen = () => {
     return (
         <View>
-            <Text>Contents Screen</Text>
+            
         </View>
     )
 };
+
+ContentsScreen.navigationOptions = ({navigation}) => {
+    return {
+        headerTitle: 'Slum Soccer Modules'
+    }
+}
 
 const styles = StyleSheet.create({
 

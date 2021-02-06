@@ -30,7 +30,7 @@ HomeScreen.navigationOptions = ({navigation}) => {
     return {
         headerTitle: 'PITCH',
         headerLeft: () => <CustomHeaderButtons navigate = {navigation.navigate}>
-            <Item title = "Contents" iconName = 'menu-outline' onPress = {() => {}}/>
+            <Item title = "Contents" iconName = 'menu-outline' onPress = {() => {navigation.navigate('ContentsScreen')}}/>
     </CustomHeaderButtons>
     }
     
