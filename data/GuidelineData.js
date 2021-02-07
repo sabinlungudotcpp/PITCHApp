@@ -127,5 +127,21 @@ const GUIDELINE_DATA = [ // Array of JSON objects to store the guideline data
         ],
 
         "canBeModified": false
+    },
+
+    {
+        "guideline_id": 3,
+        "title_sanction": "Practices never to be sanctioned",
+        "sub_heading_sanction": "The following should never be sanctioned. You should never:",
+        "practice_sanction_descriptions": [
+            {
+                "description_id": 2000,
+                "description_sanction": "1. Engage in rough, physical or sexually provocative games, including horseplay."
+            },
+
+            {
+                
+            }
+        ] 
     }
 ];
