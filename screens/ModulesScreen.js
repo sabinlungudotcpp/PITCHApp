@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 
-const ContentsScreen = () => {
+const ModulesScreen = ({props, navigation}) => {
     return (
         <View>
             
@@ -9,7 +9,7 @@ const ContentsScreen = () => {
     )
 };
 
-ContentsScreen.navigationOptions = ({navigation}) => {
+ModulesScreen.navigationOptions = ({navigation}) => {
     return {
         headerTitle: 'Slum Soccer Modules'
     }
@@ -19,4 +19,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default ContentsScreen;
+export default ModulesScreen;

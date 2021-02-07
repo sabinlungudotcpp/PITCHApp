@@ -7,7 +7,6 @@ const HomeScreen = ({navigation}) => { // Home Screen
 
     return (
         <ScrollView>
-           
             <View style = {style.main}>
             <View style = {style.mainHeader}>
             <Text style = {style.mainText}>PITCH</Text>
@@ -31,7 +30,7 @@ HomeScreen.navigationOptions = ({navigation}) => {
     return {
         headerTitle: 'PITCH',
         headerLeft: () => <CustomHeaderButtons navigate = {navigation.navigate}>
-            <Item title = "View Modules" onPress = {() => {navigation.navigate('ContentsScreen')}}/>
+            <Item title = "View Modules" onPress = {() => {navigation.navigate('ModulesScreen')}}/>
     </CustomHeaderButtons>
     }
     

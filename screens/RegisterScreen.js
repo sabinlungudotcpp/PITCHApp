@@ -7,12 +7,12 @@ const RegisterScreen = ({navigation}) => {
     return (
         <ScrollView>
     <Text style = {styles.registerStyle}>Register</Text>
-        <Input leftIcon = {{name: 'home', marginTop: 18, color: '#F7B500', marginLeft: 12}} placeholder = 'Organisation Name' style = {styles.organisationNameContainer}/>
-        <Input leftIcon = {{name: 'email', paddingTop: 21, color: '#F7B500', marginLeft: 10}} placeholder = 'E-mail' style = {styles.organisationNameContainer}/>
-        <Input leftIcon = {{name: 'phone', paddingTop: 18, color: '#F7B500', marginLeft: 10}} placeholder = 'Mobile Number' style = {styles.organisationNameContainer}/>
-        <Input leftIcon = {{name: 'cloud', paddingTop: 18, marginLeft: 10, color: '#F7B500'}} placeholder = 'Country' style = {styles.organisationNameContainer}/>
-        <Input leftIcon = {{name: ''}} placeholder = 'City' style = {styles.organisationNameContainer}/>
-        <Input leftIcon = {{name: ''}} placeholder = 'Password' style = {styles.organisationNameContainer}/>
+        <Input leftIcon = {{name: 'home', paddingTop: 20, color: '#F7B500', marginLeft: 18, marginRight: -1}} placeholder = 'Organisation Name' style = {styles.organisationNameContainer}/>
+        <Input leftIcon = {{name: 'email', paddingTop: 4, color: '#F7B500', marginLeft: 18, marginRight: 10}} placeholder = 'E-mail' style = {styles.emailContainer}/>
+        <Input leftIcon = {{name: 'phone', paddingTop: 18, color: '#F7B500', marginLeft: 10}} placeholder = 'Mobile Number' style = {styles.mobileNumberContainer}/>
+        <Input leftIcon = {{name: 'cloud', paddingTop: 18, marginLeft: 10, color: '#F7B500'}} placeholder = 'Country' style = {styles.countryContainer}/>
+        <Input leftIcon = {{name: ''}} placeholder = 'City' style = {styles.cityContainer}/>
+        <Input leftIcon = {{name: ''}} placeholder = 'Password' style = {styles.passwordContainer}/>
 
     <View>
         <TouchableOpacity onPress = {() => navigation.navigate('LoginScreen')}>
@@ -51,6 +51,14 @@ const styles = StyleSheet.create({
         margin: 10,
         left: -10,
         color: 'black'
+    },
+
+    emailContainer: {
+
+    },
+
+    mobileNumberContainer: {
+        
     },
 
     alreadyText: {

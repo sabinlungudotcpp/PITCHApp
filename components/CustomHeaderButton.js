@@ -8,7 +8,7 @@ const CustomHeaderButton = props => {
 };
 
 export const CustomHeaderButtons = (props) => {
-    return <HeaderButtons HeaderButtonComponent={CustomHeaderButton} {...props} />;
+    return <HeaderButtons HeaderButtonComponent = {CustomHeaderButton} {...props} />;
   };
   
   export { Item } from 'react-navigation-header-buttons';

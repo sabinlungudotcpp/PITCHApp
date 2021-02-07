@@ -6,14 +6,14 @@ import HomeScreen from '../screens/HomeScreen'; // Import the Product Overview S
 import ChildProtection from '../screens/ChildProtectionHomeScreen';
 import RegisterScreen from '../screens/RegisterScreen';
 import LoginScreen from '../screens/LoginScreen';
-import ContentsScreen from '../screens/ContentsScreen';
+import ModulesScreen from '../screens/ModulesScreen';
 
 const HomeStack = createStackNavigator({
     HomeScreen: HomeScreen,
     RegisterScreen: RegisterScreen,
     LoginScreen: LoginScreen,
     ChildProtection: ChildProtection,
-    ContentsScreen: ContentsScreen
+    ModulesScreen: ModulesScreen
 }, {
     defaultNavigationOptions: {
         backgroundColor: 'transparent',
