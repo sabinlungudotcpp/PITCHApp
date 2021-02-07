@@ -20,7 +20,7 @@ const RegisterScreen = ({navigation}) => {
         </TouchableOpacity>  
 
         <View>
-            <Button style = {styles.registerBtn} title = "Register" />
+            <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.registerBtn} title = "Register" />
         </View>
 
     </View>
@@ -72,14 +72,15 @@ const styles = StyleSheet.create({
 
     alreadyText: {
         fontSize: 20,
+        marginTop: 10,
         textAlign: 'center'
     },
 
     registerBtn: {
-        width: 100,
-        marginLeft: 145,
-        marginTop: 25
-    }
+        width: 120,
+        marginLeft: 140,
+        marginTop: 28
+    },
 });
 
 export default RegisterScreen;
