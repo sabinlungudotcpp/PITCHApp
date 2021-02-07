@@ -9,12 +9,6 @@ const ModulesScreen = ({props, navigation}) => {
     )
 };
 
-ModulesScreen.navigationOptions = ({navigation}) => {
-    return {
-        headerTitle: 'Slum Soccer Modules'
-    }
-}
-
 const styles = StyleSheet.create({
 
 });

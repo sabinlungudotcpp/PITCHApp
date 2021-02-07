@@ -30,7 +30,7 @@ HomeScreen.navigationOptions = ({navigation}) => {
     return {
         headerTitle: 'FALI',
         headerLeft: () => <CustomHeaderButtons navigate = {navigation.navigate}>
-            <Item title = "View Modules" onPress = {() => {navigation.navigate('ModulesScreen')}}/>
+            <Item title = "View Modules" onPress = {() => {navigation.navigate('Modules')}}/>
     </CustomHeaderButtons>
     }
 };

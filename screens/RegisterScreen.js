@@ -15,7 +15,7 @@ const RegisterScreen = ({navigation}) => {
         <Input leftIcon = {{name: ''}} placeholder = 'Password' style = {styles.passwordContainer}/>
 
     <View>
-        <TouchableOpacity onPress = {() => navigation.navigate('LoginScreen')}>
+        <TouchableOpacity onPress = {() => navigation.navigate('Login')}>
             <Text style = {styles.alreadyText}>Already have an account? Sign In</Text>
         </TouchableOpacity>  
 
