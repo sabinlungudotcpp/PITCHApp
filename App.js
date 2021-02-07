@@ -10,7 +10,7 @@ const Tab = createBottomTabNavigator();
 
 const BottomTabs = () => {
     return <Tab.Navigator>
-        <Tab.Screen name = "Slum Soccer" component = {HomeScreen} />
+        <Tab.Screen name = "Slum Soccer" component = {HomeNavigator} />
         <Tab.Screen name = "Street Soccer" component = {HomeNavigator} />
     </Tab.Navigator>
 }
@@ -18,9 +18,8 @@ const BottomTabs = () => {
 export default function App() {
   return (
     <NavigationContainer>
-        <HomeNavigator>
-          <HomeScreen/>
-        </HomeNavigator>
+     <BottomTabs/>
+      
     </NavigationContainer>
    
      
