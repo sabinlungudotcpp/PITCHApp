@@ -1,29 +1,16 @@
 import React from 'react';
-import {createStackNavigator} from 'react-navigation-stack';
-import {Platform} from 'react-native'; // Determines which platform is used (Android / iOS)
-import { createAppContainer } from 'react-navigation';
-import HomeScreen from '../screens/HomeScreen'; // Import the Product Overview Screen
-import ChildProtection from '../screens/ChildProtectionHomeScreen';
-import RegisterScreen from '../screens/RegisterScreen';
-import LoginScreen from '../screens/LoginScreen';
-import ModulesScreen from '../screens/ModulesScreen';
+import { createStackNavigator } from "@react-navigation/stack";
+import Register from '../screens/RegisterScreen';
+import HomeScreen from '../screens/HomeScreen';
 
-const HomeStack = createStackNavigator({
-    HomeScreen: HomeScreen,
-    RegisterScreen: RegisterScreen,
-    LoginScreen: LoginScreen,
-    ChildProtection: ChildProtection,
-    ModulesScreen: ModulesScreen
-}, {
-    defaultNavigationOptions: {
-        backgroundColor: 'transparent',
-        headerStyle: {
-            backgroundColor: Platform.OS === 'android' ? 'white' : 'orange'
-        },
+const Stack = createStackNavigator();
 
-        headerBackTitle: 'Back',
-        headerTintColor: Platform.OS === 'android' ? 'white' : ''
-    }
-});
+const HomeNavigator = () => {
+    return <Stack.Navigator>
+        <Stack.Screen name = "PITCH" component = {HomeScreen}/>
 
-export default createAppContainer(HomeStack);
+        <Stack.Screen name = "Register" component = {Register}/>
+    </Stack.Navigator>
+}
+
+export default HomeNavigator;

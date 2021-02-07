@@ -1,29 +1,31 @@
 import React from 'react';
-import {} from 'react-native';
+import {View} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import {createDrawerNavigator} from 'react-navigation-drawer';
-import MainStackNavigator from './navigation/StackNavigator';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import HomeNavigator from './navigation/StackNavigator';
 import HomeScreen from './screens/HomeScreen';
 import RegisterScreen from './screens/RegisterScreen';
-import { createAppContainer } from 'react-navigation';
 
-const Drawer = createDrawerNavigator({
-  HomeScreen: HomeScreen,
-  RegisterScreen: RegisterScreen
-}, {
-  initialRouteName: 'HomeScreen'
-});
+const Tab = createBottomTabNavigator();
+const DefaultTheme = () => {
+  color: {
+    primary: '#F7B500'
+  }
+}
 
-const App2 = createAppContainer(Drawer);
+const BottomTabs = () => {
+    return <Tab.Navigator>
+        <Tab.Screen name = "Slum Soccer" component = {HomeNavigator} />
+        <Tab.Screen name = "Street Soccer" component = {HomeNavigator} />
+    </Tab.Navigator>
+}
 
 export default function App() {
   return (
-    <NavigationContainer>
-          <MainStackNavigator>
-           <HomeScreen/>
-      </MainStackNavigator>
-    
+    <NavigationContainer theme = {DefaultTheme.primary}>
+        <BottomTabs/>
     </NavigationContainer>
+   
      
   );
 }

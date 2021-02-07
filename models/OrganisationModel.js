@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-const NUMBER_OF_BYTES = 10;
+const NUMBER_OF_BYTES = 10; // Number of bytes to encrypt the user data
 
 const organisationSchema = new mongoose.Schema({ // The organisation schema when registering a new organisation on the portal
     organisationName: { // The organisation name
