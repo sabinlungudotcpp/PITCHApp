@@ -8,9 +8,9 @@ const RegisterScreen = ({navigation}) => {
         <ScrollView>
     <Text style = {styles.registerStyle}>Register</Text>
         <Input leftIcon = {{name: 'home', paddingTop: 20, color: '#F7B500', marginLeft: 18, marginRight: -1}} placeholder = 'Organisation Name' style = {styles.organisationNameContainer}/>
-        <Input leftIcon = {{name: 'email', paddingTop: 4, color: '#F7B500', marginLeft: 18, marginRight: 10}} placeholder = 'E-mail' style = {styles.emailContainer}/>
-        <Input leftIcon = {{name: 'phone', paddingTop: 18, color: '#F7B500', marginLeft: 10}} placeholder = 'Mobile Number' style = {styles.mobileNumberContainer}/>
-        <Input leftIcon = {{name: 'cloud', paddingTop: 18, marginLeft: 10, color: '#F7B500'}} placeholder = 'Country' style = {styles.countryContainer}/>
+        <Input leftIcon = {{name: 'email', paddingTop: -1, color: '#F7B500', marginLeft: 18, marginRight: 10}} placeholder = 'E-mail' style = {styles.emailContainer}/>
+        <Input leftIcon = {{name: 'phone', paddingTop: 1, paddingLeft: 8, marginRight: 10, color: '#F7B500', marginLeft: 10}} placeholder = 'Mobile Number' style = {styles.mobileNumberContainer}/>
+        <Input leftIcon = {{name: 'cloud', paddingTop: 1, marginLeft: 20, marginRight: 10,  color: '#F7B500'}} placeholder = 'Country' style = {styles.countryContainer}/>
         <Input leftIcon = {{name: ''}} placeholder = 'City' style = {styles.cityContainer}/>
         <Input leftIcon = {{name: ''}} placeholder = 'Password' style = {styles.passwordContainer}/>
 
@@ -22,6 +22,7 @@ const RegisterScreen = ({navigation}) => {
         <View>
             <Button style = {styles.registerBtn} title = "Register" />
         </View>
+
     </View>
         </ScrollView>
     )
@@ -54,11 +55,19 @@ const styles = StyleSheet.create({
     },
 
     emailContainer: {
-
+        padding: 1,
+        width: 50,
+        borderBottomWidth: null,
+        height: 10,
+        left: 1
     },
 
     mobileNumberContainer: {
-        
+        left: 1
+    },
+
+    countryContainer: {
+        left: 1
     },
 
     alreadyText: {
