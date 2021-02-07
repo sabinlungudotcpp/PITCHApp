@@ -24,9 +24,9 @@ const style = StyleSheet.create({
 
   soccerIcon: {
     fontSize: 27,
-    top: -1,
-    marginTop: -5,
-    marginRight: 1,
+    top: -3,
+    marginTop: -1,
+    marginRight: -1,
     textAlign: 'center'
   }
 })

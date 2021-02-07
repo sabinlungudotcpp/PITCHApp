@@ -1,7 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Text, ScrollView} from 'react-native';
 import {Button} from 'react-native-elements';
-import {CustomHeaderButtons, Item} from '../components/CustomHeaderButton';
 
 const HomeScreen = ({navigation}) => { // Home Screen
 
@@ -17,7 +16,7 @@ const HomeScreen = ({navigation}) => { // Home Screen
         </View>
 
           <View style = {style.btnContainers}>
-            <Button containerStyle = {{shadowOffset: '10'}} buttonStyle = {{backgroundColor: 'orange', theme: 'dark', borderRadius: 200}} style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('Register')}/>
+            <Button buttonStyle = {{backgroundColor: 'orange', theme: 'dark', borderRadius: 200}} style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('Register')}/>
             <Button buttonStyle = {{backgroundColor: 'orange', borderRadius: 200}} color = 'black' title = "Login" style = {style.loginBtn} onPress = {() => navigation.navigate('Login')} />
         </View>
 

@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
         margin: 10,
         left: -10,
         color: 'black',
-        borderRadius: 200
     },
 
     emailContainer: {
