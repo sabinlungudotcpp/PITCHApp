@@ -11,7 +11,7 @@ const LoginScreen = ({props, navigation}) => { // Login Screen component
 }
 
 LoginScreen.navigationOptions = {
-    headerTitle: 'Login'
+    headerTitle: 'PITCH'
 }
 
 const style = StyleSheet.create({
