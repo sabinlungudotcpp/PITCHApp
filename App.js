@@ -11,19 +11,23 @@ const BottomTabs = () => { // Bottom Tab navigator component
     return <Tab.Navigator barStyle = {{backgroundColor: '#F7B500', height: 57, marginBottom: 35, paddingTop: 10,}}>
         <Tab.Screen options = {{tabBarLabel: 'Home', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.homeIcon} color = {color} name = "account" size = {26}/>}} name = "Home" component = {HomeNavigator}/>
         <Tab.Screen options = {{tabBarLabel: 'Slum Soccer', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.soccerIcon} color = {color} name = "soccer" size = {26} /> }} name = "Slum Soccer" component = {HomeNavigator} />
-        <Tab.Screen name = "Street Soccer" component = {HomeNavigator} />
+        <Tab.Screen options = {{tabBarLabel: 'Street Soccer', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.soccerIcon} color = {color} name = "football" size = {26} />}} name = "Street Soccer" component = {HomeNavigator} />
     </Tab.Navigator>
 }
 
 const style = StyleSheet.create({
   homeIcon: {
     fontSize: 27,
-    top: -1
+    top: -1,
+    marginTop: -5
   },
 
   soccerIcon: {
     fontSize: 27,
-    top: -1
+    top: -1,
+    marginTop: -5,
+    marginRight: 1,
+    textAlign: 'center'
   }
 })
 

@@ -29,7 +29,7 @@ const RegisterScreen = ({navigation}) => {
 };
 
 RegisterScreen.navigationOptions = {
-    headerTitle: 'PITCH'
+    headerTitle: 'Back'
 }
 
 const styles = StyleSheet.create({
@@ -51,7 +51,8 @@ const styles = StyleSheet.create({
         height: 10,
         margin: 10,
         left: -10,
-        color: 'black'
+        color: 'black',
+        borderRadius: 200
     },
 
     emailContainer: {
