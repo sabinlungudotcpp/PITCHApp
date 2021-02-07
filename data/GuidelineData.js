@@ -117,7 +117,7 @@ const GUIDELINE_DATA = [ // Array of JSON objects to store the guideline data
         "practice_avoid_descriptions": [
             {
                 "description_id": 1019,
-                "description_avoid": ""
+                "description_avoid": "1. Avoid spending time alone with children away from others"
             }
         ]
     }
