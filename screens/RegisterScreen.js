@@ -11,8 +11,8 @@ const RegisterScreen = ({navigation}) => {
         <Input leftIcon = {{name: 'email', paddingTop: -1, color: '#F7B500', marginLeft: 18, marginRight: 10}} placeholder = 'E-mail' style = {styles.emailContainer}/>
         <Input leftIcon = {{name: 'phone', paddingTop: 1, paddingLeft: 8, marginRight: 10, color: '#F7B500', marginLeft: 10}} placeholder = 'Mobile Number' style = {styles.mobileNumberContainer}/>
         <Input leftIcon = {{name: 'cloud', paddingTop: 1, marginLeft: 20, marginRight: 10,  color: '#F7B500'}} placeholder = 'Country' style = {styles.countryContainer}/>
-        <Input leftIcon = {{name: 'image', color: '#F7B500', marginLeft: 18}} placeholder = 'City' style = {styles.cityContainer}/>
-        <Input leftIcon = {{name: ''}} placeholder = 'Password' style = {styles.passwordContainer}/>
+        <Input leftIcon = {{name: 'image', color: '#F7B500', marginLeft: 18, marginRight: 11}} placeholder = 'City' style = {styles.cityContainer}/>
+        <Input leftIcon = {{name: 'lock', color :'#F7B500', marginLeft: 17, marginRight: 10}} placeholder = 'Password' style = {styles.passwordContainer}/>
 
     <View>
         <TouchableOpacity onPress = {() => navigation.navigate('Login')}>

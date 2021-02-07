@@ -1,12 +1,12 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
+import {CustomHeaderButtons, Item} from '../components/CustomHeaderButton';
 import HomeScreen from '../screens/HomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
 import Modules from '../screens/ModulesScreen';
-import {CustomHeaderButtons, Item} from '../components/CustomHeaderButton';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator(); // Creates a stack navigator
 
 const StackNavigator = ({navigation}) => {
     return (
