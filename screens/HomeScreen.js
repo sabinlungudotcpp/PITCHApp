@@ -17,8 +17,8 @@ const HomeScreen = ({navigation}) => { // Home Screen
         </View>
 
           <View style = {style.btnContainers}>
-            <Button color = 'black' buttonStyle = {{backgroundColor: 'orange', theme: 'dark', borderRadius: 200}} style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('RegisterScreen')}/>
-            <Button buttonStyle = {{backgroundColor: 'orange', borderRadius: 200}} color = 'black' title = "Login" style = {style.loginBtn} onPress = {() => navigation.navigate('LoginScreen')} />
+            <Button color = 'black' buttonStyle = {{backgroundColor: 'orange', theme: 'dark', borderRadius: 200}} style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('Register')}/>
+            <Button buttonStyle = {{backgroundColor: 'orange', borderRadius: 200}} color = 'black' title = "Login" style = {style.loginBtn} onPress = {() => navigation.navigate('Login')} />
         </View>
 
         </View>
@@ -28,10 +28,10 @@ const HomeScreen = ({navigation}) => { // Home Screen
 
 HomeScreen.navigationOptions = ({navigation}) => {
     return {
-        headerTitle: 'PITCH',
-      //  headerLeft: () => <CustomHeaderButtons navigate = {navigation.navigate}>
-          //  <Item title = "View Modules" onPress = {() => {navigation.navigate('ModulesScreen')}}/>
-   // </CustomHeaderButtons>
+        headerTitle: 'FALI',
+        headerLeft: () => <CustomHeaderButtons navigate = {navigation.navigate}>
+            <Item title = "View Modules" onPress = {() => {navigation.navigate('ModulesScreen')}}/>
+    </CustomHeaderButtons>
     }
 };
 

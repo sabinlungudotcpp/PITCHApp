@@ -10,6 +10,7 @@ const Tab = createBottomTabNavigator();
 
 const BottomTabs = () => {
     return <Tab.Navigator>
+        <Tab.Screen name = "Home" component = {HomeNavigator}/>
         <Tab.Screen name = "Slum Soccer" component = {HomeNavigator} />
         <Tab.Screen name = "Street Soccer" component = {HomeNavigator} />
     </Tab.Navigator>
