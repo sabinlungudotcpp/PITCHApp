@@ -29,11 +29,10 @@ const HomeScreen = ({navigation}) => { // Home Screen
 HomeScreen.navigationOptions = ({navigation}) => {
     return {
         headerTitle: 'PITCH',
-        headerLeft: () => <CustomHeaderButtons navigate = {navigation.navigate}>
-            <Item title = "View Modules" onPress = {() => {navigation.navigate('ModulesScreen')}}/>
-    </CustomHeaderButtons>
+      //  headerLeft: () => <CustomHeaderButtons navigate = {navigation.navigate}>
+          //  <Item title = "View Modules" onPress = {() => {navigation.navigate('ModulesScreen')}}/>
+   // </CustomHeaderButtons>
     }
-    
 };
 
 const style = StyleSheet.create({
