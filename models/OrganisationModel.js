@@ -40,4 +40,12 @@ const organisationSchema = new mongoose.Schema({ // The organisation schema when
     }
 });
 
+organisationSchema.pre('save', function(next) {
+
+});
+
+organisationSchema.methods.comparePassword = function(candidatePassword) {
+    const organisation = this;
+}
+
 mongoose.model('Organisation', organisationSchema);
