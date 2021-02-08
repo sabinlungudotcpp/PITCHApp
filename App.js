@@ -37,7 +37,6 @@ export default function App() {
      <BottomTabs/>
       
     </NavigationContainer>
-   
-     
+  
   );
 }

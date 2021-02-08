@@ -12,7 +12,6 @@ const StackNavigator = ({navigation}) => {
     return (
         <Stack.Navigator>
             <Stack.Screen options = {{headerTintColor: 'black', headerLeft: () => (<CustomHeaderButtons navigate = {navigation.navigate}>
-            
     </CustomHeaderButtons>), headerTitle: 'PITCH', headerStyle: {backgroundColor: '#F7B500'}}} name = "Back" component = {HomeScreen}/>
     
             <Stack.Screen options = {{headerTintColor: 'black', headerStyle: {backgroundColor: '#F7B500'}}} name = "Register" component = {RegisterScreen}/>
@@ -22,4 +21,4 @@ const StackNavigator = ({navigation}) => {
     )
 }
 
-export default StackNavigator;
+export default StackNavigator; // Exportrs the stack navigator

@@ -41,11 +41,15 @@ const organisationSchema = new mongoose.Schema({ // The organisation schema when
 });
 
 organisationSchema.pre('save', function(next) {
-
+    const organisation = this;
+    
+    if(!organisation.isModified('password')) { // If the password has not been modified
+        return next();
+    }
 });
 
 organisationSchema.methods.comparePassword = function(candidatePassword) {
     const organisation = this;
 }
 
-mongoose.model('Organisation', organisationSchema);
+mongoose.model('Organisation', organisationSchema); // Create an organisation model
