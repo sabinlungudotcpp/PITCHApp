@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, Text, ScrollView} from 'react-native';
 import {Button} from 'react-native-elements';
+import { Item } from '@expo/vector-icons';
 
 const HomeScreen = ({navigation}) => { // Home Screen
 
@@ -24,6 +25,7 @@ const HomeScreen = ({navigation}) => { // Home Screen
     </ScrollView>
     )
 }
+
 
 const style = StyleSheet.create({
 

@@ -15,24 +15,6 @@ const organisationSchema = new mongoose.Schema({ // The organisation schema when
         unique: false
     },
 
-    mobileNumber: {
-        type: Number,
-        required: true,
-        unique: true
-    },
-
-    country: { // The organisation country
-        type: String,
-        required: true,
-        unique: false
-    },
-
-    city: {
-        type: String,
-        required: true,
-        unique: false
-    },
-
     password: {
         type: String,
         required: true,
