@@ -16,8 +16,8 @@ const HomeScreen = ({navigation}) => { // Home Screen
         </View>
 
           <View style = {style.btnContainers}>
-            <Button buttonStyle = {{backgroundColor: 'orange', theme: 'dark', borderRadius: 200}} style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('Register')}/>
-            <Button buttonStyle = {{backgroundColor: 'orange', borderRadius: 200}} color = 'black' title = "Login" style = {style.loginBtn} onPress = {() => navigation.navigate('Login')} />
+            <Button buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('Register')}/>
+            <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} color = 'black' title = "Login" style = {style.loginBtn} onPress = {() => navigation.navigate('Login')} />
         </View>
 
         </View>
@@ -69,7 +69,7 @@ const style = StyleSheet.create({
     },
 
     registerBtn: {
-        width: 160,
+        width: 170,
         borderRadius: 200,
         color: 'black',
         paddingLeft: 10,
@@ -77,15 +77,18 @@ const style = StyleSheet.create({
         alignSelf: 'center',
         alignContent: 'center',
         color: 'black',
-        left: 10,
+        left: 20,
         paddingLeft: 10,
         paddingHorizontal: 20,
-        marginLeft: -20
+        marginRight: 5,
+        marginLeft: -35
      },
 
      loginBtn: {
-         width: 130,
-         marginLeft: 15,
+         width: 140,
+         right: -5,
+         left: -10,
+         marginLeft: 30,
          color: 'black',
          textAlign: 'center'
      }

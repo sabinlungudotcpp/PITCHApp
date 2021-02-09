@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, Text, TextInput} from 'react-native';
 import {Button} from 'react-native-elements';
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 
 const LoginScreen = ({props, navigation}) => { // Login Screen component
     return (
@@ -15,12 +15,16 @@ const LoginScreen = ({props, navigation}) => { // Login Screen component
 
         <View>
             <Text style = {styles.passwordTextContainer}>Password</Text>
-            <TextInput placeholder = "Password"  style = {styles.passwordContainer}/>
+            <TextInput secureTextEntry = {true} placeholder = "Password"  style = {styles.passwordContainer}/>
         </View>
 
-    
-    <Text style = {styles.registerTxt}>Don't have an account? Register today!</Text>
+        <View>
+        <TouchableOpacity onPress = {() => navigation.navigate('Register')}>
+            <Text style = {styles.registerTxt}>Already have an account? Sign In</Text>
+        </TouchableOpacity>  
 
+        </View>
+       
     <View>
         <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.loginBtn} title = "Login" />
     </View>
@@ -46,8 +50,7 @@ const styles = StyleSheet.create({
     registerTxt: {
         marginTop: 90,
         fontSize: 18,
-        marginLeft: 55,
-        marginBottom: -70
+        marginLeft: 80,
     },
 
     emailTextContainer: {
@@ -95,7 +98,7 @@ const styles = StyleSheet.create({
         width: 180,
         alignContent: 'center',
         marginLeft: 120,
-        marginTop: 110,
+        marginTop: 35,
         left: 7
     }
 });
