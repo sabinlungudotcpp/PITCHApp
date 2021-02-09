@@ -140,7 +140,8 @@ const GUIDELINE_DATA = [ // Array of JSON objects to store the guideline data
             },
 
             {
-                
+                "description_id": 2001,
+                "description_sanction": "2."
             }
         ] 
     }
