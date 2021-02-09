@@ -21,14 +21,14 @@ const RegisterScreen = ({navigation}) => {
         <Text style = {styles.passwordTextContainer}>Password</Text>
         <TextInput placeholder = "Password" style = {styles.passwordContainer}/>
 
-    <View>
-        <TouchableOpacity onPress = {() => navigation.navigate('Login')}>
-            <Text style = {styles.alreadyText}>Already have an account? Sign In</Text>
-        </TouchableOpacity>  
-
         <View>
             <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.registerBtn} title = "Register" />
         </View>
+
+        <View>
+        <TouchableOpacity onPress = {() => navigation.navigate('Login')}>
+            <Text style = {styles.alreadyText}>Already have an account? Sign In</Text>
+    </TouchableOpacity>  
 
     </View>
         </ScrollView>
@@ -116,13 +116,15 @@ const styles = StyleSheet.create({
     alreadyText: {
         fontSize: 20,
         marginTop: 10,
+        left: 10,
         textAlign: 'center'
     },
 
     registerBtn: { // Styles for the register button
-        width: 165,
+        width: 180,
         marginLeft: 140,
-        marginTop: 35,
+        marginTop: 10,
+        marginBottom: 20,
         left: -10
     },
 });

@@ -10,26 +10,24 @@ const LoginScreen = ({props, navigation}) => { // Login Screen component
 
         <View>
             <Text style = {styles.emailTextContainer}>E-mail Address</Text>
-            <TextInput placeholder = "E-mail Address"  style = {styles.emailContainer}/>
+            <TextInput placeholder = "E-mail Address" style = {styles.emailContainer}/>
         </View>
 
         <View>
             <Text style = {styles.passwordTextContainer}>Password</Text>
-            <TextInput secureTextEntry = {true} placeholder = "Password"  style = {styles.passwordContainer}/>
-        </View>
-
-        <View>
-        <TouchableOpacity onPress = {() => navigation.navigate('Register')}>
-            <Text style = {styles.registerTxt}>Already have an account? Sign In</Text>
-        </TouchableOpacity>  
-
-        </View>
-       
-    <View>
-        <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.loginBtn} title = "Login" />
-    </View>
+            <TextInput secureTextEntry = {true} placeholder = "Password" style = {styles.passwordContainer}/>
+    
         
-       </ScrollView>
+        <View>
+            <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.loginBtn} title = "Login" />
+        </View>
+
+    <View>
+        <TouchableOpacity onPress = {() => navigation.navigate('Register')}><Text style = {styles.registerTxt}>Already have an account? Sign In</Text></TouchableOpacity>  
+     </View>
+</View>
+
+     </ScrollView>
     )
 }
 
@@ -43,14 +41,15 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 28,
         marginTop: 50,
-        top: 16,
+        top: 2,
         color: '#F7B500'
     },
 
     registerTxt: {
-        marginTop: 90,
-        fontSize: 18,
-        marginLeft: 80,
+        textAlign: 'center',
+        fontSize: 20,
+        top: 10,
+        left: 10
     },
 
     emailTextContainer: {
@@ -86,7 +85,6 @@ const styles = StyleSheet.create({
         width: 230,
         borderRadius: 200,
         marginTop: 20,
-        marginBottom: -50,
         borderColor: '#F7B500',
         marginLeft: 100,
         borderWidth: 2,
@@ -94,11 +92,11 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
 
-    loginBtn: {
+    loginBtn: { // Login button styling
         width: 180,
-        alignContent: 'center',
         marginLeft: 120,
-        marginTop: 35,
+        marginTop: 40,
+        marginBottom: 27,
         left: 7
     }
 });
