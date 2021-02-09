@@ -8,15 +8,15 @@ const LoginScreen = ({props, navigation}) => { // Login Screen component
        <ScrollView>
            <Text style = {styles.loginTxt}>Login</Text>
 
-    <View>
+        <View>
             <Text style = {styles.emailTextContainer}>E-mail Address</Text>
             <TextInput placeholder = "E-mail Address"  style = {styles.emailContainer}/>
-    </View>
+        </View>
 
-    <View>
-    <Text style = {styles.emailTextContainer}>E-mail Address</Text>
-
-    </View>
+        <View>
+            <Text style = {styles.passwordTextContainer}>Password</Text>
+            <TextInput placeholder = "Password"  style = {styles.passwordContainer}/>
+        </View>
 
     <View>
         <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.loginBtn} title = "Login" />
@@ -46,6 +46,14 @@ const styles = StyleSheet.create({
         marginBottom: 5
     },
 
+    passwordTextContainer: {
+        marginLeft: 167,
+        top: 5,
+        marginTop: 25,
+        fontSize: 20,
+        marginBottom: 1
+    },
+
     emailContainer: {
         borderColor: 'black',
         width: 230,
@@ -58,11 +66,25 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
 
+    passwordContainer: {
+        borderColor: 'black',
+        width: 230,
+        borderRadius: 200,
+        marginTop: 20,
+        marginBottom: -50,
+        borderColor: '#F7B500',
+        marginLeft: 100,
+        borderWidth: 2,
+        padding: 10,
+        textAlign: 'center'
+    },
+
     loginBtn: {
-        width: 165,
+        width: 175,
         alignContent: 'center',
         marginLeft: 120,
-        marginTop: 100
+        marginTop: 100,
+        left: 8
     }
 });
 
