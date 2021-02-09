@@ -12,7 +12,7 @@ const RegisterScreen = ({navigation}) => {
         <Text style = {styles.organisationTextHeader}>Organisation Name</Text>
 
         <TextInput placeholder = "Organisation Name" style = {styles.organisationNameContainer}/>
-        
+
         <Text style = {styles.emailTextContainer}>E-mail Address</Text>
         <TextInput placeholder = "E-mail Address"  style = {styles.emailContainer}/>
 
@@ -40,30 +40,34 @@ const styles = StyleSheet.create({
         fontSize: 30,
         marginTop: 25,
         color: 'black',
-        marginLeft: 145
+        marginLeft: 145,
+        top: 20,
+        left: 10,
+        marginBottom: 10,
+        color: '#F7B500'
     },
 
     organisationTextHeader: {
         marginLeft: 123,
         top: 5,
-        marginTop: 40,
+        marginTop: 50,
         fontSize: 20,
         marginBottom: -15,
         color: 'black'
     },
 
     emailTextContainer: {
-        marginLeft: 137,
+        marginLeft: 140,
         top: 5,
-        marginTop: 50,
+        marginTop: 65,
         fontSize: 20,
         marginBottom: 1,
     },
 
     passwordTextContainer: {
-        marginLeft: 160,
-        top: 5,
-        marginTop: 5,
+        left: 170,
+        top: 2,
+        marginTop: 15,
         fontSize: 20,
         marginBottom: -20,
         color: 'black',
@@ -116,10 +120,11 @@ const styles = StyleSheet.create({
     },
 
     registerBtn: { // Styles for the register button
-        width: 150,
+        width: 165,
         marginLeft: 140,
-        marginTop: 28
+        marginTop: 35,
+        left: -10
     },
 });
 
-export default RegisterScreen;
+export default RegisterScreen; // Export the Register Screen

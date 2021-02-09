@@ -18,6 +18,9 @@ const LoginScreen = ({props, navigation}) => { // Login Screen component
             <TextInput placeholder = "Password"  style = {styles.passwordContainer}/>
         </View>
 
+    
+    <Text style = {styles.registerTxt}>Don't have an account? Register today!</Text>
+
     <View>
         <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.loginBtn} title = "Login" />
     </View>
@@ -35,7 +38,16 @@ const styles = StyleSheet.create({
     loginTxt: {
         textAlign: 'center',
         fontSize: 28,
-        marginTop: 60
+        marginTop: 50,
+        top: 16,
+        color: '#F7B500'
+    },
+
+    registerTxt: {
+        marginTop: 90,
+        fontSize: 18,
+        marginLeft: 55,
+        marginBottom: -70
     },
 
     emailTextContainer: {
@@ -80,11 +92,11 @@ const styles = StyleSheet.create({
     },
 
     loginBtn: {
-        width: 175,
+        width: 180,
         alignContent: 'center',
         marginLeft: 120,
-        marginTop: 100,
-        left: 8
+        marginTop: 110,
+        left: 7
     }
 });
 
