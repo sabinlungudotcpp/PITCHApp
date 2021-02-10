@@ -4,14 +4,25 @@ import {TextInput} from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import {Button} from 'react-native-elements';
 
+const generateRandomString = () => { // Generate random string to store in the Username input
+    let characters = 'abcdefgh1234567';
+    let output = '';
+
+    for(var i = 0; i < characters.length; i++) {
+       output += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+
+    return output; // Returns the generated string
+}
+
 const RegisterScreen = ({navigation}) => {
     return (
         
 <ScrollView>
         <Text style = {styles.registerStyle}>Register</Text>
-        <Text style = {styles.organisationTextHeader}>Organisation Name</Text>
+        <Text style = {styles.organisationTextHeader}>Username</Text>
 
-        <TextInput placeholder = "Organisation Name" style = {styles.organisationNameContainer}/>
+        <TextInput value = {generateRandomString()} style = {styles.organisationNameContainer}/>
 
         <Text style = {styles.emailTextContainer}>E-mail Address</Text>
         <TextInput placeholder = "E-mail Address"  style = {styles.emailContainer}/>
@@ -25,11 +36,12 @@ const RegisterScreen = ({navigation}) => {
             <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.registerBtn} title = "Register" />
         </View>
 
+
         <View>
-        <TouchableOpacity onPress = {() => navigation.navigate('Login')}>
+    <TouchableOpacity onPress = {() => navigation.navigate('Login')}>
             <Text style = {styles.alreadyText}>Already have an account? Sign In</Text>
     </TouchableOpacity>  
-
+    
     </View>
         </ScrollView>
     )
@@ -48,7 +60,7 @@ const styles = StyleSheet.create({
     },
 
     organisationTextHeader: {
-        marginLeft: 123,
+        marginLeft: 170,
         top: 5,
         marginTop: 50,
         fontSize: 20,
