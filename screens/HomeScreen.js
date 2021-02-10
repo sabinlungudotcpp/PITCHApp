@@ -1,8 +1,10 @@
 import React from 'react';
 import {View, StyleSheet, Text, ScrollView} from 'react-native';
 import {Button} from 'react-native-elements';
+import { FlatList } from 'react-native-gesture-handler';
+import introductionData from '../data/ChildProtectionData';
 
-const HomeScreen = ({navigation}) => { // Home Screen
+const HomeScreen = ({item, navigation}) => { // Home Screen
 
     return (
         <ScrollView>
@@ -21,6 +23,7 @@ const HomeScreen = ({navigation}) => { // Home Screen
         </View>
 
         </View>
+
     </ScrollView>
     )
 }
@@ -36,12 +39,12 @@ const style = StyleSheet.create({
     mainHeader: {
         alignItems: 'center',
         flex: 1,
-        marginTop: -80
+        marginTop: -110
     },
 
     mainText: {
         marginVertical: 300,
-        marginBottom: 50,
+        marginBottom: 65,
         fontSize: 35,
         color: 'orange'
     },
