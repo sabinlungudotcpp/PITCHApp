@@ -13,8 +13,16 @@ const CHILD_PROTECTION_DATA = [
 
     {
         "id": 2,
-        "title": "Practices to avoid"
+        "title_avoid": "Practices to avoid"
+    },
+
+    {
+        "id": 3,
+        "title_photo": "Photography / Filming",
+        "photo_description": ""
     }
 ]
+
+var jsonData = JSON.parse(CHILD_PROTECTION_DATA);
 
 export default CHILD_PROTECTION_DATA; // Export the data
