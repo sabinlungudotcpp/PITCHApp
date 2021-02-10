@@ -17,15 +17,14 @@ const LoginScreen = ({props, navigation}) => { // Login Screen component
             <Text style = {styles.passwordTextContainer}>Password</Text>
             <TextInput secureTextEntry = {true} placeholder = "Password" style = {styles.passwordContainer}/>
     
-        
         <View>
-            <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.loginBtn} title = "Login" />
+            <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.loginBtn} title = "Login" onPress = {() => navigation.navigate('AboutUsScreen')}/>
         </View>
 
-    <View>
-        <TouchableOpacity onPress = {() => navigation.navigate('Register')}><Text style = {styles.registerTxt}>Already have an account? Sign In</Text></TouchableOpacity>  
-     </View>
-</View>
+        <View>
+            <TouchableOpacity onPress = {() => navigation.navigate('Register')}><Text style = {styles.registerTxt}>Already have an account? Sign In</Text></TouchableOpacity>  
+        </View>
+    </View>
 
      </ScrollView>
     )

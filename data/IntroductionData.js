@@ -1,5 +1,13 @@
 const INTRODUCTION_DATA = [
     {
+        "id": 0,
+        "about_title": 'Who are we?',
+        "about_image": "../assets/Images/ImageAbout.png",
+        "about_description": "PITCH is a soccer organisation that provides opportunities to change the lives of socially disadvantaged adults throughout Scotland.",
+        "about_sub_description": "We have a variety of organisations called Slum Soccer which is an organisation in India and Street Soccer based in Scotland."
+    },
+
+    {
         "id": 1,
         "module_title": "Child Protection",
         "module_image": "../assets/Images/ImageChildProtection.jpg",

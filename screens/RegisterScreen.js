@@ -30,7 +30,7 @@ const RegisterScreen = ({navigation}) => {
         <TextInput style = {styles.cityContainer}/>
         
         <Text style = {styles.passwordTextContainer}>Password</Text>
-        <TextInput placeholder = "Password" style = {styles.passwordContainer}/>
+        <TextInput secureTextEntry = {true} placeholder = "Password" style = {styles.passwordContainer}/>
 
         <View>
             <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.registerBtn} title = "Register" />
@@ -41,7 +41,7 @@ const RegisterScreen = ({navigation}) => {
     <TouchableOpacity onPress = {() => navigation.navigate('Login')}>
             <Text style = {styles.alreadyText}>Already have an account? Sign In</Text>
     </TouchableOpacity>  
-    
+
     </View>
         </ScrollView>
     )

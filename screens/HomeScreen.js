@@ -1,8 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Text, ScrollView} from 'react-native';
 import {Button} from 'react-native-elements';
-import { FlatList } from 'react-native-gesture-handler';
-import introductionData from '../data/ChildProtectionData';
 
 const HomeScreen = ({item, navigation}) => { // Home Screen
 
@@ -21,13 +19,13 @@ const HomeScreen = ({item, navigation}) => { // Home Screen
             <Button buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('Register')}/>
             <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} color = 'black' title = "Login" style = {style.loginBtn} onPress = {() => navigation.navigate('Login')} />
         </View>
+    </View>
 
-        </View>
+        <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200, marginLeft: 10}} color = 'black' title = "About Us" style = {style.aboutUsBtn} onPress = {() => navigation.navigate('AboutUsScreen')} />
 
     </ScrollView>
     )
 }
-
 
 const style = StyleSheet.create({
 
@@ -94,6 +92,12 @@ const style = StyleSheet.create({
          marginLeft: 30,
          color: 'black',
          textAlign: 'center'
+     },
+
+     aboutUsBtn: {
+         width: 170,
+         marginLeft: 120,
+         marginTop: 30
      }
 });
 

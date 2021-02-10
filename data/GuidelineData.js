@@ -146,8 +146,14 @@ const GUIDELINE_DATA = [ // Array of JSON objects to store the guideline data
 
             {
                 "description_id": 2002,
-                "description_sanction": "3. "
+                "description_sanction": "3. Allow or engage in any form of inappopriate touching"
+            },
+
+            {
+                "description_id": 2003,
+                "description_sanction": "4. Allow children to use inappopriate language unchallenged"
             }
+
         ] 
     }
 ];

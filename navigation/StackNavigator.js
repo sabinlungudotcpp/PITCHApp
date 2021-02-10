@@ -5,6 +5,7 @@ import HomeScreen from '../screens/HomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
 import Modules from '../screens/ModulesScreen';
+import AboutUsScreen from '../screens/AboutUsScreen';
 
 const Stack = createStackNavigator(); // Creates a stack navigator
 
@@ -22,6 +23,7 @@ const StackNavigator = ({navigation}) => {
             title = "Modules" color = '#fff'/>), headerStyle: {backgroundColor: '#F7B500'}}} name = "Login" component = {LoginScreen}/>
 
             <Stack.Screen options = {{title: 'PITCH', headerTintColor: 'black', headerStyle: {backgroundColor: '#F7B500'}}} name = "Modules" component = {Modules} />
+            <Stack.Screen options = {{title: 'PITCH', headerTintColor: 'black', headerStyle: {backgroundColor: '#F7B500'}}} name = "AboutUsScreen" component = {AboutUsScreen} />
         </Stack.Navigator>
     )
 }
