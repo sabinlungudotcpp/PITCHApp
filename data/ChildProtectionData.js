@@ -23,6 +23,4 @@ const CHILD_PROTECTION_DATA = [
     }
 ]
 
-var jsonData = JSON.parse(CHILD_PROTECTION_DATA);
-
 export default CHILD_PROTECTION_DATA; // Export the data

@@ -1,12 +1,10 @@
 import React from 'react';
 import {View, StyleSheet, Text, ScrollView, FlatList} from 'react-native';
-import {Button, ListItem} from 'react-native-elements';
-import guidelineData from '../data/GuidelineData';
+import {Button} from 'react-native-elements';
 import goodPractice from '../data/GoodPracticeData';
 
 
 const HomeScreen = ({item, navigation}) => { // Home Screen
-
 
     return (
         <ScrollView>
@@ -28,9 +26,10 @@ const HomeScreen = ({item, navigation}) => { // Home Screen
         <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200, marginLeft: 10}} color = 'black' title = "About Us" style = {style.aboutUsBtn} onPress = {() => navigation.navigate('AboutUsScreen')}/>
 
     <View style = {{minHeight: 30} }>
-        <FlatList style = {style.descriptionTxt} keyExtractor = {(item) => item.id} data = {goodPractice} renderItem = {({item}) => <Text>{`${item.description_practice}\n`}</Text>}/>
+        <FlatList keyExtractor = {(item) => item.id} data = {goodPractice} renderItem = {({item}) => <Text style = {style.descriptionTxt}>{`${item.description_practice}\n`}</Text>}/>
     </View>
-    </ScrollView>
+
+</ScrollView>
     )
 }
 
@@ -44,7 +43,7 @@ const style = StyleSheet.create({
     mainHeader: {
         alignItems: 'center',
         flex: 1,
-        marginTop: -110
+        marginTop: -215
     },
 
     mainText: {
@@ -108,9 +107,11 @@ const style = StyleSheet.create({
      },
 
      descriptionTxt: {
-         padding: 25,
-         marginTop: 10,
-         paddingTop: 40
+         padding: 38,
+         marginTop: 50,
+         marginBottom: -100,
+         paddingTop: 40,
+         fontSize: 18
      }
 });
 
