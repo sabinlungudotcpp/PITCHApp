@@ -18,7 +18,7 @@ const ModulesScreen = ({props, navigation, item}) => {
         </Card>
 
         {/* Renders a card that stores the title of the module, image and the button that allows users to view that module */}
-        
+
         <Card style = {styles.cardContainer}>
             <FlatList data = {ModuleData} renderItem = {({item}) => <Text style = {styles.eduIntro}>{item.module_edu}</Text>} /> 
                 <Image style = {{width: 230, height: 180, marginTop: -230, marginBottom: 35}} source = {require('../assets/Images/EduKickImg.jpg')}/>
@@ -35,8 +35,30 @@ const ModulesScreen = ({props, navigation, item}) => {
                 <View style = {styles.buttonContainer}>
                   <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View Module" onPress = {() => {}} />
             </View>
-
         </Card>
+
+        <Card style = {styles.cardContainer}>
+                <Text style = {styles.childProtectionTitle}>Child Protection</Text>
+                <Image style = {{width: 230, height: 180, marginTop: -230, marginBottom: 35}} source = {require('../assets/Images/ChildProtection.jpg')}/>
+
+                <View style = {styles.buttonContainer}>
+                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View Module" onPress = {() => {}} />
+            </View>
+        </Card>
+
+
+        <Card style = {styles.cardContainer}>
+                <Text style = {styles.childProtectionTitle}>Child Protection</Text>
+                <Image style = {{width: 230, height: 180, marginTop: -230, marginBottom: 35}} source = {require('../assets/Images/ChildProtection.jpg')}/>
+
+                <View style = {styles.buttonContainer}>
+                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View Module" onPress = {() => {}} />
+            </View>
+        </Card>
+
+        
+
+
     </ScrollView>
     )
 };

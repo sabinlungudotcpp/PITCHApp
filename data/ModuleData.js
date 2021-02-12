@@ -6,7 +6,17 @@ const MODULE_DATA = [
 
     {
         "id": 2,
-        "module_edu": "Edu Kick"
+        "module_edu": "Shakti Fellowship"
+    },
+
+    {
+        "id": 3,
+        "module_edukick": "EduKick"
+    },
+
+    {
+        "id": 4,
+        "module_youngleaders": "Young Leaders"
     }
 ];
 
