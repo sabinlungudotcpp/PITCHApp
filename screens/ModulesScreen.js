@@ -1,27 +1,28 @@
 import React from 'react';
 import {View, StyleSheet, Text, Image} from 'react-native';
 import {Button} from 'react-native-elements';
-import { ScrollView } from 'react-native-gesture-handler';
+import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import Card from '../components/Card';
+import ModuleData from '../data/ModuleData';
 
-const ModulesScreen = ({props, navigation}) => {
+const ModulesScreen = ({props, navigation, item}) => {
     return (
         <ScrollView>
             <Card style = {styles.cardContainer}>
-                <Text style = {styles.childProtectionTitle}>Child Protection</Text>
+                <FlatList data = {ModuleData} renderItem = {({item}) => <Text style = {styles.titleIntro}>{item.module_protection}</Text>} /> 
                 <Image style = {{width: 230, height: 180, marginTop: -230, marginBottom: 35}} source = {require('../assets/Images/ChildProtection.jpg')}/>
 
                 <View style = {styles.buttonContainer}>
-                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View" onPress = {() => {}} />
+                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View Module" onPress = {() => {}} />
             </View>
         </Card>
 
         <Card style = {styles.cardContainer}>
-                <Text style = {styles.childProtectionTitle}>Edu Kick</Text>
+        <FlatList data = {ModuleData} renderItem = {({item}) => <Text style = {styles.eduIntro}>{item.module_edu}</Text>} /> 
                 <Image style = {{width: 230, height: 180, marginTop: -230, marginBottom: 35}} source = {require('../assets/Images/EduKickImg.jpg')}/>
 
                 <View style = {styles.buttonContainer}>
-                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View" onPress = {() => {}} />
+                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View Module" onPress = {() => {}} />
             </View>
         </Card>
 
@@ -30,21 +31,27 @@ const ModulesScreen = ({props, navigation}) => {
                 <Image style = {{width: 230, height: 180, marginTop: -230, marginBottom: 35}} source = {require('../assets/Images/ChildProtection.jpg')}/>
 
                 <View style = {styles.buttonContainer}>
-                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View" onPress = {() => {}} />
+                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View Module" onPress = {() => {}} />
             </View>
+
         </Card>
-
-
-
     </ScrollView>
     )
 };
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ // Styles for the module screen
     titleIntro: {
         textAlign: 'center',
-        fontSize: 28,
-        marginTop: 30,
+        fontSize: 27,
+        marginTop: 3,
+        marginLeft: 1,
+        color: '#F7B500'
+    },
+
+    eduIntro: {
+        textAlign: 'center',
+        fontSize: 27,
+        marginTop: -5,
         marginLeft: 1,
         color: '#F7B500'
     },
