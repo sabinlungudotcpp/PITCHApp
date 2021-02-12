@@ -24,11 +24,6 @@ const HomeScreen = ({item, navigation}) => { // Home Screen
     </View>
 
         <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200, marginLeft: 10}} color = 'black' title = "About Us" style = {style.aboutUsBtn} onPress = {() => navigation.navigate('AboutUsScreen')}/>
-
-    <View style = {{minHeight: 30} }>
-        <FlatList keyExtractor = {(item) => item.id} data = {goodPractice} renderItem = {({item}) => <Text style = {style.descriptionTxt}>{`${item.description_practice}\n`}</Text>}/>
-    </View>
-
 </ScrollView>
     )
 }
@@ -88,14 +83,14 @@ const style = StyleSheet.create({
         paddingLeft: 10,
         paddingHorizontal: 20,
         marginRight: 5,
-        marginLeft: -35
+        marginLeft: -35,
      },
 
      loginBtn: {
          width: 140,
          right: -5,
          left: -10,
-         marginLeft: 30,
+         marginLeft: 40,
          color: 'black',
          textAlign: 'center'
      },
@@ -103,7 +98,7 @@ const style = StyleSheet.create({
      aboutUsBtn: {
          width: 170,
          marginLeft: 120,
-         marginTop: 30
+         marginTop: 40
      },
 
      descriptionTxt: {
