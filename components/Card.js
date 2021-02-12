@@ -1,13 +1,13 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 
-const Card = props => {
+const Card = props => { // Card Component
     return (
         <View style = {{...styles.card, ...props.style}}>{props.children}</View>
     )
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ // Styles for the card
     card: {
         shadowColor: 'black',
         shadowOffset: {width: 0, height: 3},
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Card;
+export default Card; // Export the card
