@@ -17,9 +17,10 @@ const ModulesScreen = ({props, navigation, item}) => {
             </View>
         </Card>
 
+        {/* Renders a card that stores the title of the module, image and the button that allows users to view that module */}
+        
         <Card style = {styles.cardContainer}>
-            
-        <FlatList data = {ModuleData} renderItem = {({item}) => <Text style = {styles.eduIntro}>{item.module_edu}</Text>} /> 
+            <FlatList data = {ModuleData} renderItem = {({item}) => <Text style = {styles.eduIntro}>{item.module_edu}</Text>} /> 
                 <Image style = {{width: 230, height: 180, marginTop: -230, marginBottom: 35}} source = {require('../assets/Images/EduKickImg.jpg')}/>
 
                 <View style = {styles.buttonContainer}>
