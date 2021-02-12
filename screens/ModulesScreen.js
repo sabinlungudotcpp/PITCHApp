@@ -18,6 +18,7 @@ const ModulesScreen = ({props, navigation, item}) => {
         </Card>
 
         <Card style = {styles.cardContainer}>
+            
         <FlatList data = {ModuleData} renderItem = {({item}) => <Text style = {styles.eduIntro}>{item.module_edu}</Text>} /> 
                 <Image style = {{width: 230, height: 180, marginTop: -230, marginBottom: 35}} source = {require('../assets/Images/EduKickImg.jpg')}/>
 
@@ -76,7 +77,9 @@ const styles = StyleSheet.create({ // Styles for the module screen
         height: 360,
         maxWidth: '100%',
         alignItems: 'center',
-        marginLeft: 77
+        marginLeft: 77,
+        marginBottom: 20,
+        top: 10
     },
 });
 
