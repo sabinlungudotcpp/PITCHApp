@@ -6,12 +6,12 @@ const MODULE_DATA = [
 
     {
         "id": 2,
-        "module_edu": "Shakti Fellowship"
+        "module_shakti": "Shakti Fellowship"
     },
 
     {
         "id": 3,
-        "module_edukick": "EduKick"
+        "module_edukick": "Edu Kick"
     },
 
     {
