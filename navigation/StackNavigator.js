@@ -9,7 +9,7 @@ import AboutUsScreen from '../screens/AboutUsScreen';
 
 const Stack = createStackNavigator(); // Creates a stack navigator
 
-const StackNavigator = ({navigation}) => {
+const StackNavigator = ({navigation}) => { // Stack Navigator Component
     return (
         <Stack.Navigator>
             <Stack.Screen options = { {headerTintColor: 'black', headerLeft: () => (<Button onPress={() =>navigation.navigate('ModulesScreen')} title = "Modules"

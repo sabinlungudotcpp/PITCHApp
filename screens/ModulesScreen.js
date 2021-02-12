@@ -17,8 +17,8 @@ const ModulesScreen = ({props, navigation}) => {
         </Card>
 
         <Card style = {styles.cardContainer}>
-                <Text style = {styles.childProtectionTitle}>Child Protection</Text>
-                <Image style = {{width: 230, height: 180, marginTop: -230, marginBottom: 35}} source = {require('../assets/Images/ChildProtection.jpg')}/>
+                <Text style = {styles.childProtectionTitle}>Edu Kick</Text>
+                <Image style = {{width: 230, height: 180, marginTop: -230, marginBottom: 35}} source = {require('../assets/Images/EduKickImg.jpg')}/>
 
                 <View style = {styles.buttonContainer}>
                   <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View" onPress = {() => {}} />
@@ -35,7 +35,7 @@ const ModulesScreen = ({props, navigation}) => {
         </Card>
 
 
-        
+
     </ScrollView>
     )
 };
