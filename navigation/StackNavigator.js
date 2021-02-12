@@ -19,8 +19,8 @@ const StackNavigator = ({navigation}) => { // Stack Navigator Component
             <Stack.Screen options = {{title: 'PITCH', headerTintColor: 'black', headerLeft: () => (<Button onPress = {() => navigation.navigate('ModulesScreen')}
             title = "" color = '#fff'/>), headerStyle: {backgroundColor: '#F7B500'}}} name = "Register" component = {RegisterScreen}/>
 
-            <Stack.Screen options = {{title: '', headerTintColor: 'black', headerLeft: () => (<Button onPress = {() => navigation.navigate('ModulesScreen')}
-            title = "" color = '#fff'/>), headerStyle: {backgroundColor: '#F7B500'}}} name = "Login" component = {HomeScreen}/>
+            <Stack.Screen options = {{title: 'PITCH', headerTintColor: 'black', headerLeft: () => (<Button onPress = {() => navigation.navigate('ModulesScreen')}
+            title = "" color = '#fff'/>), headerStyle: {backgroundColor: '#F7B500'}}} name = "Login" component = {LoginScreen}/>
 
             <Stack.Screen options = {{title: 'PITCH', headerTintColor: 'black', headerStyle: {backgroundColor: '#F7B500'}}} name = "ModulesScreen" component = {ModulesScreen} />
             <Stack.Screen options = {{title: 'PITCH', headerTintColor: 'black', headerStyle: {backgroundColor: '#F7B500'}}} name = "AboutUsScreen" component = {AboutUsScreen} />
