@@ -34,7 +34,7 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
                 <Image style = {{width: 270, height: 180, marginTop: -230, marginBottom: 30}} source = {require('../assets/Images/EduKickImg.jpg')}/>
 
                 <View style = {styles.buttonContainer}>
-                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View Module" onPress = {() => {}} />
+                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View Module" onPress = {() => console.log('Hi')} />
             </View>
         </Card>
 
