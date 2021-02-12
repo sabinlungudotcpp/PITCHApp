@@ -5,8 +5,7 @@ const MODULE_DATA = [
     },
 
     {
-        "id": 2,
-        "module_title": "EduKick"
+        "id": 2
     }
 ];
 

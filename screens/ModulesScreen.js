@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
 
     childProtectionTitle: {
         fontSize: 24,
-        marginBottom: 270
+        marginBottom: 250
     },
 
     modulesScreen: {
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     cardContainer: {
         width: 350,
         left: -40,
-        height: 400,
+        height: 370,
         maxWidth: '100%',
         alignItems: 'center',
         marginLeft: 70

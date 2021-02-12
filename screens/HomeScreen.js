@@ -1,8 +1,6 @@
 import React from 'react';
-import {View, StyleSheet, Text, ScrollView, FlatList} from 'react-native';
+import {View, StyleSheet, Text, ScrollView} from 'react-native';
 import {Button} from 'react-native-elements';
-import goodPractice from '../data/GoodPracticeData';
-
 
 const HomeScreen = ({item, navigation}) => { // Home Screen
 
