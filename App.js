@@ -8,7 +8,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 const Tab = createMaterialBottomTabNavigator();
 
 const BottomTabs = () => { // Bottom Tab navigator component
-    return <Tab.Navigator barStyle = {{backgroundColor: '#F7B500', height: 57, marginBottom: 35, paddingTop: 10,}}>
+    return <Tab.Navigator barStyle = {{backgroundColor: '#F7B500', height: 57, marginBottom: 20, paddingTop: 10,}}>
         <Tab.Screen options = {{tabBarLabel: 'Home', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.homeIcon} color = {color} name = "account" size = {26}/>}} name = "Home" component = {HomeNavigator}/>
         <Tab.Screen options = {{tabBarLabel: 'Slum Soccer', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.soccerIcon} color = {color} name = "soccer" size = {26} /> }} name = "Slum Soccer" component = {HomeNavigator} />
         <Tab.Screen options = {{tabBarLabel: 'Street Soccer', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.soccerIcon} color = {color} name = "football" size = {26} />}} name = "Street Soccer" component = {HomeNavigator} />
