@@ -18,7 +18,7 @@ const LoginScreen = ({props, navigation}) => { // Login Screen component
             <TextInput secureTextEntry = {true} placeholder = "Password" style = {styles.passwordContainer}/>
     
         <View>
-            <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.loginBtn} title = "Login" onPress = {() => navigation.navigate('AboutUsScreen')}/>
+            <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.loginBtn} title = "Login"/>
         </View>
 
         <View>

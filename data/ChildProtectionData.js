@@ -18,8 +18,18 @@ const CHILD_PROTECTION_DATA = [
 
     {
         "id": 3,
-        "title_photo": "Photography / Filming",
-        "photo_description": ""
+        "title_photography": "Photography / Filming",
+        "photography_description": "There is evidence that some people have used sporting events as an opportunity to take inappopriate photographs or film footage of young and disabled people in vulnerable positions. All officers should be vigilant and any concerns should be reported to the Child Protection officer"
+    },
+
+    {
+        "id": 4,
+        "title_recruitment": "Recruitment / Training",
+        "recruitment_description": "Slum Soccer recognizes that anyone may have the potential to abuse children in some way and that all reasonable steps are taken to ensure unsuitable people are prevented from working with children. Pre-selection checks must include the following",
+        "recruitment_list": "1. All volunteers / staff should complete an application form. The application form will elicit information about an applicant's past and a self-disclosure about any criminal record",
+        "recruitment_list": "2. Consent should be obtained from an application to seek information from the Criminal Records Bureau.",
+        "recruitment_list": "3. Two confidential references, including one regarding previous work with children. These references must be taken up and confirmed through telephone contact",
+        "recruitment_list": "4. Evidence of identity (passport or driving licence with photo)"
     }
 ]
 

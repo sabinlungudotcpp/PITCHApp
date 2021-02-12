@@ -96,46 +96,6 @@ const GOOD_PRACTICE_DATA = [
         {
             "description_id": 1018,
             "description_practice": "18. Requesting writing parental consent if officials are required to transport young people in their cars."
-        },
-
-        {
-            "report_id": 3000,
-            "report_description": "1. If you accidentally hurt a player"
-        },
-
-        {
-            "report_id": 3001,
-            "report_description": "2. If he/she seems distressed in any manner"
-        },
-
-        {
-            "report_id": 3002,
-            "report_description": "3. If a player appears to be sexually aroused by your actions"
-        },
-
-        {
-            "report_id": 3003,
-            "report_description": "4. If a player misunderstands or misinterprets you have done"
-        },
-
-        {
-            "report_id": 3000,
-            "report_description": "1. If you accidentally hurt a player"
-        },
-
-        {
-            "report_id": 3001,
-            "report_description": "2. If he/she seems distressed in any manner"
-        },
-
-        {
-            "report_id": 3002,
-            "report_description": "3. If a player appears to be sexually aroused by your actions"
-        },
-
-        {
-            "report_id": 3003,
-            "report_description": "4. If a player misunderstands or misinterprets you have done"
         }
 ]
 

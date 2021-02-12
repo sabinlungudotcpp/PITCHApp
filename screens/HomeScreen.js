@@ -108,8 +108,8 @@ const style = StyleSheet.create({
 
      descriptionTxt: {
          padding: 38,
-         marginTop: 50,
-         marginBottom: -100,
+         marginTop: 120,
+         marginBottom: -160,
          paddingTop: 40,
          fontSize: 18
      }

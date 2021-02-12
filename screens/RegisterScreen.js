@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, StyleSheet, ScrollView, Text} from 'react-native';
 import {TextInput} from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -8,7 +8,7 @@ const generateRandomString = () => { // Generate random string to store in the U
     let characters = 'abcdefgh1234567';
     let output = '';
 
-    for(var i = 0; i < characters.length; i++) {
+    for(var i = 0; i < characters.length; i++) { // Loop through the length of the characters string
        output += characters.charAt(Math.floor(Math.random() * characters.length));
     }
 
@@ -16,6 +16,9 @@ const generateRandomString = () => { // Generate random string to store in the U
 }
 
 const RegisterScreen = ({navigation}) => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
     return (
         
 <ScrollView>
@@ -25,12 +28,12 @@ const RegisterScreen = ({navigation}) => {
         <TextInput value = {generateRandomString()} style = {styles.organisationNameContainer}/>
 
         <Text style = {styles.emailTextContainer}>E-mail Address</Text>
-        <TextInput placeholder = "E-mail Address"  style = {styles.emailContainer}/>
+        <TextInput onChangeText = {(newEmail) => setEmail(newEmail)} placeholder = "E-mail Address"  style = {styles.emailContainer}/>
 
         <TextInput style = {styles.cityContainer}/>
         
         <Text style = {styles.passwordTextContainer}>Password</Text>
-        <TextInput secureTextEntry = {true} placeholder = "Password" style = {styles.passwordContainer}/>
+        <TextInput autoCapitalize = {false} secureTextEntry = {true} placeholder = "Password" onChangeText = {(newPassword) => setPassword(newPassword)} style = {styles.passwordContainer}/>
 
         <View>
             <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.registerBtn} title = "Register" />
@@ -42,7 +45,7 @@ const RegisterScreen = ({navigation}) => {
             <Text style = {styles.alreadyText}>Already have an account? Sign In</Text>
     </TouchableOpacity>  
     </View>
-    
+
         </ScrollView>
     )
 };

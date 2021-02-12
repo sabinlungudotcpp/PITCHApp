@@ -18,16 +18,17 @@ const GUIDELINE_DATA = [ // Array of JSON objects to store the guideline data
         "title_sanction": "Practices never to be sanctioned",
         "sub_heading_sanction": "The following should never be sanctioned. You should never:",
     },
+    
+    {
+        "guideline_id": 4,
+        "title_report": "Incidents to report",
+    },
 
-    [
-        {
-            "description_id": 3000,
-            "report_title": "Incidents to report",
-            "reports_descriptions": [
-                
-            ]
-        }
-    ]
+    {
+        "guideline_id": 5,
+        "title_interview": "Interview / Induction"
+    }
+    
 ]
 
 export default GUIDELINE_DATA;
