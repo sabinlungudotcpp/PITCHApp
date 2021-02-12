@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, Image} from 'react-native';
 import {Button} from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 import Card from '../components/Card';
@@ -7,13 +7,13 @@ import Card from '../components/Card';
 const ModulesScreen = ({props, navigation}) => {
     return (
         <ScrollView>
-                <Text style = {styles.titleIntro}>Choose Module</Text>
 
             <Card style = {styles.cardContainer}>
                 <Text style = {styles.childProtectionTitle}>Child Protection</Text>
+                <Image style = {{width: 230, height: 180, marginTop: -230, marginBottom: 35}} source = {require('../assets/Images/ChildProtection.jpg')}/>
 
                 <View style = {styles.buttonContainer}>
-                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 145, borderRadius: 200}} title = "View" onPress = {() => {}} />
+                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View" onPress = {() => {}} />
             </View>
         </Card>
     </ScrollView>
@@ -24,14 +24,15 @@ const styles = StyleSheet.create({
     titleIntro: {
         textAlign: 'center',
         fontSize: 28,
-        marginTop: 50,
+        marginTop: 30,
         marginLeft: 1,
         color: '#F7B500'
     },
 
     childProtectionTitle: {
         fontSize: 24,
-        marginBottom: 250
+        marginBottom: 250,
+        color: '#F7B500'
     },
 
     modulesScreen: {
@@ -43,29 +44,13 @@ const styles = StyleSheet.create({
     },
 
     cardContainer: {
-        width: 350,
+        width: 340,
         left: -40,
-        height: 370,
+        height: 360,
         maxWidth: '100%',
         alignItems: 'center',
-        marginLeft: 70
+        marginLeft: 77
     },
-
-    moduleContainer: {
-        backgroundColor: 'red'
-    },
-
-    button: {
-        flexDirection: 'row',
-        borderRadius: 200,
-        width: 140,
-        color: 'white',
-        fontSize: 30
-    },
-
-    btnText: {
-        color: 'red'
-    }
 });
 
 export default ModulesScreen;
