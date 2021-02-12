@@ -6,7 +6,6 @@ import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
 import ModulesScreen from '../screens/ModulesScreen';
 import AboutUsScreen from '../screens/AboutUsScreen';
-import ChildProtectionHome from '../screens/SlumSoccerHome';
 import ChildProtectionScreen from '../screens/ChildProtectionScreen';
 
 const Stack = createStackNavigator(); // Creates a stack navigator
