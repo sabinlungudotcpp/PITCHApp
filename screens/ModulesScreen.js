@@ -7,7 +7,6 @@ import Card from '../components/Card';
 const ModulesScreen = ({props, navigation}) => {
     return (
         <ScrollView>
-
             <Card style = {styles.cardContainer}>
                 <Text style = {styles.childProtectionTitle}>Child Protection</Text>
                 <Image style = {{width: 230, height: 180, marginTop: -230, marginBottom: 35}} source = {require('../assets/Images/ChildProtection.jpg')}/>
@@ -16,6 +15,27 @@ const ModulesScreen = ({props, navigation}) => {
                   <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View" onPress = {() => {}} />
             </View>
         </Card>
+
+        <Card style = {styles.cardContainer}>
+                <Text style = {styles.childProtectionTitle}>Child Protection</Text>
+                <Image style = {{width: 230, height: 180, marginTop: -230, marginBottom: 35}} source = {require('../assets/Images/ChildProtection.jpg')}/>
+
+                <View style = {styles.buttonContainer}>
+                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View" onPress = {() => {}} />
+            </View>
+        </Card>
+
+        <Card style = {styles.cardContainer}>
+                <Text style = {styles.childProtectionTitle}>Child Protection</Text>
+                <Image style = {{width: 230, height: 180, marginTop: -230, marginBottom: 35}} source = {require('../assets/Images/ChildProtection.jpg')}/>
+
+                <View style = {styles.buttonContainer}>
+                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View" onPress = {() => {}} />
+            </View>
+        </Card>
+
+
+        
     </ScrollView>
     )
 };
