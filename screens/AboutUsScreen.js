@@ -8,7 +8,6 @@ const AboutUsScreen = ({item, navigation}) => {
     return (
 
     <ScrollView>
-
      <View>
         <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.aboutTitle}>{item.about_title}</Text>} keyExtractor = {(item) => item.id}/>
         <Image style = {{width: 330, height: 170, marginLeft: 40, marginTop: -30}} source = {require('../assets/Images/SlumSoccer.jpg')}/>
@@ -30,7 +29,7 @@ const AboutUsScreen = ({item, navigation}) => {
         <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.aboutMission}>{item.about_mission}</Text>} keyExtractor = {(item) => item.id}/>
     <Image style = {{width: 330, height: 200, marginLeft: 45, opacity: 0.9, backgroundColor: 'black', marginBottom: 10, marginTop: 25}} source = {require('../assets/Images/missionimg.jpg')}/>
         </View>
-        
+
        
        <View>
         <Card style = {style.cardContainer}>
@@ -67,10 +66,11 @@ const style = StyleSheet.create({
     about_sub: {
         flex: 1,
         alignItems: 'center',
-        fontSize: 18,
+        fontSize: 16,
         padding: 15,
-        marginLeft: 20,
-        marginBottom: -39,
+        marginLeft: 10,
+        marginTop: -1,
+        marginBottom: -45,
     },
 
     aboutMission: {
@@ -103,15 +103,16 @@ const style = StyleSheet.create({
     missionTxtStyle: {
         padding: 15,
         textAlign: 'center',
-        fontSize: 18,
-        marginTop: -5
+        fontSize: 16,
+        marginTop: -17,
+        marginLeft: 5
     },
 
     cardStyle: {
         padding: -3,
         paddingLeft: -35,
-        marginBottom: 40,
-        width: 360,
+        marginBottom: 50,
+        width: 345,
         height: 140,
         marginLeft: 30,
         alignItems: 'center',
@@ -119,29 +120,28 @@ const style = StyleSheet.create({
     },
 
     cardContainer: {
-        width: 350,
+        width: 330,
         paddingHorizontal: -5,
         left: -30,
-        height: 160,
+        height: 130,
         maxWidth: '100%',
         alignItems: 'center',
-        marginLeft: 60,
-        padding: -2,
-        paddingTop: -15,
+        marginLeft: 75,
+        paddingVertical: -9,
         top: -1,
         paddingRight: 10,
-        marginBottom: 10
     },
 
     secondCard: {
-        width: 380,
-        padding: 5,
+        width: 340,
+        padding: 2,
         paddingRight: 10,
-        height: 130,
+        height: 107,
         alignItems: 'center',
         textAlign: 'left',
-        marginBottom: -40,
-        top: -30,
+        marginBottom: -50,
+        top: -40,
+        marginLeft: 35
     }
 });
 

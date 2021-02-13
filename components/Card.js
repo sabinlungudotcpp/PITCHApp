@@ -10,15 +10,15 @@ const Card = props => { // Card Component
 const styles = StyleSheet.create({ // Styles for the card
     card: {
         shadowColor: 'black', // Shadow color of black
-        shadowOffset: {width: 0, height: 3},
+        shadowOffset: {width: 2, height: 3},
         shadowRadius: 6, // Shadow radius value of 6
         shadowOpacity: 0.40,
         backgroundColor: 'white',
         elevation: 10,
         marginTop: 35,
         marginLeft: 20,
-        padding: 25,
-        borderRadius: 12
+        padding: 30,
+        borderRadius: 10
     }
 })
 
