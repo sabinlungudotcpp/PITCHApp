@@ -9,9 +9,9 @@ const Card = props => { // Card Component
 
 const styles = StyleSheet.create({ // Styles for the card
     card: {
-        shadowColor: 'black',
+        shadowColor: 'black', // Shadow color of black
         shadowOffset: {width: 0, height: 3},
-        shadowRadius: 6,
+        shadowRadius: 6, // Shadow radius value of 6
         shadowOpacity: 0.40,
         backgroundColor: 'white',
         elevation: 10,

@@ -21,7 +21,6 @@ const HomeScreen = ({item, navigation}) => { // Home Screen
         </View>
     </View>
 
-
         <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200, marginLeft: 10}} color = 'black' title = "About Us" style = {style.aboutUsBtn} onPress = {() => navigation.navigate('AboutUsScreen')}/>
 </ScrollView>
     )
