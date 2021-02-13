@@ -8,7 +8,7 @@ const Stack = createStackNavigator(); // Creates a stack navigator
 
 const SlumSoccerStackNavigator = ({navigation}) => {
     return <Stack.Navigator>
-        <Stack.Screen options = { {headerTintColor: 'black', headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = ""
+        <Stack.Screen options = { {headerTintColor: 'black', headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
               color="#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "Back" component = {SlumSoccerHome}/>
 
 <Stack.Screen options = { {headerTintColor: 'black', headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = ""
