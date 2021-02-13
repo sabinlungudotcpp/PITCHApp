@@ -1,8 +1,6 @@
 import React from 'react';
-import {View, Text, StyleSheet, ScrollView, FlatList, Image} from 'react-native';
-import {Button} from 'react-native-elements';
+import {Text, StyleSheet, ScrollView, FlatList, Image} from 'react-native';
 import introductionData from '../data/IntroductionData';
-import Card from '../components/Card';
 import Colors from '../constants/Colors';
 
 const AboutUsScreen = ({item, navigation}) => {
@@ -14,8 +12,9 @@ const AboutUsScreen = ({item, navigation}) => {
 
         <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_description}>{item.about_description}</Text>} keyExtractor = {(item) => item.id}/>
         <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_sub}>{item.about_sub_description}</Text>} keyExtractor = {(item) => item.id}/>
+        <Text style = {style.missionTxt}>Our Mission</Text>
 
-        <Text style = {style.missionTxt}>Our Mission</Text>      
+        <Image style = {{width: 340, height: 200, marginLeft: 37, opacity: 0.8, backgroundColor: 'black', marginBottom: 150, marginTop: 25}} source = {require('../assets/Images/missionimg.jpg')} />
     </ScrollView>
 
     )
@@ -60,7 +59,7 @@ const style = StyleSheet.create({
 
     missionTxt: {
         marginLeft: 120,
-        marginTop: -180,
+        marginTop: -200,
         fontSize: 32,
         color: Colors.primaryColor
     }

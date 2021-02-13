@@ -1,12 +1,10 @@
 const express = require('express');
 const morgan = require('morgan');
-const mongoose = require('mongoose');
 const cors = require('cors');
 const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 8040;
-
 
 app.use(morgan('dev'));
 app.use(cors());
