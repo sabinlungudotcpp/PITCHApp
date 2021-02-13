@@ -3,6 +3,7 @@ import {View, Text, StyleSheet, ScrollView, FlatList, Image} from 'react-native'
 import {Button} from 'react-native-elements';
 import introductionData from '../data/IntroductionData';
 import Card from '../components/Card';
+import Colors from '../constants/Colors';
 
 const AboutUsScreen = ({item, navigation}) => {
     return (
@@ -13,6 +14,9 @@ const AboutUsScreen = ({item, navigation}) => {
 
         <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_description}>{item.about_description}</Text>} keyExtractor = {(item) => item.id}/>
         <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_sub}>{item.about_sub_description}</Text>} keyExtractor = {(item) => item.id}/>
+ 
+        <Text style = {style.subTitle}>Our Mission</Text>
+     
     </ScrollView>
 
     )
@@ -22,10 +26,11 @@ const style = StyleSheet.create({
 
     aboutTitle: {
         marginTop: 60,
-        marginBottom: -55,
+        marginLeft: 3,
+        marginBottom: -53,
         textAlign: 'center',
-        fontSize: 34,
-        color: '#F7B500',
+        fontSize: 32,
+        color: Colors.primaryColor,
         right: 2
     },
 
@@ -42,7 +47,16 @@ const style = StyleSheet.create({
         alignItems: 'center',
         fontSize: 18,
         padding: 15,
-        marginLeft: 17
+        marginLeft: 20
+    },
+
+    subTitle: {
+        fontSize: 24,
+        marginBottom: 30,
+        marginTop: -140,
+        marginLeft: 120,
+        fontSize: 32,
+        color: Colors.primaryColor
     }
 });
 
