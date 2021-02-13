@@ -8,27 +8,35 @@ const AboutUsScreen = ({item, navigation}) => {
     return (
 
     <ScrollView>
+        <View>
+
         <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.aboutTitle}>{item.about_title}</Text>} keyExtractor = {(item) => item.id}/>
         <Image style = {{width: 330, height: 170, marginLeft: 40, marginTop: -30}} source = {require('../assets/Images/SlumSoccer.jpg')}/>
+        </View>
 
+        <View>
+        
     <Card style = {style.cardStyle}>
         <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_description}>{item.about_description}</Text>} keyExtractor = {(item) => item.id}/>
     </Card>
 
-    <Card style = {style.secondCard}>
-    <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_sub}>{item.about_sub_description}</Text>} keyExtractor = {(item) => item.id}/>
+    </View>
 
+    <Card style = {style.secondCard}>
+        <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_sub}>{item.about_sub_description}</Text>} keyExtractor = {(item) => item.id}/>
     </Card>
 
     <View style = {style.subContainer}>
-    <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.aboutMission}>{item.about_mission}</Text>} keyExtractor = {(item) => item.id}/>
-    <Image style = {{width: 340, height: 200, marginLeft: 37, opacity: 0.8, backgroundColor: 'black', marginBottom: 10, marginTop: 25}} source = {require('../assets/Images/missionimg.jpg')}/>
-
+        <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.aboutMission}>{item.about_mission}</Text>} keyExtractor = {(item) => item.id}/>
+    <Image style = {{width: 330, height: 200, marginLeft: 45, opacity: 0.9, backgroundColor: 'black', marginBottom: 10, marginTop: 25}} source = {require('../assets/Images/missionimg.jpg')}/>
         </View>
        
+       <View>
         <Card style = {style.cardContainer}>
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.missionTxtStyle}>{item.about_mission_description}</Text>} />
         </Card>
+        </View>
+
     </ScrollView>
 
     )
@@ -77,56 +85,58 @@ const style = StyleSheet.create({
         marginTop: -140,
         marginLeft: 120,
         fontSize: 32,
-        color: Colors.primaryColor
+        color: Colors.whiteColor
     },
 
     missionTxt: {
         marginLeft: 120,
         marginTop: -200,
         fontSize: 32,
-        color: Colors.primaryColor
+        color: 'white'
     },
 
     subContainer: {
-        marginTop: 50
+        marginTop: 45,
     },
 
     missionTxtStyle: {
         padding: 15,
         textAlign: 'center',
-        fontSize: 17,
-        marginTop: 5
+        fontSize: 18,
+        marginTop: -5
     },
 
     cardStyle: {
-        padding: 3,
-        paddingLeft: -50,
-        marginBottom: 30,
-        width: 380,
-        height: 155,
-        marginLeft: 15,
+        padding: -3,
+        paddingLeft: -35,
+        marginBottom: 40,
+        width: 360,
+        height: 140,
+        marginLeft: 30,
         alignItems: 'center',
         maxWidth: '100%'
     },
 
     cardContainer: {
-        width: 385,
+        width: 350,
         paddingHorizontal: -5,
         left: -30,
-        height: 140,
+        height: 160,
         maxWidth: '100%',
         alignItems: 'center',
-        marginLeft: 45,
-        padding: -5,
-        top: -10,
-        paddingRight: 5
+        marginLeft: 60,
+        padding: -2,
+        paddingTop: -15,
+        top: -1,
+        paddingRight: 10,
+        marginBottom: 10
     },
 
     secondCard: {
         width: 380,
         padding: 5,
         paddingRight: 10,
-        height: 135,
+        height: 130,
         alignItems: 'center',
         textAlign: 'left',
         marginBottom: -40,
