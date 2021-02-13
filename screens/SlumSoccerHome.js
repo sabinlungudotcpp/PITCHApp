@@ -12,7 +12,9 @@ const SlumSoccerHome = ({props, navigation}) => {
 
 const styles = StyleSheet.create({
     introTxt: {
-        
+        textAlign: 'center',
+        fontSize: 22,
+        marginTop: 25
     }
 });
 

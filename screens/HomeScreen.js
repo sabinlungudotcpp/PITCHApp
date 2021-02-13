@@ -21,6 +21,7 @@ const HomeScreen = ({item, navigation}) => { // Home Screen
         </View>
     </View>
 
+
         <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200, marginLeft: 10}} color = 'black' title = "About Us" style = {style.aboutUsBtn} onPress = {() => navigation.navigate('AboutUsScreen')}/>
 </ScrollView>
     )
@@ -96,7 +97,7 @@ const style = StyleSheet.create({
      aboutUsBtn: {
          width: 170,
          marginLeft: 120,
-         marginTop: 40
+         marginTop: 30
      },
 
      descriptionTxt: {
