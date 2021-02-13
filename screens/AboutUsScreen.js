@@ -57,10 +57,10 @@ const style = StyleSheet.create({
     about_description: { // The description of the About Us
         padding: 15,
         marginVertical: 33,
-        fontSize: 18,
-        marginLeft: 20,
+        fontSize: 15.5,
+        marginLeft: 5,
         marginBottom: -20,
-        marginTop: 15
+        marginTop: 1
     },
 
     about_sub: {
@@ -69,7 +69,7 @@ const style = StyleSheet.create({
         fontSize: 16,
         padding: 15,
         marginLeft: 10,
-        color: 'white',
+        color: 'black',
         marginTop: -1,
         marginBottom: -45,
     },
@@ -87,14 +87,14 @@ const style = StyleSheet.create({
         marginTop: -140,
         marginLeft: 120,
         fontSize: 32,
-        color: Colors.whiteColor
+        color: 'black'
     },
 
     missionTxt: {
         marginLeft: 120,
         marginTop: -200,
         fontSize: 32,
-        color: 'white'
+        color: Colors.primaryColor
     },
 
     subContainer: {
@@ -107,16 +107,16 @@ const style = StyleSheet.create({
         fontSize: 16,
         marginTop: -17,
         marginLeft: 5,
-        color: 'white'
+        color: 'black'
     },
 
     cardStyle: {
         padding: -3,
-        paddingLeft: -35,
-        marginBottom: 50,
-        width: 345,
-        height: 140,
-        marginLeft: 30,
+        paddingLeft: -40,
+        marginBottom: 40,
+        width: 332,
+        height: 110,
+        marginLeft: 40,
         alignItems: 'center',
         maxWidth: '100%'
     },
@@ -128,7 +128,7 @@ const style = StyleSheet.create({
         height: 130,
         maxWidth: '100%',
         alignItems: 'center',
-        marginLeft: 75,
+        marginLeft: 70,
         paddingVertical: -9,
         top: -1,
         paddingRight: 10,
@@ -138,12 +138,12 @@ const style = StyleSheet.create({
         width: 340,
         padding: 2,
         paddingRight: 10,
-        height: 107,
+        height: 100,
         alignItems: 'center',
         textAlign: 'left',
         marginBottom: -50,
         top: -40,
-        marginLeft: 35
+        marginLeft: 40
     }
 });
 

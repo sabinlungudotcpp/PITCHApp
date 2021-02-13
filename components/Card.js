@@ -13,7 +13,7 @@ const styles = StyleSheet.create({ // Styles for the card
         shadowOffset: {width: 2, height: 1},
         shadowRadius: 2.4, // Shadow radius value of 6
         shadowOpacity: 0.45,
-        backgroundColor: '#F7B500',
+        backgroundColor: 'white',
         elevation: 10,
         marginTop: 35,
         marginLeft: 20,
