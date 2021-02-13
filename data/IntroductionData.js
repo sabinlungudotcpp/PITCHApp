@@ -9,8 +9,7 @@ const INTRODUCTION_DATA = [
 
     {
         "about_mission": "Our Mission",
-        "about_mission_image": "",
-        "about_mission_description": ""
+        "about_mission_description": "Our aim is to create purpose, hope and relationships using football to support people on their journey to security and happiness."
     },
 
     {
