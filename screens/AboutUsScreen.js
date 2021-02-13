@@ -69,6 +69,7 @@ const style = StyleSheet.create({
         fontSize: 16,
         padding: 15,
         marginLeft: 10,
+        color: 'white',
         marginTop: -1,
         marginBottom: -45,
     },
@@ -105,7 +106,8 @@ const style = StyleSheet.create({
         textAlign: 'center',
         fontSize: 16,
         marginTop: -17,
-        marginLeft: 5
+        marginLeft: 5,
+        color: 'white'
     },
 
     cardStyle: {
