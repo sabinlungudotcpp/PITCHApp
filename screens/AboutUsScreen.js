@@ -8,11 +8,11 @@ const AboutUsScreen = ({item, navigation}) => {
     return (
 
     <ScrollView>
-        <View>
 
+     <View>
         <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.aboutTitle}>{item.about_title}</Text>} keyExtractor = {(item) => item.id}/>
         <Image style = {{width: 330, height: 170, marginLeft: 40, marginTop: -30}} source = {require('../assets/Images/SlumSoccer.jpg')}/>
-        </View>
+    </View>
 
         <View>
         
@@ -30,6 +30,7 @@ const AboutUsScreen = ({item, navigation}) => {
         <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.aboutMission}>{item.about_mission}</Text>} keyExtractor = {(item) => item.id}/>
     <Image style = {{width: 330, height: 200, marginLeft: 45, opacity: 0.9, backgroundColor: 'black', marginBottom: 10, marginTop: 25}} source = {require('../assets/Images/missionimg.jpg')}/>
         </View>
+        
        
        <View>
         <Card style = {style.cardContainer}>
