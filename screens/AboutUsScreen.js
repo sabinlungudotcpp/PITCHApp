@@ -9,13 +9,16 @@ const AboutUsScreen = ({item, navigation}) => {
 
     <ScrollView>
         <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.aboutTitle}>{item.about_title}</Text>} keyExtractor = {(item) => item.id}/>
-        <Image style = {{width: 350, height: 185, marginLeft: 38}} source = {require('../assets/Images/SlumSoccer.jpg')}/>
+        <Image style = {{width: 330, height: 170, marginLeft: 40, marginTop: -30}} source = {require('../assets/Images/SlumSoccer.jpg')}/>
 
     <Card style = {style.cardStyle}>
         <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_description}>{item.about_description}</Text>} keyExtractor = {(item) => item.id}/>
     </Card>
 
+    <Card style = {style.secondCard}>
     <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_sub}>{item.about_sub_description}</Text>} keyExtractor = {(item) => item.id}/>
+
+    </Card>
 
     <View style = {style.subContainer}>
     <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.aboutMission}>{item.about_mission}</Text>} keyExtractor = {(item) => item.id}/>
@@ -89,32 +92,46 @@ const style = StyleSheet.create({
     },
 
     missionTxtStyle: {
-        padding: 8,
+        padding: 15,
         textAlign: 'center',
-        fontSize: 18
+        fontSize: 17,
+        marginTop: 5
     },
 
     cardStyle: {
-        padding: -10,
-        paddingHorizontal: -10,
+        padding: 3,
+        paddingLeft: -50,
         marginBottom: 30,
-        width: 350,
+        width: 380,
         height: 155,
-        marginLeft: 38,
+        marginLeft: 15,
         alignItems: 'center',
         maxWidth: '100%'
     },
 
     cardContainer: {
-        width: 300,
+        width: 385,
+        paddingHorizontal: -5,
         left: -30,
-        height: 200,
+        height: 140,
         maxWidth: '100%',
         alignItems: 'center',
-        marginLeft: 90,
-        padding: 10,
-        top: -10
+        marginLeft: 45,
+        padding: -5,
+        top: -10,
+        paddingRight: 5
     },
+
+    secondCard: {
+        width: 380,
+        padding: 5,
+        paddingRight: 10,
+        height: 135,
+        alignItems: 'center',
+        textAlign: 'left',
+        marginBottom: -40,
+        top: -30,
+    }
 });
 
 export default AboutUsScreen;
