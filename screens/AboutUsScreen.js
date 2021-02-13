@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, StyleSheet, ScrollView, FlatList, Image} from 'react-native';
+import {View, Text, StyleSheet, ScrollView, FlatList, Image} from 'react-native';
 import introductionData from '../data/IntroductionData';
 import Colors from '../constants/Colors';
 import Card from '../components/Card';
@@ -14,12 +14,15 @@ const AboutUsScreen = ({item, navigation}) => {
     <Card style = {style.cardStyle}>
         <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_description}>{item.about_description}</Text>} keyExtractor = {(item) => item.id}/>
     </Card>
-        <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_sub}>{item.about_sub_description}</Text>} keyExtractor = {(item) => item.id}/>
-        
 
-        <Text style = {style.missionTxt}>Our Mission</Text>
-        <Image style = {{width: 340, height: 200, marginLeft: 37, opacity: 0.8, backgroundColor: 'black', marginBottom: 10, marginTop: 25}} source = {require('../assets/Images/missionimg.jpg')}/>
+    <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_sub}>{item.about_sub_description}</Text>} keyExtractor = {(item) => item.id}/>
 
+    <View style = {style.subContainer}>
+    <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.aboutMission}>{item.about_mission}</Text>} keyExtractor = {(item) => item.id}/>
+    <Image style = {{width: 340, height: 200, marginLeft: 37, opacity: 0.8, backgroundColor: 'black', marginBottom: 10, marginTop: 25}} source = {require('../assets/Images/missionimg.jpg')}/>
+
+        </View>
+       
         <Card style = {style.cardContainer}>
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.missionTxtStyle}>{item.about_mission_description}</Text>} />
         </Card>
@@ -45,7 +48,8 @@ const style = StyleSheet.create({
         marginVertical: 33,
         fontSize: 18,
         marginLeft: 20,
-        marginBottom: -62
+        marginBottom: -20,
+        marginTop: 15
     },
 
     about_sub: {
@@ -53,7 +57,15 @@ const style = StyleSheet.create({
         alignItems: 'center',
         fontSize: 18,
         padding: 15,
-        marginLeft: 20
+        marginLeft: 20,
+        marginBottom: -39,
+    },
+
+    aboutMission: {
+        marginLeft: 125,
+        fontSize: 30,
+        marginBottom: -10,
+        color: Colors.primaryColor
     },
 
     subTitle: {
@@ -72,6 +84,10 @@ const style = StyleSheet.create({
         color: Colors.primaryColor
     },
 
+    subContainer: {
+        marginTop: 50
+    },
+
     missionTxtStyle: {
         padding: 8,
         textAlign: 'center',
@@ -79,11 +95,12 @@ const style = StyleSheet.create({
     },
 
     cardStyle: {
-        padding: -5,
-        marginBottom: 10,
-        width: 300,
-        height: 200,
-        marginLeft: 60,
+        padding: -10,
+        paddingHorizontal: -10,
+        marginBottom: 30,
+        width: 350,
+        height: 155,
+        marginLeft: 38,
         alignItems: 'center',
         maxWidth: '100%'
     },
