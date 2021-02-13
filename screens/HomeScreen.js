@@ -35,7 +35,7 @@ const style = StyleSheet.create({
     mainHeader: {
         alignItems: 'center',
         flex: 1,
-        marginTop: -215
+        marginTop: -80
     },
 
     mainText: {
@@ -49,7 +49,7 @@ const style = StyleSheet.create({
         marginLeft: 40,
         fontSize: 20,
         color: 'black',
-        marginTop: -20
+        marginTop: -30
     },
 
     btnContainers: {
@@ -75,12 +75,13 @@ const style = StyleSheet.create({
         textAlign: 'center',
         alignSelf: 'center',
         alignContent: 'center',
+        textAlign: 'center',
         color: 'black',
-        left: 20,
+        left: 25,
         paddingLeft: 10,
         paddingHorizontal: 20,
         marginRight: 5,
-        marginLeft: -35,
+        marginLeft: -40,
      },
 
      loginBtn: {
