@@ -14,9 +14,8 @@ const AboutUsScreen = ({item, navigation}) => {
 
         <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_description}>{item.about_description}</Text>} keyExtractor = {(item) => item.id}/>
         <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_sub}>{item.about_sub_description}</Text>} keyExtractor = {(item) => item.id}/>
- 
-        <Text style = {style.subTitle}>Our Mission</Text>
-     
+
+        <Text style = {style.missionTxt}>Our Mission</Text>      
     </ScrollView>
 
     )
@@ -39,7 +38,7 @@ const style = StyleSheet.create({
         marginVertical: 33,
         fontSize: 18,
         marginLeft: 20,
-        marginBottom: -59
+        marginBottom: -65
     },
 
     about_sub: {
@@ -55,6 +54,13 @@ const style = StyleSheet.create({
         marginBottom: 30,
         marginTop: -140,
         marginLeft: 120,
+        fontSize: 32,
+        color: Colors.primaryColor
+    },
+
+    missionTxt: {
+        marginLeft: 120,
+        marginTop: -180,
         fontSize: 32,
         color: Colors.primaryColor
     }

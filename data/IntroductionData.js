@@ -8,6 +8,12 @@ const INTRODUCTION_DATA = [
     },
 
     {
+        "about_mission": "Our Mission",
+        "about_mission_image": "",
+        "about_mission_description": ""
+    },
+
+    {
         "id": 1,
         "module_title": "Child Protection",
         "module_image": "../assets/Images/ImageChildProtection.jpg",
