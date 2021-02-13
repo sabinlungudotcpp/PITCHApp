@@ -4,16 +4,20 @@ import Colors from '../constants/Colors';
 
 const ShaktiFellowshipScreen = ({props, navigation, item}) => {
     return (
-        <View>
+        <ScrollView>
+
+        
             <Text style = {styles.mainTxt}>Shakti Screen</Text>
-        </View>
+    </ScrollView>
     )
 }
 
 const styles = StyleSheet.create({
     mainTxt: {
-        fontSize: 24,
-        color: Colors.primaryColor
+        fontSize: 28,
+        color: Colors.primaryColor,
+        textAlign: 'center',
+        marginTop: 30
     }
 })
 
