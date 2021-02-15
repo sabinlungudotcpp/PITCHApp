@@ -27,6 +27,12 @@ const GUIDELINE_DATA = [ // Array of JSON objects to store the guideline data
     {
         "guideline_id": 5,
         "title_interview": "Interview / Induction"
+    },
+
+    {
+        "guideline_id": 6,
+        "title_training": "Training",
+        "training_description": ""
     }
     
 ]

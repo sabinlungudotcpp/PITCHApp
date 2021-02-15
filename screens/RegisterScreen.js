@@ -15,7 +15,7 @@ const generateRandomString = () => { // Generate random string to store in the U
     return output; // Returns the generated string
 }
 
-const RegisterScreen = ({navigation}) => {
+const RegisterScreen = ({navigation}) => { // Register Screen
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -28,9 +28,7 @@ const RegisterScreen = ({navigation}) => {
         <TextInput value = {generateRandomString()} style = {styles.organisationNameContainer}/>
 
         <Text style = {styles.emailTextContainer}>E-mail Address</Text>
-        <TextInput onChangeText = {(newEmail) => setEmail(newEmail)} placeholder = "E-mail Address"  style = {styles.emailContainer}/>
-
-        <TextInput style = {styles.cityContainer}/>
+        <TextInput value = {setEmail} onChangeText = {(newEmail) => setEmail(newEmail)} placeholder = "E-mail Address"  style = {styles.emailContainer}/>
         
         <Text style = {styles.passwordTextContainer}>Password</Text>
         <TextInput autoCapitalize = {false} secureTextEntry = {true} placeholder = "Password" onChangeText = {(newPassword) => setPassword(newPassword)} style = {styles.passwordContainer}/>
@@ -39,14 +37,13 @@ const RegisterScreen = ({navigation}) => {
             <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.registerBtn} title = "Register" />
         </View>
 
-
         <View>
     <TouchableOpacity onPress = {() => navigation.navigate('Login')}>
             <Text style = {styles.alreadyText}>Already have an account? Sign In</Text>
     </TouchableOpacity>  
-    </View>
 
-        </ScrollView>
+         </View>
+    </ScrollView>
     )
 };
 
@@ -85,6 +82,7 @@ const styles = StyleSheet.create({
         marginTop: 15,
         fontSize: 20,
         marginBottom: -20,
+        marginTop: 40,
         color: 'black',
     },
 
