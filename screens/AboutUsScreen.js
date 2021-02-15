@@ -35,7 +35,7 @@ const AboutUsScreen = ({item, navigation}) => {
         <Card style = {style.cardContainer}>
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.missionTxtStyle}>{item.about_mission_description}</Text>} />
         </Card>
-        </View>
+     </View>
 
     </ScrollView>
 

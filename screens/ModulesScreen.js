@@ -10,7 +10,7 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
         <ScrollView>
             <Card style = {styles.cardContainer}>
                 <FlatList data = {ModuleData} renderItem = {({item}) => <Text style = {styles.protectionTitle}>{item.module_protection}</Text>} /> 
-                <Image style = {{width: 270, height: 190, marginTop: -230, marginBottom: 35}} source = {require('../assets/Images/ChildProtection.jpg')}/>
+                <Image style = {{width: 270, height: 190, marginTop: -215, marginBottom: 25}} source = {require('../assets/Images/ChildProtection.jpg')}/>
 
                 <View style = {styles.buttonContainer}>
                   <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View Module" onPress = {() => navigation.navigate('ChildProtectionScreen')} />
@@ -20,7 +20,7 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
         {/* Renders a card that stores the title of the module, image and the button that allows users to view that module */}
         <Card style = {styles.cardContainer}>
             <FlatList data = {ModuleData} renderItem = {({item}) => <Text style = {styles.shaktiTitle}>{item.module_shakti}</Text>} /> 
-                <Image style = {{width: 270, height: 200, marginTop: -250, marginBottom: 25}} source = {require('../assets/Images/ShaktiImg.jpg')}/>
+                <Image style = {{width: 270, height: 200, marginTop: -250, marginBottom: 15}} source = {require('../assets/Images/ShaktiImg.jpg')}/>
 
                 <View style = {styles.buttonContainer}>
                   <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View Module" onPress = {() => navigation.navigate('ShaktiFellowshipScreen')} />
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({ // Styles for the module screen
         textAlign: 'center',
         fontSize: 27,
         marginTop: -1,
-        marginBottom: -20,
+        marginBottom: 15,
         left: -1,
         color: '#F7B500'
     },

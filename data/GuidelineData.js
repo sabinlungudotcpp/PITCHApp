@@ -32,7 +32,7 @@ const GUIDELINE_DATA = [ // Array of JSON objects to store the guideline data
     {
         "guideline_id": 6,
         "title_training": "Training",
-        "training_description": ""
+        "training_description": "In addition to pre-selection checks, the safeguarding process includes training after recruitment to help staff and volunteers"
     }
     
 ]
