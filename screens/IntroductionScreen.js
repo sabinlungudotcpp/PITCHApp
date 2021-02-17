@@ -15,11 +15,11 @@ const IntroductionScreen = ({props, navigation, item}) => {
      </Card>
 
      <Card style = {styles.cardStyle}>
-        <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.main_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
+        <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.second_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
      </Card>
 
      <Card style = {styles.cardStyle}>
-        <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.main_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
+        <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.third_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
      </Card>
 
         <View style = {styles.btnContainers}>
@@ -41,8 +41,9 @@ const styles = StyleSheet.create({
     },
 
     introText: {
-        fontSize: 15,
-        marginTop: -5
+        fontSize: 16,
+        marginTop: -5,
+        paddingLeft: 5
     },
 
     cardStyle: {
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
         paddingLeft: -20,
         marginBottom: 10,
         width: 350,
-        height: 160,
+        height: 150,
         marginLeft: 40,
         alignItems: 'center',
         maxWidth: '100%'
@@ -62,7 +63,8 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         borderRadius: 200,
         marginLeft: 45,
-        marginTop: 10,
+        marginTop: 30,
+        marginBottom: 50,
         paddingHorizontal: -15,
         justifyContent: 'space-between',
         flex: 1,
