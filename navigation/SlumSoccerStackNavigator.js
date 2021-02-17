@@ -3,6 +3,7 @@ import {Button} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import SlumSoccerHome from '../screens/SlumSoccerHome';
 import ChildProtectionScreen from '../screens/ChildProtectionScreen';
+import IntroductionScreen from '../screens/IntroductionScreen';
 
 const Stack = createStackNavigator(); // Creates a stack navigator
 
@@ -14,6 +15,9 @@ const SlumSoccerStackNavigator = ({navigation}) => {
 
 <Stack.Screen options = { {headerTintColor: 'black', headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
               color="#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "ChildProtectionScreen" component = {ChildProtectionScreen}/>
+
+<Stack.Screen options = { {headerTintColor: 'black', headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
+              color="#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "IntroductionScreen" component = {IntroductionScreen}/>
     </Stack.Navigator>
     
 }

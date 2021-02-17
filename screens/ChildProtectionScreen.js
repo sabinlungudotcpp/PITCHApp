@@ -19,7 +19,7 @@ const ChildProtectionScreen = ({props, navigation, item}) => {
             </Card>
 
             <View style = {styles.btnContainers}>
-                <Button style = {styles.policyBtn} buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "View Policy"/>
+                <Button style = {styles.policyBtn} buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "View Policy" onPress = {() => navigation.navigate('IntroductionScreen')} />
                 <Button style = {styles.guidelineBtn} buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "Guidelines" />
             </View>
 
@@ -56,39 +56,39 @@ const styles = StyleSheet.create({
     },
 
     btnContainers: {
-        width: 150,
+        width: 130,
         height: 42,
         textAlign: 'center',
         borderRadius: 200,
-        marginLeft: 60,
+        marginLeft: 45,
         marginTop: 10,
-        paddingHorizontal: -20,
+        paddingHorizontal: -15,
         justifyContent: 'space-between',
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        paddingRight: 10,
+        paddingRight: 1,
     },
 
     policyBtn: {
-         width: 150,
+         width: 160,
          right: -5,
-         left: -10,
+         left: -15,
          marginLeft: 5,
          color: 'black',
          textAlign: 'center'
     },
 
     childProtectionText: {
-        fontSize: 15,
+        fontSize: 15.5,
         paddingLeft: 10
     },
 
     guidelineBtn: {
-         width: 150,
+         width: 155,
          right: -5,
          left: -10,
-         marginLeft: 30,
+         marginLeft: 20,
          color: 'black',
          textAlign: 'center'
     }
