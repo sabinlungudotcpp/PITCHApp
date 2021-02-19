@@ -15,9 +15,10 @@ const styles = StyleSheet.create({ // Styles for the card
         shadowOpacity: 0.45,
         backgroundColor: 'white',
         elevation: 10,
-        marginTop: 35,
+        marginTop: 30,
         marginLeft: 20,
         padding: 30,
+        marginBottom:  10,
         borderRadius: 10
     }
 })
