@@ -23,7 +23,7 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
                 <Image style = {{width: 270, height: 200, marginTop: -250, marginBottom: 15}} source = {require('../assets/Images/ShaktiImg.jpg')}/>
 
                 <View style = {styles.buttonContainer}>
-                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View Module" onPress = {() => navigation.navigate('ShaktiFellowshipScreen')} />
+                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1, marginTop: 5}} title = "View Module" onPress = {() => navigation.navigate('ShaktiFellowshipScreen')} />
             </View>
         </Card>
 
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({ // Styles for the module screen
     shaktiTitle: {
         textAlign: 'center',
         fontSize: 27,
-        marginTop: 5,
+        marginTop: -5,
         marginBottom: -20,
         left: -1,
         color: '#F7B500'

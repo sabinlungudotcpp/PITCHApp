@@ -16,14 +16,15 @@ const INTRODUCTION_DATA = [
         "id": 1,
         "module_title": "Child Protection",
         "module_image": "../assets/Images/ImageChildProtection.jpg",
-        "module_text": "Child Protection is very important for Slum Soccer because it ensures the utmost privacy for our players as well as their protection. The children should always have fun while playing football and there should never be any sort of bullying or mistreatment between children."
+        "module_text": "Child Protection is very important for Slum Soccer because it ensures the utmost privacy for our players as well as their protection. \n\nThe children should always have fun while playing football and there should never be any sort of bullying or mistreatment between children."
     },
 
     {
         "id": 2,
         "title_intro": "Introduction",
-        "main_sub_description_intro": "Through this policy, Slum Soccer recognizes that the welfare of the child is paramount. \n\nAll children, whatever their age, culture, disability, gender, language, racial origin religious beliefs and/or sexual identity have the right to protection from abuse.",
-        "second_sub_description_intro": "All suspicions and allegations of abuse and poor practice will be taken seriously and responded to swiftly and appropriately.",
+        "main_sub_description_intro": "1. Through this policy, Slum Soccer recognizes that the welfare of the child is paramount.",
+        "extra_intro": "All children, whatever their age, culture, disability, gender, language, racial origin religious beliefs and/or sexual identity have the right to protection from abuse.",
+        "second_sub_description_intro": "2. All suspicions and allegations of abuse and poor practice will be taken seriously and responded to swiftly and appropriately.",
         "third_sub_description_intro": "All staff (paid/unpaid) working in sport have a responsibility to report concerns to the appropriate officer",
         "canBeModified": false
     },

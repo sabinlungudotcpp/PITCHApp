@@ -18,6 +18,10 @@ const IntroductionScreen = ({props, navigation, item}) => {
         <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.second_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
      </Card>
 
+     <Card style = {styles.tempCard}>
+        <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.extra_intro}</Text>} keyExtractor = {(item) => item.id} />
+     </Card>
+
      <Card style = {styles.thirdCard}>
         <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.third_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
      </Card>
@@ -47,29 +51,40 @@ const styles = StyleSheet.create({
     },
 
     cardStyle: {
-        padding: 1,
+        padding: -3,
         paddingLeft: -20,
         marginBottom: 10,
         width: 350,
-        height: 170,
+        height: 80,
         marginLeft: 35,
         alignItems: 'center',
         maxWidth: '100%'
     },
 
     secondCard: {
-        height: 100,
+        height: 95,
         width: 350,
         marginLeft: 35,
         padding: 10,
-        paddingTop: -1
+        paddingTop: -10,
+        paddingBottom: -1
+    },
+
+    tempCard: {
+        height: 115,
+        width: 350, 
+        marginLeft: 35,
+        padding: 10,
+        paddingTop: -3 
     },
 
     thirdCard: {
-        height: 100,
+        height: 95,
         width: 350,
         marginLeft: 35,
-        marginBottom: 10
+        marginBottom: 10,
+        padding: 10,
+        paddingTop: -5
     },
 
     btnContainers: {

@@ -5,8 +5,6 @@ import Colors from '../constants/Colors';
 const ShaktiFellowshipScreen = ({props, navigation, item}) => {
     return (
         <ScrollView>
-
-        
             <Text style = {styles.mainTxt}>Shakti Screen</Text>
     </ScrollView>
     )
