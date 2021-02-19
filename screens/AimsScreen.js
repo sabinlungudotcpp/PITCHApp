@@ -5,7 +5,7 @@ import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import Card from '../components/Card';
 import introductionData from '../data/IntroductionData';
 
-const AimsScreen = ({props, navigation, item}) => { // Aims Screen Component
+const AimsScreen = ({props, navigation}) => { // Aims Screen Component
     return (
         <ScrollView>
             <Text style = {styles.aimsText}>{introductionData.map((value) => value.title_statement)}</Text>
@@ -17,11 +17,14 @@ const AimsScreen = ({props, navigation, item}) => { // Aims Screen Component
         <Text style = {styles.aimsContainer}>{introductionData.map(value => value.title_aims)}</Text>
 
         <Card style = {styles.cardStyle}>
-
+            <FlatList data = {introductionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.aimsTextContainer}>{item.description_aims}</Text>} />
         </Card>
 
-        <Button title = "Back" />
-        <Button title = "View Policies" />
+        <View style = {styles.btnContainers}>
+            <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Back" />
+            <Button style = {styles.policyBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "View Policies" />
+        </View>
+        
     </ScrollView>
     )
 };
@@ -38,6 +41,13 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 32,
         color: '#F7B500'
+    },
+
+    aimsTextContainer: { // Styles for the text inside the card
+        textAlign: 'center',
+        padding: -9,
+        marginBottom: -10,
+        fontSize: 15.5
     },
 
     cardStyle: {
@@ -57,6 +67,33 @@ const styles = StyleSheet.create({
         marginTop: -8,
         fontSize: 15,
         padding: -1
+    },
+
+    btnContainers: {
+        width: 110,
+        height: 42,
+        textAlign: 'center',
+        borderRadius: 200,
+        marginLeft: 60,
+        marginTop: 30,
+        paddingHorizontal: -20,
+        justifyContent: 'space-between',
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingRight: 10,
+    },
+
+    backBtn: {
+        width: 130,
+        marginRight: 20,
+        paddingLeft: 5,
+        marginLeft: -5
+    },
+
+    policyBtn: {
+        width: 145,
+        marginLeft: 10
     }
 });
 
