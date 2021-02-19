@@ -28,7 +28,7 @@ const IntroductionScreen = ({props, navigation, item}) => {
 
         <View style = {styles.btnContainers}>
              <Button buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} style = {styles.backBtn} title = "Back" onPress = {() => navigation.navigate('ChildProtectionScreen')}/>
-             <Button buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} style = {styles.aimsBtn} title = "View Aims"/>
+             <Button buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} style = {styles.aimsBtn} title = "View Aims" onPress = {() => navigation.navigate('AimsScreen')}/>
         </View>
      
 </ScrollView>
