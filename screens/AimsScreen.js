@@ -22,8 +22,8 @@ const AimsScreen = ({props, navigation}) => { // Aims Screen Component
         </Card>
 
         <View style = {styles.btnContainers}>
-            <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Back" />
-            <Button style = {styles.policyBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "View Policies" />
+            <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Back" onPress = {() => navigation.navigate('IntroductionScreen')} />
+            <Button style = {styles.policyBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "View Policies" onPress = {() => navigation.navigate('GoodPracticeScreen')} />
         </View>
         
     </ScrollView>

@@ -5,7 +5,7 @@ import SlumSoccerHome from '../screens/SlumSoccerHome';
 import ChildProtectionScreen from '../screens/ChildProtectionScreen';
 import IntroductionScreen from '../screens/IntroductionScreen';
 import AimsScreen from '../screens/AimsScreen';
-import { color } from 'react-native-reanimated';
+import GoodPracticeScreen from '../screens/GoodPracticeScreen';
 
 const Stack = createStackNavigator(); // Creates a stack navigator
 
@@ -23,6 +23,9 @@ const SlumSoccerStackNavigator = ({navigation}) => {
 
 <Stack.Screen options = { {headerTintColor: 'black', headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = '#fff' />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
               color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "AimsScreen" component = {AimsScreen}/>
+
+<Stack.Screen options = { {headerTintColor: 'black', headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = '#fff' />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
+              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "GoodPracticeScreen" component = {GoodPracticeScreen}/>
 
     </Stack.Navigator>
     
