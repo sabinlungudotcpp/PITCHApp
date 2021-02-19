@@ -5,8 +5,8 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import {Button} from 'react-native-elements';
 
 const generateRandomString = () => { // Generate random string to store in the Username input
-    let characters = 'abcdef15';
-    let output = '';
+    let characters = 'abcdef15'; // Random characters to generate
+    let output = ''; // Output of the generated string
 
     for(var i = 0; i < characters.length; i++) { // Loop through the length of the characters string
        output += characters.charAt(Math.floor(Math.random() * characters.length));
@@ -38,6 +38,7 @@ const RegisterScreen = ({navigation}) => { // Register Screen
         </View>
 
         <View>
+
     <TouchableOpacity onPress = {() => navigation.navigate('Login')}>
             <Text style = {styles.alreadyText}>Already have an account? Sign In</Text>
     </TouchableOpacity>  
@@ -47,7 +48,7 @@ const RegisterScreen = ({navigation}) => { // Register Screen
     )
 };
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ // Styles for the Register Screen
     registerStyle: {
         fontSize: 30,
         marginTop: 25,
@@ -68,11 +69,11 @@ const styles = StyleSheet.create({
         color: 'black'
     },
 
-    emailTextContainer: {
+    emailTextContainer: { // The email text container
         marginLeft: 140,
         top: 5,
         marginTop: 65,
-        fontSize: 20,
+        fontSize: 20, // Font size of 20
         marginBottom: 1,
     },
 

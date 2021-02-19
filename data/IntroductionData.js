@@ -22,7 +22,7 @@ const INTRODUCTION_DATA = [
     {
         "id": 2,
         "title_intro": "Introduction",
-        "main_sub_description_intro": "Through this policy, Slum Soccer recognizes that the welfare of the child is paramount. All children, whatever their age, culture, disability, gender, language, racial origin religious beliefs and/or sexual identity have the right to protection from abuse.",
+        "main_sub_description_intro": "Through this policy, Slum Soccer recognizes that the welfare of the child is paramount. \n\nAll children, whatever their age, culture, disability, gender, language, racial origin religious beliefs and/or sexual identity have the right to protection from abuse.",
         "second_sub_description_intro": "All suspicions and allegations of abuse and poor practice will be taken seriously and responded to swiftly and appropriately.",
         "third_sub_description_intro": "All staff (paid/unpaid) working in sport have a responsibility to report concerns to the appropriate officer",
         "canBeModified": false
