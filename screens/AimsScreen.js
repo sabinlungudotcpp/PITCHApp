@@ -17,7 +17,8 @@ const AimsScreen = ({props, navigation}) => { // Aims Screen Component
         <Text style = {styles.aimsContainer}>{introductionData.map(value => value.title_aims)}</Text>
 
         <Card style = {styles.cardStyle}>
-            <FlatList data = {introductionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.aimsTextContainer}>{item.description_aims}</Text>} />
+            <FlatList data = {introductionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.aimsTextContainer}>{item.description_aims}</Text>}/>
+            <FlatList data = {introductionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.aimsTextContainer}>{item.main_sub_description_aims}</Text>} />
         </Card>
 
         <View style = {styles.btnContainers}>
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
     aimsText: {
         textAlign: 'center',
         fontSize: 32,
-        marginTop: 60,
+        marginTop: 55,
         color: '#F7B500'
     },
 
@@ -46,7 +47,8 @@ const styles = StyleSheet.create({
     aimsTextContainer: { // Styles for the text inside the card
         textAlign: 'center',
         padding: -9,
-        marginBottom: -10,
+        marginBottom: -13,
+        marginTop: 1.5,
         fontSize: 15.5
     },
 
@@ -54,9 +56,9 @@ const styles = StyleSheet.create({
         padding: 4,
         paddingLeft: -40,
         paddingBottom: -5,
-        marginBottom: 40,
+        marginBottom: 30,
         width: 350,
-        height: 160,
+        height: 165,
         marginLeft: 35,
         marginTop: 35,
         alignItems: 'center',
@@ -74,8 +76,8 @@ const styles = StyleSheet.create({
         height: 42,
         textAlign: 'center',
         borderRadius: 200,
-        marginLeft: 60,
-        marginTop: 30,
+        marginLeft: 50,
+        marginTop: 10,
         paddingHorizontal: -20,
         justifyContent: 'space-between',
         flex: 1,
@@ -85,14 +87,14 @@ const styles = StyleSheet.create({
     },
 
     backBtn: {
-        width: 130,
+        width: 140,
         marginRight: 20,
         paddingLeft: 5,
         marginLeft: -5
     },
 
     policyBtn: {
-        width: 145,
+        width: 150,
         marginLeft: 10
     }
 });
