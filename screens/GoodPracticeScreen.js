@@ -12,6 +12,7 @@ const GoodPracticeScreen = ({props, navigation}) => {
             <Image style = {styles.imageContainer} source = {require('../assets/Images/ImageGoodPractice.jpg')}/>
 
             <Card style = {styles.cardStyle}>
+            <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text>{item.description_practice}</Text>} />
 
             </Card>
 
@@ -27,7 +28,7 @@ const GoodPracticeScreen = ({props, navigation}) => {
             <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Next Policy" />
         </View>
 
-        </ScrollView>
+       </ScrollView>
     )
 }
 
@@ -67,9 +68,9 @@ const styles = StyleSheet.create({
         paddingBottom: -5,
         marginBottom: 30,
         width: 320,
-        height: 150,
+        height: 175,
         marginLeft: 50,
-        marginTop: 45,
+        marginTop: 35,
         alignItems: 'center',
         maxWidth: '100%'
     },
