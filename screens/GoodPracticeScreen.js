@@ -11,17 +11,21 @@ const GoodPracticeScreen = ({props, navigation}) => {
             <Text style = {styles.goodPracticeTxt}>{ChildProtectionData.map(data => data.title_practice)}</Text>
             <Image style = {styles.imageContainer} source = {require('../assets/Images/ImageGoodPractice.jpg')}/>
 
-            <Card style = {styles.cardStyle}>
-            <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text>{item.description_practice}</Text>} />
+        <Card style = {styles.cardStyle}>
+            <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.practiceTxt}>{item.description_practice}</Text>}/>
+        </Card>
 
-            </Card>
+        <View style = {styles.btnContainers}>
+                <Button style = {styles.nextBtn} buttonStyle =  {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "Next Policy" /> 
+                <Button style = {styles.guidelinesBtn} buttonStyle =  {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "Guidelines" /> 
+        </View>
 
-            <Text style = {styles.avoidTxt}>{ChildProtectionData.map(data => data.title_avoid)}</Text>
-            <Image style = {styles.avoidImg} source = {require('../assets/Images/ImagePracticesToAvoid.jpg')}/>
+        <Text style = {styles.avoidTxt}>{ChildProtectionData.map(data => data.title_avoid)}</Text>
+        <Image style = {styles.avoidImg} source = {require('../assets/Images/ImagePracticesToAvoid.jpg')}/>
 
-            <Card style = {styles.cardStyle}>
+        <Card style = {styles.cardStyle}>
 
-            </Card>
+        </Card>
 
         <View style = {styles.btnContainer}>
             <Button style = {styles.guidelinesBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Guidelines"/>
@@ -47,6 +51,10 @@ const styles = StyleSheet.create({
         color: '#F7B500'
     },
 
+    practiceTxt: {
+        fontSize: 15.5
+    },
+
     imageContainer: {
         width: 320,
         height: 180,
@@ -63,12 +71,12 @@ const styles = StyleSheet.create({
     },
 
     cardStyle: {
-        padding: 4,
+        padding: 8,
         paddingLeft: -40,
         paddingBottom: -5,
         marginBottom: 30,
         width: 320,
-        height: 175,
+        height: 163,
         marginLeft: 50,
         marginTop: 35,
         alignItems: 'center',
@@ -101,6 +109,12 @@ const styles = StyleSheet.create({
     nextPolicyBtn: {
         width: 150,
         marginLeft: 10
+    },
+
+    nextBtn: {
+        width: 175,
+        marginLeft: 120,
+        marginBottom: 30
     }
 });
 
