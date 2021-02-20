@@ -1,7 +1,7 @@
 const GUIDELINE_DATA = [ // Array of JSON objects to store the guideline data
     {
         "guideline_id": 1, // Unqiue guideline ID
-        "title_practice": "Good practice guidelines",
+        "title_practice": "Good Practice Guidelines",
         "sub_heading_practice": "All personnel should be encouraged to demonstrate exemplary behavior in order to promote children's welfare and reduce the likelihood of allegations being made. The following are common sense examples of how to create a positive culture and climate",
         "image_practice": "../assets/Images/ImageGuidelines.jpg",
         "guideline_sub_title_practice": "Good practice means:",
