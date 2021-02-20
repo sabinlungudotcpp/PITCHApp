@@ -15,9 +15,9 @@ const GoodPracticeScreen = ({props, navigation}) => {
             <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.practiceTxt}>{item.description_practice}</Text>}/>
         </Card>
 
-        <View style = {styles.btnContainers}>
-                <Button style = {styles.nextBtn} buttonStyle =  {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "Next Policy" /> 
-                <Button style = {styles.guidelinesBtn} buttonStyle =  {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "Guidelines" /> 
+        <View style = {styles.btnContainer}>
+             <Button style = {styles.firstGuidelineBtn} buttonStyle =  {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "Guidelines" /> 
+             <Button style = {styles.nextPolicyBtn} buttonStyle =  {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "Next Policy" /> 
         </View>
 
         <Text style = {styles.avoidTxt}>{ChildProtectionData.map(data => data.title_avoid)}</Text>
@@ -99,6 +99,16 @@ const styles = StyleSheet.create({
         marginBottom: 50
     },
 
+    firstGuidelineBtn: {
+        width: 140,
+         right: -5,
+         left: -10,
+         marginLeft: 20,
+         marginRight: 10,
+         color: 'black',
+         textAlign: 'center'
+    },
+
     guidelinesBtn: {
         width: 145,
         marginRight: 20,
@@ -109,12 +119,6 @@ const styles = StyleSheet.create({
     nextPolicyBtn: {
         width: 150,
         marginLeft: 10
-    },
-
-    nextBtn: {
-        width: 175,
-        marginLeft: 120,
-        marginBottom: 30
     }
 });
 
