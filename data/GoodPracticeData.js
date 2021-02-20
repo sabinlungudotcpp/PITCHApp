@@ -1,25 +1,25 @@
 const GOOD_PRACTICE_DATA = [
     {
             "description_id": 1001,
-            "description_practice": "1. Always working in an open environment (e.g avoiding private or unobserved situations and encouraging open communication with no secrets",
+            "description_practice": "1. Always working in an open environment (e.g avoiding private or unobserved situations and encouraging open communication with no secrets.\n",
             "canBeModified": false
         },
 
         {
             "description_id": 1002,
-            "description_practice": "2. Treating all young people/disabled adults equally, and with respect and dignity",
+            "description_practice": "2. Treating all young people/disabled adults equally, and with respect and dignity\n",
             "canBeModified": false
         },
 
         {
             "description_id": 1003,
-            "description_practice": "3. Always putting the welfare of each young person first, before winning or achieving goals",
+            "description_practice": "3. Always putting the welfare of each young person first, before winning or achieving goals\n",
             "canBeModified": false
         },
 
         {
             "description_id": 1004,
-            "description_practice": "4. Maintaining a safe and appropriate distance with players (e.g it's not appropriate for staff or volunteers to have an intimate relationship with a child or to share a room with them).",
+            "description_practice": "4. Maintaining a safe and appropriate distance with players (e.g it's not appropriate for staff or volunteers to have an intimate relationship with a child or to share a room with them).\n",
             "canBeModified": false
         },
 
