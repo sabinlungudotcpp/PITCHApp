@@ -2,7 +2,7 @@ import React from 'react';
 import {Text, Image, StyleSheet, FlatList, View} from 'react-native';
 import {Button} from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
-import Card from '../components/Card';
+import Card from '../components/Card'; // Card import from the components
 import ChildProtectionData from '../data/ChildProtectionData';
 
 const GoodPracticeScreen = ({props, navigation}) => {
@@ -17,7 +17,7 @@ const GoodPracticeScreen = ({props, navigation}) => {
 
         <View style = {styles.btnContainer}>
              <Button style = {styles.firstGuidelineBtn} buttonStyle =  {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "Guidelines" /> 
-             <Button style = {styles.nextPolicyBtn} buttonStyle =  {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "Next Policy" /> 
+             <Button style = {styles.nextPolicyBtn} buttonStyle =  {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "View More" /> 
         </View>
 
         <Text style = {styles.avoidTxt}>{ChildProtectionData.map(data => data.title_avoid)}</Text>
@@ -37,8 +37,8 @@ const GoodPracticeScreen = ({props, navigation}) => {
 }
 
 const styles = StyleSheet.create({
-    goodPracticeTxt: {
-        textAlign: 'center',
+    goodPracticeTxt: { // Stylings for the good practice text header
+        textAlign: 'center', // Aligned in the center
         marginTop: 60,
         marginBottom: 10,
         fontSize: 30,
@@ -75,9 +75,9 @@ const styles = StyleSheet.create({
         paddingLeft: -40,
         paddingBottom: -5,
         marginBottom: 30,
-        width: 320,
-        height: 163,
-        marginLeft: 50,
+        width: 350,
+        height: 130,
+        marginLeft: 35,
         marginTop: 35,
         alignItems: 'center',
         maxWidth: '100%'
@@ -99,14 +99,14 @@ const styles = StyleSheet.create({
         marginBottom: 50
     },
 
-    firstGuidelineBtn: {
-        width: 140,
-         right: -5,
-         left: -10,
-         marginLeft: 20,
-         marginRight: 10,
-         color: 'black',
-         textAlign: 'center'
+    firstGuidelineBtn: { // Stylings for the first guideline button
+      width: 145, // Width of 145 pixels
+      right: -5,
+      left: -10,
+      marginLeft: 10,
+      marginRight: 15,
+      color: 'black',
+      textAlign: 'center'
     },
 
     guidelinesBtn: {
@@ -117,8 +117,8 @@ const styles = StyleSheet.create({
     },  
 
     nextPolicyBtn: {
-        width: 150,
-        marginLeft: 10
+        width: 155,
+        marginLeft: 1
     }
 });
 
