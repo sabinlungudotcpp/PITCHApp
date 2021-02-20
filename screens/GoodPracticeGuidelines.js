@@ -48,11 +48,15 @@ const style = StyleSheet.create({
         paddingBottom: -5,
         marginBottom: 30,
         width: 350,
-        height: 185,
+        height: 200,
         marginLeft: 35,
         marginTop: 35,
         alignItems: 'center',
         maxWidth: '100%'
+    },
+
+    descriptionStyles: {
+        fontSize: 15.5
     },
 
     guidelineBtn: {
