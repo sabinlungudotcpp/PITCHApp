@@ -7,19 +7,16 @@ import GoodPracticeData from '../data/GoodPracticeData';
 
 const GoodPracticeGuidelines = ({props, navigation, item}) => {
     return (
+
         <ScrollView>
             <Text style = {style.goodPracticeGuidelinesTxt}>{GuidelineData.map(value => value.title_practice)}</Text>
 
-        
           <Card style = {style.cardStyle}>
              <FlatList keyExtractor = {(item) => item.id} data = {GoodPracticeData} renderItem = {({item}) => item.description_practice.startsWith('1.') || item.description_practice.startsWith('2. ') || item.description_practice.startsWith('3. ') || item.description_practice.startsWith('4. ') || item.description_practice.startsWith('5. ') ? <Text style = {style.descriptionStyles}>{item.description_practice}</Text> : null} />
           </Card>
 
-       
-        
-
+    
          <Card style = {style.cardStyle}>
-         
          </Card>
 
          <Card style = {style.cardStyle}>
@@ -43,12 +40,12 @@ const style = StyleSheet.create({
     },
 
     cardStyle: {
-        padding: 10,
+        padding: 12,
         paddingLeft: -40,
         paddingBottom: -5,
         marginBottom: 30,
         width: 350,
-        height: 200,
+        height: 220,
         marginLeft: 35,
         marginTop: 35,
         alignItems: 'center',
@@ -56,7 +53,7 @@ const style = StyleSheet.create({
     },
 
     descriptionStyles: {
-        fontSize: 15.5
+        fontSize: 15.7
     },
 
     guidelineBtn: {
