@@ -30,7 +30,7 @@ const GoodPracticeScreen = ({props, navigation}) => {
 
         <View style = {styles.btnContainer}>
             <Button onPress = {() => {}} style = {styles.guidelinesBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Guidelines"/>
-            <Button onPress = {() => {}} style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Next Policy" />
+            <Button onPress = {() => navigation.navigate('PhotographyFilmingScreen')} style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Next Policy" />
         </View>
 
        </ScrollView>

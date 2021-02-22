@@ -11,7 +11,7 @@ import PhotographyFilmingScreen from '../screens/PhotographyFilmingScreen';
 
 const Stack = createStackNavigator(); // Creates a stack navigator
 
-const SlumSoccerStackNavigator = ({navigation}) => {
+const SlumSoccerStackNavigator = ({navigation}) => { // Stack Navigation for Slum Soccer
     return <Stack.Navigator>
         <Stack.Screen options = { {headerTintColor: 'black', headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
               color="#fff"/>), headerRight: () => (<Button onPress={() => navigation.navigate('Register')} title = "Register"
