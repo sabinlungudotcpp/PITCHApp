@@ -29,8 +29,8 @@ const GoodPracticeScreen = ({props, navigation}) => {
         </Card>
 
         <View style = {styles.btnContainer}>
-            <Button style = {styles.guidelinesBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Guidelines"/>
-            <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Next Policy" />
+            <Button onPress = {() => {}} style = {styles.guidelinesBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Guidelines"/>
+            <Button onPress = {() => {}} style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Next Policy" />
         </View>
 
        </ScrollView>
