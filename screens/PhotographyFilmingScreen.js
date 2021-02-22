@@ -15,8 +15,8 @@ const PhotographyFilmingScreen = ({props, navigation, item}) => {
             </Card>
 
             <View style = {style.btnContainers}>
-                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Back" />
-                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Next Policy"/>
+                <Button onPress = {() => {}} style = {style.backBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Back" />
+                <Button onPress = {() => {}} style = {style.nextPolicyBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Next Policy"/>
             </View>
         </ScrollView>
     )
@@ -52,6 +52,14 @@ const style = StyleSheet.create({
 
     btnContainers: {
 
+    },
+
+    backBtn: {
+
+    },
+
+    nextPolicyBtn: {
+        
     }
 })
 
