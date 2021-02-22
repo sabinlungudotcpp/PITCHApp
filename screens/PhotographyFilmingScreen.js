@@ -18,7 +18,8 @@ const PhotographyFilmingScreen = ({props, navigation, item}) => {
                 <Button onPress = {() => {}} style = {style.backBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Back" />
                 <Button onPress = {() => {}} style = {style.nextPolicyBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Next Policy"/>
             </View>
-        </ScrollView>
+
+     </ScrollView>
     )
 };
 
@@ -51,15 +52,44 @@ const style = StyleSheet.create({
     },
 
     btnContainers: {
-
+        width: 140,
+        height: 42,
+        textAlign: 'center',
+        borderRadius: 200,
+        marginLeft: 50,
+        marginTop: 15,
+        paddingHorizontal: -20,
+        justifyContent: 'space-between',
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingRight: 10,
     },
 
-    backBtn: {
-
+    backBtn: { 
+        width: 180,
+        borderRadius: 200,
+        color: 'black',
+        paddingLeft: 10,
+        textAlign: 'center',
+        alignSelf: 'center',
+        alignContent: 'center',
+        textAlign: 'center',
+        color: 'black',
+        left: 25,
+        paddingLeft: 10,
+        paddingHorizontal: 20,
+        marginRight: 5,
+        marginLeft: -40,
     },
 
     nextPolicyBtn: {
-        
+        width: 160,
+         right: -5,
+         left: -10,
+         marginLeft: 35,
+         color: 'black',
+         textAlign: 'center'
     }
 })
 
