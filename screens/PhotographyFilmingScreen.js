@@ -8,8 +8,15 @@ const PhotographyFilmingScreen = ({props, navigation, item}) => {
     return (
         <ScrollView>
             <Text style = {style.photographyTxt}>{ChildProtectionData.map(value => value.title_photography)}</Text>
-
             <Image style = {style.photographyImg} source = {require('../assets/Images/ImagePhotography.jpg')} />
+
+            <Card style = {style.cardStyle}>
+
+            </Card>
+
+            <View style = {style.btnContainers}>
+
+            </View>
         </ScrollView>
     )
 };
@@ -23,10 +30,27 @@ const style = StyleSheet.create({
     },
 
     photographyImg: {
-        width: 300,
-        height: 180,
-        marginLeft: 58,
+        width: 320,
+        height: 200,
+        marginLeft: 52,
         marginVertical: 25
+    },
+
+    cardStyle: {
+        padding: 12,
+        paddingLeft: -40,
+        paddingBottom: -5,
+        marginBottom: 30,
+        width: 320,
+        height: 160,
+        marginLeft: 50,
+        marginTop: 20,
+        alignItems: 'center',
+        maxWidth: '100%'
+    },
+
+    btnContainers: {
+        
     }
 })
 
