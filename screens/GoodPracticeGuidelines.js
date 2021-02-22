@@ -1,13 +1,13 @@
 import React from 'react';
-import {View, StyleSheet, ScrollView, Text, FlatList, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, ScrollView, Text, FlatList} from 'react-native';
 import {Button} from 'react-native-elements';
 import Card from '../components/Card';
 import GuidelineData from '../data/GuidelineData';
 import GoodPracticeData from '../data/GoodPracticeData';
 
-const GoodPracticeGuidelines = ({props, navigation, item}) => {
-    return (
+const GoodPracticeGuidelines = ({props, navigation, item}) => { // Good Practice Guidelines Component
 
+    return (
         <ScrollView>
             <Text style = {style.goodPracticeGuidelinesTxt}>{GuidelineData.map(value => value.title_practice)}</Text>
 
@@ -17,6 +17,7 @@ const GoodPracticeGuidelines = ({props, navigation, item}) => {
 
     
          <Card style = {style.cardStyle}>
+             <FlatList keyExtractor = {(item) => item.id} data = {GoodPracticeData} renderItem = {({item}) => item.description_id >= 1006 && item.description_id  <= 1011 ? <Text style = {style.descriptionStyles}>{item.description_practice}</Text> : null}  />
          </Card>
 
          <Card style = {style.cardStyle}>

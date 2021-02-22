@@ -4,6 +4,7 @@ import {Button} from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 import Card from '../components/Card'; // Card import from the components
 import ChildProtectionData from '../data/ChildProtectionData';
+import AvoidData from '../data/AvoidData';
 
 const GoodPracticeScreen = ({props, navigation}) => {
     return (
@@ -24,7 +25,7 @@ const GoodPracticeScreen = ({props, navigation}) => {
         <Image style = {styles.avoidImg} source = {require('../assets/Images/ImagePracticesToAvoid.jpg')}/>
 
         <Card style = {styles.cardStyle}>
-
+            <FlatList data = {AvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.descriptionAvoidTxt}>{item.description_avoid}</Text>} />
         </Card>
 
         <View style = {styles.btnContainer}>
@@ -119,6 +120,11 @@ const styles = StyleSheet.create({
     nextPolicyBtn: {
         width: 155,
         marginLeft: 1
+    },
+
+    descriptionAvoidTxt: {
+        marginTop: 10,
+        fontSize: 15
     }
 });
 

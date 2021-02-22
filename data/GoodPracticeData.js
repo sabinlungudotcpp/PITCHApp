@@ -31,19 +31,19 @@ const GOOD_PRACTICE_DATA = [
 
         {
             "description_id": 1006,
-            "description_practice": "6. Making sport fun, enjoyable and promoting fair play",
+            "description_practice": "6. Making sport fun, enjoyable and promoting fair play. \n",
             "canBeModified": false
         },
 
         {
             "description_id": 1007,
-            "description_practice": "7. Ensuring that if any form of manual/physical support is required, it should be provided openly and according to guidelines provided by the Coach Education Programme. \n \nCare is needed, as it is difficult to maintain hand positions when the child is constantly moving. Young people and their parents should always be conslted and their agreement gained",
+            "description_practice": "7. Ensuring that if any form of manual/physical support is required, it should be provided openly and according to guidelines provided by the Coach Education Programme. \n \nCare is needed, as it is difficult to maintain hand positions when the child is constantly moving. Young people and their parents should always be conslted and their agreement gained. \n",
             "canBeModified": false
         },
 
         {
             "description_id": 1008, // Description ID
-            "description_practice": "8. Keeping up to date with technical skills, qualifications and insurance in sport.",
+            "description_practice": "8. Keeping up to date with technical skills, qualifications and insurance in sport.\n ",
             "canBeModified": false
         },
 
