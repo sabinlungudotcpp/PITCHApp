@@ -11,7 +11,7 @@ const PhotographyFilmingScreen = ({props, navigation, item}) => {
             <Image style = {style.photographyImg} source = {require('../assets/Images/ImagePhotography.jpg')} />
 
             <Card style = {style.cardStyle}>
-
+                <FlatList keyExtractor = {(item) => item.id} data = {ChildProtectionData} renderItem = {({item}) => <Text style = {style.photographyDescriptionTxt}>{item.photography_description}</Text>} />
             </Card>
 
             <View style = {style.btnContainers}>
@@ -44,7 +44,7 @@ const style = StyleSheet.create({
         paddingBottom: -5,
         marginBottom: 30,
         width: 320,
-        height: 160,
+        height: 170,
         marginLeft: 50,
         marginTop: 20,
         alignItems: 'center',
@@ -90,6 +90,12 @@ const style = StyleSheet.create({
          marginLeft: 35,
          color: 'black',
          textAlign: 'center'
+    },
+
+    photographyDescriptionTxt: {
+        padding: -6,
+        marginBottom: -15,
+        fontSize: 15
     }
 })
 

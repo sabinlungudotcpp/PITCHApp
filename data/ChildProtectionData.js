@@ -19,7 +19,8 @@ const CHILD_PROTECTION_DATA = [
     {
         "id": 3,
         "title_photography": "Photography / Filming",
-        "photography_description": "There is evidence that some people have used sporting events as an opportunity to take inappopriate photographs or film footage of young and disabled people in vulnerable positions. All officers should be vigilant and any concerns should be reported to the Child Protection officer"
+        "photography_description": "There is evidence that some people have used sporting events as an opportunity to take inappopriate photographs or film footage of young and disabled people in vulnerable positions. \n All officers should be vigilant and any concerns should be reported to the Child Protection officer",
+        "photography_description": "There is no intention to prevent coaches and teachers using video equipment as a legitimate coaching aid. However, performers and their parents/carers should be made aware that this is part of the coaching programme and their consent obtained, and such films should be stored safely."
     },
 
     {
