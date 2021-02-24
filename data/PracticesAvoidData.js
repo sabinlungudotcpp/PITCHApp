@@ -14,7 +14,17 @@ const PRACTICES_AVOID_DATA = [
 
     {
         "id": 3,
-        "sanction_data": "2. Share a room with a child"
+        "sanction_data": "2. Share a room with a child.\n"
+    },
+
+    {
+        "id": 4,
+        "sanction_data": "3. Allow or engage in any form of inappopriate touching.\n"
+    },
+
+    {
+        "id": 5,
+        "sanction_data": "4. Allow children to use inappopriate language unchallenged."
     }
 ]
 
