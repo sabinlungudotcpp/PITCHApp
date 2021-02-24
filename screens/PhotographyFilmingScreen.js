@@ -84,7 +84,7 @@ const style = StyleSheet.create({
     },
 
     nextPolicyBtn: {
-        width: 160,
+         width: 160,
          right: -5,
          left: -10,
          marginLeft: 35,

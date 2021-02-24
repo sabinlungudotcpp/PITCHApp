@@ -1,9 +1,8 @@
 import React from 'react';
 import {View, StyleSheet, Text, ScrollView, FlatList, Image} from 'react-native';
-import {Button} from 'react-native';
+import {Button} from 'react-native-elements';
 import Card from '../components/Card';
 import ChildProtectionData from '../data/ChildProtectionData';
-
 
 const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Screen
     return (
@@ -20,8 +19,8 @@ const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Sc
             </Card>
 
             <View style = {style.buttonContainer}>
-                <Button onPress = {() => {}} style = {style.backBtn} title = "Back" />
-                <Button onPress = {() => {}} style = {style.guidelinesBtn} title = "View Guidelines" />
+                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {style.backBtn} title = "Back" />
+                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {style.guidelinesBtn} title = "View Guidelines" />
             </View>
 
         </ScrollView>
@@ -48,7 +47,7 @@ const style = StyleSheet.create({ // The styles for the recruitment screen
         padding: 10, // Has a padding space of 12
         paddingLeft: -40, // Padding left of -40
         paddingBottom: -5,
-        marginBottom: 10,
+        marginBottom: 1,
         width: 340,
         height: 140,
         marginLeft: 45,
@@ -75,15 +74,45 @@ const style = StyleSheet.create({ // The styles for the recruitment screen
     },
 
     buttonContainer: {
-
+        width: 110,
+        height: 42,
+        textAlign: 'center',
+        borderRadius: 200,
+        marginLeft: 47,
+        marginTop: 35,
+        paddingHorizontal: -20,
+        justifyContent: 'space-between',
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingRight: 10,
+        marginBottom: 50
     },
 
     backBtn: {
-        marginTop: 20
+        width: 180,
+        borderRadius: 200,
+        color: 'black',
+        paddingLeft: 10,
+        textAlign: 'center',
+        alignSelf: 'center',
+        alignContent: 'center',
+        textAlign: 'center',
+        color: 'black',
+        left: 25,
+        paddingLeft: 10,
+        paddingHorizontal: 20,
+        marginRight: 5,
+        marginLeft: -40,
     },
 
     guidelinesBtn: {
-
+        width: 160,
+        right: -5,
+        left: -10,
+        marginLeft: 35,
+        color: 'black',
+        textAlign: 'center'
     }
 
 
