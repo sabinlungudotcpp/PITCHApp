@@ -16,7 +16,7 @@ const PhotographyFilmingScreen = ({props, navigation, item}) => {
 
             <View style = {style.btnContainers}>
                 <Button onPress = {() => {}} style = {style.backBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Back" />
-                <Button onPress = {() => {}} style = {style.nextPolicyBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Next Policy"/>
+                <Button onPress = {() => navigation.navigate('RecruitmentScreen')} style = {style.nextPolicyBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Next Policy"/>
             </View>
 
      </ScrollView>
