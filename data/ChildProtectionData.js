@@ -43,7 +43,12 @@ const CHILD_PROTECTION_DATA = [
     {
         "id": 7,
         "recruitment_list": "4. Evidence of identity (passport or driving licence with photo).\n"
+    },
 
+    {
+        "id": 8,
+        "guideline_title": "Interview and Induction",
+        "guideline_description": "All employees (and volunteers)"
     }
 ]
 

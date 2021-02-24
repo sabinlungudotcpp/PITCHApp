@@ -20,7 +20,7 @@ const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Sc
 
             <View style = {style.buttonContainer}>
                 <Button onPress = {() => {}} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {style.backBtn} title = "Back" />
-                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {style.guidelinesBtn} title = "View Guidelines" />
+                <Button onPress = {() => navigation.navigate('RecruitmentGuidelines')} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {style.guidelinesBtn} title = "View Guidelines" />
             </View>
 
         </ScrollView>

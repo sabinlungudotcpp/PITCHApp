@@ -37,8 +37,6 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
                   <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View Module" onPress = {() => navigation.navigate('EdukickScreen')} />
             </View>
         </Card>
-
-
     </ScrollView>
     )
 };
@@ -81,8 +79,5 @@ const styles = StyleSheet.create({ // Styles for the module screen
         top: 10
     },
 });
-
-
-
 
 export default ModulesScreen;

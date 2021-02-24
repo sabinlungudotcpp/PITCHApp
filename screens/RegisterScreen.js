@@ -5,7 +5,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import {Button} from 'react-native-elements';
 
 const generateRandomString = () => { // Generate random string to store in the Username input
-    let characters = 'abcdef15'; // Random characters to generate
+    let characters = 'abcdefgh12345'; // Random characters to generate
     let output = ''; // Output of the generated string
 
     for(var i = 0; i < characters.length; i++) { // Loop through the length of the characters string
