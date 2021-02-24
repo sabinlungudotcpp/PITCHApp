@@ -3,6 +3,7 @@ import {View, StyleSheet, Text, ScrollView, FlatList, Image} from 'react-native'
 import {Button} from 'react-native-elements';
 import Card from '../components/Card';
 import ChildProtectionData from '../data/ChildProtectionData';
+import Colors from '../constants/Colors';
 
 const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Screen
     return (
@@ -33,7 +34,7 @@ const style = StyleSheet.create({ // The styles for the recruitment screen
         marginTop: 40,
         fontSize: 31,
         marginLeft: 5,
-        color: '#F7B500'
+        color: Colors.primaryColor
     },
 
     recruitmentImg: { // The styles for the recruitment image
