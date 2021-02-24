@@ -7,7 +7,7 @@ import ChildProtectionData from '../data/ChildProtectionData';
 const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Screen
     return (
         <ScrollView>
-            <Text style = {style.recruitmentTxt}>Recruitment / Training</Text>
+            <Text style = {style.recruitmentTxt}>{ChildProtectionData.map(value => value.title_recruitment)}</Text>
             <Image style = {style.recruitmentImg} source = {require('../assets/Images/ImageRecruitment.jpg')} />
 
             <Card style = {style.cardStyle}>
@@ -28,16 +28,16 @@ const style = StyleSheet.create({ // The styles for the recruitment screen
         color: '#F7B500'
     },
 
-    recruitmentImg: {
-        width: 330,
+    recruitmentImg: { // The styles for the recruitment image
+        width: 330, // Width of the image
         height: 165,
         marginLeft: 48,
-        marginTop: 20
+        marginTop: 20 // 20 pixels from the top
     },
 
-    cardStyle: {
-        padding: 12,
-        paddingLeft: -40,
+    cardStyle: { // Styling for the card
+        padding: 12, // Has a padding space of 12
+        paddingLeft: -40, // Padding left of -40
         paddingBottom: -5,
         marginBottom: 30,
         width: 340,
