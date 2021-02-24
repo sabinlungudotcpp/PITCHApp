@@ -14,15 +14,14 @@ const PracticesAvoidScreen = ({props, navigation}) => { // The Practices to Avoi
             </Card>
 
             <Card style = {style.cardStyle}>
-            <FlatList data = {PracticesAvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.descriptionStyleTxt}>{item.avoid_list}</Text>} />
-            <FlatList data = {PracticesAvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.descriptionStyleTxt}>{item.avoid_second}</Text>} />
-
+                <FlatList data = {PracticesAvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.descriptionStyleTxt}>{item.avoid_list}</Text>} />
+                <FlatList data = {PracticesAvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.descriptionStyleTxt}>{item.avoid_second}</Text>} />
             </Card>
 
             <Text style = {style.sanctionTxt}>Practices to Sanction</Text>
 
             <Card style = {style.cardStyle}>
-
+                <FlatList data = {PracticesAvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id >= 2 && item.id <= 6 ? <Text>{item.sanction_data}</Text> : null} />
             </Card>
 
         </ScrollView>

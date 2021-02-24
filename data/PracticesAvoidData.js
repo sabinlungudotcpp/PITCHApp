@@ -1,7 +1,7 @@
 const PRACTICES_AVOID_DATA = [
     {
         "id": 1,
-        "description": "The following should be avoided except in emergenceis. If cases arise where these situations are unavoidable it should be with the full knowledge and consent of someone in charge in the organization or the child's parents.",
+        "description": "The following should be avoided except in emergencies.\n\nIf cases arise where these situations are unavoidable it should be with the full knowledge and consent of someone in charge in the organization or the child's parents.",
         "avoid_list": "1. Avoid taking or dropping off a child to an event or activity",
         "avoid_second": "2. Avoid spending time alone with children away from others\n",
     },
@@ -9,7 +9,7 @@ const PRACTICES_AVOID_DATA = [
     {
         "id": 2,
         "description_sanction": "The following should never be sanctioned. You should never: \n",
-        "sanction_data": "1. Engage in rough, physical or sexually provocative games, including horseplay.",
+        "sanction_data": "1. Engage in rough, physical or sexually provocative games, including horseplay.\n",
     },
 
     {
@@ -40,6 +40,16 @@ const PRACTICES_AVOID_DATA = [
     {
         "id": 8,
         "sanction_data": "7. Fail to act upon and record any allegations made by a child.\n"
+    },
+
+    {
+        "id": 9,
+        "sanction_data": "8. Do things of a personal nature for children or disabled adults, that they can do for themselves.\n"
+    },
+
+    {
+        "id": 10,
+        "sanction_data": "9. Invite or allow children to stay with you at your home unsupervised"
     }
 ]
 
