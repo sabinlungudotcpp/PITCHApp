@@ -29,7 +29,7 @@ const GoodPracticeScreen = ({props, navigation}) => {
         </Card>
 
         <View style = {styles.btnContainer}>
-            <Button onPress = {() => {}} style = {styles.guidelinesBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Guidelines"/>
+            <Button onPress = {() => navigation.navigate('PracticesAvoidScreen')} style = {styles.guidelinesBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Guidelines"/>
             <Button onPress = {() => navigation.navigate('PhotographyFilmingScreen')} style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Next Policy" />
         </View>
 

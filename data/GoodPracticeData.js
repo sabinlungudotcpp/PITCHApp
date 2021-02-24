@@ -95,7 +95,7 @@ const GOOD_PRACTICE_DATA = [
 
         {
             "description_id": 1018,
-            "description_practice": "18. Requesting writing parental consent if officials are required to transport young people in their cars."
+            "description_practice": "18. Requesting writing parental consent if officials are required to transport young people in their cars.\n"
         }
 ]
 

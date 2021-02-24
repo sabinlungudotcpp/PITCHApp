@@ -1,6 +1,7 @@
 import React from 'react';
-import {Virw, Text, Image, FlatList, StyleSheet, ScrollView, SafeAreaView} from 'react-native';
+import {View, Text, Image, FlatList, StyleSheet, ScrollView, SafeAreaView} from 'react-native';
 import {Button} from 'react-native-elements';
+import Card from '../components/Card'; // Imports the Card component
 
 const PracticesAvoidScreen = ({props, navigation}) => { // The Practices to Avoid Screen
     return (
