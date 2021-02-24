@@ -11,7 +11,7 @@ const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Sc
             <Image style = {style.recruitmentImg} source = {require('../assets/Images/ImageRecruitment.jpg')} />
 
             <Card style = {style.cardStyle}>
-                <FlatList />
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} />
             </Card>
 
 
