@@ -6,10 +6,16 @@ import Card from '../components/Card'; // Imports the Card component
 const PracticesAvoidScreen = ({props, navigation}) => { // The Practices to Avoid Screen
     return (
         <ScrollView>
-            <Text style = {style.practicesAvoidTxt}>Practices to Avoid</Text>
+            <Text style = {style.mainHeading}>Practices to Avoid</Text>
 
             <Card style = {style.cardStyle}>
-                
+
+            </Card>
+
+            <Text style = {style.mainHeading}>Practices to Sanction</Text>
+
+            <Card style = {style.cardStyle}>
+
             </Card>
 
         </ScrollView>
@@ -21,9 +27,9 @@ const style = StyleSheet.create({
         flex: 1
     },
 
-    practicesAvoidTxt: {
+    mainHeading: {
         textAlign: 'center',
-        marginTop: 60,
+        marginTop: 55,
         fontSize: 31,
         color: '#F7B500'
     },
