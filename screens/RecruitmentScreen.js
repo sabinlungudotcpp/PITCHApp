@@ -20,8 +20,8 @@ const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Sc
             </Card>
 
             <View style = {style.buttonContainer}>
-                <Button style = {style.backBtn} title = "Back" />
-                <Button style = {style.guidelinesBtn} title = "View Guidelines" />
+                <Button onPress = {() => {}} style = {style.backBtn} title = "Back" />
+                <Button onPress = {() => {}} style = {style.guidelinesBtn} title = "View Guidelines" />
             </View>
 
         </ScrollView>
@@ -79,14 +79,14 @@ const style = StyleSheet.create({ // The styles for the recruitment screen
     },
 
     backBtn: {
-
+        marginTop: 20
     },
 
     guidelinesBtn: {
 
     }
 
-    
+
 });
 
 export default RecruitmentScreen; // Export the Recruitment Screen
