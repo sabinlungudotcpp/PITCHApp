@@ -5,7 +5,9 @@ import Card from '../components/Card';
 
 const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Screen
     return (
-
+        <ScrollView>
+            <Text>Recruitment / Training</Text>
+        </ScrollView>
     )
 };
 
