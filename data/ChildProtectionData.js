@@ -26,11 +26,24 @@ const CHILD_PROTECTION_DATA = [
     {
         "id": 4,
         "title_recruitment": "Recruitment / Training",
-        "recruitment_description": "Slum Soccer recognizes that anyone may have the potential to abuse children in some way and that all reasonable steps are taken to ensure unsuitable people are prevented from working with children. Pre-selection checks must include the following",
-        "recruitment_list": "1. All volunteers / staff should complete an application form. The application form will elicit information about an applicant's past and a self-disclosure about any criminal record",
-        "recruitment_list": "2. Consent should be obtained from an application to seek information from the Criminal Records Bureau.",
-        "recruitment_list": "3. Two confidential references, including one regarding previous work with children. These references must be taken up and confirmed through telephone contact",
-        "recruitment_list": "4. Evidence of identity (passport or driving licence with photo)"
+        "recruitment_description": "Slum Soccer recognizes that anyone may have the potential to abuse children in some way and that all reasonable steps are taken to ensure unsuitable people are prevented from working with children. Pre-selection checks must include the following:",
+        "recruitment_list": "1. All volunteers / staff should complete an application form. The application form will elicit information about an applicant's past and a self-disclosure about any criminal record.\n",
+    },
+
+    {
+        "id": 5,
+        "recruitment_list": "2. Consent should be obtained from an application to seek information from the Criminal Records Bureau.\n",
+    },
+
+    {
+        "id": 6,
+        "recruitment_list": "3. Two confidential references, including one regarding previous work with children. These references must be taken up and confirmed through telephone contact.\n",
+    },
+
+    {
+        "id": 7,
+        "recruitment_list": "4. Evidence of identity (passport or driving licence with photo).\n"
+
     }
 ]
 
