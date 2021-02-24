@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, FlatList, StyleSheet, ScrollView} from 'react-native';
+import {View, Text, FlatList, StyleSheet, ScrollView} from 'react-native';
 import {Button} from 'react-native-elements';
 import Card from '../components/Card'; // Imports the Card component
 import PracticesAvoidData from '../data/PracticesAvoidData';
@@ -27,6 +27,11 @@ const PracticesAvoidScreen = ({props, navigation}) => { // The Practices to Avoi
             <Card style = {style.cardStyle}>
                 <FlatList data = {PracticesAvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id >= 6 && item.id <= 10 ? <Text>{item.sanction_data}</Text> : null} />
             </Card>
+
+            <View style = {style.btnContainer}>
+                <Button onPress = {() => navigation.navigate('GoodPracticeScreen')} style = {style.backBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Back"/>
+            </View>
+            
 
         </ScrollView>
     )
@@ -65,6 +70,27 @@ const style = StyleSheet.create({
         textAlign: 'center',
         fontSize: 31,
         color: '#F7B500'
+    },
+
+    btnContainer: {
+        width: 110,
+        height: 42,
+        textAlign: 'center',
+        borderRadius: 200,
+        marginLeft: 50,
+        marginTop: 10,
+        paddingHorizontal: -20,
+        justifyContent: 'space-between',
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingRight: 10,
+        marginBottom: 50
+    },
+
+    backBtn: {
+        width: 150,
+        marginLeft: 80
     }
 });
 
