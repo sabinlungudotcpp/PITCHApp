@@ -4,10 +4,10 @@ import {Button} from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 import Card from '../components/Card'; // Card import from the components
 import ChildProtectionData from '../data/ChildProtectionData';
-import AvoidData from '../data/AvoidData';
-import Colors from '../constants/Colors';
+import AvoidData from '../data/AvoidData'; // Imports the Avoid data
+import Colors from '../constants/Colors'; // Imports the Colors from the file
 
-const GoodPracticeScreen = ({props, navigation}) => {
+const GoodPracticeScreen = ({props, navigation, item}) => { // The Good Practices Screen
     return (
         <ScrollView>
             <Text style = {styles.goodPracticeTxt}>{ChildProtectionData.map(data => data.title_practice)}</Text>
@@ -57,8 +57,8 @@ const styles = StyleSheet.create({
         fontSize: 15.5
     },
 
-    imageContainer: {
-        width: 320,
+    imageContainer: { // Stylings for the image container
+        width: 320, // Has a width of 320
         height: 180,
         marginLeft: 47,
         marginTop: 20
@@ -123,10 +123,10 @@ const styles = StyleSheet.create({
         marginLeft: 1
     },
 
-    descriptionAvoidTxt: {
+    descriptionAvoidTxt: { // Styles for the avoid descriptions text
         marginTop: 10,
         fontSize: 15
     }
 });
 
-export default GoodPracticeScreen;
+export default GoodPracticeScreen; // Export the screen
