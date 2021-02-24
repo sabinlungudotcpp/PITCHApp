@@ -5,6 +5,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import Card from '../components/Card'; // Card import from the components
 import ChildProtectionData from '../data/ChildProtectionData';
 import AvoidData from '../data/AvoidData';
+import Colors from '../constants/Colors';
 
 const GoodPracticeScreen = ({props, navigation}) => {
     return (
@@ -43,13 +44,13 @@ const styles = StyleSheet.create({
         marginTop: 60,
         marginBottom: 10,
         fontSize: 30,
-        color: '#F7B500'
+        color: Colors.primaryColor
     },
 
     avoidTxt: {
         textAlign: 'center',
         fontSize: 30,
-        color: '#F7B500'
+        color: Colors.primaryColor
     },
 
     practiceTxt: {
