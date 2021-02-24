@@ -24,8 +24,23 @@ const PRACTICES_AVOID_DATA = [
 
     {
         "id": 5,
-        "sanction_data": "4. Allow children to use inappopriate language unchallenged."
+        "sanction_data": "4. Allow children to use inappopriate language unchallenged.\n"
+    },
+
+    {
+        "id": 6,
+        "sanction_data": "5. Make sexually suggestive comments to a child.\n"
+    },
+
+    {
+        "id": 7,
+        "sanction_data": "6. Reduce a child to tears as a form of control.\n"
+    },
+
+    {
+        "id": 8,
+        "sanction_data": "7. Fail to act upon and record any allegations made by a child.\n"
     }
 ]
 
-export default PRACTICES_AVOID_DATA;
+export default PRACTICES_AVOID_DATA; // Export the data
