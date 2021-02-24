@@ -60,37 +60,37 @@ const GOOD_PRACTICE_DATA = [
 
         {
             "description_id": 1011,
-            "description_practice": "11. Ensuring that if mixed teams are taken away, they should always be accomopanied by a mal and a female member of staff. However, remember that same gender abuse can also occur"
+            "description_practice": "11. Ensuring that if mixed teams are taken away, they should always be accomopanied by a mal and a female member of staff. However, remember that same gender abuse can also occur\n"
         },
 
         {
             "description_id": 1012,
-            "description_practice": "12. Ensuring that at tournaments or residential events, adults should not enter in children's rooms or invite children into their rooms"
+            "description_practice": "12. Ensuring that at tournaments or residential events, adults should not enter in children's rooms or invite children into their rooms.\n"
         },
 
         {
             "description_id": 1013,
-            "description_practice": "13. Being an excellent role model - this includes not smoking or drinking alcohol in the company of young people."
+            "description_practice": "13. Being an excellent role model - this includes not smoking or drinking alcohol in the company of young people\n"
         },
 
         {
             "description_id": 1014,
-            "description_practice": "14. Giving enthusiastic and constructive feedback rather than negative criticism."
+            "description_practice": "14. Giving enthusiastic and constructive feedback rather than negative criticism.\n"
         },
 
         {
             "description_id": 1015,
-            "description_practice": "15. Recognising the developmental needs and capacity of young people and disabled adults - avoiding excessive training or competition and not pushing them against their will."
+            "description_practice": "15. Recognising the developmental needs and capacity of young people and disabled adults - avoiding excessive training or competition and not pushing them against their will.\n"
         },
 
         {
             "description_id": 1016,
-            "description_practice": "16. Securing parental consent in writing to act in loco parentis, if the needs arise to administer emergency first aid and/or other medical treatment"
+            "description_practice": "16. Securing parental consent in writing to act in loco parentis, if the needs arise to administer emergency first aid and/or other medical treatment\n"
         },
 
         {
             "description_id": 1017,
-            "description_practice": "17. Keeping a written record of any injury that occurs, along with the details of any treatment given"
+            "description_practice": "17. Keeping a written record of any injury that occurs, along with the details of any treatment given.\n"
         },
 
         {

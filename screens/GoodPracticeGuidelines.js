@@ -21,7 +21,7 @@ const GoodPracticeGuidelines = ({props, navigation, item}) => { // Good Practice
          </Card>
 
          <Card style = {style.cardStyle}>
-            <FlatList data = {GoodPracticeData} renderItem = {({item}) => item.description_id >= 1012 && item.description_id <= 1018 ? <Text>{item.description_practice}</Text> : null} />
+            <FlatList data = {GoodPracticeData} renderItem = {({item}) => item.description_id >= 1012 && item.description_id <= 1018 ? <Text style = {style.descriptionStyles}>{item.description_practice}</Text> : null} />
          </Card>
 
         <View style = {style.btnContainer}>
