@@ -24,6 +24,10 @@ const PracticesAvoidScreen = ({props, navigation}) => { // The Practices to Avoi
                 <FlatList data = {PracticesAvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id >= 2 && item.id <= 6 ? <Text>{item.sanction_data}</Text> : null} />
             </Card>
 
+            <Card style = {style.cardStyle}>
+                <FlatList data = {PracticesAvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id >= 6 && item.id <= 10 ? <Text>{item.sanction_data}</Text> : null} />
+            </Card>
+
         </ScrollView>
     )
 };
@@ -48,7 +52,7 @@ const style = StyleSheet.create({
         width: 350,
         height: 110,
         marginLeft: 35,
-        marginTop: 35,
+        marginTop: 28,
         alignItems: 'center',
         maxWidth: '100%'
     },
