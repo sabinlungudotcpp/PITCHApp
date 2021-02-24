@@ -2,6 +2,7 @@ import React from 'react';
 import {View, StyleSheet, Text, ScrollView, FlatList, Image} from 'react-native';
 import {Button} from 'react-native';
 import Card from '../components/Card';
+import ChildProtectionData from '../data/ChildProtectionData';
 
 const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Screen
     return (
@@ -10,7 +11,7 @@ const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Sc
             <Image style = {style.recruitmentImg} source = {require('../assets/Images/ImageRecruitment.jpg')} />
 
             <Card style = {style.cardStyle}>
-
+                <FlatList />
             </Card>
 
 
