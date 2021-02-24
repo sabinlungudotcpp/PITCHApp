@@ -17,11 +17,11 @@ const GoodPracticeGuidelines = ({props, navigation, item}) => { // Good Practice
 
     
          <Card style = {style.cardStyle}>
-             <FlatList keyExtractor = {(item) => item.id} data = {GoodPracticeData} renderItem = {({item}) => item.description_id >= 1006 && item.description_id  <= 1011 ? <Text style = {style.descriptionStyles}>{item.description_practice}</Text> : null}  />
+             <FlatList keyExtractor = {(item) => item.id} data = {GoodPracticeData} renderItem = {({item}) => item.description_id >= 1006 && item.description_id <= 1011 ? <Text style = {style.descriptionStyles}>{item.description_practice}</Text> : null}  />
          </Card>
 
          <Card style = {style.cardStyle}>
-         
+            <FlatList data = {GoodPracticeData} renderItem = {({item}) => item.description_id >= 1012 && item.description_id <= 1018 ? <Text>{item.description_practice}</Text> : null} />
          </Card>
 
         <View style = {style.btnContainer}>

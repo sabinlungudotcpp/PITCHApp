@@ -49,13 +49,13 @@ const GOOD_PRACTICE_DATA = [
 
         {
             "description_id": 1009,
-            "description_practice": "9. Involving parents/carers wherever possible. For example, encouraging them to take responsibility for their children in the changing rooms.",
+            "description_practice": "9. Involving parents/carers wherever possible. For example, encouraging them to take responsibility for their children in the changing rooms \n",
             "canBeModified": false
         },
 
         {
             "description_id": 1010,
-            "description_practice": "10. If groups have to be supervised in the changing rooms, always ensure parents, teachers, coaches or officials work in pairs"
+            "description_practice": "10. If groups have to be supervised in the changing rooms, always ensure parents, teachers, coaches or officials work in pairs\n"
         },
 
         {
