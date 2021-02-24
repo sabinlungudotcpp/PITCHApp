@@ -107,7 +107,7 @@ const style = StyleSheet.create({ // The styles for the recruitment screen
         marginLeft: -40,
     },
 
-    guidelinesBtn: {
+    guidelinesBtn: { // Styles for the guidelines button
         width: 160,
         right: -5,
         left: -10,
@@ -115,8 +115,6 @@ const style = StyleSheet.create({ // The styles for the recruitment screen
         color: 'black',
         textAlign: 'center'
     }
-
-
 });
 
 export default RecruitmentScreen; // Export the Recruitment Screen
