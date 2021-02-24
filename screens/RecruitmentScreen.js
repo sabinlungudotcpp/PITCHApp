@@ -58,6 +58,7 @@ const style = StyleSheet.create({ // The styles for the recruitment screen
 
     recruitmentDescriptionTxt: {
         padding: -10,
+        fontSize: 15,
         marginTop: -10
     },
 
