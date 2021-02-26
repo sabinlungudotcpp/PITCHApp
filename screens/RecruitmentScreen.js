@@ -30,7 +30,7 @@ const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Sc
 
 const style = StyleSheet.create({ // The styles for the recruitment screen
     recruitmentTxt: {
-        textAlign: 'center',
+        textAlign: 'center', // Aligns the text to the center
         marginTop: 40,
         fontSize: 31,
         marginLeft: 5,

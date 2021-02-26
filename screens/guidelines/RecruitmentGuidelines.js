@@ -5,6 +5,11 @@ import Card from '../../components/Card';
 import ChildProtectionData from '../../data/ChildProtectionData';
 import Colors from '../../constants/Colors';
 
+const SIZES = {
+    borderRadius: 200,
+    fontSize: 14.5
+}
+
 const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment Guidelines component
     return (
         <ScrollView>
@@ -25,8 +30,8 @@ const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment G
             </Card>
 
             <View style = {style.buttonContainer}>
-                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back"/>
-                <Button onPress = {() => {}} title = "Next Policy" />
+                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "Back"/>
+                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "Next Policy" />
             </View>
 
 
@@ -57,7 +62,7 @@ const style = StyleSheet.create({
 
     guidelineDescriptionTxt: {
         marginTop: -12,
-        fontSize: 14.5
+        fontSize: SIZES.fontSize
     },
 
     trainingTxt: {
