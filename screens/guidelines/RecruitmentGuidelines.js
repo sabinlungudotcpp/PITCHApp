@@ -25,7 +25,7 @@ const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment G
             </Card>
 
             <View style = {style.buttonContainer}>
-                <Button onPress = {() => {}} title = "Back"/>
+                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back"/>
                 <Button onPress = {() => {}} title = "Next Policy" />
             </View>
 
