@@ -75,6 +75,16 @@ const CHILD_PROTECTION_DATA = [
     {
         "id": 13,
         "guideline_training": "Training"
+    },
+
+    {
+        "id": 14,
+        "training_list": "1. Analyse their own practice against established good practice, and to ensure that their practice is not likely to result in allegations being made.\n"
+    },
+
+    {
+        "id": 15,
+        "training_list": "2. Recognise their responsibilities and report any concerns about suspected poor practice or possible abuse.\n"
     }
 ]
 
