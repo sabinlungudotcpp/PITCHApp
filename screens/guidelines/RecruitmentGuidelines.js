@@ -25,10 +25,11 @@ const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment G
             </Card>
 
             <View style = {style.buttonContainer}>
-                <Button title = "Back"/>
+                <Button onPress = {() => {}} title = "Back"/>
+                <Button onPress = {() => {}} title = "Next Policy" />
             </View>
 
-            
+
         </ScrollView>
     )
 };
