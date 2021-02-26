@@ -49,7 +49,7 @@ const CHILD_PROTECTION_DATA = [
         "id": 8,
         "guideline_title": "Interview and Induction",
         "guideline_description": "All employees (and volunteers) will be required to undergo an interview carried out to an acceptable protocol and recommendations. All employees and volunteers should receive an induction.",
-        "guideline_list": "1. A check should be made that the application form has been completed in full including sections on criminal records and self-disclosures.\n"
+        "guideline_list": "1. A check should be made that the application form has been completed in full including sections on criminal records and self-disclosures."
     },
 
     {

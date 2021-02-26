@@ -5,13 +5,17 @@ import Card from '../../components/Card';
 import ChildProtectionData from '../../data/ChildProtectionData';
 import Colors from '../../constants/Colors';
 
-const RecruitmentGuidelines = ({props, navigation, items}) => {
+const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment Guidelines component
     return (
         <ScrollView>
             <Text style = {style.guidelineTitle}>{ChildProtectionData.map(data => data.guideline_title)}</Text>
 
             <Card style = {style.cardStyle}>
-                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.guidelineDescriptionTxt}>{item.guideline_description}</Text>} />
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.guidelineDescriptionTxt}>{item.guideline_description}</Text>}/>
+            </Card>
+
+            <Card style = {style.cardStyle}>
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id >= 8 && item.id <= 12 ? <Text>{item.guideline_list}</Text> : null} />
             </Card>
 
             <Text style = {style.trainingTxt}>{ChildProtectionData.map(data => data.guideline_training)}</Text>
@@ -19,6 +23,12 @@ const RecruitmentGuidelines = ({props, navigation, items}) => {
             <Card style = {style.cardStyle}>
                 <FlatList data = {ChildProtectionData} />
             </Card>
+
+            <View style = {style.buttonContainer}>
+                <Button title = "Back"/>
+            </View>
+
+            
         </ScrollView>
     )
 };
