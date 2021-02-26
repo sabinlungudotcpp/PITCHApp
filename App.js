@@ -33,6 +33,7 @@ const style = StyleSheet.create({
 })
 
 export default function App() {
+  
   return (
     <NavigationContainer>
      <BottomTabs/>

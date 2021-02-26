@@ -15,7 +15,7 @@ import Colors from '../constants/Colors';
 
 const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Screen
     return (
-        
+
         <ScrollView>
             <Text style = {style.recruitmentTxt}>{ChildProtectionData.map(value => value.title_recruitment)}</Text>
             <Image style = {style.recruitmentImg} source = {require('../assets/Images/ImageRecruitment.jpg')} />
@@ -56,7 +56,7 @@ const style = StyleSheet.create({ // The styles for the recruitment screen
     cardStyle: { // Styling for the card
         padding: 10, // Has a padding space of 12
         paddingLeft: -40, // Padding left of -40
-        paddingBottom: -5,
+        paddingBottom: -5, // Padding bottom of -5
         marginBottom: 1,
         width: 340,
         height: 140,
