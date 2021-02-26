@@ -34,14 +34,13 @@ const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment G
             <Text style = {style.trainingTxt}>{ChildProtectionData.map(data => data.guideline_training)}</Text>
 
             <Card style = {style.cardStyle}>
-                <FlatList data = {ChildProtectionData} />
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id >= 14 || item.id <= 20 ? <Text style = {style.trainingItemListTxt}>{item.training_list}</Text> : null} />
             </Card>
 
             <View style = {style.buttonContainer}>
                 <Button onPress = {() => navigation.navigate('RecruitmentScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.backBtn} title = "Back"/>
                 <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.nextPolicyBtn} title = "Next Policy" />
             </View>
-
 
         </ScrollView>
     )
@@ -122,6 +121,10 @@ const style = StyleSheet.create({
         marginLeft: SIZES.marginLeft,
         color: Colors.black,
         textAlign: 'center'
+    },
+
+    trainingItemListTxt: {
+        marginTop: -12
     }
 })
 

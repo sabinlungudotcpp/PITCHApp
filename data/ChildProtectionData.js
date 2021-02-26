@@ -89,12 +89,12 @@ const CHILD_PROTECTION_DATA = [
 
     {
         "id": 16,
-        "training_list": "3. Respond to concerns expressed by a child or a young person"
+        "training_list": "3. Respond to concerns expressed by a child or a young person.\n"
     },
 
     {
         "id": 17,
-        "training_list": "4. Work safely with children."
+        "training_list": "4. Work safely with children.\n"
     },
 
     {
@@ -109,7 +109,7 @@ const CHILD_PROTECTION_DATA = [
 
     {
         "id": 20,
-        "training_list": "7. Relevant personnel to receive advisory information outlining good practice and informing them about what to do if they have concerns about the behaviour of an adult towards a young person."
+        "training_list": "7. Relevant personnel to receive advisory information outlining good practice and informing them about what to do if they have concerns about the behaviour of an adult towards a young person.\n"
     }
 ]
 
