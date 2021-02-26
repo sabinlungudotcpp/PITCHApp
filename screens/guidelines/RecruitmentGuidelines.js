@@ -1,3 +1,11 @@
+/*
+    Author of application: Sabin Constantin Lungu
+    Purpose of File: To display the content required for the recruitment guidelines screen
+    Date of last modification: 26/02/2021
+    Any errors: N/A
+    All Rights Reserved - Sabin Constantin Lungu 2021 PITCH Application
+*/
+
 import React from 'react';
 import {View, ScrollView, StyleSheet, FlatList, Text} from 'react-native';
 import {Button} from 'react-native-elements';
