@@ -94,7 +94,22 @@ const CHILD_PROTECTION_DATA = [
 
     {
         "id": 17,
-        "training_list": "4. Work effectively with children."
+        "training_list": "4. Work safely with children."
+    },
+
+    {
+        "id": 18,
+        "training_list": "5. Coaching staff to attend a recognised 3-hour good practice and child protection awareness training workshop, to ensure their practice is exemplary and to facilitate the development of a positive culture towards good practice.\n"
+    },
+
+    {
+        "id": 19,
+        "training_list": "6. Non-coaching staff and volunteers to complete recognised awareness training on child protection.\n"
+    },
+
+    {
+        "id": 20,
+        "training_list": "7. Relevant personnel to receive advisory information outlining good practice and informing them about what to do if they have concerns about the behaviour of an adult towards a young person."
     }
 ]
 
