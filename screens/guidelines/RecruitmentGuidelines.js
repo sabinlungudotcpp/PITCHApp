@@ -5,9 +5,10 @@ import Card from '../../components/Card';
 import ChildProtectionData from '../../data/ChildProtectionData';
 import Colors from '../../constants/Colors';
 
-const SIZES = {
+const SIZES = { // Sizez to be used throughout the application
     borderRadius: 200,
-    fontSize: 14.5
+    fontSize: 14.5,
+    marginLeft: 35
 }
 
 const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment Guidelines component
@@ -30,7 +31,7 @@ const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment G
             </Card>
 
             <View style = {style.buttonContainer}>
-                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.backBtn} title = "Back"/>
+                <Button onPress = {() => navigation.navigate('RecruitmentScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.backBtn} title = "Back"/>
                 <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.nextPolicyBtn} title = "Next Policy" />
             </View>
 
@@ -111,8 +112,8 @@ const style = StyleSheet.create({
         width: 160,
         right: -5,
         left: -10,
-        marginLeft: 35,
-        color: 'black',
+        marginLeft: SIZES.marginLeft,
+        color: Colors.black,
         textAlign: 'center'
     }
 })
