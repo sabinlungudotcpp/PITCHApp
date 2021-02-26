@@ -30,8 +30,8 @@ const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment G
             </Card>
 
             <View style = {style.buttonContainer}>
-                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "Back"/>
-                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "Next Policy" />
+                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.backBtn} title = "Back"/>
+                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.nextPolicyBtn} title = "Next Policy" />
             </View>
 
 
@@ -70,6 +70,50 @@ const style = StyleSheet.create({
         fontSize: 31,
         marginTop: 45,
         color: Colors.primaryColor
+    },
+
+    buttonContainer: { // Styles for the button container
+        flex: 1,
+        justifyContent: 'center',
+        width: 130,
+        height: 42,
+        textAlign: 'center',
+        borderRadius: 200,
+        marginLeft: 47,
+        marginTop: 35,
+        paddingHorizontal: -20,
+        justifyContent: 'space-between',
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingRight: 10,
+        marginBottom: 50
+    },
+
+    backBtn: {
+        width: 180,
+        borderRadius: 200,
+        color: 'black',
+        paddingLeft: 10,
+        textAlign: 'center',
+        alignSelf: 'center',
+        alignContent: 'center',
+        textAlign: 'center',
+        color: 'black',
+        left: 25,
+        paddingLeft: 10,
+        paddingHorizontal: 20,
+        marginRight: 5,
+        marginLeft: -40,
+    },
+
+    nextPolicyBtn: {
+        width: 160,
+        right: -5,
+        left: -10,
+        marginLeft: 35,
+        color: 'black',
+        textAlign: 'center'
     }
 })
 
