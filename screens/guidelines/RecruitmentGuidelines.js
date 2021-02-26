@@ -15,6 +15,10 @@ const RecruitmentGuidelines = ({props, navigation, items}) => {
             </Card>
 
             <Text style = {style.trainingTxt}>{ChildProtectionData.map(data => data.guideline_training)}</Text>
+
+            <Card style = {style.cardStyle}>
+                <FlatList data = {ChildProtectionData} />
+            </Card>
         </ScrollView>
     )
 };
