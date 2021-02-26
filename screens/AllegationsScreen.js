@@ -49,8 +49,8 @@ const style = StyleSheet.create({
         paddingLeft: -40, // Padding left of -40
         paddingBottom: -5,
         marginBottom: MARGIN_SIZES.marginBottom,
-        width: 340, // Width of 340
-        height: 150, // The height of the card is 150 pixels
+        width: CARD_SIZES.width,
+        height: CARD_SIZES.height,
         marginLeft: MARGIN_SIZES.marginLeft,
         marginTop: MARGIN_SIZES.marginTop,
         alignItems: 'center', // Aligns the content of the items to the center
