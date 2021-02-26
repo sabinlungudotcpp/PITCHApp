@@ -5,17 +5,22 @@ import Colors from '../constants/Colors';
 import Card from '../components/Card';
 import ChildProtectionData from '../data/ChildProtectionData';
 
-const MARGIN_SIZES= {
+const MARGIN_SIZES = {
     marginTop: 35,
     marginBottom: 30,
     marginLeft: 45
 }
 
 const PADDING_SIZES = { // Padding sizes
-
+    padding: 10
 }
 
-const AllegationsScreen = ({item, navigation, props}) => {
+const CARD_SIZES = {
+    width: 340,
+    height: 150
+};
+
+const AllegationsScreen = ({item, navigation, props}) => { // The allegations screen used.
     return (
         <ScrollView>
             <Text style = {style.allegationMainTxt}>{ChildProtectionData.map(value => value.allegation_title)}</Text>
@@ -27,7 +32,6 @@ const AllegationsScreen = ({item, navigation, props}) => {
             <Card style = {style.cardStyle}>
                 
             </Card>
-            
         </ScrollView>
     )
 };
@@ -41,11 +45,11 @@ const style = StyleSheet.create({
     },
 
     cardStyle: {
-        padding: 10, // Has a padding space of 12
+        padding: PADDING_SIZES.padding,
         paddingLeft: -40, // Padding left of -40
         paddingBottom: -5,
         marginBottom: MARGIN_SIZES.marginBottom,
-        width: 340,
+        width: 340, // Width of 340
         height: 150, // The height of the card is 150 pixels
         marginLeft: MARGIN_SIZES.marginLeft,
         marginTop: MARGIN_SIZES.marginTop,
