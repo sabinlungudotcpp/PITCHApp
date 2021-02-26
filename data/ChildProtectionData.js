@@ -74,7 +74,7 @@ const CHILD_PROTECTION_DATA = [
 
     {
         "id": 13,
-        "guideline_title": "Training"
+        "guideline_training": "Training"
     }
 ]
 

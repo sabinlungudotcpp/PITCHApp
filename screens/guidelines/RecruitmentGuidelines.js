@@ -11,8 +11,10 @@ const RecruitmentGuidelines = ({props, navigation, items}) => {
             <Text style = {style.guidelineTitle}>{ChildProtectionData.map(data => data.guideline_title)}</Text>
 
             <Card style = {style.cardStyle}>
-
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.guidelineDescriptionTxt}>{item.guideline_description}</Text>} />
             </Card>
+
+            <Text style = {style.trainingTxt}>{ChildProtectionData.map(data => data.guideline_training)}</Text>
         </ScrollView>
     )
 };
@@ -36,6 +38,18 @@ const style = StyleSheet.create({
         marginTop: 35,
         alignItems: 'center',
         maxWidth: '100%'
+    },
+
+    guidelineDescriptionTxt: {
+        marginTop: -12,
+        fontSize: 14.5
+    },
+
+    trainingTxt: {
+        textAlign: 'center',
+        fontSize: 31,
+        marginTop: 45,
+        color: Colors.primaryColor
     }
 })
 
