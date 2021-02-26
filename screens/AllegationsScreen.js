@@ -5,7 +5,11 @@ import Colors from '../constants/Colors';
 import Card from '../components/Card';
 
 const AllegationsScreen = ({item, navigation, props}) => {
-
+    return (
+        <ScrollView>
+            <Text>Allegations Screen</Text>
+        </ScrollView>
+    )
 };
 
 export default AllegationsScreen; // Exports the allegations screen
