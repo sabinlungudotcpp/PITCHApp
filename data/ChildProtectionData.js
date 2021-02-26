@@ -49,6 +49,11 @@ const CHILD_PROTECTION_DATA = [
         "id": 8,
         "guideline_title": "Interview and Induction",
         "guideline_description": "All employees (and volunteers)"
+    },
+
+    {
+        "id": 9,
+        "guidline_title": "Training"
     }
 ]
 
