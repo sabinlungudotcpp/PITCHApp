@@ -7,7 +7,8 @@ import ChildProtectionData from '../data/ChildProtectionData';
 
 const MARGIN_SIZES= {
     marginTop: 35,
-    marginBottom: 30
+    marginBottom: 30,
+    marginLeft: 45
 }
 
 const PADDING_SIZES = { // Padding sizes
@@ -46,8 +47,8 @@ const style = StyleSheet.create({
         marginBottom: MARGIN_SIZES.marginBottom,
         width: 340,
         height: 150, // The height of the card is 150 pixels
-        marginLeft: 45,
-        marginTop: 35,
+        marginLeft: MARGIN_SIZES.marginLeft,
+        marginTop: MARGIN_SIZES.marginTop,
         alignItems: 'center', // Aligns the content of the items to the center
         maxWidth: '100%' // Maximum width of 100%
     }
