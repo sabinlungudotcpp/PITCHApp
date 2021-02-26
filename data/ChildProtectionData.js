@@ -85,6 +85,16 @@ const CHILD_PROTECTION_DATA = [
     {
         "id": 15,
         "training_list": "2. Recognise their responsibilities and report any concerns about suspected poor practice or possible abuse.\n"
+    },
+
+    {
+        "id": 16,
+        "training_list": "3. Respond to concerns expressed by a child or a young person"
+    },
+
+    {
+        "id": 17,
+        "training_list": "4. Work effectively with children."
     }
 ]
 
