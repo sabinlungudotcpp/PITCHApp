@@ -39,7 +39,7 @@ const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment G
 
             <View style = {style.buttonContainer}>
                 <Button onPress = {() => navigation.navigate('RecruitmentScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.backBtn} title = "Back"/>
-                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.nextPolicyBtn} title = "Next Policy" />
+                <Button onPress = {() => navigation.navigate('AllegationsScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.nextPolicyBtn} title = "Next Policy" />
             </View>
 
         </ScrollView>

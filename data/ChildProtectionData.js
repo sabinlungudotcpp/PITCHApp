@@ -115,6 +115,11 @@ const CHILD_PROTECTION_DATA = [
     {
         "id": 21,
         "training_list": "8. Relevant personnel to gain national first aid training (where necessary).\n"
+    },
+
+    {
+        "id": 22,
+        "allegation_title": "Responding to allegations / suspicions"
     }
 ]
 
