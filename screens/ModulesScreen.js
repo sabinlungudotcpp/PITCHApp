@@ -16,6 +16,7 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
                   <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View Module" onPress = {() => navigation.navigate('ChildProtectionScreen')} />
             </View>
         </Card>
+        
 
         {/* Renders a card that stores the title of the module, image and the button that allows users to view that module */}
         <Card style = {styles.cardContainer}>
