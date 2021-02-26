@@ -48,12 +48,33 @@ const CHILD_PROTECTION_DATA = [
     {
         "id": 8,
         "guideline_title": "Interview and Induction",
-        "guideline_description": "All employees (and volunteers)"
+        "guideline_description": "All employees (and volunteers) will be required to undergo an interview carried out to an acceptable protocol and recommendations. All employees and volunteers should receive an induction.",
+        "guideline_list": "1. A check should be made that the application form has been completed in full including sections on criminal records and self-disclosures.\n"
     },
 
     {
         "id": 9,
-        "guidline_title": "Training"
+        "guideline_list": "2. Their qualifications should be substantiated.\n"
+    },
+
+    {
+        "id": 10,
+        "guideline_list": "3. The job requirements and responsibilities should be clarified.\n"
+    },
+
+    {
+        "id": 11,
+        "guideline_list": "4. Child protection procedures are explained and training needs are identified.\n"
+    },
+
+    {
+        "id": 12,
+        "guideline_list": "5. They should sign up to the organisation's Code of Ethics and Conduct and Child Protection Policy.\n"
+    },
+
+    {
+        "id": 13,
+        "guideline_title": "Training"
     }
 ]
 
