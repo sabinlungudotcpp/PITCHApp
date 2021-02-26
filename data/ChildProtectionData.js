@@ -110,6 +110,11 @@ const CHILD_PROTECTION_DATA = [
     {
         "id": 20,
         "training_list": "7. Relevant personnel to receive advisory information outlining good practice and informing them about what to do if they have concerns about the behaviour of an adult towards a young person.\n"
+    },
+
+    {
+        "id": 21,
+        "training_list": "8. Relevant personnel to gain national first aid training (where necessary).\n"
     }
 ]
 

@@ -34,7 +34,7 @@ const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment G
             <Text style = {style.trainingTxt}>{ChildProtectionData.map(data => data.guideline_training)}</Text>
 
             <Card style = {style.cardStyle}>
-                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id >= 14 || item.id <= 20 ? <Text style = {style.trainingItemListTxt}>{item.training_list}</Text> : null} />
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id >= 14 || item.id <= 21 ? <Text style = {style.trainingItemListTxt}>{item.training_list}</Text> : null} />
             </Card>
 
             <View style = {style.buttonContainer}>
