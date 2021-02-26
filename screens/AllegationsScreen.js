@@ -12,7 +12,8 @@ const MARGIN_SIZES = {
 }
 
 const PADDING_SIZES = { // Padding sizes
-    padding: 10
+    padding: 10,
+    paddingLeft: -40
 }
 
 const CARD_SIZES = {
@@ -32,6 +33,7 @@ const AllegationsScreen = ({item, navigation, props}) => { // The allegations sc
             <Card style = {style.cardStyle}>
                 
             </Card>
+
         </ScrollView>
     )
 };
@@ -44,9 +46,9 @@ const style = StyleSheet.create({
         color: Colors.primaryColor // The color of the text
     },
 
-    cardStyle: {
+    cardStyle: { // Styles for the card
         padding: PADDING_SIZES.padding,
-        paddingLeft: -40, // Padding left of -40
+        paddingLeft: PADDING_SIZES.paddingLeft,
         paddingBottom: -5,
         marginBottom: MARGIN_SIZES.marginBottom,
         width: CARD_SIZES.width,
