@@ -5,6 +5,7 @@
     Any errors: N/A
     All Rights Reserved - Sabin Constantin Lungu 2021 PITCH Application
 */
+
 import React from 'react';
 import {View, ScrollView, StyleSheet, FlatList, Text} from 'react-native';
 import {Button} from 'react-native-elements';

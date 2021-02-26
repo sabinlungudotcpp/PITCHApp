@@ -16,7 +16,7 @@ const PADDING_SIZES = { // Padding sizes
     paddingLeft: -40
 }
 
-const CARD_SIZES = {
+const CARD_SIZES = { // The Cart sizes
     width: 340,
     height: 150
 };

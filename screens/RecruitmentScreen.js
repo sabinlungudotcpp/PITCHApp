@@ -15,6 +15,7 @@ import Colors from '../constants/Colors';
 
 const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Screen
     return (
+        
         <ScrollView>
             <Text style = {style.recruitmentTxt}>{ChildProtectionData.map(value => value.title_recruitment)}</Text>
             <Image style = {style.recruitmentImg} source = {require('../assets/Images/ImageRecruitment.jpg')} />
