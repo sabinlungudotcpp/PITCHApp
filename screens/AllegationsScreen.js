@@ -45,7 +45,7 @@ const AllegationsScreen = ({item, navigation, props}) => { // The allegations sc
             </Card>
 
             <View style = {style.btnContainer}>
-                <Button style = {style.backBtn} onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
+                <Button style = {style.backBtn} onPress = {() => navigation.navigate('RecruitmentGuidelines')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
                 <Button style = {style.nextPolicyBtn} onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
             </View>
         </ScrollView>
@@ -68,8 +68,7 @@ const style = StyleSheet.create({ // Styles for the allegations screen
     },
 
     investigationTxt: {
-        top: -300,
-        marginBottom: 1
+        marginTop: -12
     },
 
     cardStyle: { // Styles for the card

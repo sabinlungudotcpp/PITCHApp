@@ -126,12 +126,12 @@ const CHILD_PROTECTION_DATA = [
 
     {
         "id": 23,
-        "allegation_investigation": "1. A criminal investigation"
+        "allegation_investigation": "1. A criminal investigation.\n"
     },
 
     {
         "id": 24,
-        "allegation_investigation": "2. A child protection investigation"
+        "allegation_investigation": "2. A child protection investigation.\n"
     },
 
     {
