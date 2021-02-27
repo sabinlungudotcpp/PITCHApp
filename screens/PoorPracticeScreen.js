@@ -5,9 +5,10 @@ import ChildProtectionData from '../data/ChildProtectionData';
 import Card from '../components/Card';
 import Colors from '../constants/Colors';
 
-const PoorPracticeScreen = ({item, navigation, props}) => {
+const PoorPracticeScreen = ({item, navigation, props}) => { // The poor practice screen component
     return (
-        <ScrollView>
+
+    <ScrollView>
             <Text style = {styles.policyTitleTxt}>{ChildProtectionData.map(value => value.poor_practice_title)}</Text>
             <Image style = {styles.concernImg} source = {(require('../assets/Images/ImageConcerns.jpg'))} />
 
@@ -20,15 +21,21 @@ const PoorPracticeScreen = ({item, navigation, props}) => {
            </Card>
 
             <View>
-                <Text>{ChildProtectionData.map(value => value.abuse_title)}</Text>
+                <Text style = {styles.abuseTitle}>{ChildProtectionData.map(value => value.abuse_title)}</Text>
+                <Image style = {styles.abuseImg} source = {(require('../assets/Images/ImageAbuse.jpg'))} />
             </View>
+
+            <Card style = {styles.cardStyle}>
+
+            </Card>
 
           <View style = {styles.btnContainer}>
               <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => navigation.navigate('AllegationsScreen')} title = "Back" />
               <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => {}} title = "Next" />
           </View>
 
-        </ScrollView>
+
+    </ScrollView>
     )
 };
 
@@ -48,9 +55,9 @@ const styles = StyleSheet.create({
     },
 
     cardStyle: {
-        padding: 10, // Has a padding space of 12
-        paddingLeft: -40, // Padding left of -40
-        paddingBottom: -5, // Padding bottom of -5
+        padding: 10, 
+        paddingLeft: -40,
+        paddingBottom: -5,
         marginBottom: 1,
         width: 340,
         height: 150,
@@ -96,9 +103,21 @@ const styles = StyleSheet.create({
         marginLeft: 30,
         color: 'black',
         textAlign: 'center'
+    },
+
+    abuseTitle: {
+        textAlign: 'center',
+        marginTop: 39,
+        color: Colors.primaryColor,
+        fontSize: 29
+    },
+
+    abuseImg: {
+        width: 320,
+        height: 180,
+        marginLeft: 55,
+        marginTop: 20
     }
-
-
 });
 
 
