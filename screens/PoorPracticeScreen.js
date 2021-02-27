@@ -20,9 +20,9 @@ const PoorPracticeScreen = ({item, navigation, props}) => {
                 <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.poorPracticeSubTxt}>{item.poor_practice_sub_description}</Text>} />
            </Card>
 
-          <View>
-              <Button onPress = {() => {}} title = "Back" />
-              <Button onPress = {() => {}} title = "Next Policy" />
+          <View style = {styles.btnContainer}>
+              <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => navigation.navigate('AllegationsScreen')} title = "Back" />
+              <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => {}} title = "Next Policy" />
           </View>
 
         </ScrollView>
@@ -63,7 +63,21 @@ const styles = StyleSheet.create({
 
     poorPracticeSubTxt: {
         marginTop: -13
+    },
+
+    btnContainer: { // Button container styles
+
+    },
+
+    backBtn: {
+
+    },
+
+    nextPolicyBtn: {
+
     }
+
+    
 });
 
 
