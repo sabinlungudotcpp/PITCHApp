@@ -142,7 +142,9 @@ const CHILD_PROTECTION_DATA = [
 
     {
         "id": 26,
-        "poor_practice_title": "Reporting Poor Practice Concerns"
+        "poor_practice_title": "Reporting Poor Practice Concerns",
+        "poor_practice_description": "If, following consideration, the allegation is clearly about poor practice the designated Child Protection Officer will deal with it as a misconduct issue.\n",
+        "poor_practice_sub_description": ""
     }
 ]
 
