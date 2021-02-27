@@ -48,7 +48,7 @@ const AllegationsScreen = ({item, navigation, props}) => { // The allegations sc
 
             <View style = {style.btnContainer}>
                 <Button style = {style.backBtn} onPress = {() => navigation.navigate('RecruitmentGuidelines')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
-                <Button style = {style.nextPolicyBtn} onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
+                <Button style = {style.nextPolicyBtn} onPress = {() => navigation.navigate('PoorPracticeScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
             </View>
 
         </ScrollView>

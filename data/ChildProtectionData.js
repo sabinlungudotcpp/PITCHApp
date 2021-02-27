@@ -138,6 +138,11 @@ const CHILD_PROTECTION_DATA = [
         "id": 25,
         "allegation_investigation": "3. A disciplinary or misconduct investigation",
         "allegation_sub_desc": "The results of the police and child protection investigation may well influence and inform the disciplinary investigation, but all available information will be used to reach a decision.\n"
+    },
+
+    {
+        "id": 26,
+        "poor_practice_title": "Reporting Poor Practice Concerns"
     }
 ]
 
