@@ -36,8 +36,8 @@ const AllegationsScreen = ({item, navigation, props}) => { // The allegations sc
             </Card>
 
             <View style = {style.btnContainer}>
-                <Button onPress = {() => {}} title = "Back" />
-                <Button onPress = {() => {}} title = "Next Policy" />
+                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
+                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
             </View>
 
         </ScrollView>
