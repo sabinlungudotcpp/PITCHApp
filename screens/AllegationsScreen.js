@@ -41,7 +41,7 @@ const AllegationsScreen = ({item, navigation, props}) => { // The allegations sc
             </Card>
 
             <Card style = {style.cardStyle}>
-
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.investigationTxt}>{item.allegation_investigation}</Text>} />
             </Card>
 
             <View style = {style.btnContainer}>
@@ -68,6 +68,11 @@ const style = StyleSheet.create({
         marginTop: 30
     },
 
+    investigationTxt: {
+        top: -300,
+        marginBottom: 1
+    },
+
     cardStyle: { // Styles for the card
         padding: PADDING_SIZES.padding,
         paddingLeft: PADDING_SIZES.paddingLeft,
@@ -90,7 +95,7 @@ const style = StyleSheet.create({
     },
 
     nextPolicyBtn: {
-        
+
     }
 });
 
