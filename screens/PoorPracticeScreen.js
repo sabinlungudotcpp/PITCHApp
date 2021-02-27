@@ -16,6 +16,7 @@ const PoorPracticeScreen = ({item, navigation, props}) => {
             </Card>
 
             <Card style = {styles.cardStyle}>
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.poorPracticeSubTxt}>{item.poor_practice_sub_description}</Text>} />
            </Card>
 
         </ScrollView>
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
         paddingBottom: -5, // Padding bottom of -5
         marginBottom: 1,
         width: 340,
-        height: 130,
+        height: 150,
         marginLeft: 45,
         marginTop: 35,
         alignItems: 'center',
@@ -51,6 +52,10 @@ const styles = StyleSheet.create({
     },
 
     poorPracticeTxt: {
+        marginTop: -13
+    },
+
+    poorPracticeSubTxt: {
         marginTop: -13
     }
 });
