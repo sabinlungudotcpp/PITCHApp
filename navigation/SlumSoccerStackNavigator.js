@@ -12,6 +12,7 @@ import PracticesAvoidScreen from '../screens/PracticesAvoidScreen';
 import RecruitmentScreen from '../screens/RecruitmentScreen';
 import RecruitmentGuidelines from '../screens/guidelines/RecruitmentGuidelines';
 import AllegationsScreen from '../screens/AllegationsScreen';
+import PoorPracticeScreen from '../screens/PoorPracticeScreen';
 
 const Stack = createStackNavigator(); // Creates a stack navigator
 
@@ -50,6 +51,9 @@ const SlumSoccerStackNavigator = ({navigation}) => { // Stack Navigation for Slu
 
 <Stack.Screen options = { {headerTintColor: 'black', headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = '#fff' />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
               color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "AllegationsScreen" component = {AllegationsScreen}/>
+
+<Stack.Screen options = { {headerTintColor: 'black', headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = '#fff' />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
+              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "PoorPracticeScreen" component = {PoorPracticeScreen}/>
 
 
     </Stack.Navigator>

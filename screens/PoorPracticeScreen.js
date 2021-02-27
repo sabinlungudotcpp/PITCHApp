@@ -6,7 +6,7 @@ import Card from '../components/Card';
 const PoorPracticeScreen = ({item, navigation, props}) => {
     return (
         <ScrollView>
-            
+            <Text>Poor Practice Screen</Text>
         </ScrollView>
     )
 };
