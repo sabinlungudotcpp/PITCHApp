@@ -48,12 +48,11 @@ const AllegationsScreen = ({item, navigation, props}) => { // The allegations sc
                 <Button style = {style.backBtn} onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
                 <Button style = {style.nextPolicyBtn} onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
             </View>
-
         </ScrollView>
     )
 };
 
-const style = StyleSheet.create({
+const style = StyleSheet.create({ // Styles for the allegations screen
     allegationMainTxt: {
         textAlign: 'center',
         fontSize: 28,
@@ -90,12 +89,34 @@ const style = StyleSheet.create({
         marginBottom: -13.5
     },
 
-    backBtn: {
+    btnContainer: {
+        width: 110,
+        height: 42,
+        textAlign: 'center',
+        borderRadius: 200,
+        marginLeft: 47,
+        marginTop: 35,
+        paddingHorizontal: -20,
+        justifyContent: 'space-between',
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingRight: 10,
+        marginBottom: 50
+    },
 
+    backBtn: {
+        width: 140,
+        marginLeft: 10
     },
 
     nextPolicyBtn: {
-
+        width: 160,
+        right: -5,
+        left: -10,
+        marginLeft: 30,
+        color: 'black',
+        textAlign: 'center'
     }
 });
 
