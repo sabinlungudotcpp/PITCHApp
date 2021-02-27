@@ -23,7 +23,9 @@ const CARD_SIZES = { // The Card sizes
 };
 
 const IMAGE_SIZES = {
-    width: 320
+    width: 320,
+    height: 180,
+    marginLeft: 50
 }
 
 const AllegationsScreen = ({item, navigation, props}) => { // The allegations screen used.
@@ -48,6 +50,7 @@ const AllegationsScreen = ({item, navigation, props}) => { // The allegations sc
                 <Button style = {style.backBtn} onPress = {() => navigation.navigate('RecruitmentGuidelines')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
                 <Button style = {style.nextPolicyBtn} onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
             </View>
+            
         </ScrollView>
     )
 };
