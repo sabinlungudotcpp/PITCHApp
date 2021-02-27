@@ -12,6 +12,10 @@ const PoorPracticeScreen = ({item, navigation, props}) => {
 
             <Card style = {styles.cardStyle}>
 
+            </Card>
+
+            <Card style = {styles.cardStyle}>
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text></Text>} />
            </Card>
 
         </ScrollView>
