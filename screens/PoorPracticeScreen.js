@@ -22,7 +22,7 @@ const PoorPracticeScreen = ({item, navigation, props}) => {
 
           <View style = {styles.btnContainer}>
               <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => navigation.navigate('AllegationsScreen')} title = "Back" />
-              <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => {}} title = "Next Policy" />
+              <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => {}} title = "Next" />
           </View>
 
         </ScrollView>
@@ -66,18 +66,36 @@ const styles = StyleSheet.create({
     },
 
     btnContainer: { // Button container styles
-
+        width: 110,
+        height: 42,
+        textAlign: 'center',
+        borderRadius: 200,
+        marginLeft: 47,
+        marginTop: 35,
+        paddingHorizontal: -20,
+        justifyContent: 'space-between',
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingRight: 10,
+        marginBottom: 50
     },
 
-    backBtn: {
-
+    backBtn: { // Style for the back button
+        width: 145,
+        marginLeft: 10
     },
 
     nextPolicyBtn: {
-
+        width: 160,
+        right: -5,
+        left: -10,
+        marginLeft: 30,
+        color: 'black',
+        textAlign: 'center'
     }
 
-    
+
 });
 
 

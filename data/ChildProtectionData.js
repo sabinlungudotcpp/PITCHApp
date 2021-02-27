@@ -145,6 +145,11 @@ const CHILD_PROTECTION_DATA = [
         "poor_practice_title": "Reporting Poor Practice Concerns",
         "poor_practice_description": "If, following consideration, the allegation is clearly about poor practice the designated Child Protection Officer will deal with it as a misconduct issue.\n",
         "poor_practice_sub_description": "If the allegation is about poor practice by the Slum Soccer Child Protection Officer, or if the matter has been handled inadequately and concerns remain, it should be reported to the relevant Sport Governing Body officer who will decide how to deal with the allegation and whether or not to initiate disciplinary proceedings.\n"
+    },
+
+    {
+        "id": 27,
+        "abuse_title": "Reporting Concerns / Abuse"
     }
 ]
 
