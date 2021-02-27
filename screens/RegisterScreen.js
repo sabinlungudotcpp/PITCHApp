@@ -15,7 +15,7 @@ const generateRandomString = () => { // Generate random string to store in the U
     return output; // Returns the generated string
 }
 
-const RegisterScreen = ({navigation}) => { // Register Screen
+const RegisterScreen = ({navigation}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 

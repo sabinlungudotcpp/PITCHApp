@@ -119,7 +119,24 @@ const CHILD_PROTECTION_DATA = [
 
     {
         "id": 22,
-        "allegation_title": "Responding to allegations / suspicions"
+        "allegation_title": "Responding to allegations / suspicions",
+        "allegations_description": "It is not the responsibility of anyone working in Slum Soccer, in a paid or unpaid capacity to decide whether or not child abuse has taken place. However there is a responsibility to act on any concerns by reporting these to the appropriate officer or the appropriate authorities.\n",
+        "allegations_sub_description": "Slum Soccer will assure that all staff/volunteers that it will fully support and protect anyone, who in good faith reports his or her concern that a colleague is, or may be, abusing a child. Where there is a complaint against a member of staff there may be three types of investigation:\n"
+    },
+
+    {
+        "id": 23,
+        "allegation_investigation": "1. A criminal investigation"
+    },
+
+    {
+        "id": 24,
+        "allegation_investigation": "2. A child protection investigation"
+    },
+
+    {
+        "id": 25,
+        "allegation_investigation": "3. A disciplinary or misconduct investigation"
     }
 ]
 
