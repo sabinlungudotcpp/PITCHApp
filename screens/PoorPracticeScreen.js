@@ -11,14 +11,17 @@ const PoorPracticeScreen = ({item, navigation, props}) => {
             <Text style = {styles.policyTitleTxt}>{ChildProtectionData.map(value => value.poor_practice_title)}</Text>
             <Image style = {styles.concernImg} source = {(require('../assets/Images/ImageConcerns.jpg'))} />
 
-            <Card style = {styles.cardStyle}>
+        <Card style = {styles.cardStyle}>
             <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.poorPracticeTxt}>{item.poor_practice_description}</Text>} />
-
-            </Card>
+        </Card>
 
             <Card style = {styles.cardStyle}>
                 <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.poorPracticeSubTxt}>{item.poor_practice_sub_description}</Text>} />
            </Card>
+
+            <View>
+                <Text>{ChildProtectionData.map(value => value.abuse_title)}</Text>
+            </View>
 
           <View style = {styles.btnContainer}>
               <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => navigation.navigate('AllegationsScreen')} title = "Back" />
