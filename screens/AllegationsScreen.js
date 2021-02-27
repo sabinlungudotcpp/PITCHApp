@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, ScrollView, FlatList, Text} from 'react-native';
+import {View, StyleSheet, ScrollView, FlatList, Text, Image} from 'react-native';
 import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
 import Card from '../components/Card';
@@ -22,10 +22,15 @@ const CARD_SIZES = { // The Card sizes
     height: 150
 };
 
+const IMAGE_SIZES = {
+    width: 320
+}
+
 const AllegationsScreen = ({item, navigation, props}) => { // The allegations screen used.
     return (
         <ScrollView>
             <Text style = {style.allegationMainTxt}>{ChildProtectionData.map(value => value.allegation_title)}</Text>
+            <Image style = {style.allegationImg} source = {require('../assets/Images/ImageAllegations.jpg')} />
 
             <Card style = {style.cardStyle}>
                 <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.allegationTxt}>{item.allegations_description}</Text>} />
@@ -50,6 +55,13 @@ const style = StyleSheet.create({
         fontSize: 28,
         marginTop: 50,
         color: Colors.primaryColor // The color of the text
+    },
+    
+    allegationImg: {
+        width: IMAGE_SIZES.width,
+        height: 180,
+        marginLeft: 50,
+        marginTop: 30
     },
 
     cardStyle: { // Styles for the card
