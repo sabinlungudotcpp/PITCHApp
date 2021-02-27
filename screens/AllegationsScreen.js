@@ -7,7 +7,7 @@ import ChildProtectionData from '../data/ChildProtectionData';
 
 const MARGIN_SIZES = {
     marginTop: 35,
-    marginBottom: 20,
+    marginBottom: 1,
     marginLeft: 45
 }
 
@@ -37,12 +37,16 @@ const AllegationsScreen = ({item, navigation, props}) => { // The allegations sc
             </Card>
 
             <Card style = {style.cardStyle}>
-                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} />
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.allegationTxt}>{item.allegations_sub_description}</Text>} />
+            </Card>
+
+            <Card style = {style.cardStyle}>
+
             </Card>
 
             <View style = {style.btnContainer}>
-                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
-                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
+                <Button style = {style.backBtn} onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
+                <Button style = {style.nextPolicyBtn} onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
             </View>
 
         </ScrollView>
@@ -79,6 +83,14 @@ const style = StyleSheet.create({
 
     allegationTxt: {
         marginBottom: -13.5
+    },
+
+    backBtn: {
+
+    },
+
+    nextPolicyBtn: {
+        
     }
 });
 
