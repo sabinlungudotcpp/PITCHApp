@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, ScrollView, Text, FlatList, StyleSheet, Image} from 'react-native';
+import {Button} from 'react-native-elements';
 import ChildProtectionData from '../data/ChildProtectionData';
 import Card from '../components/Card';
 import Colors from '../constants/Colors';
@@ -18,6 +19,11 @@ const PoorPracticeScreen = ({item, navigation, props}) => {
             <Card style = {styles.cardStyle}>
                 <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.poorPracticeSubTxt}>{item.poor_practice_sub_description}</Text>} />
            </Card>
+
+          <View>
+              <Button onPress = {() => {}} title = "Back" />
+              <Button onPress = {() => {}} title = "Next Policy" />
+          </View>
 
         </ScrollView>
     )
