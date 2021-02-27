@@ -50,7 +50,7 @@ const AllegationsScreen = ({item, navigation, props}) => { // The allegations sc
                 <Button style = {style.backBtn} onPress = {() => navigation.navigate('RecruitmentGuidelines')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
                 <Button style = {style.nextPolicyBtn} onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
             </View>
-            
+
         </ScrollView>
     )
 };
@@ -108,8 +108,8 @@ const style = StyleSheet.create({ // Styles for the allegations screen
     },
 
     backBtn: {
-        width: 140,
-        marginLeft: 10
+        width: 150,
+        marginLeft: 3
     },
 
     nextPolicyBtn: {
