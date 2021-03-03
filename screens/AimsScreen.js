@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, Text, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
-import { FlatList, ScrollView } from 'react-native-gesture-handler';
+import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import Card from '../components/Card';
 import Colors from '../constants/Colors';
 import introductionData from '../data/IntroductionData';
@@ -28,11 +28,14 @@ const AimsScreen = ({props, navigation}) => { // Aims Screen Component
             </Card>
     
             <View style = {styles.btnContainers}>
-                <Button style = {styles.backBtn} buttonStyle = {{width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "Back" onPress = {() => navigation.navigate('IntroductionScreen')} />
-                <Button style = {styles.policyBtn} buttonStyle = {{width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "View Policies" onPress = {() => navigation.navigate('GoodPracticeScreen')} />
+                <Button style = {styles.backBtn} buttonStyle = {{marginRight: Platform.OS === 'android' ? 30 : null ,width: Platform.OS === 'android' ? 140 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "Back" onPress = {() => navigation.navigate('IntroductionScreen')} />
+
+                <TouchableOpacity onPress = {() => navigation.navigate('GoodPracticeScreen')}>
+                     <Button style = {styles.policyBtn} buttonStyle = {{width: Platform.OS === 'android' ? 140 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "View Policies"/>
+                </TouchableOpacity>
+
             </View>
         </ScrollView>
-        
         )
     } 
     
@@ -49,13 +52,13 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 32,
         marginTop: 55,
-        color: '#F7B500'
+        color: Colors.primaryColor
     },
 
     aimsContainer: {
         textAlign: 'center',
         fontSize: 32,
-        color: '#F7B500'
+        color: Colors.primaryColor
     },
 
     aimsTextContainer: { // Styles for the text inside the card
