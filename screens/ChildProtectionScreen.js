@@ -34,7 +34,6 @@ const ChildProtectionScreen = ({props, navigation, item}) => { // The child prot
                 </TouchableOpacity>
 
             </View>
-
         </ScrollView>
     )
 };

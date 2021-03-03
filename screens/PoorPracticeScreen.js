@@ -12,11 +12,11 @@ const PoorPracticeScreen = ({item, navigation, props}) => { // The poor practice
             <Text style = {styles.policyTitleTxt}>{ChildProtectionData.map(value => value.poor_practice_title)}</Text>
             <Image style = {styles.concernImg} source = {(require('../assets/Images/ImageConcerns.jpg'))} />
 
-        <Card style = {styles.cardStyle}>
-            <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.poorPracticeTxt}>{item.poor_practice_description}</Text>} />
-        </Card>
-
             <Card style = {styles.cardStyle}>
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.poorPracticeTxt}>{item.poor_practice_description}</Text>} />
+            </Card>
+
+           <Card style = {styles.cardStyle}>
                 <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.poorPracticeSubTxt}>{item.poor_practice_sub_description}</Text>} />
            </Card>
 
@@ -33,6 +33,8 @@ const PoorPracticeScreen = ({item, navigation, props}) => { // The poor practice
               <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => navigation.navigate('AllegationsScreen')} title = "Back" />
               <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => {}} title = "Next" />
           </View>
+
+
     </ScrollView>
     )
 };
