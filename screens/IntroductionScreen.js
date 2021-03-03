@@ -29,6 +29,8 @@ const IntroductionScreen = ({props, navigation, item}) => {
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.third_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
         </Card>
 
+        {/* Container that stores the buttons */}
+        
         <View style = {styles.btnContainers}>
              <Button buttonStyle = {{backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: Sizes.borderRadius}} style = {styles.backBtn} title = "Back" onPress = {() => navigation.navigate('ChildProtectionScreen')}/>
              <Button buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: Sizes.borderRadius}} style = {styles.aimsBtn} title = "View Aims" onPress = {() => navigation.navigate('AimsScreen')}/>
