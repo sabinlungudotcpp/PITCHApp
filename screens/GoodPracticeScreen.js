@@ -16,7 +16,7 @@ const GoodPracticeScreen = ({props, navigation, item}) => { // The Good Practice
 
     try {
         return (
-            
+
         <ScrollView>
             <Text style = {styles.goodPracticeTxt}>{ChildProtectionData.map(data => data.title_practice)}</Text>
         <Image style = {styles.imageContainer} source = {require('../assets/Images/ImageGoodPractice.jpg')}/>
@@ -26,8 +26,8 @@ const GoodPracticeScreen = ({props, navigation, item}) => { // The Good Practice
         </Card>
     
         <View style = {styles.btnContainer}>
-            <Button style = {styles.firstGuidelineBtn} buttonStyle =  {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "Guidelines" onPress = {() => navigation.navigate('GoodPracticeGuidelines')} /> 
-            <Button style = {styles.nextPolicyBtn} buttonStyle =  {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "View More" /> 
+            <Button style = {styles.firstGuidelineBtn} buttonStyle =  {{backgroundColor: Colors.primaryColor, theme: 'dark', borderRadius: 200}} title = "Guidelines" onPress = {() => navigation.navigate('GoodPracticeGuidelines')} /> 
+            <Button style = {styles.nextPolicyBtn} buttonStyle =  {{backgroundColor: Colors.primaryColor, theme: 'dark', borderRadius: 200}} title = "View More" /> 
         </View>
     
         <Text style = {styles.avoidTxt}>{ChildProtectionData.map(data => data.title_avoid)}</Text>
