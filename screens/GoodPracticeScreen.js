@@ -9,7 +9,8 @@ import Colors from '../constants/Colors'; // Imports the Colors from the file
 
 const BUTTON_CONTAINER_SIZES = {
     width: 110,
-    height: 42
+    height: 42,
+    borderRadius: 200
 }
 
 const GoodPracticeScreen = ({props, navigation, item}) => { // The Good Practices Screen
@@ -26,8 +27,8 @@ const GoodPracticeScreen = ({props, navigation, item}) => { // The Good Practice
         </Card>
     
         <View style = {styles.btnContainer}>
-            <Button style = {styles.firstGuidelineBtn} buttonStyle =  {{backgroundColor: Colors.primaryColor, theme: 'dark', borderRadius: 200}} title = "Guidelines" onPress = {() => navigation.navigate('GoodPracticeGuidelines')} /> 
-            <Button style = {styles.nextPolicyBtn} buttonStyle =  {{backgroundColor: Colors.primaryColor, theme: 'dark', borderRadius: 200}} title = "View More" /> 
+            <Button style = {styles.firstGuidelineBtn} buttonStyle =  {{backgroundColor: Colors.primaryColor, theme: 'dark', borderRadius: BUTTON_CONTAINER_SIZES.borderRadius}} title = "Guidelines" onPress = {() => navigation.navigate('GoodPracticeGuidelines')} /> 
+            <Button style = {styles.nextPolicyBtn} buttonStyle =  {{backgroundColor: Colors.primaryColor, theme: 'dark', borderRadius: BUTTON_CONTAINER_SIZES.borderRadius}} title = "View More" /> 
         </View>
     
         <Text style = {styles.avoidTxt}>{ChildProtectionData.map(data => data.title_avoid)}</Text>
