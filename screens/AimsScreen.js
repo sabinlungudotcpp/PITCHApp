@@ -1,9 +1,14 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import Card from '../components/Card';
+import Colors from '../constants/Colors';
 import introductionData from '../data/IntroductionData';
+
+const SIZES = {
+    borderRadius: 200
+}
 
 const AimsScreen = ({props, navigation}) => { // Aims Screen Component
     return (
@@ -22,8 +27,8 @@ const AimsScreen = ({props, navigation}) => { // Aims Screen Component
         </Card>
 
         <View style = {styles.btnContainers}>
-            <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Back" onPress = {() => navigation.navigate('IntroductionScreen')} />
-            <Button style = {styles.policyBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "View Policies" onPress = {() => navigation.navigate('GoodPracticeScreen')} />
+            <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "Back" onPress = {() => navigation.navigate('IntroductionScreen')} />
+            <Button style = {styles.policyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "View Policies" onPress = {() => navigation.navigate('GoodPracticeScreen')} />
         </View>
         
     </ScrollView>

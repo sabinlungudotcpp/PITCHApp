@@ -12,39 +12,40 @@ const SIZES = {
 
 const PoorPracticeScreen = ({item, navigation, props}) => { // The poor practice screen component
 
-    try {
+ try {
 
-        return (
+    return (
 
-            <ScrollView>
-                <Text style = {styles.policyTitleTxt}>{ChildProtectionData.map(value => value.poor_practice_title)}</Text>
-                    <Image style = {styles.concernImg} source = {(require('../assets/Images/ImageConcerns.jpg'))} />
+     <ScrollView>
+            <Text style = {styles.policyTitleTxt}>{ChildProtectionData.map(value => value.poor_practice_title)}</Text>
+         <Image style = {styles.concernImg} source = {(require('../assets/Images/ImageConcerns.jpg'))} />
+    
+     <Card style = {styles.cardStyle}>
+          <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.poorPracticeTxt}>{item.poor_practice_description}</Text>} />
+     </Card>
         
-                    <Card style = {styles.cardStyle}>
-                        <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.poorPracticeTxt}>{item.poor_practice_description}</Text>} />
-                    </Card>
+         <Card style = {styles.cardStyle}>
+            <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.poorPracticeSubTxt}>{item.poor_practice_sub_description}</Text>} />
+         </Card>
         
-                   <Card style = {styles.cardStyle}>
-                        <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.poorPracticeSubTxt}>{item.poor_practice_sub_description}</Text>} />
-                   </Card>
+         <View>
+            <Text style = {styles.abuseTitle}>{ChildProtectionData.map(value => value.abuse_title)}</Text>
+                 <Image style = {styles.abuseImg} source = {(require('../assets/Images/ImageAbuse.jpg'))} />
+         </View>
         
-                <View>
-                    <Text style = {styles.abuseTitle}>{ChildProtectionData.map(value => value.abuse_title)}</Text>
-                    <Image style = {styles.abuseImg} source = {(require('../assets/Images/ImageAbuse.jpg'))} />
-                </View>
+         <Card style = {styles.cardStyle}>
+            <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.abuseDescription}>{item.abuse_description}</Text>} />
+         </Card>
         
-                <Card style = {styles.cardStyle}>
-                    <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.abuseDescription}>{item.abuse_description}</Text>} />
-                </Card>
+          <View style = {styles.btnContainer}>
+               <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} onPress = {() => navigation.navigate('AllegationsScreen')} title = "Back" />
         
-                <View style = {styles.btnContainer}>
-                     <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} onPress = {() => navigation.navigate('AllegationsScreen')} title = "Back" />
-        
-                     <TouchableOpacity onPress = {() => {}}>
-                         <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "Next" />
-                      </TouchableOpacity>
-                 </View>
-            </ScrollView>
+        <TouchableOpacity onPress = {() => {}}>
+            <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "Next" />
+        </TouchableOpacity>
+
+         </View>
+    </ScrollView>
         )
     } 
     
@@ -53,8 +54,6 @@ const PoorPracticeScreen = ({item, navigation, props}) => { // The poor practice
             return console.error(`Cause of error ${error.toString()}`);
         }
     }
-
-
 };
 
 const styles = StyleSheet.create({
