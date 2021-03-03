@@ -3,6 +3,11 @@ import {View, StyleSheet, Text, ScrollView, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
 
+const PLATFORM_SIZES = {
+    ANDROID_WIDTH_SIZE: 130,
+    IOS_WIDTH_SIZE: 145
+}
+
 const HomeScreen = ({item, navigation}) => { // Home Screen
 
     return (
@@ -17,7 +22,7 @@ const HomeScreen = ({item, navigation}) => { // Home Screen
         </View>
 
           <View style = {style.btnContainers}>
-            <Button buttonStyle = {{width: Platform.OS === 'android' ? 130 : 145 ,backgroundColor: '#F7B500', marginRight: Platform.OS === 'android' ? -5 : 40, theme: 'dark', borderRadius: 200}} style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('Register')}/>
+            <Button buttonStyle = {{width: Platform.OS === 'android' ? PLATFORM_SIZES.ANDROID_WIDTH_SIZE : PLATFORM_SIZES.IOS_WIDTH_SIZE ,backgroundColor: '#F7B500', marginRight: Platform.OS === 'android' ? -5 : 40, theme: 'dark', borderRadius: 200}} style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('Register')}/>
             <Button buttonStyle = {{width: Platform.OS === 'android' ? 135 : 145 ,backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, marginLeft: Platform.OS === 'android' ? 20 : 1, borderRadius: Platform.OS === 'android' ? 200 : 200}} color = 'black' title = "Login" style = {style.loginBtn} onPress = {() => navigation.navigate('Login')} />
         </View>
     </View>
@@ -28,7 +33,7 @@ const HomeScreen = ({item, navigation}) => { // Home Screen
 
 const style = StyleSheet.create({
 
-    backImg: {
+    backImg: { // Style for the background image
         width: 450,
         height: 900
     },
@@ -41,7 +46,8 @@ const style = StyleSheet.create({
 
     mainText: {
         marginVertical: 300,
-        marginBottom: 65,
+        marginBottom: 60,
+        marginTop: Platform.OS === 'android' ? 230 : null,
         fontSize: 35,
         color: 'orange'
     },
