@@ -33,8 +33,8 @@ const AimsScreen = ({props, navigation}) => { // Aims Screen Component
                 <TouchableOpacity onPress = {() => navigation.navigate('GoodPracticeScreen')}>
                      <Button style = {styles.policyBtn} buttonStyle = {{width: Platform.OS === 'android' ? 140 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "View Policies"/>
                 </TouchableOpacity>
-
             </View>
+            
         </ScrollView>
         )
     } 
@@ -101,6 +101,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         paddingRight: 10,
+        marginBottom: Platform.OS === 'android' ? 60 : null
     },
 
     backBtn: {
