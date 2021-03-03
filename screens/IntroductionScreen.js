@@ -3,6 +3,7 @@ import {FlatList, View, Text, StyleSheet, ScrollView, Platform} from 'react-nati
 import {Button} from 'react-native-elements';
 import Card from '../components/Card';
 import Colors from '../constants/Colors';
+import Sizes from '../constants/Sizes';
 import introductionData from '../data/IntroductionData';
 
 const IntroductionScreen = ({props, navigation, item}) => {
@@ -29,8 +30,8 @@ const IntroductionScreen = ({props, navigation, item}) => {
         </Card>
 
         <View style = {styles.btnContainers}>
-             <Button buttonStyle = {{backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: 200}} style = {styles.backBtn} title = "Back" onPress = {() => navigation.navigate('ChildProtectionScreen')}/>
-             <Button buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} style = {styles.aimsBtn} title = "View Aims" onPress = {() => navigation.navigate('AimsScreen')}/>
+             <Button buttonStyle = {{backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: Sizes.borderRadius}} style = {styles.backBtn} title = "Back" onPress = {() => navigation.navigate('ChildProtectionScreen')}/>
+             <Button buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: Sizes.borderRadius}} style = {styles.aimsBtn} title = "View Aims" onPress = {() => navigation.navigate('AimsScreen')}/>
         </View>
      
 </ScrollView>
