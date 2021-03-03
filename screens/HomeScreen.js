@@ -3,6 +3,7 @@ import {View, StyleSheet, Text, ScrollView, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Colors from '../constants/Colors';
+import buttonData from '../data/buttons/buttonData';
 
 // The platform sizes
 const PLATFORM_SIZES = {
@@ -25,7 +26,7 @@ const HomeScreen = ({item, navigation}) => { // Home Screen
         </View>
 
         <View style = {style.btnContainers}>
-            <Button buttonStyle = {{width: Platform.OS === 'android' ? PLATFORM_SIZES.ANDROID_WIDTH_SIZE : PLATFORM_SIZES.IOS_WIDTH_SIZE ,backgroundColor: '#F7B500', marginRight: Platform.OS === 'android' ? -5 : 40, theme: 'dark', borderRadius: 200}} style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('Register')}/>
+            <Button buttonStyle = {{width: Platform.OS === 'android' ? PLATFORM_SIZES.ANDROID_WIDTH_SIZE : PLATFORM_SIZES.IOS_WIDTH_SIZE ,backgroundColor: Colors.primaryColor, marginRight: Platform.OS === 'android' ? -5 : 40, theme: 'dark', borderRadius: 200}} style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('Register')}/>
 
         <TouchableOpacity onPress = {() => Platform.OS === 'android' ? navigation.navigate('Login') : navigation.navigate('Login')}>
             <Button buttonStyle = {{width: Platform.OS === 'android' ? 135 : 145 , backgroundColor: Colors.primaryColor, marginLeft: Platform.OS === 'android' ? 20 : 1, borderRadius: 200}} color = 'black' style = {style.loginBtn} title = "Login" />

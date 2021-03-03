@@ -26,7 +26,6 @@ const IntroductionScreen = ({props, navigation, item}) => {
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.extra_intro}</Text>} keyExtractor = {(item) => item.id} />
         </Card>
 
-
         <Card style = {styles.cardStyle}>
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.third_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
         </Card>
