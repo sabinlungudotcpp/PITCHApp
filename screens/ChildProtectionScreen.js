@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
         borderRadius: 200,
         marginLeft: 45,
         marginTop: 10,
+        marginBottom: Platform.OS === 'android' ? 50 : null,
         paddingHorizontal: -15,
         justifyContent: 'space-between',
         flex: 1,
