@@ -10,7 +10,6 @@ const IntroductionScreen = ({props, navigation, item}) => {
 
     return (
         <ScrollView>
-            
         <Text style = {styles.introductionTxt}>Introduction</Text>
 
         <Card style = {styles.cardStyle}>
@@ -30,10 +29,10 @@ const IntroductionScreen = ({props, navigation, item}) => {
         </Card>
 
         {/* Container that stores the buttons */}
-        
+
         <View style = {styles.btnContainers}>
              <Button buttonStyle = {{backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: Sizes.borderRadius}} style = {styles.backBtn} title = "Back" onPress = {() => navigation.navigate('ChildProtectionScreen')}/>
-             <Button buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: Sizes.borderRadius}} style = {styles.aimsBtn} title = "View Aims" onPress = {() => navigation.navigate('AimsScreen')}/>
+             <Button buttonStyle = {{backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: Sizes.borderRadius}} style = {styles.aimsBtn} title = "View Aims" onPress = {() => navigation.navigate('AimsScreen')}/>
         </View>
      
 </ScrollView>
