@@ -18,7 +18,6 @@ const IntroductionScreen = ({props, navigation, item}) => {
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.main_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
         </Card>
 
-
         <Card style = {styles.cardStyle}>
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.second_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
         </Card>
@@ -26,6 +25,7 @@ const IntroductionScreen = ({props, navigation, item}) => {
         <Card style = {styles.cardStyle}>
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.extra_intro}</Text>} keyExtractor = {(item) => item.id} />
         </Card>
+
 
         <Card style = {styles.cardStyle}>
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.third_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
@@ -39,7 +39,7 @@ const IntroductionScreen = ({props, navigation, item}) => {
              <TouchableOpacity onPress = {() => navigation.navigate('AimsScreen')}>
                 <Button buttonStyle = {{width: Platform.OS === 'android' ? 140 : null , backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: 200}} style = {styles.aimsBtn} title = "View Aims"/>
              </TouchableOpacity>
-             
+
         </View>
      
 </ScrollView>
