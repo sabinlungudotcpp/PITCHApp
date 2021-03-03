@@ -27,8 +27,8 @@ const ChildProtectionScreen = ({props, navigation, item}) => { // The child prot
             </Card>
 
             <View style = {styles.btnContainers}>
-                <Button style = {styles.policyBtn} buttonStyle = {{width: Platform.OS === 'android' ? SIZES.width : null, backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: SIZES.borderRadius}} title = "View Policy" onPress = {() => navigation.navigate('IntroductionScreen')} />
-                <Button style = {styles.guidelineBtn} buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "Guidelines" />
+                <Button style = {styles.policyBtn} buttonStyle = {{width: Platform.OS === 'android' ? SIZES.width : null, marginLeft: Platform.OS === 'android' ? 30 : null, marginRight: Platform.OS === 'android' ? 30 : null, backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: SIZES.borderRadius}} title = "View Policy" onPress = {() => navigation.navigate('IntroductionScreen')} />
+                <Button style = {styles.guidelineBtn} buttonStyle = {{width: Platform.OS === 'android' ? SIZES.width : null, backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "Guidelines" />
             </View>
 
         </ScrollView>
