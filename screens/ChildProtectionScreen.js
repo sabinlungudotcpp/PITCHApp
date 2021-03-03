@@ -4,9 +4,16 @@ import {Button} from 'react-native-elements';
 import { FlatList } from 'react-native-gesture-handler';
 import Card from '../components/Card';
 import introductionData from '../data/IntroductionData';
+import Colors from '../constants/Colors';
 
-const ChildProtectionScreen = ({props, navigation, item}) => {
+const SIZES = {
+    borderRadius: 200
+}
+
+const ChildProtectionScreen = ({props, navigation, item}) => { // The child protection screen
+
     return (
+
        <ScrollView>
             <Text style = {styles.childProtectionTxt}>Child Protection</Text>
 
@@ -19,10 +26,10 @@ const ChildProtectionScreen = ({props, navigation, item}) => {
             </Card>
 
             <View style = {styles.btnContainers}>
-                <Button style = {styles.policyBtn} buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "View Policy" onPress = {() => navigation.navigate('IntroductionScreen')} />
+                <Button style = {styles.policyBtn} buttonStyle = {{backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: SIZES.borderRadius}} title = "View Policy" onPress = {() => navigation.navigate('IntroductionScreen')} />
                 <Button style = {styles.guidelineBtn} buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "Guidelines" />
             </View>
-            
+
         </ScrollView>
     )
 };
