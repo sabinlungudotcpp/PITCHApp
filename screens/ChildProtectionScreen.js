@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, Text, Image, ScrollView, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
-import { FlatList } from 'react-native-gesture-handler';
+import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
 import Card from '../components/Card';
 import introductionData from '../data/IntroductionData';
 import Colors from '../constants/Colors';
@@ -28,7 +28,11 @@ const ChildProtectionScreen = ({props, navigation, item}) => { // The child prot
 
             <View style = {styles.btnContainers}>
                 <Button style = {styles.policyBtn} buttonStyle = {{width: Platform.OS === 'android' ? SIZES.width : null, marginLeft: Platform.OS === 'android' ? 30 : null, marginRight: Platform.OS === 'android' ? 30 : null, backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: SIZES.borderRadius}} title = "View Policy" onPress = {() => navigation.navigate('IntroductionScreen')} />
-                <Button style = {styles.guidelineBtn} buttonStyle = {{width: Platform.OS === 'android' ? SIZES.width : null, backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "Guidelines" />
+
+                <TouchableOpacity onPress = {() => navigation.navigate('')}>
+                     <Button style = {styles.guidelineBtn} buttonStyle = {{width: Platform.OS === 'android' ? SIZES.width : null, backgroundColor: Colors.primaryColor, theme: 'dark', borderRadius: 200}} title = "Guidelines" />
+                </TouchableOpacity>
+
             </View>
 
         </ScrollView>
