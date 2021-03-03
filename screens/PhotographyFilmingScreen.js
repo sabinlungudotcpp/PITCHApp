@@ -3,6 +3,7 @@ import {View, StyleSheet, FlatList, ScrollView, Text, Image} from 'react-native'
 import {Button} from 'react-native-elements';
 import Card from '../components/Card';
 import ChildProtectionData from '../data/ChildProtectionData';
+import Colors from '../constants/Colors';
 
 const PhotographyFilmingScreen = ({props, navigation, item}) => {
     return (
@@ -15,7 +16,7 @@ const PhotographyFilmingScreen = ({props, navigation, item}) => {
             </Card>
 
             <View style = {style.btnContainers}>
-                <Button onPress = {() => {}} style = {style.backBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Back" />
+                <Button onPress = {() => navigation.navigate('GoodPracticeScreen')} style = {style.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
                 <Button onPress = {() => navigation.navigate('RecruitmentScreen')} style = {style.nextPolicyBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Next Policy"/>
             </View>
 

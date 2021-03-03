@@ -1,39 +1,41 @@
 import React from 'react';
-import {View, Text, FlatList, StyleSheet, ScrollView} from 'react-native';
+import {View, Text, FlatList, StyleSheet, ScrollView, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
 import Card from '../components/Card'; // Imports the Card component
+import Colors from '../constants/Colors';
 import PracticesAvoidData from '../data/PracticesAvoidData';
 
 const PracticesAvoidScreen = ({props, navigation}) => { // The Practices to Avoid Screen
     try {
         return (
-            <ScrollView>
-                <Text style = {style.mainHeading}>Practices to Avoid</Text>
+
+       <ScrollView minimumZoomScale = {1} maximumZoomScale = {5}>
+        <Text style = {style.mainHeading}>Practices to Avoid</Text>
     
-                <Card style = {style.cardStyle}>
-                    <FlatList data = {PracticesAvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.descriptionStyleTxt}>{item.description}</Text>} />
-                </Card>
+        <Card style = {style.cardStyle}>
+            <FlatList data = {PracticesAvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.descriptionStyleTxt}>{item.description}</Text>} />
+        </Card>
+
+        <Card style = {style.cardStyle}>
+            <FlatList data = {PracticesAvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.descriptionStyleTxt}>{item.avoid_list}</Text>} />
+            <FlatList data = {PracticesAvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.descriptionStyleTxt}>{item.avoid_second}</Text>} />
+        </Card>
     
-                <Card style = {style.cardStyle}>
-                    <FlatList data = {PracticesAvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.descriptionStyleTxt}>{item.avoid_list}</Text>} />
-                    <FlatList data = {PracticesAvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.descriptionStyleTxt}>{item.avoid_second}</Text>} />
-                </Card>
+         <Text style = {style.sanctionTxt}>Practices to Sanction</Text>
     
-                <Text style = {style.sanctionTxt}>Practices to Sanction</Text>
+        <Card style = {style.cardStyle}>
+            <FlatList data = {PracticesAvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id >= 2 && item.id <= 6 ? <Text>{item.sanction_data}</Text> : null} />
+         </Card>
     
-                <Card style = {style.cardStyle}>
-                    <FlatList data = {PracticesAvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id >= 2 && item.id <= 6 ? <Text>{item.sanction_data}</Text> : null} />
-                </Card>
+        <Card style = {style.cardStyle}>
+             <FlatList data = {PracticesAvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id >= 6 && item.id <= 10 ? <Text>{item.sanction_data}</Text> : null} />
+        </Card>
     
-                <Card style = {style.cardStyle}>
-                    <FlatList data = {PracticesAvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id >= 6 && item.id <= 10 ? <Text>{item.sanction_data}</Text> : null} />
-                </Card>
-    
-                <View style = {style.btnContainer}>
-                    <Button onPress = {() => navigation.navigate('GoodPracticeScreen')} style = {style.backBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Back"/>
-                </View>
-                
-            </ScrollView>
+        <View style = {style.btnContainer}>
+            <Button onPress = {() => navigation.navigate('GoodPracticeScreen')} style = {style.backBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Back"/>
+        </View> 
+    </ScrollView>
+
         )
     } 
     
@@ -53,7 +55,7 @@ const style = StyleSheet.create({
         textAlign: 'center',
         marginTop: 55,
         fontSize: 31,
-        color: '#F7B500'
+        color: Colors.primaryColor
     },
 
     cardStyle: { // The style for the card
@@ -76,7 +78,7 @@ const style = StyleSheet.create({
     sanctionTxt: {
         textAlign: 'center',
         fontSize: 31,
-        color: '#F7B500'
+        color: Colors.primaryColor
     },
 
     btnContainer: {
