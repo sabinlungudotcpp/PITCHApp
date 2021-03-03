@@ -33,8 +33,8 @@ const IntroductionScreen = ({props, navigation, item}) => {
         {/* Container that stores the buttons */}
 
         <View style = {styles.btnContainers}>
-             <Button buttonStyle = {{width: Platform.OS === 'android' ? 135 : null, backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: Sizes.borderRadius}} style = {styles.backBtn} title = "Back" onPress = {() => navigation.navigate('ChildProtectionScreen')}/>
-             <Button buttonStyle = {{width: Platform.OS === 'android' ? 135 : null , backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: Sizes.borderRadius}} style = {styles.aimsBtn} title = "View Aims" onPress = {() => navigation.navigate('AimsScreen')}/>
+             <Button buttonStyle = {{marginRight: Platform.OS === 'android' ? 45 : null, width: Platform.OS === 'android' ? 135 : null, backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: Sizes.borderRadius}} style = {styles.backBtn} title = "Back" onPress = {() => navigation.navigate('ChildProtectionScreen')}/>
+             <Button buttonStyle = {{width: Platform.OS === 'android' ? 140 : null , backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: 200}} style = {styles.aimsBtn} title = "View Aims" onPress = {() => navigation.navigate('AimsScreen')}/>
         </View>
      
 </ScrollView>

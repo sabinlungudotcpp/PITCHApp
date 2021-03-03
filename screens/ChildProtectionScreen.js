@@ -8,7 +8,7 @@ import Colors from '../constants/Colors';
 
 const SIZES = {
     borderRadius: 200,
-    width: 120
+    width: 135
 }
 
 const ChildProtectionScreen = ({props, navigation, item}) => { // The child protection screen
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
          width: 160,
          right: -5,
          left: -15,
-         marginLeft: 5,
+         marginLeft: -1,
          color: 'black',
          textAlign: 'center'
     },
