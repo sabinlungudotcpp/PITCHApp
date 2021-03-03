@@ -21,7 +21,7 @@ const RegisterScreen = ({navigation}) => { // Register Screen Component
 
     return (
         
-<ScrollView>
+    <ScrollView>
         <Text style = {styles.registerStyle}>Register</Text>
         <Text style = {styles.organisationTextHeader}>Username</Text>
 

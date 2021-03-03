@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text, Image, ScrollView} from 'react-native';
+import {View, StyleSheet, Text, Image, ScrollView, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
 import { FlatList } from 'react-native-gesture-handler';
 import Card from '../components/Card';
@@ -22,8 +22,7 @@ const ChildProtectionScreen = ({props, navigation, item}) => {
                 <Button style = {styles.policyBtn} buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "View Policy" onPress = {() => navigation.navigate('IntroductionScreen')} />
                 <Button style = {styles.guidelineBtn} buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "Guidelines" />
             </View>
-
-
+            
         </ScrollView>
     )
 };
