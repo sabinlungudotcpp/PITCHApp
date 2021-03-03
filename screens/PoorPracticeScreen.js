@@ -13,6 +13,7 @@ const SIZES = {
 const PoorPracticeScreen = ({item, navigation, props}) => { // The poor practice screen component
 
     try {
+
         return (
 
             <ScrollView>
@@ -27,29 +28,30 @@ const PoorPracticeScreen = ({item, navigation, props}) => { // The poor practice
                         <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.poorPracticeSubTxt}>{item.poor_practice_sub_description}</Text>} />
                    </Card>
         
-                    <View>
-                        <Text style = {styles.abuseTitle}>{ChildProtectionData.map(value => value.abuse_title)}</Text>
-                        <Image style = {styles.abuseImg} source = {(require('../assets/Images/ImageAbuse.jpg'))} />
-                    </View>
+                <View>
+                    <Text style = {styles.abuseTitle}>{ChildProtectionData.map(value => value.abuse_title)}</Text>
+                    <Image style = {styles.abuseImg} source = {(require('../assets/Images/ImageAbuse.jpg'))} />
+                </View>
         
-                    <Card style = {styles.cardStyle}>
-                        <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.abuseDescription}>{item.abuse_description}</Text>} />
-                    </Card>
+                <Card style = {styles.cardStyle}>
+                    <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.abuseDescription}>{item.abuse_description}</Text>} />
+                </Card>
         
-                    <View style = {styles.btnContainer}>
-                        <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} onPress = {() => navigation.navigate('AllegationsScreen')} title = "Back" />
+                <View style = {styles.btnContainer}>
+                     <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} onPress = {() => navigation.navigate('AllegationsScreen')} title = "Back" />
         
-                        <TouchableOpacity onPress = {() => {}}>
-                             <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "Next" />
-                        </TouchableOpacity>
-                    </View>
-        
+                     <TouchableOpacity onPress = {() => {}}>
+                         <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "Next" />
+                      </TouchableOpacity>
+                 </View>
             </ScrollView>
         )
     } 
     
     catch(error) {
-
+        if(error) {
+            return console.error(`Cause of error ${error.toString()}`);
+        }
     }
 
 
