@@ -1,15 +1,19 @@
 import React from 'react';
-import {View, ScrollView, Text, FlatList, StyleSheet, Image} from 'react-native';
+import {View, ScrollView, Text, FlatList, StyleSheet, Image, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
 import ChildProtectionData from '../data/ChildProtectionData';
 import Card from '../components/Card';
 import Colors from '../constants/Colors';
 
+const SIZES = {
+    borderRadius: 200
+}
+
 const PoorPracticeScreen = ({item, navigation, props}) => { // The poor practice screen component
     return (
 
     <ScrollView>
-            <Text style = {styles.policyTitleTxt}>{ChildProtectionData.map(value => value.poor_practice_title)}</Text>
+        <Text style = {styles.policyTitleTxt}>{ChildProtectionData.map(value => value.poor_practice_title)}</Text>
             <Image style = {styles.concernImg} source = {(require('../assets/Images/ImageConcerns.jpg'))} />
 
             <Card style = {styles.cardStyle}>
@@ -29,10 +33,10 @@ const PoorPracticeScreen = ({item, navigation, props}) => { // The poor practice
                 <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.abuseDescription}>{item.abuse_description}</Text>} />
             </Card>
 
-          <View style = {styles.btnContainer}>
-              <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => navigation.navigate('AllegationsScreen')} title = "Back" />
-              <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => {}} title = "Next" />
-          </View>
+            <View style = {styles.btnContainer}>
+                <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} onPress = {() => navigation.navigate('AllegationsScreen')} title = "Back" />
+                <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} onPress = {() => {}} title = "Next" />
+            </View>
 
 
     </ScrollView>
@@ -60,7 +64,7 @@ const styles = StyleSheet.create({
         paddingBottom: -5,
         marginBottom: 1,
         width: 340,
-        height: 150,
+        height: 160,
         marginLeft: 45,
         marginTop: 35,
         alignItems: 'center',
@@ -121,7 +125,7 @@ const styles = StyleSheet.create({
 
     abuseDescription: {
         marginTop: -13,
-        paddingLeft: 5
+        paddingLeft: 5,
     }
 });
 
