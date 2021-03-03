@@ -1,33 +1,35 @@
 import React from 'react';
-import {FlatList, View, Text, StyleSheet, ScrollView} from 'react-native';
+import {FlatList, View, Text, StyleSheet, ScrollView, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
 import Card from '../components/Card';
+import Colors from '../constants/Colors';
 import introductionData from '../data/IntroductionData';
 
 const IntroductionScreen = ({props, navigation, item}) => {
+
     return (
         <ScrollView>
             
-            <Text style = {styles.introductionTxt}>Introduction</Text>
+        <Text style = {styles.introductionTxt}>Introduction</Text>
 
-    <Card style = {styles.cardStyle}>
-        <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.main_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
-     </Card>
+        <Card style = {styles.cardStyle}>
+            <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.main_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
+        </Card>
 
-     <Card style = {styles.secondCard}>
-        <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.second_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
-     </Card>
+        <Card style = {styles.secondCard}>
+            <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.second_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
+        </Card>
 
-     <Card style = {styles.tempCard}>
-        <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.extra_intro}</Text>} keyExtractor = {(item) => item.id} />
-     </Card>
+        <Card style = {styles.tempCard}>
+            <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.extra_intro}</Text>} keyExtractor = {(item) => item.id} />
+        </Card>
 
-     <Card style = {styles.thirdCard}>
-        <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.third_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
-     </Card>
+        <Card style = {styles.thirdCard}>
+            <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.third_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
+        </Card>
 
         <View style = {styles.btnContainers}>
-             <Button buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} style = {styles.backBtn} title = "Back" onPress = {() => navigation.navigate('ChildProtectionScreen')}/>
+             <Button buttonStyle = {{backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: 200}} style = {styles.backBtn} title = "Back" onPress = {() => navigation.navigate('ChildProtectionScreen')}/>
              <Button buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} style = {styles.aimsBtn} title = "View Aims" onPress = {() => navigation.navigate('AimsScreen')}/>
         </View>
      
