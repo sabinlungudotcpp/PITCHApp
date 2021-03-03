@@ -35,6 +35,7 @@ const AboutUsScreen = ({item, navigation}) => {
             </Card>
         </View>
     </ScrollView>
+    
     )
 };
 
@@ -73,7 +74,7 @@ const style = StyleSheet.create({
     aboutMission: {
         marginLeft: 125,
         fontSize: 30,
-        marginBottom: -10,
+        marginBottom: Platform.OS === 'android' ? -12 : -10,
         color: Colors.primaryColor
     },
 
