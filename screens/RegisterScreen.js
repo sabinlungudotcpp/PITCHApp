@@ -15,7 +15,7 @@ const generateRandomString = () => { // Generate random string to store in the U
     return output; // Returns the generated string
 }
 
-const RegisterScreen = ({navigation}) => {
+const RegisterScreen = ({navigation}) => { // Register Screen Component
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -34,16 +34,16 @@ const RegisterScreen = ({navigation}) => {
         <TextInput autoCapitalize = {false} secureTextEntry = {true} placeholder = "Password" onChangeText = {(newPassword) => setPassword(newPassword)} style = {styles.passwordContainer}/>
 
         <View>
-            <Button buttonStyle = {{marginLeft: Platform.OS === 'android' ? 130 : null ,width: Platform.OS === 'android' ? 150 : 150 ,backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.registerBtn} title = "Register" />
+            <Button buttonStyle = {{marginLeft: Platform.OS === 'android' ? 137 : null ,width: Platform.OS === 'android' ? 150 : 150 ,backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.registerBtn} title = "Register" />
         </View>
 
         <View>
 
-    <TouchableOpacity onPress = {() => navigation.navigate('Login')}>
+     <TouchableOpacity onPress = {() => navigation.navigate('Login')}>
             <Text style = {styles.alreadyText}>Already have an account? Sign In</Text>
-    </TouchableOpacity>  
-
+     </TouchableOpacity>  
          </View>
+
     </ScrollView>
     )
 };
@@ -129,7 +129,8 @@ const styles = StyleSheet.create({ // Styles for the Register Screen
 
     alreadyText: {
         fontSize: 20,
-        marginTop: 10,
+        marginTop: Platform.OS === 'android' ? 30 : 10,
+        marginBottom: Platform.OS === 'android' ? 50 : 10,
         left: 10,
         textAlign: 'center'
     },

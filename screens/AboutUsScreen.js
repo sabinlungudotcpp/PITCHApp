@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, ScrollView, FlatList, Image} from 'react-native';
+import {View, Text, StyleSheet, ScrollView, FlatList, Image, Platform} from 'react-native';
 import introductionData from '../data/IntroductionData';
 import Colors from '../constants/Colors';
 import Card from '../components/Card';
@@ -8,37 +8,33 @@ const AboutUsScreen = ({item, navigation}) => {
     return (
 
     <ScrollView>
-     <View>
-        <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.aboutTitle}>{item.about_title}</Text>} keyExtractor = {(item) => item.id}/>
-        <Image style = {{width: 330, height: 170, marginLeft: 40, marginTop: -30}} source = {require('../assets/Images/SlumSoccer.jpg')}/>
-    </View>
-
         <View>
-        
-    <Card style = {style.cardStyle}>
-        <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_description}>{item.about_description}</Text>} keyExtractor = {(item) => item.id}/>
-    </Card>
-
-    </View>
-
-    <Card style = {style.secondCard}>
-        <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_sub}>{item.about_sub_description}</Text>} keyExtractor = {(item) => item.id}/>
-    </Card>
-
-    <View style = {style.subContainer}>
-        <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.aboutMission}>{item.about_mission}</Text>} keyExtractor = {(item) => item.id}/>
-    <Image style = {{width: 330, height: 200, marginLeft: 45, opacity: 0.9, backgroundColor: 'black', marginBottom: 10, marginTop: 25}} source = {require('../assets/Images/missionimg.jpg')}/>
+            <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.aboutTitle}>{item.about_title}</Text>} keyExtractor = {(item) => item.id}/>
+            <Image style = {{width: 330, height: 170, marginLeft: 40, marginTop: Platform.OS === 'android' ? -160 : -10}} source = {require('../assets/Images/SlumSoccer.jpg')}/>
         </View>
 
-       
-       <View>
-        <Card style = {style.cardContainer}>
-            <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.missionTxtStyle}>{item.about_mission_description}</Text>} />
+        <View>    
+            <Card style = {style.cardStyle}>
+                <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_description}>{item.about_description}</Text>} keyExtractor = {(item) => item.id}/>
+            </Card>
+        </View>
+
+        <Card style = {style.secondCard}>
+            <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_sub}>{item.about_sub_description}</Text>} keyExtractor = {(item) => item.id}/>
         </Card>
-     </View>
 
+
+        <View style = {style.subContainer}>
+            <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.aboutMission}>{item.about_mission}</Text>} keyExtractor = {(item) => item.id}/>
+        <Image style = {{width: 330, height: 200, marginLeft: 45, opacity: 0.9, backgroundColor: 'black', marginBottom: 10, marginTop: Platform.OS === 'android' ? -77 : 25}} source = {require('../assets/Images/missionimg.jpg')}/>
+            </View>
+       
+        <View>
+            <Card style = {style.cardContainer}>
+                <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.missionTxtStyle}>{item.about_mission_description}</Text>} />
+            </Card>
+        </View>
     </ScrollView>
-
     )
 };
 
