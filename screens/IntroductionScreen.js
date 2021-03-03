@@ -9,12 +9,14 @@ import introductionData from '../data/IntroductionData';
 const IntroductionScreen = ({props, navigation, item}) => {
 
     return (
-        <ScrollView>
+
+    <ScrollView>
         <Text style = {styles.introductionTxt}>Introduction</Text>
 
         <Card style = {styles.cardStyle}>
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.main_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
         </Card>
+
 
         <Card style = {styles.cardStyle}>
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.second_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
@@ -31,8 +33,8 @@ const IntroductionScreen = ({props, navigation, item}) => {
         {/* Container that stores the buttons */}
 
         <View style = {styles.btnContainers}>
-             <Button buttonStyle = {{backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: Sizes.borderRadius}} style = {styles.backBtn} title = "Back" onPress = {() => navigation.navigate('ChildProtectionScreen')}/>
-             <Button buttonStyle = {{backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: Sizes.borderRadius}} style = {styles.aimsBtn} title = "View Aims" onPress = {() => navigation.navigate('AimsScreen')}/>
+             <Button buttonStyle = {{width: Platform.OS === 'android' ? 135 : null, backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: Sizes.borderRadius}} style = {styles.backBtn} title = "Back" onPress = {() => navigation.navigate('ChildProtectionScreen')}/>
+             <Button buttonStyle = {{width: Platform.OS === 'android' ? 135 : null , backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: Sizes.borderRadius}} style = {styles.aimsBtn} title = "View Aims" onPress = {() => navigation.navigate('AimsScreen')}/>
         </View>
      
 </ScrollView>
@@ -107,22 +109,22 @@ const styles = StyleSheet.create({
         paddingRight: 1,
     },
 
-    backBtn: {
+    backBtn: { // Styles for the back button
         width: 160,
-         right: -5,
-         left: -15,
-         marginLeft: 5,
-         color: 'black',
-         textAlign: 'center'
+        right: -5,
+        left: -15,
+        marginLeft: 5,
+        color: 'black',
+        textAlign: 'center'
     },
 
     aimsBtn: {
         width: 155,
-         right: -5,
-         left: -10,
-         marginLeft: 20,
-         color: 'black',
-         textAlign: 'center'
+        right: -5,
+        left: -10,
+        marginLeft: 20,
+        color: 'black',
+        textAlign: 'center'
     }
 });
 
