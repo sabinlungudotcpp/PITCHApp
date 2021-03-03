@@ -3,6 +3,7 @@ import {View, StyleSheet, Text, ScrollView, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
 
+// The platform sizes
 const PLATFORM_SIZES = {
     ANDROID_WIDTH_SIZE: 130,
     IOS_WIDTH_SIZE: 145
@@ -25,6 +26,7 @@ const HomeScreen = ({item, navigation}) => { // Home Screen
             <Button buttonStyle = {{width: Platform.OS === 'android' ? PLATFORM_SIZES.ANDROID_WIDTH_SIZE : PLATFORM_SIZES.IOS_WIDTH_SIZE ,backgroundColor: '#F7B500', marginRight: Platform.OS === 'android' ? -5 : 40, theme: 'dark', borderRadius: 200}} style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('Register')}/>
             <Button buttonStyle = {{width: Platform.OS === 'android' ? 135 : 145 ,backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, marginLeft: Platform.OS === 'android' ? 20 : 1, borderRadius: Platform.OS === 'android' ? 200 : 200}} color = 'black' title = "Login" style = {style.loginBtn} onPress = {() => navigation.navigate('Login')} />
         </View>
+
     </View>
 
 </ScrollView>

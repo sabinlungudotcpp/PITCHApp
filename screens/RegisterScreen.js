@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, ScrollView, Text} from 'react-native';
+import {View, StyleSheet, ScrollView, Text, Platform} from 'react-native';
 import {TextInput} from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import {Button} from 'react-native-elements';
@@ -34,7 +34,7 @@ const RegisterScreen = ({navigation}) => {
         <TextInput autoCapitalize = {false} secureTextEntry = {true} placeholder = "Password" onChangeText = {(newPassword) => setPassword(newPassword)} style = {styles.passwordContainer}/>
 
         <View>
-            <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.registerBtn} title = "Register" />
+            <Button buttonStyle = {{marginLeft: Platform.OS === 'android' ? 130 : null ,width: Platform.OS === 'android' ? 150 : 150 ,backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.registerBtn} title = "Register" />
         </View>
 
         <View>
