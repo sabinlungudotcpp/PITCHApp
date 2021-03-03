@@ -26,7 +26,7 @@ const PoorPracticeScreen = ({item, navigation, props}) => { // The poor practice
             </View>
 
             <Card style = {styles.cardStyle}>
-
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} />
             </Card>
 
           <View style = {styles.btnContainer}>
