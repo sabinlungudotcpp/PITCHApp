@@ -16,15 +16,15 @@ const IntroductionScreen = ({props, navigation, item}) => {
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.main_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
         </Card>
 
-        <Card style = {styles.secondCard}>
+        <Card style = {styles.cardStyle}>
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.second_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
         </Card>
 
-        <Card style = {styles.tempCard}>
+        <Card style = {styles.cardStyle}>
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.extra_intro}</Text>} keyExtractor = {(item) => item.id} />
         </Card>
 
-        <Card style = {styles.thirdCard}>
+        <Card style = {styles.cardStyle}>
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.introText}>{item.third_sub_description_intro}</Text>} keyExtractor = {(item) => item.id} />
         </Card>
 
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
         paddingLeft: -20,
         marginBottom: 10,
         width: 350,
-        height: 80,
+        height: Platform.OS === 'android' ? 90 : 80,
         marginLeft: 35,
         alignItems: 'center',
         maxWidth: '100%'
