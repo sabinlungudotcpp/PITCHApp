@@ -10,19 +10,21 @@ const Tab = createMaterialBottomTabNavigator();
 
 const SIZES = {
   androidSize: 40,
-  iosSize: 57
+  iosSize: 57,
+  tabScreenSize: 26
 }
 
 const BottomTabs = () => { // Bottom Tab navigator component
 
     return <Tab.Navigator barStyle = {{backgroundColor: '#F7B500', height: Platform.OS === 'android' ? SIZES.androidSize : SIZES.iosSize, marginBottom: 20, paddingTop: 10,}}>
-        <Tab.Screen options = {{tabBarLabel: 'Home', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.homeIcon} color = {color} name = "account" size = {26}/>}} name = "Home" component = {HomeNavigator}/>
-        <Tab.Screen options = {{tabBarLabel: 'Slum Soccer', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.soccerIcon} color = {color} name = "soccer" size = {26} /> }} name = "Slum Soccer" component = {SlumSoccerStackNavigator} />
-        <Tab.Screen options = {{tabBarLabel: 'Street Soccer', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.soccerIcon} color = {color} name = "football" size = {26} />}} name = "Street Soccer" component = {HomeNavigator} />
+        <Tab.Screen options = {{tabBarLabel: 'Home', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.homeIcon} color = {color} name = "account" size = {SIZES.tabScreenSize}/>}} name = "Home" component = {HomeNavigator}/>
+        <Tab.Screen options = {{tabBarLabel: 'Slum Soccer', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.soccerIcon} color = {color} name = "soccer" size = {SIZES.tabScreenSize} /> }} name = "Slum Soccer" component = {SlumSoccerStackNavigator} />
+        <Tab.Screen options = {{tabBarLabel: 'Street Soccer', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.soccerIcon} color = {color} name = "football" size = {SIZES.tabScreenSize} />}} name = "Street Soccer" component = {HomeNavigator} />
     </Tab.Navigator>
 }
 
 const style = StyleSheet.create({
+  
   homeIcon: {
     fontSize: 27,
     top: -1,

@@ -33,10 +33,12 @@ const LoginScreen = ({props, navigation}) => { // Login Screen component
     </View>
 
  </ScrollView>
+
     )
 }
 
 const styles = StyleSheet.create({
+
     mainView: {
         flex: 1,
         justifyContent: 'center'
@@ -90,7 +92,7 @@ const styles = StyleSheet.create({
         width: 230,
         borderRadius: 200,
         marginTop: 20,
-        borderColor: '#F7B500',
+        borderColor: Colors.primaryColor,
         marginLeft: 100,
         borderWidth: 2,
         padding: 10,
@@ -106,4 +108,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default LoginScreen;
+export default LoginScreen; // Exports the login screen to be reused
