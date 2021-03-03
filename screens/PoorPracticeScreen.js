@@ -26,7 +26,7 @@ const PoorPracticeScreen = ({item, navigation, props}) => { // The poor practice
             </View>
 
             <Card style = {styles.cardStyle}>
-                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} />
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.abuseDescription}>{item.abuse_description}</Text>} />
             </Card>
 
           <View style = {styles.btnContainer}>
@@ -117,6 +117,11 @@ const styles = StyleSheet.create({
         height: 180,
         marginLeft: 55,
         marginTop: 20
+    },
+
+    abuseDescription: {
+        marginTop: -13,
+        paddingLeft: 5
     }
 });
 
