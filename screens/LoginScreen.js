@@ -2,8 +2,14 @@ import React from 'react';
 import {View, StyleSheet, Text, TextInput} from 'react-native';
 import {Button} from 'react-native-elements';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import Colors from '../constants/Colors';
+
+const SIZES = {
+    borderRadius: 200
+}
 
 const LoginScreen = ({props, navigation}) => { // Login Screen component
+
     return (
        <ScrollView>
            <Text style = {styles.loginTxt}>Login</Text>
@@ -16,9 +22,9 @@ const LoginScreen = ({props, navigation}) => { // Login Screen component
         <View>
             <Text style = {styles.passwordTextContainer}>Password</Text>
             <TextInput secureTextEntry = {true} placeholder = "Password" style = {styles.passwordContainer}/>
-    
+
         <View>
-            <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.loginBtn} title = "Login"/>
+            <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.loginBtn} title = "Login"/>
         </View>
 
         <View>
@@ -26,7 +32,7 @@ const LoginScreen = ({props, navigation}) => { // Login Screen component
         </View>
     </View>
 
-     </ScrollView>
+ </ScrollView>
     )
 }
 
