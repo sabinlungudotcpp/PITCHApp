@@ -1,6 +1,7 @@
 import React from 'react';
 import {FlatList, View, Text, StyleSheet, ScrollView, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import Card from '../components/Card';
 import Colors from '../constants/Colors';
 import Sizes from '../constants/Sizes';
@@ -34,7 +35,11 @@ const IntroductionScreen = ({props, navigation, item}) => {
 
         <View style = {styles.btnContainers}>
              <Button buttonStyle = {{marginRight: Platform.OS === 'android' ? 45 : null, width: Platform.OS === 'android' ? 135 : null, backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: Sizes.borderRadius}} style = {styles.backBtn} title = "Back" onPress = {() => navigation.navigate('ChildProtectionScreen')}/>
-             <Button buttonStyle = {{width: Platform.OS === 'android' ? 140 : null , backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: 200}} style = {styles.aimsBtn} title = "View Aims" onPress = {() => navigation.navigate('AimsScreen')}/>
+
+             <TouchableOpacity onPress = {() => navigation.navigate('AimsScreen')}>
+                <Button buttonStyle = {{width: Platform.OS === 'android' ? 140 : null , backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: 200}} style = {styles.aimsBtn} title = "View Aims"/>
+             </TouchableOpacity>
+             
         </View>
      
 </ScrollView>

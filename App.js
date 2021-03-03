@@ -6,7 +6,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import HomeNavigator from './navigation/StackNavigator';
 import SlumSoccerStackNavigator from './navigation/SlumSoccerStackNavigator';
 
-const Tab = createMaterialBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator(); // Creates the bottom tab navigator
 
 const SIZES = {
   androidSize: 40,
@@ -43,9 +43,10 @@ const style = StyleSheet.create({
 export default function App() {
   
   return (
+
     <NavigationContainer>
      <BottomTabs/>
-      
+ 
     </NavigationContainer>
   
   );

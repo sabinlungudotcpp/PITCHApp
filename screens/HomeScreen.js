@@ -15,7 +15,7 @@ const HomeScreen = ({item, navigation}) => { // Home Screen
     return (
         <ScrollView>
         <View style = {style.main}>
-            
+
         <View style = {style.mainHeader}>
             <Text style = {style.mainText}>PITCH</Text>
         </View>
@@ -31,6 +31,7 @@ const HomeScreen = ({item, navigation}) => { // Home Screen
             <Button buttonStyle = {{width: Platform.OS === 'android' ? 135 : 145 , backgroundColor: Colors.primaryColor, marginLeft: Platform.OS === 'android' ? 20 : 1, borderRadius: 200}} color = 'black' style = {style.loginBtn} title = "Login" />
         </TouchableOpacity>
 
+
         </View>
     </View>
 </ScrollView>
@@ -44,7 +45,7 @@ const style = StyleSheet.create({
         height: 900
     },
 
-    mainHeader: {
+    mainHeader: { // Styles for the main header
         alignItems: 'center',
         flex: 1,
         marginTop: -80
@@ -100,26 +101,26 @@ const style = StyleSheet.create({
      },
 
      loginBtn: {
-         width: Platform.OS === 'android' ? 200 : 140,
-         right: -5,
-         left: -10,
-         marginLeft: Platform.OS === 'android' ? 40 : 40,
-         color: 'black',
-         textAlign: 'center'
+        width: Platform.OS === 'android' ? 200 : 140,
+        right: -5,
+        left: -10,
+        marginLeft: Platform.OS === 'android' ? 40 : 40,
+        color: 'black',
+        textAlign: 'center'
      },
 
      aboutUsBtn: {
-         width: 170,
-         marginLeft: 120,
-         marginTop: 30
+        width: 170,
+        marginLeft: 120,
+        marginTop: 30
      },
 
      descriptionTxt: {
-         padding: 38,
-         marginTop: 120,
-         marginBottom: -160,
-         paddingTop: 40,
-         fontSize: 18
+        padding: 38,
+        marginTop: 120,
+        marginBottom: -160,
+        paddingTop: 40,
+        fontSize: 18
      }
 });
 
