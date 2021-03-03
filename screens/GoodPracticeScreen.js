@@ -7,6 +7,11 @@ import ChildProtectionData from '../data/ChildProtectionData';
 import AvoidData from '../data/AvoidData'; // Imports the Avoid data
 import Colors from '../constants/Colors'; // Imports the Colors from the file
 
+const BUTTON_CONTAINER_SIZES = {
+    width: 110,
+    height: 42
+}
+
 const GoodPracticeScreen = ({props, navigation, item}) => { // The Good Practices Screen
     return (
         <ScrollView>
@@ -86,8 +91,8 @@ const styles = StyleSheet.create({
     },
 
     btnContainer: {
-        width: 110,
-        height: 42,
+        width: BUTTON_CONTAINER_SIZES.width,
+        height: BUTTON_CONTAINER_SIZES.height,
         textAlign: 'center',
         borderRadius: 200,
         marginLeft: 50,

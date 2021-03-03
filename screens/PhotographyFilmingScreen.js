@@ -20,7 +20,7 @@ const PhotographyFilmingScreen = ({props, navigation, item}) => {
                 <Button onPress = {() => navigation.navigate('GoodPracticeScreen')} style = {style.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back"/>
 
                 <TouchableOpacity onPress = {() => navigation.navigate('RecruitmentScreen')}>
-                    <Button style = {style.nextPolicyBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Next Policy"/>
+                    <Button style = {style.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy"/>
                 </TouchableOpacity>
             </View>
 
