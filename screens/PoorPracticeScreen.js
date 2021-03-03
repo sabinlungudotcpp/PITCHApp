@@ -33,8 +33,6 @@ const PoorPracticeScreen = ({item, navigation, props}) => { // The poor practice
               <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => navigation.navigate('AllegationsScreen')} title = "Back" />
               <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => {}} title = "Next" />
           </View>
-
-
     </ScrollView>
     )
 };

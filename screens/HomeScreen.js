@@ -1,6 +1,7 @@
 import React from 'react';
-import {View, StyleSheet, Text, ScrollView} from 'react-native';
+import {View, StyleSheet, Text, ScrollView, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
+import Colors from '../constants/Colors';
 
 const HomeScreen = ({item, navigation}) => { // Home Screen
 
@@ -16,8 +17,8 @@ const HomeScreen = ({item, navigation}) => { // Home Screen
         </View>
 
           <View style = {style.btnContainers}>
-            <Button buttonStyle = {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('Register')}/>
-            <Button buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} color = 'black' title = "Login" style = {style.loginBtn} onPress = {() => navigation.navigate('Login')} />
+            <Button buttonStyle = {{backgroundColor: '#F7B500', marginRight: Platform.OS === 'android' ? 20 : 40, theme: 'dark', borderRadius: 200}} style = {style.registerBtn} title = "Register" onPress = {() => navigation.navigate('Register')}/>
+            <Button buttonStyle = {{width: Platform.OS === 'android' ? 120 : 150 ,backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, marginLeft: Platform.OS === 'android' ? 30 : -4, borderRadius: Platform.OS === 'android' ? 200 : 200}} color = 'black' title = "Login" style = {style.loginBtn} onPress = {() => navigation.navigate('Login')} />
         </View>
     </View>
 
@@ -68,7 +69,7 @@ const style = StyleSheet.create({
     },
 
     registerBtn: {
-        width: 170,
+        width: Platform.OS === 'android' ? 200 : 200,
         borderRadius: 200,
         color: 'black',
         paddingLeft: 10,
@@ -80,15 +81,16 @@ const style = StyleSheet.create({
         left: 25,
         paddingLeft: 10,
         paddingHorizontal: 20,
-        marginRight: 5,
+        marginRight: Platform.OS === 'android' ? 50 : -40,
+        elevation: 5,
         marginLeft: -40,
      },
 
      loginBtn: {
-         width: 140,
+         width: Platform.OS === 'android' ? 200 : 140,
          right: -5,
          left: -10,
-         marginLeft: 40,
+         marginLeft: Platform.OS === 'android' ? 40 : 40,
          color: 'black',
          textAlign: 'center'
      },
