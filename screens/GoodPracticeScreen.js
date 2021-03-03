@@ -13,34 +13,45 @@ const BUTTON_CONTAINER_SIZES = {
 }
 
 const GoodPracticeScreen = ({props, navigation, item}) => { // The Good Practices Screen
-    return (
+
+    try {
+        return (
+            
         <ScrollView>
             <Text style = {styles.goodPracticeTxt}>{ChildProtectionData.map(data => data.title_practice)}</Text>
-            <Image style = {styles.imageContainer} source = {require('../assets/Images/ImageGoodPractice.jpg')}/>
-
+        <Image style = {styles.imageContainer} source = {require('../assets/Images/ImageGoodPractice.jpg')}/>
+    
         <Card style = {styles.cardStyle}>
             <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.practiceTxt}>{item.description_practice}</Text>}/>
         </Card>
-
+    
         <View style = {styles.btnContainer}>
-             <Button style = {styles.firstGuidelineBtn} buttonStyle =  {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "Guidelines" onPress = {() => navigation.navigate('GoodPracticeGuidelines')} /> 
-             <Button style = {styles.nextPolicyBtn} buttonStyle =  {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "View More" /> 
+            <Button style = {styles.firstGuidelineBtn} buttonStyle =  {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "Guidelines" onPress = {() => navigation.navigate('GoodPracticeGuidelines')} /> 
+            <Button style = {styles.nextPolicyBtn} buttonStyle =  {{backgroundColor: '#F7B500', theme: 'dark', borderRadius: 200}} title = "View More" /> 
         </View>
-
+    
         <Text style = {styles.avoidTxt}>{ChildProtectionData.map(data => data.title_avoid)}</Text>
         <Image style = {styles.avoidImg} source = {require('../assets/Images/ImagePracticesToAvoid.jpg')}/>
-
+    
         <Card style = {styles.cardStyle}>
             <FlatList data = {AvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.descriptionAvoidTxt}>{item.description_avoid}</Text>} />
         </Card>
-
+    
         <View style = {styles.btnContainer}>
             <Button onPress = {() => navigation.navigate('PracticesAvoidScreen')} style = {styles.guidelinesBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Guidelines"/>
             <Button onPress = {() => navigation.navigate('PhotographyFilmingScreen')} style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Next Policy" />
-        </View>
+         </View>
+    </ScrollView>
 
-       </ScrollView>
-    )
+        )
+    } 
+    
+    catch(error) {
+
+        if(error) {
+            return console.error(`An error occurred ${error.toString()}`);
+        }
+    }
 }
 
 const styles = StyleSheet.create({
