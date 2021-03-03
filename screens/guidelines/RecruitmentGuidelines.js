@@ -20,8 +20,10 @@ const SIZES = { // Sizez to be used throughout the application
 }
 
 const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment Guidelines component
-    return (
-        <ScrollView>
+
+    try {
+        return (
+            <ScrollView>
             <Text style = {style.guidelineTitle}>{ChildProtectionData.map(data => data.guideline_title)}</Text>
 
             <Card style = {style.cardStyle}>
@@ -44,7 +46,15 @@ const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment G
             </View>
 
         </ScrollView>
-    )
+        )
+    } 
+    
+    catch(error) {
+
+        if(error) {
+            return console.log(error);
+        }
+    }
 };
 
 const style = StyleSheet.create({
