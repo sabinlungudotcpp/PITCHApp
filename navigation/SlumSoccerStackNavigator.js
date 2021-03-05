@@ -13,6 +13,8 @@ import RecruitmentScreen from '../screens/RecruitmentScreen';
 import RecruitmentGuidelines from '../screens/guidelines/RecruitmentGuidelines';
 import AllegationsScreen from '../screens/AllegationsScreen';
 import PoorPracticeScreen from '../screens/PoorPracticeScreen';
+import EnquiriesActionScreen from '../screens/EnquiriesActionScreen';
+import Colors from '../constants/Colors';
 
 const Stack = createStackNavigator(); // Creates a stack navigator
 
@@ -20,40 +22,44 @@ const SlumSoccerStackNavigator = ({navigation}) => { // Stack Navigation for Slu
     return <Stack.Navigator>
         <Stack.Screen options = { {headerTintColor: 'black', headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
               color="#fff"/>), headerRight: () => (<Button onPress={() => navigation.navigate('Register')} title = "Register"
-              color="#fff"/>), headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "Back" component = {SlumSoccerHome}/>
+              color="#fff"/>), headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "Back" component = {SlumSoccerHome}/>
 
 <Stack.Screen options = { {headerTintColor: 'black', headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
-              color="#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "ChildProtectionScreen" component = {ChildProtectionScreen}/>
+              color="#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "ChildProtectionScreen" component = {ChildProtectionScreen}/>
 
 <Stack.Screen options = { {headerTintColor: 'black', headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
-              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "IntroductionScreen" component = {IntroductionScreen}/>
+              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "IntroductionScreen" component = {IntroductionScreen}/>
 
 <Stack.Screen options = { {headerTintColor: 'black', headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = '#fff' />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
-              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "AimsScreen" component = {AimsScreen}/>
+              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "AimsScreen" component = {AimsScreen}/>
 
 <Stack.Screen options = { {headerTintColor: 'black', headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = '#fff' />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
-              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "GoodPracticeScreen" component = {GoodPracticeScreen}/>
+              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "GoodPracticeScreen" component = {GoodPracticeScreen}/>
 
 <Stack.Screen options = { {headerTintColor: 'black', headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = '#fff' />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
-              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "GoodPracticeGuidelines" component = {GoodPracticeGuidelines}/>
+              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "GoodPracticeGuidelines" component = {GoodPracticeGuidelines}/>
 
 <Stack.Screen options = { {headerTintColor: 'black', headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = '#fff' />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
-              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "PhotographyFilmingScreen" component = {PhotographyFilmingScreen}/>
+              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "PhotographyFilmingScreen" component = {PhotographyFilmingScreen}/>
 
 <Stack.Screen options = { {headerTintColor: 'black', headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = '#fff' />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
-              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "PracticesAvoidScreen" component = {PracticesAvoidScreen}/>
+              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "PracticesAvoidScreen" component = {PracticesAvoidScreen}/>
 
 <Stack.Screen options = { {headerTintColor: 'black', headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = '#fff' />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
-              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "RecruitmentScreen" component = {RecruitmentScreen}/>
+              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "RecruitmentScreen" component = {RecruitmentScreen}/>
 
 <Stack.Screen options = { {headerTintColor: 'black', headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = '#fff' />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
-              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "RecruitmentGuidelines" component = {RecruitmentGuidelines}/>
+              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "RecruitmentGuidelines" component = {RecruitmentGuidelines}/>
 
 <Stack.Screen options = { {headerTintColor: 'black', headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = '#fff' />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
-              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "AllegationsScreen" component = {AllegationsScreen}/>
+              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "AllegationsScreen" component = {AllegationsScreen}/>
 
 <Stack.Screen options = { {headerTintColor: 'black', headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = '#fff' />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
-              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: '#F7B500'}}} name = "PoorPracticeScreen" component = {PoorPracticeScreen}/>
+              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "PoorPracticeScreen" component = {PoorPracticeScreen}/>
+
+<Stack.Screen options = { {headerTintColor: 'black', headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = '#fff' />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
+              color=  "#fff"/>) , headerTitle: 'Slum Soccer', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "EnquiriesActionScreen" component = {EnquiriesActionScreen}/>
+
 
 
     </Stack.Navigator>
