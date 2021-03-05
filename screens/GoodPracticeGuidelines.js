@@ -26,7 +26,7 @@ const GoodPracticeGuidelines = ({props, navigation, item}) => { // Good Practice
          </Card>
 
         <View style = {style.btnContainer}>
-            <Button onPress = {() => navigation.navigate('GoodPracticeScreen')} style = {style.guidelineBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
+            <Button onPress = {() => navigation.navigate('GoodPracticeScreen')} style = {style.guidelineBtn} buttonStyle = {{marginBottom: Platform.OS === 'android' ? 50 : null, marginLeft: Platform.OS === 'android' ? 140 : null ,width: Platform.OS === 'android' ? 140 : null ,backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
         </View>
 
         </ScrollView>
