@@ -10,11 +10,11 @@ const SIZES = {
     borderRadius: 200
 }
 
-const PhotographyFilmingScreen = ({props, navigation, item}) => {
+const PhotographyFilmingScreen = ({props, navigation, item}) => { // Photography / Filming Screen Component
     return (
         <ScrollView>
             <Text style = {style.photographyTxt}>{ChildProtectionData.map(value => value.title_photography)}</Text>
-            <Image style = {style.photographyImg} source = {require('../assets/Images/ImagePhotography.jpg')} />
+                <Image style = {style.photographyImg} source = {require('../assets/Images/ImagePhotography.jpg')} />
 
             <Card style = {style.cardStyle}>
                 <FlatList keyExtractor = {(item) => item.id} data = {ChildProtectionData} renderItem = {({item}) => <Text style = {style.photographyDescriptionTxt}>{item.photography_description}</Text>} />
@@ -109,4 +109,4 @@ const style = StyleSheet.create({
     }
 })
 
-export default PhotographyFilmingScreen;
+export default PhotographyFilmingScreen; // Exports the screen

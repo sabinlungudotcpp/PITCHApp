@@ -12,6 +12,11 @@ import {Button} from 'react-native-elements';
 import Card from '../components/Card';
 import ChildProtectionData from '../data/ChildProtectionData';
 import Colors from '../constants/Colors';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+
+const SIZES = {
+    borderRadius: 200
+}
 
 const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Screen
     return (
@@ -29,8 +34,12 @@ const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Sc
             </Card>
 
             <View style = {style.buttonContainer}>
-                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} style = {style.backBtn} title = "Back" />
-                <Button onPress = {() => navigation.navigate('RecruitmentGuidelines')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} style = {style.guidelinesBtn} title = "View Guidelines" />
+                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.backBtn} title = "Back" />
+
+                <TouchableOpacity onPress = {() => navigation.navigate('RecruitmentGuidelines')}>
+                    <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.guidelinesBtn} title = "View Guidelines" />
+                </TouchableOpacity>
+
             </View>
 
         </ScrollView>
