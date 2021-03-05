@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, ScrollView, Text, FlatList} from 'react-native';
+import {View, StyleSheet, ScrollView, Text, FlatList, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
 import Card from '../components/Card';
 import GuidelineData from '../data/GuidelineData';

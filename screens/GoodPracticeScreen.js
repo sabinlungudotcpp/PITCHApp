@@ -43,10 +43,10 @@ const GoodPracticeScreen = ({props, navigation, item}) => { // The Good Practice
         </Card>
     
         <View style = {styles.btnContainer}>
-            <Button onPress = {() => navigation.navigate('PracticesAvoidScreen')} style = {styles.guidelinesBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: BUTTON_CONTAINER_SIZES.borderRadius}} title = "Guidelines"/>
+            <Button onPress = {() => navigation.navigate('PracticesAvoidScreen')} style = {styles.guidelinesBtn} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 10 : null ,width: Platform.OS === 'android' ? 130 : null  , backgroundColor: Colors.primaryColor, borderRadius: BUTTON_CONTAINER_SIZES.borderRadius}} title = "Guidelines"/>
 
             <TouchableOpacity onPress = {() => navigation.navigate('PhotographyFilmingScreen')}>
-                <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: BUTTON_CONTAINER_SIZES.borderRadius}} title = "Next Policy" />
+                <Button style = {styles.nextPolicyBtn} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 30 : null ,width: Platform.OS === 'android' ? 130 : null ,backgroundColor: Colors.primaryColor, borderRadius: BUTTON_CONTAINER_SIZES.borderRadius}} title = "Next Policy" />
             </TouchableOpacity>
 
          </View>
