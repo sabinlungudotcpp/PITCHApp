@@ -1,7 +1,7 @@
 import React from 'react';
-import {Text, Image, StyleSheet, FlatList, View} from 'react-native';
+import {Text, Image, StyleSheet, FlatList, View, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import Card from '../components/Card'; // Card import from the components
 import ChildProtectionData from '../data/ChildProtectionData';
 import AvoidData from '../data/AvoidData'; // Imports the Avoid data
@@ -27,8 +27,12 @@ const GoodPracticeScreen = ({props, navigation, item}) => { // The Good Practice
         </Card>
     
         <View style = {styles.btnContainer}>
-            <Button style = {styles.firstGuidelineBtn} buttonStyle =  {{backgroundColor: Colors.primaryColor, theme: 'dark', borderRadius: BUTTON_CONTAINER_SIZES.borderRadius}} title = "Guidelines" onPress = {() => navigation.navigate('GoodPracticeGuidelines')} /> 
-            <Button style = {styles.nextPolicyBtn} buttonStyle =  {{backgroundColor: Colors.primaryColor, theme: 'dark', borderRadius: BUTTON_CONTAINER_SIZES.borderRadius}} title = "View More" /> 
+            <Button style = {styles.firstGuidelineBtn} buttonStyle =  {{marginRight: Platform.OS === 'android' ? 30 : null , width: Platform.OS === 'android' ? 130 : null ,backgroundColor: Colors.primaryColor, theme: 'dark', borderRadius: BUTTON_CONTAINER_SIZES.borderRadius}} title = "Guidelines" onPress = {() => navigation.navigate('GoodPracticeGuidelines')} /> 
+
+            <TouchableOpacity>
+                <Button style = {styles.nextPolicyBtn} buttonStyle =  {{width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.primaryColor, theme: 'dark', borderRadius: BUTTON_CONTAINER_SIZES.borderRadius}} title = "View More" /> 
+            </TouchableOpacity>
+
         </View>
     
         <Text style = {styles.avoidTxt}>{ChildProtectionData.map(data => data.title_avoid)}</Text>

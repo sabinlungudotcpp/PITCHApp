@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text, TextInput} from 'react-native';
+import {View, StyleSheet, Text, TextInput, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import Colors from '../constants/Colors';
@@ -24,7 +24,7 @@ const LoginScreen = ({props, navigation}) => { // Login Screen component
             <TextInput secureTextEntry = {true} placeholder = "Password" style = {styles.passwordContainer}/>
 
         <View>
-            <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.loginBtn} title = "Login"/>
+            <Button buttonStyle = {{marginTop: Platform.OS === 'android' ? 40 : null ,marginLeft: Platform.OS === 'android' ? 150 : null ,width: Platform.OS === 'android' ? 120 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.loginBtn} title = "Login"/>
         </View>
 
         <View>
