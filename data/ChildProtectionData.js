@@ -151,6 +151,11 @@ const CHILD_PROTECTION_DATA = [
         "id": 27,
         "abuse_title": "Reporting Concerns About Abuse",
         "abuse_description": "Any suspicion that a child has been abused by either a member of staff or a volunteer should be reported to the Slum Soccer Child Protection Officer, who will take such steps as considered necessary to ensure the safety of the child in question and any other child who may be at risk.\n\nThe Slum Soccer Child Protection Officer should also notify the relevant Sport Governing Body Officer who in turn will inform the Sport Governing Body officer who will deal with any media queries."
+    },
+
+    {
+        "id": 28,
+        "enquiries_title": "Enquiries and Actions"
     }
 
 ]
