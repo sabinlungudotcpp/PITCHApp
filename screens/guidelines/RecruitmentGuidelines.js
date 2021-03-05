@@ -13,6 +13,7 @@ import Card from '../../components/Card';
 import ChildProtectionData from '../../data/ChildProtectionData';
 import Colors from '../../constants/Colors';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Platform } from 'react-native';
 
 const SIZES = { // Sizez to be used throughout the application
     borderRadius: 200,
@@ -24,7 +25,8 @@ const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment G
 
     try {
         return (
-            <ScrollView>
+
+        <ScrollView>
             <Text style = {style.guidelineTitle}>{ChildProtectionData.map(data => data.guideline_title)}</Text>
 
             <Card style = {style.cardStyle}>
@@ -42,15 +44,15 @@ const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment G
             </Card>
 
             <View style = {style.buttonContainer}>
-                <Button onPress = {() => navigation.navigate('RecruitmentScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.backBtn} title = "Back"/>
+                <Button onPress = {() => navigation.navigate('RecruitmentScreen')} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 20 : null, width: Platform.OS === 'android' ? 115 : null ,backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.backBtn} title = "Back"/>
 
-                <TouchableOpacity onPress = {() => navigation.navigate('AllegationsScreen')}>
-                    <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.nextPolicyBtn} title = "Next Policy" />
-                </TouchableOpacity>
+            <TouchableOpacity onPress = {() => navigation.navigate('AllegationsScreen')}>
+                <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.nextPolicyBtn} title = "Next Policy" />
+            </TouchableOpacity>
 
             </View>
-
         </ScrollView>
+
         )
     } 
     
@@ -84,7 +86,7 @@ const style = StyleSheet.create({
     },
 
     guidelineDescriptionTxt: {
-        marginTop: -12,
+        marginTop: Platform.OS === 'android' ? -15 : -12,
         fontSize: SIZES.fontSize
     },
 
