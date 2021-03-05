@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, ScrollView, FlatList, Text, Image} from 'react-native';
+import {View, StyleSheet, ScrollView, FlatList, Text, Image, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
 import Card from '../components/Card';
@@ -29,30 +29,38 @@ const IMAGE_SIZES = {
 }
 
 const AllegationsScreen = ({item, navigation, props}) => { // The allegations screen used.
-    return (
-        <ScrollView>
-            <Text style = {style.allegationMainTxt}>{ChildProtectionData.map(value => value.allegation_title)}</Text>
-            <Image style = {style.allegationImg} source = {require('../assets/Images/ImageAllegations.jpg')} />
-
-            <Card style = {style.cardStyle}>
-                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.allegationTxt}>{item.allegations_description}</Text>} />
-            </Card>
-
-            <Card style = {style.cardStyle}>
-                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.allegationTxt}>{item.allegations_sub_description}</Text>} />
-            </Card>
-
-            <Card style = {style.cardStyle}>
-                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.investigationTxt}>{item.allegation_investigation}</Text>} />
-            </Card>
-
-            <View style = {style.btnContainer}>
-                <Button style = {style.backBtn} onPress = {() => navigation.navigate('RecruitmentGuidelines')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
-                <Button style = {style.nextPolicyBtn} onPress = {() => navigation.navigate('PoorPracticeScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
-            </View>
-
-        </ScrollView>
-    )
+    try {
+        return (
+            <ScrollView>
+                <Text style = {style.allegationMainTxt}>{ChildProtectionData.map(value => value.allegation_title)}</Text>
+                <Image style = {style.allegationImg} source = {require('../assets/Images/ImageAllegations.jpg')} />
+    
+                <Card style = {style.cardStyle}>
+                    <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.allegationTxt}>{item.allegations_description}</Text>} />
+                </Card>
+    
+                <Card style = {style.cardStyle}>
+                    <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.allegationTxt}>{item.allegations_sub_description}</Text>} />
+                </Card>
+    
+                <Card style = {style.cardStyle}>
+                    <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.investigationTxt}>{item.allegation_investigation}</Text>} />
+                </Card>
+    
+                <View style = {style.btnContainer}>
+                    <Button style = {style.backBtn} onPress = {() => navigation.navigate('RecruitmentGuidelines')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
+                    <Button style = {style.nextPolicyBtn} onPress = {() => navigation.navigate('PoorPracticeScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
+                </View>
+    
+            </ScrollView>
+        )
+    } 
+    
+    catch(error) {
+        if(error) {
+            return console.error(error.toString());
+        }
+    }
 };
 
 const style = StyleSheet.create({ // Styles for the allegations screen
@@ -88,7 +96,7 @@ const style = StyleSheet.create({ // Styles for the allegations screen
     },
 
     allegationTxt: {
-        marginBottom: -13.5
+        marginBottom: Platform.OS === 'android' ? -18.5 : -13.5
     },
 
     btnContainer: {

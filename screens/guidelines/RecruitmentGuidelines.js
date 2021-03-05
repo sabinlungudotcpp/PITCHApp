@@ -44,10 +44,10 @@ const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment G
             </Card>
 
             <View style = {style.buttonContainer}>
-                <Button onPress = {() => navigation.navigate('RecruitmentScreen')} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 20 : null, width: Platform.OS === 'android' ? 115 : null ,backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.backBtn} title = "Back"/>
+                <Button onPress = {() => navigation.navigate('RecruitmentScreen')} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 20 : null, width: Platform.OS === 'android' ? 120 : null ,backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.backBtn} title = "Back"/>
 
             <TouchableOpacity onPress = {() => navigation.navigate('AllegationsScreen')}>
-                <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.nextPolicyBtn} title = "Next Policy" />
+                <Button buttonStyle = {{marginLeft: Platform.OS === 'android' ? 30 : null, width: Platform.OS === 'android' ? 120 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.nextPolicyBtn} title = "Next Policy" />
             </TouchableOpacity>
 
             </View>
@@ -142,7 +142,7 @@ const style = StyleSheet.create({
     },
 
     trainingItemListTxt: {
-        marginTop: -12
+        marginTop: Platform.OS === 'android' ? -17 : 12
     }
 })
 
