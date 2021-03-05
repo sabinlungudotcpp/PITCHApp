@@ -12,6 +12,7 @@ const SIZES = {
 
 const PhotographyFilmingScreen = ({props, navigation, item}) => { // Photography / Filming Screen Component
     return (
+        
         <ScrollView>
             <Text style = {style.photographyTxt}>{ChildProtectionData.map(value => value.title_photography)}</Text>
                 <Image style = {style.photographyImg} source = {require('../assets/Images/ImagePhotography.jpg')} />
