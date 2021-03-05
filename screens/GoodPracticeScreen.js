@@ -44,7 +44,11 @@ const GoodPracticeScreen = ({props, navigation, item}) => { // The Good Practice
     
         <View style = {styles.btnContainer}>
             <Button onPress = {() => navigation.navigate('PracticesAvoidScreen')} style = {styles.guidelinesBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: BUTTON_CONTAINER_SIZES.borderRadius}} title = "Guidelines"/>
-            <Button onPress = {() => navigation.navigate('PhotographyFilmingScreen')} style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: BUTTON_CONTAINER_SIZES.borderRadius}} title = "Next Policy" />
+
+            <TouchableOpacity onPress = {() => navigation.navigate('PhotographyFilmingScreen')}>
+                <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: BUTTON_CONTAINER_SIZES.borderRadius}} title = "Next Policy" />
+            </TouchableOpacity>
+
          </View>
     </ScrollView>
 
