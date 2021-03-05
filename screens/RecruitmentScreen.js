@@ -13,6 +13,7 @@ import Card from '../components/Card';
 import ChildProtectionData from '../data/ChildProtectionData';
 import Colors from '../constants/Colors';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Platform } from 'react-native';
 
 const SIZES = {
     borderRadius: 200
@@ -34,10 +35,10 @@ const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Sc
             </Card>
 
             <View style = {style.buttonContainer}>
-                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.backBtn} title = "Back" />
+                <Button onPress = {() => {}} buttonStyle = {{marginRight: Platform.OS === 'android' ? 25 : null, marginLeft: Platform.OS === 'android' ? 25 : null ,width: Platform.OS === 'android' ? 115 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.backBtn} title = "Back" />
 
                 <TouchableOpacity onPress = {() => navigation.navigate('RecruitmentGuidelines')}>
-                    <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.guidelinesBtn} title = "View Guidelines" />
+                    <Button buttonStyle = {{width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.guidelinesBtn} title = "View Guidelines" />
                 </TouchableOpacity>
 
             </View>
