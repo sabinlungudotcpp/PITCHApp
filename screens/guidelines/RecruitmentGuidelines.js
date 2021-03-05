@@ -12,6 +12,7 @@ import {Button} from 'react-native-elements';
 import Card from '../../components/Card';
 import ChildProtectionData from '../../data/ChildProtectionData';
 import Colors from '../../constants/Colors';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const SIZES = { // Sizez to be used throughout the application
     borderRadius: 200,
@@ -42,7 +43,11 @@ const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment G
 
             <View style = {style.buttonContainer}>
                 <Button onPress = {() => navigation.navigate('RecruitmentScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.backBtn} title = "Back"/>
-                <Button onPress = {() => navigation.navigate('AllegationsScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.nextPolicyBtn} title = "Next Policy" />
+
+                <TouchableOpacity onPress = {() => navigation.navigate('AllegationsScreen')}>
+                    <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.nextPolicyBtn} title = "Next Policy" />
+                </TouchableOpacity>
+
             </View>
 
         </ScrollView>
