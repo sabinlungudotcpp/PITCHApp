@@ -20,6 +20,7 @@ const SIZES = {
 }
 
 const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Screen
+    
     return (
 
         <ScrollView>
@@ -35,7 +36,7 @@ const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Sc
             </Card>
 
             <View style = {style.buttonContainer}>
-                <Button onPress = {() => {}} buttonStyle = {{marginRight: Platform.OS === 'android' ? 25 : null, marginLeft: Platform.OS === 'android' ? 25 : null ,width: Platform.OS === 'android' ? 115 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.backBtn} title = "Back" />
+                <Button onPress = {() => navigation.navigate('PhotographyFilmingScreen')} buttonStyle = {{marginRight: Platform.OS === 'android' ? 25 : null, marginLeft: Platform.OS === 'android' ? 25 : null ,width: Platform.OS === 'android' ? 115 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.backBtn} title = "Back" />
 
                 <TouchableOpacity onPress = {() => navigation.navigate('RecruitmentGuidelines')}>
                     <Button buttonStyle = {{width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.guidelinesBtn} title = "View Guidelines" />

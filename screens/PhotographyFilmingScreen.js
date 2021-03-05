@@ -89,8 +89,8 @@ const style = StyleSheet.create({
         left: 25,
         paddingLeft: 10,
         paddingHorizontal: 20,
-        marginRight: 5,
-        marginLeft: -40,
+        marginRight: 10,
+        marginLeft: 10,
     },
 
     nextPolicyBtn: {

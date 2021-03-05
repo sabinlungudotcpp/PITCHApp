@@ -142,7 +142,8 @@ const style = StyleSheet.create({
     },
 
     trainingItemListTxt: {
-        marginTop: Platform.OS === 'android' ? -17 : 12
+        marginTop: Platform.OS === 'android' ? -17 : 9,
+        marginBottom: -27
     }
 })
 

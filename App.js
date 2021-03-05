@@ -46,7 +46,7 @@ const style = StyleSheet.create({
   }
 })
 
-export default function App() {
+const App = () => {
   
   return (
 
@@ -57,3 +57,5 @@ export default function App() {
   
   );
 }
+
+export default App;
