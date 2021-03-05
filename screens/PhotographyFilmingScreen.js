@@ -6,6 +6,10 @@ import ChildProtectionData from '../data/ChildProtectionData';
 import Colors from '../constants/Colors';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
+const SIZES = {
+    borderRadius: 200
+}
+
 const PhotographyFilmingScreen = ({props, navigation, item}) => {
     return (
         <ScrollView>
@@ -17,10 +21,10 @@ const PhotographyFilmingScreen = ({props, navigation, item}) => {
             </Card>
 
             <View style = {style.btnContainers}>
-                <Button onPress = {() => navigation.navigate('GoodPracticeScreen')} style = {style.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back"/>
+                <Button onPress = {() => navigation.navigate('GoodPracticeScreen')} style = {style.backBtn} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 15 : null, width: Platform.OS === 'android' ? 120 : null, backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back"/>
 
                 <TouchableOpacity onPress = {() => navigation.navigate('RecruitmentScreen')}>
-                    <Button style = {style.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy"/>
+                    <Button style = {style.nextPolicyBtn} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 40 : null, width: Platform.OS === 'android' ? 120 : null , backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "Next Policy"/>
                 </TouchableOpacity>
             </View>
 
@@ -61,7 +65,7 @@ const style = StyleSheet.create({
         height: 42,
         textAlign: 'center',
         borderRadius: 200,
-        marginLeft: 50,
+        marginLeft: Platform.OS === 'android' ? 50 : null, 
         marginTop: 15,
         paddingHorizontal: -20,
         justifyContent: 'space-between',
@@ -69,6 +73,7 @@ const style = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         paddingRight: 10,
+        marginBottom: Platform.OS === 'android' ? 50 : null, 
     },
 
     backBtn: { 
