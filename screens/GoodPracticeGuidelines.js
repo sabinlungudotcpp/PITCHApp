@@ -3,6 +3,7 @@ import {View, StyleSheet, ScrollView, Text, FlatList, Platform} from 'react-nati
 import {Button} from 'react-native-elements';
 import Card from '../components/Card';
 import GuidelineData from '../data/GuidelineData';
+import Colors from '../constants/Colors';
 import GoodPracticeData from '../data/GoodPracticeData';
 
 const GoodPracticeGuidelines = ({props, navigation, item}) => { // Good Practice Guidelines Component
@@ -14,18 +15,18 @@ const GoodPracticeGuidelines = ({props, navigation, item}) => { // Good Practice
           <Card style = {style.cardStyle}>
              <FlatList keyExtractor = {(item) => item.id} data = {GoodPracticeData} renderItem = {({item}) => item.description_practice.startsWith('1.') || item.description_practice.startsWith('2. ') || item.description_practice.startsWith('3. ') || item.description_practice.startsWith('4. ') || item.description_practice.startsWith('5. ') ? <Text style = {style.descriptionStyles}>{item.description_practice}</Text> : null} />
           </Card>
-
     
          <Card style = {style.cardStyle}>
              <FlatList keyExtractor = {(item) => item.id} data = {GoodPracticeData} renderItem = {({item}) => item.description_id >= 1006 && item.description_id <= 1011 ? <Text style = {style.descriptionStyles}>{item.description_practice}</Text> : null}  />
          </Card>
+
 
          <Card style = {style.cardStyle}>
             <FlatList data = {GoodPracticeData} renderItem = {({item}) => item.description_id >= 1012 && item.description_id <= 1018 ? <Text style = {style.descriptionStyles}>{item.description_practice}</Text> : null} />
          </Card>
 
         <View style = {style.btnContainer}>
-            <Button onPress = {() => navigation.navigate('GoodPracticeScreen')} style = {style.guidelineBtn} buttonStyle = {{backgroundColor: '#F7B500', borderRadius: 200}} title = "Back" />
+            <Button onPress = {() => navigation.navigate('GoodPracticeScreen')} style = {style.guidelineBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
         </View>
 
         </ScrollView>
