@@ -42,7 +42,6 @@ const RecruitmentScreen = ({props, navigation, item}) => { // The Recruitment Sc
                 </TouchableOpacity>
 
             </View>
-
         </ScrollView>
     )
 };
