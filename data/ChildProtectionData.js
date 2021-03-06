@@ -155,7 +155,26 @@ const CHILD_PROTECTION_DATA = [
 
     {
         "id": 28,
-        "enquiries_title": "Enquiries and Actions"
+        "enquiries_title": "Enquiries and Actions",
+        "enquiries_description": "The Slum Soccer Child Protection Officer will make an immediate decision about whether any individual accused of abuse should be temporarily suspended pending further police and social services enquiries.\n Irrespective of the findings of the social services or police enquiries the Slum Soccer Disciplinary Committee will assess all individual cases to decide whether a member of staff or volunteer can be reinstated and how this can be sensitively handled.",
+        "enquiries_description_sub": "This may be a difficult decision; particularly where there is insufficient evidence to uphold any action by the police. In such cases, the Slum Soccer Disciplinary Committee must reach a decision based upon the available information which could suggest that on a balance of probability, it is more likely that not that the allegation is true. The welfare of the child should remain of paramount importance throughout."
+    },
+
+    {
+        "id": 29,
+        "enquiries_heading": "Support to deal with the aftermath with the aftermath of abuse.",
+        "enquiries_heading_sub": "Consideration should be given to the kind of support that children, parents and members of staff may need. Use of helplines, support groups and open meetings will maintain an open culture and help the healing process."
+    },
+
+    {
+        "id": 30,
+        "enquiries_heading": "Allegations of previous abuse.",
+        "enquiries_heading_sub": "Allegations of abuse may be made some after time after the event (e.g by an adult who was abused as a child or by a member of staff who is still currently working with children)."
+    },
+
+    {
+        "id": 31,
+        "enquiries_sub_last": "Where such an allegation is made, the organization"
     }
 
 ]
