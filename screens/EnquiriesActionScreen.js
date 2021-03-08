@@ -27,8 +27,9 @@ const EnquiriesActionScreen = ({props, navigation, item}) => { // Enquiries and 
                 <TouchableOpacity onPress = {() => {}}>
                         <Button title = "Next Policy" style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} />
                 </TouchableOpacity>
-                
             </View>
+
+            <Text style = {styles.aftermathHeading}>{ChildProtectionData.map(title => title.id === 29 ? title.enquiries_heading : null)}</Text>
 
         </ScrollView>
     )

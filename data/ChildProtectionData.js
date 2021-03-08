@@ -163,7 +163,7 @@ const CHILD_PROTECTION_DATA = [
 
     {
         "id": 29,
-        "enquiries_heading": "Support to deal with the aftermath with the aftermath of abuse.",
+        "enquiries_heading": "Aftermath Support",
         "enquiries_heading_sub": "Consideration should be given to the kind of support that children, parents and members of staff may need. Use of helplines, support groups and open meetings will maintain an open culture and help the healing process."
     },
 
