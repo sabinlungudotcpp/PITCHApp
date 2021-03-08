@@ -4,13 +4,14 @@ import {Button} from 'react-native-elements';
 import ChildProtectionData from '../data/ChildProtectionData';
 import Card from '../components/Card';
 import Colors from '../constants/Colors';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const EnquiriesActionScreen = ({props, navigation, item}) => {
+const EnquiriesActionScreen = ({props, navigation, item}) => { // Enquiries and Actions Screen
 
     return (
         <ScrollView>
             <Text style = {styles.enquiriesTxt}>{ChildProtectionData.map(value => value.enquiries_title)}</Text>
-            <Image style = {styles.enquiriesImg} source = {require('../assets/Images/ImageEnquiries.jpg')} />
+                <Image style = {styles.enquiriesImg} source = {require('../assets/Images/ImageEnquiries.jpg')} />
 
             <Card style = {styles.cardStyle}>
                 <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.enquiriesTxtStyle}>{item.enquiries_description}</Text>} />
@@ -21,8 +22,12 @@ const EnquiriesActionScreen = ({props, navigation, item}) => {
             </Card>
 
             <View style = {styles.btnContainer}>
-                <Button onPress = {() => {}} title = "Back" />
-                <Button onPress = {() => {}} title = "Next Policy" />
+                <Button onPress = {() => {}} title = "Back" buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} style = {styles.backBtn} />
+
+                <TouchableOpacity onPress = {() => {}}>
+                        <Button title = "Next Policy" style = {styles.nextPolicyBtn} />
+                </TouchableOpacity>
+                
             </View>
 
         </ScrollView>
