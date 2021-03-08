@@ -56,7 +56,6 @@ const AllegationsScreen = ({item, navigation, props}) => { // The allegations sc
                     </TouchableOpacity>
 
                 </View>
-    
             </ScrollView>
         )
     } 

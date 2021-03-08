@@ -40,7 +40,7 @@ const PoorPracticeScreen = ({item, navigation, props}) => { // The poor practice
           <View style = {styles.btnContainer}>
                <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} onPress = {() => navigation.navigate('AllegationsScreen')} title = "Back" />
         
-            <Button onPress = {() => navigation.navigate('EnquiriesActionScreen')} style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "Next" />
+            <Button onPress = {() => navigation.navigate('EnquiriesActionScreen')} style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "Next Policy" />
 
          </View>
     </ScrollView>
@@ -83,7 +83,8 @@ const styles = StyleSheet.create({
     },
 
     poorPracticeTxt: {
-        marginTop: -13
+        marginTop: Platform.OS === 'android' ? -18.5 : -13,
+        fontSize: Platform.OS === 'android' ? 15 : 15
     },
 
     poorPracticeSubTxt: {
