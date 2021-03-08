@@ -47,8 +47,16 @@ const EnquiriesActionScreen = ({props, navigation, item}) => { // Enquiries and 
             <Text style = {styles.allegationTxt}>{ChildProtectionData.map(value => value.id === 30 ? value.enquiries_heading : null)}</Text>
 
             <Card style = {styles.cardStyle}>
- 
+                <FlatList />
             </Card>
+
+            <View style = {styles.btnContainer}>
+                <Button onPress = {() => navigation.navigate('PoorPracticeScreen')} title = {`${BUTTON_NAMES.backBtn}`} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} />
+
+                <TouchableOpacity onPress = {() => {}}>
+                        <Button title = {`${BUTTON_NAMES.nextPolicy}`} style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} />
+                </TouchableOpacity>
+            </View>
 
         </ScrollView>
     )
