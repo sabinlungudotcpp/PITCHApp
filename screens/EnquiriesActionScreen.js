@@ -18,7 +18,7 @@ const EnquiriesActionScreen = ({props, navigation, item}) => { // Enquiries and 
             </Card>
 
             <Card style = {styles.cardStyle}>
-
+                <FlatList data = {ChildProtectionData} />
             </Card>
 
             <View style = {styles.btnContainer}>
@@ -79,7 +79,17 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         paddingRight: 10,
-        marginBottom: 50
+        marginBottom: 100
+    },
+
+    backBtn: {
+        width: 130,
+        marginLeft: 20
+    },
+
+    nextPolicyBtn: {
+        marginLeft: 30,
+        width: 130
     }
 });
 
