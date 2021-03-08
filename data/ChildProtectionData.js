@@ -156,7 +156,8 @@ const CHILD_PROTECTION_DATA = [
     {
         "id": 28,
         "enquiries_title": "Enquiries and Actions",
-        "enquiries_description": "The Slum Soccer Child Protection Officer will make an immediate decision about whether any individual accused of abuse should be temporarily suspended pending further police and social services enquiries.\n Irrespective of the findings of the social services or police enquiries the Slum Soccer Disciplinary Committee will assess all individual cases to decide whether a member of staff or volunteer can be reinstated and how this can be sensitively handled.",
+        "image_url": "../assets/Images/ImageEnquiries.jpg",
+        "enquiries_description": "The Slum Soccer Child Protection Officer will make an immediate decision about whether any individual accused of abuse should be temporarily suspended pending further police and social services enquiries.\n\nIrrespective of the findings of the social services or police enquiries the Slum Soccer Disciplinary Committee will assess all individual cases to decide whether a member of staff or volunteer can be reinstated and how this can be sensitively handled.",
         "enquiries_description_sub": "This may be a difficult decision; particularly where there is insufficient evidence to uphold any action by the police. In such cases, the Slum Soccer Disciplinary Committee must reach a decision based upon the available information which could suggest that on a balance of probability, it is more likely that not that the allegation is true. The welfare of the child should remain of paramount importance throughout."
     },
 
@@ -174,7 +175,7 @@ const CHILD_PROTECTION_DATA = [
 
     {
         "id": 31,
-        "enquiries_sub_last": "Where such an allegation is made, the organization"
+        "enquiries_sub_last": "Where such an allegation is made, the organization should follow the procedures as detailed above and report the matter to the social services or police. This is because other children, either within or outside the sport, may be at risk from this person.\n Anyone who has a previous criminal conviction for offences related to abuse is automatically excuded from working with children"
     }
 
 ]

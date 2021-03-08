@@ -13,8 +13,18 @@ const EnquiriesActionScreen = ({props, navigation, item}) => {
             <Image style = {styles.enquiriesImg} source = {require('../assets/Images/ImageEnquiries.jpg')} />
 
             <Card style = {styles.cardStyle}>
-                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} />
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.enquiriesTxtStyle}>{item.enquiries_description}</Text>} />
             </Card>
+
+            <Card style = {styles.cardStyle}>
+
+            </Card>
+
+            <View style = {styles.btnContainer}>
+                <Button onPress = {() => {}} title = "Back" />
+                <Button onPress = {() => {}} title = "Next Policy" />
+            </View>
+
         </ScrollView>
     )
 };
@@ -45,6 +55,10 @@ const styles = StyleSheet.create({
         marginTop: 35,
         alignItems: 'center',
         maxWidth: '100%'
+    },
+
+    enquiriesTxtStyle: {
+        marginTop: -13.5
     }
 });
 
