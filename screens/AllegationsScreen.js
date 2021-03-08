@@ -4,6 +4,7 @@ import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
 import Card from '../components/Card';
 import ChildProtectionData from '../data/ChildProtectionData';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const MARGIN_SIZES = {
     marginTop: 35,
@@ -48,8 +49,12 @@ const AllegationsScreen = ({item, navigation, props}) => { // The allegations sc
                 </Card>
     
                 <View style = {style.btnContainer}>
-                    <Button style = {style.backBtn} onPress = {() => navigation.navigate('RecruitmentGuidelines')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
-                    <Button style = {style.nextPolicyBtn} onPress = {() => navigation.navigate('PoorPracticeScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
+                    <Button style = {style.backBtn} onPress = {() => navigation.navigate('RecruitmentGuidelines')} buttonStyle = {{marginRight: Platform.OS === 'android' ? 30 : null, marginLeft: Platform.OS === 'android' ? 15 : null, width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
+
+                    <TouchableOpacity onPress = {() => navigation.navigate('PoorPracticeScreen')}>
+                        <Button style = {style.nextPolicyBtn} buttonStyle = {{width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
+                    </TouchableOpacity>
+
                 </View>
     
             </ScrollView>
