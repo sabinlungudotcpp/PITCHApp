@@ -28,7 +28,7 @@ const EnquiriesActionScreen = ({props, navigation, item}) => { // Enquiries and 
 
             <Card style = {styles.cardStyle}>
                 <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.enquiriesSubTxt}>{item.enquiries_description_sub}</Text>} />
-            </Card>
+            </Card> 
 
             <View style = {styles.btnContainer}>
                 <Button onPress = {() => navigation.navigate('PoorPracticeScreen')} title = {`${BUTTON_NAMES.backBtn}`} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} />
@@ -45,6 +45,10 @@ const EnquiriesActionScreen = ({props, navigation, item}) => { // Enquiries and 
             </Card>
 
             <Text style = {styles.allegationTxt}>{ChildProtectionData.map(value => value.id === 30 ? value.enquiries_heading : null)}</Text>
+
+            <Card style = {styles.cardStyle}>
+ 
+            </Card>
 
         </ScrollView>
     )
@@ -124,7 +128,7 @@ const styles = StyleSheet.create({
         color: Colors.primaryColor,
         fontSize: 31,
         marginTop: 40,
-        marginBottom: 50
+        marginBottom: 5
     }
 });
 
