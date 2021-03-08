@@ -169,7 +169,7 @@ const CHILD_PROTECTION_DATA = [
 
     {
         "id": 30,
-        "enquiries_heading": "Allegations of previous abuse.",
+        "enquiries_heading": "Allegations of Abuse.",
         "enquiries_heading_sub": "Allegations of abuse may be made some after time after the event (e.g by an adult who was abused as a child or by a member of staff who is still currently working with children)."
     },
 
