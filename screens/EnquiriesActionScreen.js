@@ -18,7 +18,7 @@ const EnquiriesActionScreen = ({props, navigation, item}) => { // Enquiries and 
             </Card>
 
             <Card style = {styles.cardStyle}>
-                <FlatList data = {ChildProtectionData} />
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.enquiriesSubTxt}>{item.enquiries_description_sub}</Text>} />
             </Card>
 
             <View style = {styles.btnContainer}>
@@ -43,9 +43,9 @@ const styles = StyleSheet.create({
     },
 
     enquiriesImg: {
-        width: 290,
+        width: 340,
         height: 180,
-        marginLeft: 60,
+        marginLeft: 45,
         marginTop: 30
     },
 
@@ -80,6 +80,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingRight: 10,
         marginBottom: 100
+    },
+
+    enquiriesSubTxt: {
+        marginTop: -13.5,
+        padding: -1,
     },
 
     backBtn: {
