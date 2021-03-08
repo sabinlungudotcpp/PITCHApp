@@ -6,6 +6,10 @@ import Card from '../components/Card';
 import Colors from '../constants/Colors';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
+const SIZES = {
+    borderRadius: 200
+}
+
 const EnquiriesActionScreen = ({props, navigation, item}) => { // Enquiries and Actions Screen
 
     return (
@@ -22,14 +26,20 @@ const EnquiriesActionScreen = ({props, navigation, item}) => { // Enquiries and 
             </Card>
 
             <View style = {styles.btnContainer}>
-                <Button onPress = {() => {}} title = "Back" buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} style = {styles.backBtn} />
+                <Button onPress = {() => navigation.navigate('PoorPracticeScreen')} title = "Back" buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} />
 
                 <TouchableOpacity onPress = {() => {}}>
-                        <Button title = "Next Policy" style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} />
+                        <Button title = "Next Policy" style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} />
                 </TouchableOpacity>
             </View>
 
             <Text style = {styles.aftermathHeading}>{ChildProtectionData.map(title => title.id === 29 ? title.enquiries_heading : null)}</Text>
+
+            <Card style = {styles.cardStyle}>
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id === 29 ? <Text>{item.enquiries_heading_sub}</Text> : null} /> 
+            </Card>
+
+            <Text></Text>
 
         </ScrollView>
     )
@@ -80,7 +90,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         paddingRight: 10,
-        marginBottom: 100
+        marginBottom: 50
     },
 
     enquiriesSubTxt: {
@@ -96,6 +106,12 @@ const styles = StyleSheet.create({
     nextPolicyBtn: {
         marginLeft: 30,
         width: 130
+    },
+
+    aftermathHeading: {
+        textAlign: 'center',
+        color: Colors.primaryColor,
+        fontSize: 31
     }
 });
 
