@@ -25,7 +25,7 @@ const EnquiriesActionScreen = ({props, navigation, item}) => { // Enquiries and 
                 <Button onPress = {() => {}} title = "Back" buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} style = {styles.backBtn} />
 
                 <TouchableOpacity onPress = {() => {}}>
-                        <Button title = "Next Policy" style = {styles.nextPolicyBtn} />
+                        <Button title = "Next Policy" style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} />
                 </TouchableOpacity>
                 
             </View>
@@ -64,6 +64,22 @@ const styles = StyleSheet.create({
 
     enquiriesTxtStyle: {
         marginTop: -13.5
+    },
+
+    btnContainer: {
+        width: 110,
+        height: 42,
+        textAlign: 'center',
+        borderRadius: 200,
+        marginLeft: 47,
+        marginTop: 35,
+        paddingHorizontal: -20,
+        justifyContent: 'space-between',
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingRight: 10,
+        marginBottom: 50
     }
 });
 
