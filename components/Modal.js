@@ -8,8 +8,12 @@ const Modal = () => {
 
     return (
         <View style = {styles.modalView}>
-            <Modal />
-        </View>
+           <Modal animationType="slide" transparent={true} visible={modalVisible} onRequestClose={() => { Alert.alert("Modal has been closed.");
+          setModalVisible(!modalOpen);
+        }}>
+        
+        </Modal>
+    </View>
     )
 };
 
