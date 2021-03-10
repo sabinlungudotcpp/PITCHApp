@@ -6,6 +6,10 @@ import Card from '../components/Card';
 import ChildProtectionData from '../data/ChildProtectionData';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
+const SIZES = {
+    borderRadius: 200
+}
+
 const BullyingScreen = ({item, navigation}) => {
     return (
     <SafeAreaView style = {styles.safeView}>
@@ -19,10 +23,10 @@ const BullyingScreen = ({item, navigation}) => {
             </Card>
 
             <View style = {styles.btnContainer}>
-                <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} style = {styles.backBtn} title = "Back" />
+                <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} title = "Back" />
 
                 <TouchableOpacity onPress = {() => {}}>
-                     <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} style = {styles.backBtn} title = "Next Policy" />
+                     <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.nextPolicyBtn} title = "Next Policy" />
                 </TouchableOpacity>
             </View>
 
@@ -63,6 +67,32 @@ const styles = StyleSheet.create({
         height: 170,
         marginLeft: 60,
         marginTop: 30
+    },
+
+    btnContainer: {
+        width: 110,
+        height: 42,
+        textAlign: 'center',
+        borderRadius: 200,
+        marginLeft: 47,
+        marginTop: 35,
+        paddingHorizontal: -20,
+        justifyContent: 'space-between',
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingRight: 10,
+        marginBottom: 50
+    },
+
+    backBtn: {
+        width: 130,
+        marginLeft: 20
+    },
+
+    nextPolicyBtn: {
+        width: 130,
+        marginLeft: 20
     }
 });
 
