@@ -1,5 +1,5 @@
-import React from 'react';
-import {ScrollView, Text, FlatList, Platform, StyleSheet, Image, SafeAreaView, View} from 'react-native';
+import React, { useState } from 'react';
+import {ScrollView, Text, FlatList, Platform, StyleSheet, Image, SafeAreaView, View, Modal} from 'react-native';
 import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
 import Card from '../components/Card';
@@ -11,10 +11,12 @@ const SIZES = {
 }
 
 const BullyingScreen = ({item, navigation}) => {
+    const [modalOpen, setModalOpen] = useState(false);
+
     return (
     <SafeAreaView style = {styles.safeView}>
 
-            <ScrollView>
+        <ScrollView>
             <Text style = {styles.bullyingTxt}>{ChildProtectionData.map(title => title.title_bullying)}</Text>
             <Image style = {styles.bullyingImg} source = {(require('../assets/Images/ImageBullying.jpg'))} />
 
@@ -22,10 +24,17 @@ const BullyingScreen = ({item, navigation}) => {
                         
             </Card>
 
+        <Modal animationType = {"slide"} transparent={false} visible={modalOpen} onRequestClose={() => {
+              Alert.alert('Modal has now been closed.');
+
+              <Text  onPress={() => { setIsOpen(false)}}>Close Modal</Text>
+                  
+            }}></Modal>
+
             <View style = {styles.btnContainer}>
                 <Button onPress = {() => navigation.navigate('EnquiriesActionScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} title = "Back" />
 
-                <TouchableOpacity onPress = {() => {}}>
+                <TouchableOpacity onPress = {() => setModalOpen(!modalOpen)}>
                      <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.nextPolicyBtn} title = "Next Policy" />
                 </TouchableOpacity>
             </View>
