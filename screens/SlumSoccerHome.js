@@ -4,12 +4,13 @@ import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
 import Card from '../components/Card';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import ChildProtectionData from '../data/ChildProtectionData';
 
 const SlumSoccerHome = ({props, navigation}) => {
     return (
         <SafeAreaView>
             <ScrollView>
-                <Text style = {styles.introTxt}>Slum Soccer</Text>
+                <Text style = {styles.introTxt}>{ChildProtectionData.map(value => value.main_title)}</Text>
 
                 <Image style = {styles.slumSoccerImg} source = {(require('../assets/Images/SlumSoccerImg.jpg'))} />
 

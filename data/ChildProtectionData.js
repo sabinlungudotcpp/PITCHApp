@@ -1,5 +1,10 @@
 const CHILD_PROTECTION_DATA = [
     {
+        "id": 0,
+        "main_title": "Slum Soccer"
+    },
+    
+    {
         "id": 1,
         "title_practice": "Promoting good practice",
         "image_practice": "../assets/Images/ImageGoodPractice.jpg",
