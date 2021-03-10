@@ -38,9 +38,12 @@ const PoorPracticeScreen = ({item, navigation, props}) => { // The poor practice
          </Card>
         
           <View style = {styles.btnContainer}>
-               <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} onPress = {() => navigation.navigate('AllegationsScreen')} title = "Back" />
+
+            <Button style = {styles.backBtn} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 30 : null ,marginRight: Platform.OS === 'android' ? 25: null ,width: Platform.OS === 'android' ? 120 : null,backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} onPress = {() => navigation.navigate('AllegationsScreen')} title = "Back" />
         
-            <Button onPress = {() => navigation.navigate('EnquiriesActionScreen')} style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "Next Policy" />
+        <TouchableOpacity onPress = {() => navigation.navigate('EnquiriesActionScreen')} >
+             <Button style = {styles.nextPolicyBtn} buttonStyle = {{width: Platform.OS === 'android' ? 120 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "Next Policy" />
+        </TouchableOpacity>
 
          </View>
     </ScrollView>
@@ -96,7 +99,7 @@ const styles = StyleSheet.create({
         height: 42,
         textAlign: 'center',
         borderRadius: 200,
-        marginLeft: 47,
+        marginLeft: Platform.OS === 'android' ? 47 : 47,
         marginTop: 35,
         paddingHorizontal: -20,
         justifyContent: 'space-between',
