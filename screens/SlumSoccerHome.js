@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet, FlatList, ScrollView, SafeAreaView} from 'react-native';
+import {View, Text, Image, StyleSheet, FlatList, ScrollView, SafeAreaView, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
 import Card from '../components/Card';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const SlumSoccerHome = ({props, navigation}) => {
     return (
@@ -16,7 +17,13 @@ const SlumSoccerHome = ({props, navigation}) => {
 
                 </Card>
 
-                
+                <View style = {styles.btnContainer}>
+
+                    <TouchableOpacity>
+                        <Button title = "Back" />
+                    </TouchableOpacity>
+                   
+                </View>
             </ScrollView>
         </SafeAreaView>
     )
@@ -35,6 +42,19 @@ const styles = StyleSheet.create({
         height: 180,
         marginLeft: 66,
         marginTop: 30
+    },
+
+    cardStyle: {
+        padding: 10, 
+        paddingLeft: -40,
+        paddingBottom: -5,
+        marginBottom: 1,
+        width: 340,
+        height: 160,
+        marginLeft: 45,
+        marginTop: 35,
+        alignItems: 'center',
+        maxWidth: '100%'
     }
 });
 
