@@ -23,7 +23,7 @@ const BullyingScreen = ({item, navigation}) => {
             </Card>
 
             <View style = {styles.btnContainer}>
-                <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} title = "Back" />
+                <Button onPress = {() => navigation.navigate('EnquiriesActionScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} title = "Back" />
 
                 <TouchableOpacity onPress = {() => {}}>
                      <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.nextPolicyBtn} title = "Next Policy" />
