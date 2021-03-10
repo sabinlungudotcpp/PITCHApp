@@ -5,14 +5,12 @@ import Colors from '../constants/Colors';
 import Card from '../components/Card';
 import ChildProtectionData from '../data/ChildProtectionData';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import Modal from '../components/Modal';
 
 const SIZES = {
     borderRadius: 200
 }
 
 const BullyingScreen = ({item, navigation}) => {
-    const [modalVisible, setModalVisible] = useState(false);
 
     return (
     <SafeAreaView style = {styles.safeView}>
@@ -28,10 +26,7 @@ const BullyingScreen = ({item, navigation}) => {
     
             <View style = {styles.btnContainer}>
                 <Button onPress = {() => navigation.navigate('EnquiriesActionScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} title = "Back" />
-
-                <TouchableOpacity onPress = {() => setModalOpen(modalOpen)}>
-                     <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.nextPolicyBtn} title = "Next Policy" />
-                </TouchableOpacity>
+                <Button onPress = {() => {showModal()}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.nextPolicyBtn} title = "Next Policy" />
             </View>
 
         </ScrollView>
