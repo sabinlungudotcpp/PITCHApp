@@ -164,18 +164,18 @@ const CHILD_PROTECTION_DATA = [
     {
         "id": 29,
         "enquiries_heading": "Abuse aftermath Support",
-        "enquiries_heading_sub": "Consideration should be given to the kind of support that children, parents and members of staff may need. Use of helplines, support groups and open meetings will maintain an open culture and help the healing process."
+        "enquiries_heading_abuse": "Consideration should be given to the kind of support that children, parents and members of staff may need. Use of helplines, support groups and open meetings will maintain an open culture and help the healing process."
     },
 
     {
         "id": 30,
-        "enquiries_heading": "Allegations of Abuse.",
-        "enquiries_heading_sub": "Allegations of abuse may be made some after time after the event (e.g by an adult who was abused as a child or by a member of staff who is still currently working with children)."
+        "enquiries_heading": "Allegations of Abuse",
+        "enquiries_heading_allegation": "Allegations of abuse may be made some after time after the event (e.g by an adult who was abused as a child or by a member of staff who is still currently working with children)."
     },
 
     {
         "id": 31,
-        "enquiries_sub_last": "Where such an allegation is made, the organization should follow the procedures as detailed above and report the matter to the social services or police. This is because other children, either within or outside the sport, may be at risk from this person.\n Anyone who has a previous criminal conviction for offences related to abuse is automatically excuded from working with children"
+        "enquiries_sub_last": "Where such an allegation is made, the organization should follow the procedures as detailed above and report the matter to the social services or police. This is because other children, either within or outside the sport, may be at risk from this person.\n\nAnyone who has a previous criminal conviction for offences related to abuse is automatically excuded from working with children"
     }
 
 ]

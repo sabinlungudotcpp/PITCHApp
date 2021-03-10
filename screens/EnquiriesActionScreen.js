@@ -41,13 +41,17 @@ const EnquiriesActionScreen = ({props, navigation, item}) => { // Enquiries and 
             <Text style = {styles.aftermathHeading}>{ChildProtectionData.map(title => title.id === 29 ? title.enquiries_heading : null)}</Text>
 
             <Card style = {styles.cardStyle}>
-                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id === 29 ? <Text style = {styles.enquiriesSubHeadingTxt}>{item.enquiries_heading_sub}</Text> : null} /> 
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.enquiriesSubHeadingTxt}>{item.enquiries_heading_abuse}</Text>} /> 
             </Card>
 
             <Text style = {styles.allegationTxt}>{ChildProtectionData.map(value => value.id === 30 ? value.enquiries_heading : null)}</Text>
 
             <Card style = {styles.cardStyle}>
-                <FlatList />
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.allegationSubTxt}>{item.enquiries_heading_allegation}</Text>} />
+            </Card>
+
+            <Card style = {styles.cardStyle}>
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.allegationSubTxt}>{item.enquiries_sub_last}</Text>} />
             </Card>
 
             <View style = {styles.btnContainer}>
@@ -140,7 +144,11 @@ const styles = StyleSheet.create({
     },
 
     enquiriesSubHeadingTxt: {
-        marginTop: 5
+        marginTop: -13
+    },
+
+    allegationSubTxt: {
+        marginTop: -13
     }
 });
 
