@@ -1,6 +1,8 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet, FlatList, ScrollView} from 'react-native';
 import {Button} from 'react-native-elements';
+import Colors from '../constants/Colors';
+import Card from '../components/Card';
 
 const SlumSoccerHome = ({props, navigation}) => {
     return (
