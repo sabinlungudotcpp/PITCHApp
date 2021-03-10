@@ -11,22 +11,24 @@ const SIZES = {
 }
 
 const BullyingScreen = ({item, navigation}) => {
+    const [modalOpen, setModalOpen] = useState(false);
 
     return (
-    <SafeAreaView style = {styles.safeView}>
+        <SafeAreaView style = {styles.safeView}>
 
         <ScrollView>
             <Text style = {styles.bullyingTxt}>{ChildProtectionData.map(title => title.title_bullying)}</Text>
             <Image style = {styles.bullyingImg} source = {(require('../assets/Images/ImageBullying.jpg'))} />
             
-
             <Card style = {styles.cardStyles}>
                         
             </Card>
+
+            <Modal visible = {modalOpen} />
     
             <View style = {styles.btnContainer}>
-                <Button onPress = {() => navigation.navigate('EnquiriesActionScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} title = "Back" />
-                <Button onPress = {() => {showModal()}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.nextPolicyBtn} title = "Next Policy" />
+            <Button onPress = {() => navigation.navigate('EnquiriesActionScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} title = "Back" />
+                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.nextPolicyBtn} title = "Next Policy" />
             </View>
 
         </ScrollView>
