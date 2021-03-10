@@ -20,8 +20,8 @@ const SlumSoccerHome = ({props, navigation}) => {
 
                 <View style = {styles.btnContainer}>
 
-                    <TouchableOpacity>
-                        <Button title = "Back" />
+                    <TouchableOpacity onPress = {() => navigation.navigate('ModulesScreen')}>
+                        <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
                     </TouchableOpacity>
                    
                 </View>
@@ -42,6 +42,12 @@ const styles = StyleSheet.create({
         width: 310,
         height: 180,
         marginLeft: 66,
+        marginTop: 30
+    },
+
+    backBtn: {
+        width: 140,
+        marginLeft: 145,
         marginTop: 30
     },
 
