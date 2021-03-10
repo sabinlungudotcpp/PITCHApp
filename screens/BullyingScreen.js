@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
-import {ScrollView, Text, FlatList, Platform, StyleSheet, Image, SafeAreaView, View, Modal} from 'react-native';
+import {ScrollView, Text, FlatList, Platform, StyleSheet, Image, SafeAreaView, View, Modal, Pressable} from 'react-native';
 import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
 import Card from '../components/Card';
 import ChildProtectionData from '../data/ChildProtectionData';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import Modal from '../components/Modal';
 
 const SIZES = {
     borderRadius: 200
 }
 
 const BullyingScreen = ({item, navigation}) => {
-    const [modalOpen, setModalOpen] = useState(false);
+    const [modalVisible, setModalVisible] = useState(false);
 
     return (
     <SafeAreaView style = {styles.safeView}>
@@ -19,22 +20,16 @@ const BullyingScreen = ({item, navigation}) => {
         <ScrollView>
             <Text style = {styles.bullyingTxt}>{ChildProtectionData.map(title => title.title_bullying)}</Text>
             <Image style = {styles.bullyingImg} source = {(require('../assets/Images/ImageBullying.jpg'))} />
+            
 
             <Card style = {styles.cardStyles}>
                         
             </Card>
-
-        <Modal animationType = {"slide"} transparent={false} visible={modalOpen} onRequestClose={() => {
-              Alert.alert('Modal has now been closed.');
-
-              <Text  onPress={() => { setIsOpen(false)}}>Close Modal</Text>
-                  
-            }}></Modal>
-
+    
             <View style = {styles.btnContainer}>
                 <Button onPress = {() => navigation.navigate('EnquiriesActionScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} title = "Back" />
 
-                <TouchableOpacity onPress = {() => setModalOpen(!modalOpen)}>
+                <TouchableOpacity onPress = {() => setModalOpen(modalOpen)}>
                      <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.nextPolicyBtn} title = "Next Policy" />
                 </TouchableOpacity>
             </View>
@@ -57,7 +52,7 @@ const styles = StyleSheet.create({
     safeView: {
         flex: 1
     },
-
+    
     cardStyles: {
         padding: 10, 
         paddingLeft: -40,
@@ -76,6 +71,12 @@ const styles = StyleSheet.create({
         height: 170,
         marginLeft: 60,
         marginTop: 30
+    },
+
+    closeModalTxt: {
+        fontSize: 24,
+        color: '#00479e',
+        textAlign: 'center',
     },
 
     btnContainer: {
