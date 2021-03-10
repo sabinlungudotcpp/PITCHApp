@@ -8,7 +8,7 @@ import ChildProtectionData from '../data/ChildProtectionData';
 const BullyingScreen = ({item, navigation}) => {
     return (
         <ScrollView>
-
+            <Text>Bullying Screen</Text>
         </ScrollView>
     )
 };
