@@ -21,7 +21,7 @@ const SlumSoccerHome = ({props, navigation}) => {
                 <View style = {styles.btnContainer}>
 
                     <TouchableOpacity onPress = {() => navigation.navigate('ModulesScreen')}>
-                        <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
+                        <Button style = {styles.backBtn} buttonStyle = {{ marginBottom: Platform.OS === 'android' ? 30 : null ,marginTop: Platform.OS === 'android' ? 30 : null ,marginLeft: Platform.OS === 'android' ? 150 : null ,width: Platform.OS === 'android' ? 120 : null, backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
                     </TouchableOpacity>
                 </View>
             </ScrollView>
