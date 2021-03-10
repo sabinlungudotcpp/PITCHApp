@@ -15,7 +15,7 @@ const SlumSoccerHome = ({props, navigation}) => {
                 <Image style = {styles.slumSoccerImg} source = {(require('../assets/Images/SlumSoccerImg.jpg'))} />
 
                 <Card style = {styles.cardStyle}>
-
+                    <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text>{item.slum_soccer_description}</Text>} />
                 </Card>
 
                 <View style = {styles.btnContainer}>
@@ -23,7 +23,6 @@ const SlumSoccerHome = ({props, navigation}) => {
                     <TouchableOpacity onPress = {() => navigation.navigate('ModulesScreen')}>
                         <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
                     </TouchableOpacity>
-                   
                 </View>
             </ScrollView>
         </SafeAreaView>

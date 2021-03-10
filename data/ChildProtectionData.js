@@ -2,7 +2,7 @@ const CHILD_PROTECTION_DATA = [
     {
         "id": 0,
         "main_title": "Slum Soccer",
-        "slum_soccer_description": ""
+        "slum_soccer_description": "Slum Soccer is a non profit organisation which uses football - the beautiful game which is unique yet a perfect vehicle that transcends race, religion, language and gender to bring about a change in the lives of street dwellers. It's aim is to improve children's lives through football based activities. You can find the Slum Soccer modules by pressing the modules option on the top left of the screen."
     },
 
     {
