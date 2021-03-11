@@ -17,7 +17,8 @@ const PoorPracticeScreen = ({item, navigation, props}) => { // The poor practice
     return (
 
      <ScrollView>
-            <Text style = {styles.policyTitleTxt}>{ChildProtectionData.map(value => value.poor_practice_title)}</Text>
+     
+     <Text style = {styles.policyTitleTxt}>{ChildProtectionData.map(value => value.poor_practice_title)}</Text>
          <Image style = {styles.concernImg} source = {(require('../assets/Images/ImageConcerns.jpg'))} />
     
         <Card style = {styles.cardStyle}>

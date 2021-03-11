@@ -31,10 +31,10 @@ const EnquiriesActionScreen = ({props, navigation, item}) => { // Enquiries and 
             </Card> 
 
             <View style = {styles.btnContainer}>
-                <Button onPress = {() => navigation.navigate('PoorPracticeScreen')} title = {`${BUTTON_NAMES.backBtn}`} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} />
+                <Button onPress = {() => navigation.navigate('PoorPracticeScreen')} title = {`${BUTTON_NAMES.backBtn}`} buttonStyle = {{width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} />
 
                 <TouchableOpacity onPress = {() => {}}>
-                        <Button title = {`${BUTTON_NAMES.nextPolicy}`} style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} />
+                        <Button title = {`${BUTTON_NAMES.nextPolicy}`} style = {styles.nextPolicyBtn} buttonStyle = {{width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} />
                 </TouchableOpacity>
             </View>
 
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     },
 
     enquiriesTxtStyle: {
-        marginTop: -13.5
+        marginBottom: Platform.OS === 'android' ? -19 : -13.8
     },
 
     btnContainer: {
