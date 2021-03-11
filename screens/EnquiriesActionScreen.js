@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     },
 
     enquiriesSubHeadingTxt: {
-        marginTop: -13
+        marginTop: Platform.OS === 'android' ? -18 : -13.5
     },
 
     allegationSubTxt: {
