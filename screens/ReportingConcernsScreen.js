@@ -10,6 +10,14 @@ const ReportingConcernsScreen = ({props, navigation, item}) => {
         <SafeAreaView>
             <ScrollView>
                 <Text style = {styles.reportingConcernsTitle}>{ChildProtectionData.map(value => value.title_concerns)}</Text>
+
+                <Image style = {styles.concernImg} source = {(require('../assets/Images/ImageConcerns.jpg'))} />
+
+                <Card style = {styles.cardStyle}>
+                    <FlatList />
+                </Card>
+
+
             </ScrollView>
         </SafeAreaView>
     )
@@ -21,6 +29,11 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 60,
         fontSize: 29
+    },
+
+    concernImg: {
+        width: 280,
+        height: 180
     }
 })
 

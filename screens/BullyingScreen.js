@@ -10,7 +10,7 @@ const SIZES = {
     borderRadius: 200
 }
 
-const BullyingScreen = ({item, navigation}) => {
+const BullyingScreen = ({item, navigation}) => { // Bullying Screen
 
     return (
         <SafeAreaView style = {styles.safeView}>
@@ -79,8 +79,8 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
 
-    btnContainer: {
-        width: 110,
+    btnContainer: { // Styles for the button container
+        width: 110, // Width of the container is 120
         height: 42,
         textAlign: 'center',
         borderRadius: 200,

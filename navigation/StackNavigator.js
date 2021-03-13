@@ -17,7 +17,7 @@ const StackNavigator = ({navigation}) => { // Stack Navigator Component
     return (
         <Stack.Navigator>
             <Stack.Screen options = { {headerTintColor: Colors.black, headerLeft: () => (<Button onPress={() => navigation.navigate('AboutUsScreen')} title = "About Us"
-              color="#fff"/>) , headerTitle: 'PITCH', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "Back" component = {HomeScreen}/>
+              color = "#fff"/>) , headerTitle: 'PITCH', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "Back" component = {HomeScreen}/>
     
             <Stack.Screen options = {{title: 'PITCH', headerTintColor: Colors.black, headerLeft: () => (<Button onPress = {() => navigation.navigate('AboutUsScreen')}
             title = "About Us" color = '#fff'/>), headerStyle: {backgroundColor: Colors.primaryColor}}} name = "Register" component = {RegisterScreen}/>
@@ -25,7 +25,7 @@ const StackNavigator = ({navigation}) => { // Stack Navigator Component
             <Stack.Screen options = {{title: 'PITCH', headerTintColor: Colors.black, headerLeft: () => (<Button onPress = {() => navigation.navigate('ModulesScreen')}
             title = "" color = '#fff'/>), headerStyle: {backgroundColor: Colors.primaryColor}}} name = "Login" component = {LoginScreen}/>
 
-            <Stack.Screen options = {{title: 'PITCH', headerTintColor: Colors.black, headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
+            <Stack.Screen options = {{title: 'PITCH', headerTintColor: Colors.black, headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = '#fff' />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
               color="#fff"/>) , headerTitle: 'PITCH', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "ModulesScreen" component = {ModulesScreen} />
             <Stack.Screen options = {{title: 'PITCH', headerTintColor: Colors.black, headerLeft: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = '#fff' />) , headerStyle: {backgroundColor: '#F7B500'}}} name = "AboutUsScreen" component = {AboutUsScreen} />
 
