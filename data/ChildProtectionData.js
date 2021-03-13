@@ -187,7 +187,12 @@ const CHILD_PROTECTION_DATA = [
     {
         "id": 32,
         "title_bullying": "Bullying",
-        "bullying_txt": "Every child has the right to experience sport in a safe environment free from abuse and bullying. Sports organisations play an important role in creating a positive ethos that challenges bullying by empowering young people to understand the impact of bullying, how best to deal with it and agree standards of behaviour."
+        "bullying_text": "Every child has the right to experience sport in a safe environment free from abuse and bullying. Sports organisations play an important role in creating a positive ethos that challenges bullying by empowering young people to understand the impact of bullying, how best to deal with it and agree standards of behaviour."
+    },
+
+    {
+        "id": 33,
+        "title_concerns": "Reporting Concerns"
     }
 ]
 

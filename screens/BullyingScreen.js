@@ -21,7 +21,7 @@ const BullyingScreen = ({item, navigation}) => {
             <Image style = {styles.bullyingImg} source = {(require('../assets/Images/ImageBullying.jpg'))} />
             
             <Card style = {styles.cardStyles}>
-                        
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.bullyingText}>{item.bullying_text}</Text>} />
             </Card>
 
 
@@ -61,6 +61,11 @@ const styles = StyleSheet.create({
         marginTop: 35,
         alignItems: 'center',
         maxWidth: '100%'
+    },
+
+    bullyingText: {
+        fontSize: 15,
+        marginTop: -13.5
     },
 
     bullyingImg: {
