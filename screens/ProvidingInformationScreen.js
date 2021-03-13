@@ -6,6 +6,10 @@ import ChildProtectionData from '../data/ChildProtectionData';
 import Card from '../components/Card';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
+const BUTTON_SIZES = {
+    borderRadius: 200
+}
+
 const ProvidingInformationScreen = ({props, navigation, item}) => {
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -21,10 +25,10 @@ const ProvidingInformationScreen = ({props, navigation, item}) => {
                 </Card>
 
                 <View style = {styles.btnContainer}>
-                    <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => navigation.navigate('ReportingConcernsScreen')} title = "Back" />
+                    <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: BUTTON_SIZES.borderRadius}} onPress = {() => navigation.navigate('ReportingConcernsScreen')} title = "Back" />
 
                     <TouchableOpacity onPress = {() => setModalOpen(true)} >
-                         <Button style = {styles.viewInfoBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "View Information" />
+                         <Button style = {styles.viewInfoBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: BUTTON_SIZES.borderRadius}} title = "View Information" />
                     </TouchableOpacity>
                 </View>
 
@@ -68,9 +72,9 @@ const styles = StyleSheet.create({
         marginBottom: 1,
         width: 340,
         height: 160,
-        marginLeft: 48,
+        marginLeft: 48, // Has a margin left of 48 pixels
         marginTop: 35,
-        alignItems: 'center',
+        alignItems: 'center', // Align the items to the center of the screen
         maxWidth: '100%'
     },
 
