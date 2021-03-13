@@ -4,6 +4,7 @@ import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
 import ChildProtectionData from '../data/ChildProtectionData';
 import Card from '../components/Card';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const ProvidingInformationScreen = ({props, navigation, item}) => {
     return (
@@ -18,8 +19,12 @@ const ProvidingInformationScreen = ({props, navigation, item}) => {
                 </Card>
 
                 <View style = {styles.btnContainer}>
-                    <Button onPress = {() => navigation.navigate('ReportingConcernsScreen')} title = "Back" />
-                    <Button onPress = {() => {}} title = "View Information" />
+                    <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => navigation.navigate('ReportingConcernsScreen')} title = "Back" />
+
+                    <TouchableOpacity onPress = {() => {}} >
+                         <Button style = {styles.viewInfoBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "View Information" />
+                    </TouchableOpacity>
+                    
                 </View>
 
             </ScrollView>
@@ -37,6 +42,14 @@ const styles = StyleSheet.create({
         color: Colors.primaryColor,
         fontSize: 29,
         marginTop: 60
+    },
+
+    backBtn: {
+
+    },
+
+    viewInfoBtn: {
+        
     }
 });
 
