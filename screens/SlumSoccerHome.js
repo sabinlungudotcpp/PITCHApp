@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet, FlatList, ScrollView, SafeAreaView, Platform} from 'react-native';
+import {View, Text, Image, StyleSheet, FlatList, ScrollView, SafeAreaView, Platform, Modal} from 'react-native';
 import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
 import Card from '../components/Card';
