@@ -13,8 +13,9 @@ const ReportingConcernsScreen = ({props, navigation, item}) => {
         <SafeAreaView>
             <ScrollView>
 
-                <Modal visible = {modalOpen}>
+                <Modal transparent = {false} animationType = {"slide"} visible = {modalOpen}>
                     <Text style = {{textAlign: 'center', marginTop: 50, fontSize: 30}}>Test Modal</Text>
+                    <Button style = {styles.modalBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => setModalOpen(false)} title = "Back" />
                 </Modal>
 
                 <Text style = {styles.reportingConcernsTitle}>{ChildProtectionData.map(value => value.title_concerns)}</Text>
@@ -26,7 +27,7 @@ const ReportingConcernsScreen = ({props, navigation, item}) => {
                 </Card>
 
                 <View style = {styles.btnContainer}>
-                    <Button onPress = {() => {}} style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
+                    <Button onPress = {() => setModalOpen(true)} style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
 
                     <TouchableOpacity>
                             <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
@@ -97,6 +98,12 @@ const styles = StyleSheet.create({
 
     nextPolicyBtn: {
         width: 155
+    },
+
+    modalBtn: {
+        width: 150,
+        marginLeft: 130,
+        marginTop: 100,
     }
 })
 
