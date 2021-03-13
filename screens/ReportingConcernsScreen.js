@@ -10,7 +10,7 @@ const ReportingConcernsScreen = ({props, navigation, item}) => {
 
     return (
 
-        <SafeAreaView>
+        <SafeAreaView style = {styles.safeView}>
             <ScrollView>
                 <Text style = {styles.reportingConcernsTitle}>{ChildProtectionData.map(value => value.title_concerns)}</Text>
 
@@ -35,6 +35,11 @@ const ReportingConcernsScreen = ({props, navigation, item}) => {
 };
 
 const styles = StyleSheet.create({
+
+    safeView: {
+        flex: 1
+    },
+
     reportingConcernsTitle: {
         color: Colors.primaryColor,
         textAlign: 'center',
