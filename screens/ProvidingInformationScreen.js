@@ -36,11 +36,7 @@ const ProvidingInformationScreen = ({props, navigation, item}) => {
                     <Text style = {styles.infoServiceTxt}>Information Services</Text>
 
                     <Card style = {styles.cardStyle}>
-                        <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} />
-                    </Card>
-
-                    <Card style = {styles.cardStyle}>
-                        <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} />
+                        <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.modalListTxt}>{item.providing_information_sub}</Text>}/>
                     </Card>
 
                     <View style = {styles.btnContainer}>
@@ -108,11 +104,19 @@ const styles = StyleSheet.create({
         marginTop: 300
     },
 
+    listInfoTxt: {
+        marginTop: -13.2
+    },
+
     infoServiceTxt: {
         marginTop: 100,
         textAlign: 'center',
         color: Colors.primaryColor,
         fontSize: 29
+    },
+
+    modalListTxt: {
+        marginTop: -13.5,
     }
 });
 

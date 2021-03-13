@@ -205,22 +205,62 @@ const CHILD_PROTECTION_DATA = [
 
     {
         "id": 35,
-        "providing_information_sub": "1. Whether or not the person making the report is expressing their own concerns or those of someone else",
-        "providing_information_sub": "2. The nature of the allegation. Includes dates, times, any special factors and other relevant information",
-        "providing_information_sub": "3. Make a clear distinction between what is fact, opinion or hearsay",
-        "providing_information_sub": "4. A description of any visible bruising or other injuries. Also any indirect signs, such as behavioural changes.",
-        "providing_information_sub": "5. Details of witnesses to the incidents"
+        "providing_information_sub": "1. Whether or not the person making the report is expressing their own concerns or those of someone else\n",
     },
 
     {
         "id": 36,
-        "providing_information_sub": "6. The Child's account, if it can be given, of what has happened and how any bruising or any other injuries occurred",
-        "providing_information_sub": "7. Have the parents been contacted?",
-        "providing_information_sub": "8. If so what has been said?",
-        "providing_information_sub": "9. Has anyone else been consulted? If so record details",
-        "providing_information_sub": "10. If the child was not the person who reported the incident, has the child been spoken to? If so what was said?",
-        "providing_information_sub": "11. Has anyone been alleged to be the abuser? Record details",
-        "providing_information_sub": "12. Where possible referral to the police or social services should be confirmed in writing within 24 hours and the name of the contact who took the referral should be recorded"
+        "providing_information_sub": "2. The nature of the allegation. Includes dates, times, any special factors and other relevant information.\n",
+    },
+
+    {
+        "id": 37,
+        "providing_information_sub": "3. Make a clear distinction between what is fact, opinion or hearsay.\n",
+    },
+
+    {
+        "id": 38,
+        "providing_information_sub": "4. A description of any visible bruising or other injuries. Also any indirect signs, such as behavioural changes.\n",
+    },
+
+    {
+        "id": 39,
+        "providing_information_sub": "5. Details of witnesses to the incidents.\n"
+    },
+
+    {
+        "id": 40,
+        "providing_information_sub": "6. The Child's account, if it can be given, of what has happened and how any bruising or any other injuries occurred.\n",
+    },
+
+    {
+        "id": 41,
+        "providing_information_sub": "7. Have the parents been contacted?.\n",
+    },
+
+    {
+        "id": 42,
+        "providing_information_sub": "8. If so what has been said?\n",
+    },
+
+    {
+        "id": 43,
+        "providing_information_sub": "9. Has anyone else been consulted? If so record details.\n",
+    },
+
+    {
+        "id": 44,
+        "providing_information_sub": "10. If the child was not the person who reported the incident, has the child been spoken to? If so what was said?\n",
+    },
+
+    {
+        "id": 45,
+        "providing_information_sub": "11. Has anyone been alleged to be the abuser? Record details.\n",
+    },
+
+    {
+        "id": 46,
+        "providing_information_sub": "12. Where possible referral to the police or social services should be confirmed in writing within 24 hours and the name of the contact who took the referral should be recorded.\n"
     }
 ]
 
