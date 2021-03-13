@@ -5,6 +5,7 @@ import React from 'react';
 import Card from '../components/Card';
 import ModuleData from '../data/ModuleData';
 import Colors from '../constants/Colors';
+import EstablishStreetSoccer from '../data/EstablishStreetSoccer';
 
 const MODULE_SIZES = {
     defaultWidth: 200,
@@ -50,6 +51,7 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
         <Card style = {styles.cardContainer}>
 
         </Card>
+
     </ScrollView>
     )
 };
