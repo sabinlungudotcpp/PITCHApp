@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, ScrollView, SafeAreaView, Text, FlatList, Image} from 'react-native';
+import {View, StyleSheet, ScrollView, SafeAreaView, Text, FlatList, Image, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
 import Card from '../components/Card';
@@ -17,6 +17,11 @@ const ReportingConcernsScreen = ({props, navigation, item}) => {
                     <FlatList />
                 </Card>
 
+                <View style = {styles.btnContainer}>
+                    <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
+                    <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
+                </View>
+
 
             </ScrollView>
         </SafeAreaView>
@@ -32,8 +37,23 @@ const styles = StyleSheet.create({
     },
 
     concernImg: {
-        width: 280,
-        height: 180
+        width: 320,
+        height: 190,
+        marginLeft: 55,
+        marginTop: 30
+    },
+
+    cardStyle: {
+        padding: 10, 
+        paddingLeft: -40,
+        paddingBottom: -5,
+        marginBottom: 1,
+        width: 340,
+        height: 160,
+        marginLeft: 48,
+        marginTop: 35,
+        alignItems: 'center',
+        maxWidth: '100%'
     }
 })
 
