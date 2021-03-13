@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, FlatList, Image, Text, Platform, Modal, SafeAreaView} from 'react-native';
+import {View, StyleSheet, FlatList, Image, Text, Platform, Modal, SafeAreaView, ScrollView} from 'react-native';
 import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
 import ChildProtectionData from '../data/ChildProtectionData';

@@ -23,7 +23,7 @@ const ReportingConcernsScreen = ({props, navigation, item}) => {
                 <View style = {styles.btnContainer}>
                     <Button onPress = {() => navigation.navigate('BullyingScreen')} style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress = {() => navigation.navigate('ProvidingInformationScreen')} >
                             <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
                     </TouchableOpacity>
                 </View>
