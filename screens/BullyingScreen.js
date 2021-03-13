@@ -11,7 +11,6 @@ const SIZES = {
 }
 
 const BullyingScreen = ({item, navigation}) => {
-    const [modalOpen, setModalOpen] = useState(false);
 
     return (
         <SafeAreaView style = {styles.safeView}>
@@ -26,9 +25,8 @@ const BullyingScreen = ({item, navigation}) => {
 
 
             <View style = {styles.btnContainer}>
-
                 <Button onPress = {() => navigation.navigate('EnquiriesActionScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} title = "Back" />
-                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.nextPolicyBtn} title = "Next Policy" />
+                <Button onPress = {() => navigation.navigate('ReportingConcernsScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.nextPolicyBtn} title = "Next Policy" />
             </View>
 
         </ScrollView>
