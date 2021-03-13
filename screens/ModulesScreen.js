@@ -4,6 +4,13 @@ import { FlatList, ScrollView } from 'react-native-gesture-handler';
 import React from 'react';
 import Card from '../components/Card';
 import ModuleData from '../data/ModuleData';
+import Colors from '../constants/Colors';
+
+const MODULE_SIZES = {
+    defaultWidth: 200,
+    borderRadius: 200,
+    marginLeft: -1
+}
 
 const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Component
     return (
@@ -13,7 +20,7 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
                 <Image style = {{width: 270, height: 190, marginTop: -215, marginBottom: 25}} source = {require('../assets/Images/ChildProtection.jpg')}/>
 
                 <View style = {styles.buttonContainer}>
-                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View Module" onPress = {() => navigation.navigate('ChildProtectionScreen')} />
+                  <Button buttonStyle = {{backgroundColor: Colors.primaryColor, width: MODULE_SIZES.defaultWidth, borderRadius: MODULE_SIZES.borderRadius, marginLeft: -1}} title = "View Module" onPress = {() => navigation.navigate('ChildProtectionScreen')} />
             </View>
         </Card>
         
@@ -24,7 +31,7 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
                 <Image style = {{width: 270, height: 200, marginTop: -250, marginBottom: 15}} source = {require('../assets/Images/ShaktiImg.jpg')}/>
 
                 <View style = {styles.buttonContainer}>
-                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1, marginTop: 5}} title = "View Module" onPress = {() => navigation.navigate('ShaktiFellowshipScreen')} />
+                  <Button buttonStyle = {{backgroundColor: Colors.primaryColor, width: MODULE_SIZES.defaultWidth, borderRadius: MODULE_SIZES.borderRadius, marginLeft: MODULE_SIZES.marginLeft, marginTop: 5}} title = "View Module" onPress = {() => navigation.navigate('ShaktiFellowshipScreen')} />
             </View>
         </Card>
 
@@ -35,8 +42,13 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
                 <Image style = {{width: 270, height: 180, marginTop: -230, marginBottom: 30}} source = {require('../assets/Images/EduKickImg.jpg')}/>
 
                 <View style = {styles.buttonContainer}>
-                  <Button buttonStyle = {{backgroundColor: '#F7B500', width: 200, borderRadius: 200, marginLeft: -1}} title = "View Module" onPress = {() => navigation.navigate('EdukickScreen')} />
+                  <Button buttonStyle = {{backgroundColor: Colors.primaryColor, width: 200, borderRadius: 200, marginLeft: -1}} title = "View Module" onPress = {() => navigation.navigate('EdukickScreen')} />
             </View>
+        </Card>
+
+        {/* Rendered card for establishing street soccer */}
+        <Card style = {styles.cardContainer}>
+
         </Card>
     </ScrollView>
     )
