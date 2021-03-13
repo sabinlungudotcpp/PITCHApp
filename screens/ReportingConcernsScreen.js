@@ -10,7 +10,7 @@ const ReportingConcernsScreen = ({props, navigation, item}) => {
 
     return (
 
-        <SafeAreaView style = {styles.safeView}>
+        <SafeAreaView style = {styles.defaultView}>
             <ScrollView>
                 <Text style = {styles.reportingConcernsTitle}>{ChildProtectionData.map(value => value.title_concerns)}</Text>
 
@@ -18,6 +18,10 @@ const ReportingConcernsScreen = ({props, navigation, item}) => {
 
                 <Card style = {styles.cardStyle}>
                     <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.concernsTxt}>{item.concerns_description}</Text>} />
+                </Card>
+
+                <Card style = {styles.cardStyle}>
+                    <FlatList />
                 </Card>
 
                 <View style = {styles.btnContainer}>
@@ -36,7 +40,7 @@ const ReportingConcernsScreen = ({props, navigation, item}) => {
 
 const styles = StyleSheet.create({
 
-    safeView: {
+    defaultView: {
         flex: 1
     },
 

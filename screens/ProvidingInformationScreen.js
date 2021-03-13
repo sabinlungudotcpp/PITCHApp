@@ -18,7 +18,7 @@ const ProvidingInformationScreen = ({props, navigation, item}) => {
                 </Card>
 
                 <View style = {styles.btnContainer}>
-                    <Button onPress = {() => {}} title = "Back" />
+                    <Button onPress = {() => navigation.navigate('ReportingConcernsScreen')} title = "Back" />
                     <Button onPress = {() => {}} title = "View Information" />
                 </View>
 
