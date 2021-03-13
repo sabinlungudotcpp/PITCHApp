@@ -13,7 +13,7 @@ const ProvidingInformationScreen = ({props, navigation, item}) => {
         <SafeAreaView style = {styles.defaultView}>
             <ScrollView>
                 <Text style = {styles.providingInfoHeader}>{ChildProtectionData.map(value => value.title_providing_information)}</Text>
-                
+
             <Image />
 
                 <Card style = {styles.cardStyle}>
@@ -32,11 +32,11 @@ const ProvidingInformationScreen = ({props, navigation, item}) => {
                     <Text style = {styles.infoServiceTxt}>Information Services</Text>
 
                     <Card style = {styles.cardStyle}>
-                        <Text></Text>
+                        <FlatList />
                     </Card>
 
                     <Card style = {styles.cardStyle}>
-                        <Text></Text>
+                        <FlatList />
                     </Card>
 
                     <View style = {styles.btnContainer}>

@@ -201,6 +201,13 @@ const CHILD_PROTECTION_DATA = [
         "id": 34,
         "title_providing_information": "Providing Service Information",
         "providing_info_text": "Information about suspected abuse must be accurate and a detailed record should always be made at the time ofd the disclosure/concern.\n\nIt should include the child's name, age and date of birth of the child and the child's home address and telephone number"
+    },
+
+    {
+        "id": 35,
+        "providing_information_sub": "1. Whether or not the person making the report is expressing their own concerns or those of someone else",
+        "providing_information_sub": "2. The nature of the allegation. Includes dates, times, any special factors and other relevant information",
+        "providing_information_sub": "3."
     }
 ]
 
