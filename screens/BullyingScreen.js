@@ -13,6 +13,7 @@ const SIZES = {
 const BullyingScreen = ({item, navigation}) => { // Bullying Screen
 
     return (
+        
         <SafeAreaView style = {styles.safeView}>
 
         <ScrollView>
@@ -31,7 +32,6 @@ const BullyingScreen = ({item, navigation}) => { // Bullying Screen
 
         </ScrollView>
     </SafeAreaView>
-
         
     )
 };
