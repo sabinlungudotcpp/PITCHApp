@@ -36,11 +36,11 @@ const ProvidingInformationScreen = ({props, navigation, item}) => {
                     <Text style = {styles.infoServiceTxt}>Information Services</Text>
 
                     <Card style = {styles.cardStyle}>
-                        <FlatList />
+                        <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} />
                     </Card>
 
                     <Card style = {styles.cardStyle}>
-                        <FlatList />
+                        <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} />
                     </Card>
 
                     <View style = {styles.btnContainer}>
