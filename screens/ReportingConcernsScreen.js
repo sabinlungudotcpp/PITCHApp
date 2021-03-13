@@ -58,6 +58,32 @@ const styles = StyleSheet.create({
         marginTop: 35,
         alignItems: 'center',
         maxWidth: '100%'
+    },
+
+    btnContainer: {
+        width: 110, // Width of the container is 120
+        height: 42,
+        textAlign: 'center',
+        borderRadius: 200,
+        marginLeft: 47,
+        marginTop: 35,
+        paddingHorizontal: -20,
+        justifyContent: 'space-between',
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingRight: 10,
+        marginBottom: 50
+    },
+
+    backBtn: {
+        width: 150,
+        marginLeft: 10,
+        marginRight: 20
+    },
+
+    nextPolicyBtn: {
+        width: 155
     }
 })
 
