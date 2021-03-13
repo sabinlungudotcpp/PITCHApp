@@ -121,13 +121,13 @@ const styles = StyleSheet.create({
     },
 
     backBtn: {
-        width: 130,
-        marginLeft: 20
+        width: 150,
+        marginLeft: 5
     },
 
     nextPolicyBtn: {
         marginLeft: 30,
-        width: 130
+        width: 150
     },
 
     aftermathHeading: {

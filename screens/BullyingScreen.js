@@ -13,7 +13,7 @@ const SIZES = {
 const BullyingScreen = ({item, navigation}) => { // Bullying Screen
 
     return (
-        
+
         <SafeAreaView style = {styles.safeView}>
 
         <ScrollView>
@@ -96,12 +96,12 @@ const styles = StyleSheet.create({
     },
 
     backBtn: {
-        width: 130,
-        marginLeft: 20
+        width: 150,
+        marginLeft: 10
     },
 
     nextPolicyBtn: {
-        width: 130,
+        width: 150,
         marginLeft: 20
     }
 });
