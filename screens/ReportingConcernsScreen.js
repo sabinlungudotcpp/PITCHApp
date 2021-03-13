@@ -21,7 +21,7 @@ const ReportingConcernsScreen = ({props, navigation, item}) => {
                 </Card>
 
                 <Card style = {styles.cardStyle}>
-                    <FlatList />
+                    <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.concernsSub}>{item.concerns_description_sub}</Text>} />
                 </Card>
 
                 <View style = {styles.btnContainer}>
@@ -75,6 +75,11 @@ const styles = StyleSheet.create({
         marginTop: -13.5,
         fontSize: 15
     },  
+
+    concernsSub: {
+        marginTop: -13.5,
+        fontSize: 15
+    },
 
     btnContainer: {
         width: 110, // Width of the container is 120

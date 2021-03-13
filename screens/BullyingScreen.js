@@ -14,7 +14,7 @@ const BullyingScreen = ({item, navigation}) => { // Bullying Screen
 
     return (
 
-        <SafeAreaView style = {styles.safeView}>
+    <SafeAreaView style = {styles.safeView}>
 
         <ScrollView>
             <Text style = {styles.bullyingTxt}>{ChildProtectionData.map(title => title.title_bullying)}</Text>
@@ -23,7 +23,6 @@ const BullyingScreen = ({item, navigation}) => { // Bullying Screen
             <Card style = {styles.cardStyles}>
                 <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.bullyingText}>{item.bullying_text}</Text>} />
             </Card>
-
 
             <View style = {styles.btnContainer}>
                 <Button onPress = {() => navigation.navigate('EnquiriesActionScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} title = "Back" />
