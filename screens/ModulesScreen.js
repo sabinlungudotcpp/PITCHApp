@@ -49,7 +49,9 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
 
         {/* Rendered card for establishing street soccer */}
         <Card style = {styles.cardContainer}>
+            <FlatList data = {EstablishStreetSoccer} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.establishTxt}>{item.title}</Text>} />
 
+            <Image style = {styles.establishImg} source = {(require('../assets/Images/ImageEstablishStreetSoccer.jpg'))} />
         </Card>
 
     </ScrollView>
@@ -83,6 +85,12 @@ const styles = StyleSheet.create({ // Styles for the module screen
         right: 10
     },
 
+    establishImg: {
+        width: 250,
+        height: 150,
+        marginBottom: 100
+    },
+
     cardContainer: {
         width: 340,
         left: -40,
@@ -93,6 +101,11 @@ const styles = StyleSheet.create({ // Styles for the module screen
         marginBottom: 20,
         top: 10
     },
+
+    establishTxt: {
+        fontSize: 27,
+        top: 1
+    }
 });
 
 export default ModulesScreen;
