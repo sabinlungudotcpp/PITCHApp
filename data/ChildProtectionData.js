@@ -192,7 +192,9 @@ const CHILD_PROTECTION_DATA = [
 
     {
         "id": 33,
-        "title_concerns": "Reporting Concerns"
+        "title_concerns": "Reporting Sport Concerns",
+        "concerns_description": "Report your concerns to the Child Protection Officer, who should contact the police as soon as possible.\n\nIf the Child Protection Officer is not available, the person being told of or discovering the abuse should contact the police immediately.",
+        "concerns_description_sub": ""
     }
 ]
 

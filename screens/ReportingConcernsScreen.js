@@ -15,7 +15,7 @@ const ReportingConcernsScreen = ({props, navigation, item}) => {
                 <Image style = {styles.concernImg} source = {(require('../assets/Images/ImageConcerns.jpg'))} />
 
                 <Card style = {styles.cardStyle}>
-                    <FlatList />
+                    <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.concernsTxt}>{item.concerns_description}</Text>} />
                 </Card>
 
                 <View style = {styles.btnContainer}>
@@ -60,6 +60,11 @@ const styles = StyleSheet.create({
         maxWidth: '100%'
     },
 
+    concernsTxt: {
+        marginTop: -13.5,
+        fontSize: 15
+    },  
+
     btnContainer: {
         width: 110, // Width of the container is 120
         height: 42,
@@ -75,7 +80,6 @@ const styles = StyleSheet.create({
         paddingRight: 10,
         marginBottom: 50
     },
-
     backBtn: {
         width: 150,
         marginLeft: 10,
