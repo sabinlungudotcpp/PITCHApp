@@ -4,6 +4,7 @@ import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
 import Card from '../components/Card';
 import ChildProtectionData from '../data/ChildProtectionData';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const ReportingConcernsScreen = ({props, navigation, item}) => {
     return (
@@ -19,7 +20,10 @@ const ReportingConcernsScreen = ({props, navigation, item}) => {
 
                 <View style = {styles.btnContainer}>
                     <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
-                    <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
+
+                    <TouchableOpacity>
+                            <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
+                    </TouchableOpacity>
                 </View>
 
 
