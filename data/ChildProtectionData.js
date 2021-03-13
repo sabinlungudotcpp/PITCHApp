@@ -215,7 +215,12 @@ const CHILD_PROTECTION_DATA = [
     {
         "id": 36,
         "providing_information_sub": "6. The Child's account, if it can be given, of what has happened and how any bruising or any other injuries occurred",
-        "providing_information_sub": "7. "
+        "providing_information_sub": "7. Have the parents been contacted?",
+        "providing_information_sub": "8. If so what has been said?",
+        "providing_information_sub": "9. Has anyone else been consulted? If so record details",
+        "providing_information_sub": "10. If the child was not the person who reported the incident, has the child been spoken to? If so what was said?",
+        "providing_information_sub": "11. Has anyone been alleged to be the abuser? Record details",
+        "providing_information_sub": "12. Where possible referral to the police or social services should be confirmed in writing within 24 hours and the name of the contact who took the referral should be recorded"
     }
 ]
 
