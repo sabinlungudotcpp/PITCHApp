@@ -195,6 +195,12 @@ const CHILD_PROTECTION_DATA = [
         "title_concerns": "Reporting Sport Concerns",
         "concerns_description": "Report your concerns to the Child Protection Officer, who should contact the police as soon as possible.\n\nIf the Child Protection Officer is not available, the person being told of or discovering the abuse should contact the police immediately.",
         "concerns_description_sub": "The Child Protection Officer will decide how to involve the parents/carers.\n\nThe Child Protection Officer should also report the incident to the Slum Succer Governing Body.\n\nThe Governing Body should ascertain whether or not the person/s involved in the incident play a role in Slum Soccer and act accordingly."
+    },
+
+    {
+        "id": 34,
+        "title_providing_information": "Providing Service Information",
+        "providing_info_text": "Information about suspected abuse must be accurate and a detailed record should always be made at the time ofd the disclosure/concern.\n\nIt should include the child's name, age and date of birth of the child and the child's home address and telephone number"
     }
 ]
 
