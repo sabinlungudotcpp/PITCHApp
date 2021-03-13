@@ -21,7 +21,7 @@ const ProvidingInformationScreen = ({props, navigation, item}) => {
             <Image />
 
                 <Card style = {styles.cardStyle}>
-                    <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text>{item.providing_info_text}</Text>} />
+                    <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.listInfoTxt}>{item.providing_info_text}</Text>} />
                 </Card>
 
                 <View style = {styles.btnContainer}>

@@ -207,7 +207,15 @@ const CHILD_PROTECTION_DATA = [
         "id": 35,
         "providing_information_sub": "1. Whether or not the person making the report is expressing their own concerns or those of someone else",
         "providing_information_sub": "2. The nature of the allegation. Includes dates, times, any special factors and other relevant information",
-        "providing_information_sub": "3."
+        "providing_information_sub": "3. Make a clear distinction between what is fact, opinion or hearsay",
+        "providing_information_sub": "4. A description of any visible bruising or other injuries. Also any indirect signs, such as behavioural changes.",
+        "providing_information_sub": "5. Details of witnesses to the incidents"
+    },
+
+    {
+        "id": 36,
+        "providing_information_sub": "6. The Child's account, if it can be given, of what has happened and how any bruising or any other injuries occurred",
+        "providing_information_sub": "7. "
     }
 ]
 
