@@ -13,12 +13,9 @@ const ProvidingInformationScreen = ({props, navigation, item}) => {
         <SafeAreaView style = {styles.defaultView}>
             <ScrollView>
                 <Text style = {styles.providingInfoHeader}>{ChildProtectionData.map(value => value.title_providing_information)}</Text>
+                
+            <Image />
 
-                <Modal animationType = {"slide"} visible = {modalOpen} transparent = {false}>
-                    <Text style = {styles.infoServiceTxt}>Information Services</Text>
-                </Modal>
-
-                <Image />
                 <Card style = {styles.cardStyle}>
                     <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text>{item.providing_info_text}</Text>} />
                 </Card>
@@ -29,9 +26,24 @@ const ProvidingInformationScreen = ({props, navigation, item}) => {
                     <TouchableOpacity onPress = {() => setModalOpen(true)} >
                          <Button style = {styles.viewInfoBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "View Information" />
                     </TouchableOpacity>
-                    
                 </View>
 
+                <Modal backgroundColor = {Colors.primaryColor} style = {styles.modalStyle} animationType = {"slide"} visible = {modalOpen} transparent = {false}>
+                    <Text style = {styles.infoServiceTxt}>Information Services</Text>
+
+                    <Card style = {styles.cardStyle}>
+                        <Text></Text>
+                    </Card>
+
+                    <Card style = {styles.cardStyle}>
+                        <Text></Text>
+                    </Card>
+
+                    <View style = {styles.btnContainer}>
+                            <Button onPress = {() => setModalOpen(false)} style = {styles.modalBackBtn} buttonStyle = {{borderRadius: 200, backgroundColor: Colors.primaryColor, width: 150, marginBottom: 5, marginLeft: 85}} title = "Back" />
+                    </View>
+
+                </Modal>
             </ScrollView>
         </SafeAreaView>
     )
