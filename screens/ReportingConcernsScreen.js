@@ -1,5 +1,5 @@
-import React from 'react';
-import {View, StyleSheet, ScrollView, SafeAreaView, Text, FlatList, Image, Platform} from 'react-native';
+import React, {useState} from 'react';
+import {View, StyleSheet, ScrollView, SafeAreaView, Text, FlatList, Image, Platform, Modal} from 'react-native';
 import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
 import Card from '../components/Card';
@@ -7,9 +7,16 @@ import ChildProtectionData from '../data/ChildProtectionData';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const ReportingConcernsScreen = ({props, navigation, item}) => {
+    const [modalOpen, setModalOpen] = useState(false);
+
     return (
         <SafeAreaView>
             <ScrollView>
+
+                <Modal visible = {modalOpen}>
+                    <Text style = {{textAlign: 'center', marginTop: 50, fontSize: 30}}>Test Modal</Text>
+                </Modal>
+
                 <Text style = {styles.reportingConcernsTitle}>{ChildProtectionData.map(value => value.title_concerns)}</Text>
 
                 <Image style = {styles.concernImg} source = {(require('../assets/Images/ImageConcerns.jpg'))} />
@@ -19,12 +26,14 @@ const ReportingConcernsScreen = ({props, navigation, item}) => {
                 </Card>
 
                 <View style = {styles.btnContainer}>
-                    <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
+                    <Button onPress = {() => {}} style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
 
                     <TouchableOpacity>
                             <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
                     </TouchableOpacity>
                 </View>
+
+                
 
 
             </ScrollView>

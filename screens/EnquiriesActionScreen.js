@@ -31,7 +31,7 @@ const EnquiriesActionScreen = ({props, navigation, item}) => { // Enquiries and 
             </Card> 
 
             <View style = {styles.btnContainer}>
-                
+
                 <Button onPress = {() => navigation.navigate('PoorPracticeScreen')} title = {`${BUTTON_NAMES.backBtn}`} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 10 : null, marginRight: Platform.OS === 'android' ? 40 : null, width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} />
 
                 <TouchableOpacity onPress = {() => {}}>
