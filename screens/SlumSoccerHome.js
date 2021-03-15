@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {View, Text, Image, StyleSheet, FlatList, ScrollView, SafeAreaView, Platform, Modal} from 'react-native';
 import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
@@ -7,6 +7,8 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import ChildProtectionData from '../data/ChildProtectionData';
 
 const SlumSoccerHome = ({props, navigation}) => {
+    const [modalOpen, setModalOpen] = useState(false);
+    
     return (
         <SafeAreaView>
             <ScrollView>
@@ -21,7 +23,8 @@ const SlumSoccerHome = ({props, navigation}) => {
                 <View style = {styles.btnContainer}>
 
                     <TouchableOpacity onPress = {() => navigation.navigate('ModulesScreen')}>
-                        <Button style = {styles.backBtn} buttonStyle = {{ marginBottom: Platform.OS === 'android' ? 30 : null ,marginTop: Platform.OS === 'android' ? 30 : null ,marginLeft: Platform.OS === 'android' ? 150 : null ,width: Platform.OS === 'android' ? 120 : null, backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
+                        <Button style = {styles.backBtn} buttonStyle = {{ marginBottom: Platform.OS === 'android' ? 30 : null ,marginTop: Platform.OS === 'android' ? 30 : null ,marginLeft: Platform.OS === 'android' ? 150 : null ,width: Platform.OS === 'android' ? 120 : null, backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "View More" />
+
                     </TouchableOpacity>
                 </View>
             </ScrollView>
