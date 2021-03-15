@@ -13,6 +13,11 @@ const EST_STREET_SOCCER = [
     {
         "id": 2,
         "process_description": "Establishing a Street Soccer centre requires research and thought before starting the programme, on the next page you will find notes and suggestions on the key areas to be considered with a simple table at the end to help you plan your programme."
+    },
+
+    {
+        "id": 3,
+        "target_group_text": "When considering establishing a Street Soccer programme thought needs to be given to the target groups that the programme will be providing for. This could be different depending on the demographics and need of the area, and could vary between cities, regions and countries. If the idea of participating in a specific tournament such as the Homeless World Cup or Street Child World Cup is appealing to you, consideration should be given to the numbers involved in the target area that meet the criteria."
     }
 ]
 

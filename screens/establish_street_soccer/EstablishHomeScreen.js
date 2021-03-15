@@ -29,7 +29,7 @@ const EstablishHomeScreen = ({props, navigation, item}) => {
                 <Text style = {styles.targetGroupsTxt}>Target Groups</Text>
 
                 <Card style = {styles.cardStyle}>
-                        <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} />
+                        <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.targetGroupTxtStyle}>{item.target_group_text}</Text>} />
                 </Card>
 
                 <Button onPress = {() => setModalOpen(false)} buttonStyle = {{width: 150, borderRadius: 200, marginLeft: 140, marginTop: 40}} title = "Back" />
@@ -39,7 +39,11 @@ const EstablishHomeScreen = ({props, navigation, item}) => {
                     <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.streetSoccerDescription}>{item.street_soccer_description}</Text>} />
                 </Card>
 
-                <Button onPress = {() => setModalOpen(true)} style = {styles.processesBtn} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "View Processes" />
+                <View style = {styles.btnContainer}>
+                    <Button onPress = {() => setModalOpen(true)} style = {styles.processesBtn} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "View Process" />
+                    <Button onPress = {() => {}} style = {styles.processNxtBtn} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "Next Process" />
+                </View>
+
 
             </ScrollView>
         </SafeAreaView>
@@ -85,7 +89,7 @@ const styles = StyleSheet.create({
 
     processesBtn: {
         width: 175,
-        marginTop: 50,
+        marginTop: 10,
         marginLeft: 130
     },
 
@@ -132,6 +136,18 @@ const styles = StyleSheet.create({
         fontSize: 29,
         color: Colors.secondaryColor,
         marginTop: 20
+    },
+
+    targetGroupTxtStyle: {
+        marginTop: -10,
+        fontSize: 16,
+        padding: 1
+    },
+
+    processNxtBtn: {
+        marginLeft: 10,
+        width: 165,
+        marginTop: 5
     }
 });
 
