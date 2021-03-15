@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     },
 
     processNxtBtn: {
-        marginLeft: 10,
+        marginLeft: 20,
         width: 165,
         marginTop: 5
     }
