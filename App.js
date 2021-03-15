@@ -24,7 +24,7 @@ const TAB_SIZES = {
 
 const BottomTabs = () => { // Bottom Tab navigator component
 
-    return <Tab.Navigator labeled = {true} shifting = {true} initialRouteName = "Home" barStyle = {{backgroundColor: Colors.primaryColor, height: Platform.OS === 'android' ? SIZES.androidSize : SIZES.iosSize, paddingBottom: TAB_SIZES.paddingBottom, marginBottom: TAB_SIZES.marginBottom, paddingTop: TAB_SIZES.paddingTop}}>
+    return <Tab.Navigator activeColor = "red" labeled = {true} shifting = {true} initialRouteName = "Home" barStyle = {{backgroundColor: Colors.primaryColor, height: Platform.OS === 'android' ? SIZES.androidSize : SIZES.iosSize, paddingBottom: TAB_SIZES.paddingBottom, marginBottom: TAB_SIZES.marginBottom, paddingTop: TAB_SIZES.paddingTop}}>
         <Tab.Screen shifting = {true} options = {{tabBarLabel: 'Home', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.homeIcon} color = {color} name = "account" size = {SIZES.tabScreenSize}/>}} name = "Home" component = {HomeNavigator}/>
         <Tab.Screen options = {{title: 'Slum Soccer', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.soccerIcon} color = {color} name = "soccer" size = {SIZES.tabScreenSize} /> }} name = "Slum Soccer" component = {SlumSoccerStackNavigator} />
         <Tab.Screen options = {{title: 'Street Soccer', tabBarColor: Colors.secondaryColor, tabBarIcon: (color) => <MaterialCommunityIcons style = {style.footballIcon} color = {color} name = "football" size = {SIZES.tabScreenSize} />}} name = "Street Soccer" component = {StreetSoccerNavigator} />
@@ -34,14 +34,15 @@ const BottomTabs = () => { // Bottom Tab navigator component
 const style = StyleSheet.create({
   
   homeIcon: {
-    fontSize: 28.5,
-    top: -1,
+    fontSize: 28.9,
+    top: -3,
     marginTop: -1
   },
 
   soccerIcon: {
-    fontSize: 28,
-    top: -3,
+    fontSize: 28.9,
+    top: -1,
+    marginBottom: -1,
     marginRight: -1,
     textAlign: 'center',
     marginTop: -1,
@@ -49,7 +50,8 @@ const style = StyleSheet.create({
 
   footballIcon: {
     fontSize: 28.9,
-    top: -3,
+    top: -1,
+    marginBottom: -1,
     marginRight: -1,
     textAlign: 'center',
     marginTop: -1,

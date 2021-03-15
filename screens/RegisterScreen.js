@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, ScrollView, Text, Platform} from 'react-native';
+import {View, StyleSheet, ScrollView, Text, Platform, Alert} from 'react-native';
 import {TextInput} from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import {Button} from 'react-native-elements';
@@ -15,9 +15,23 @@ const generateRandomString = () => { // Generate random string to store in the U
     return output; // Returns the generated string
 }
 
-const RegisterScreen = ({navigation}) => { // Register Screen Component
+const RegisterScreen = ({navigation, props}) => { // Register Screen Component
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const validateEmail = () => {
+        if(email.trim() === "" || !email.includes('@')) {
+            Alert.alert('You must provide a valid e-mail address');
+        }
+
+        else if(email.length < 5) {
+            Alert.alert('E-mail address is too short');
+        }
+
+        else {
+            setEmail(email);
+        }
+    }
 
     return (
         
@@ -28,13 +42,13 @@ const RegisterScreen = ({navigation}) => { // Register Screen Component
         <TextInput value = {generateRandomString()} style = {styles.organisationNameContainer}/>
 
         <Text style = {styles.emailTextContainer}>E-mail Address</Text>
-        <TextInput value = {setEmail} onChangeText = {(newEmail) => setEmail(newEmail)} placeholder = "E-mail Address"  style = {styles.emailContainer}/>
+            <TextInput value = {email} onChangeText = {(newEmail) => setEmail(newEmail)} placeholder = "E-mail Address"  style = {styles.emailContainer}/>
         
         <Text style = {styles.passwordTextContainer}>Password</Text>
-        <TextInput autoCapitalize = {false} secureTextEntry = {true} placeholder = "Password" onChangeText = {(newPassword) => setPassword(newPassword)} style = {styles.passwordContainer}/>
+            <TextInput value = {password} autoCapitalize = {false} secureTextEntry = {true} placeholder = "Password" onChangeText = {(newPassword) => setPassword(newPassword)} style = {styles.passwordContainer}/>
 
         <View>
-            <Button buttonStyle = {{marginLeft: Platform.OS === 'android' ? 137 : null ,width: Platform.OS === 'android' ? 150 : 150 ,backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.registerBtn} title = "Register" />
+            <Button onPress = {validateEmail} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 137 : null ,width: Platform.OS === 'android' ? 150 : 150 ,backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.registerBtn} title = "Register" />
         </View>
 
         <View>

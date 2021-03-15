@@ -6,10 +6,10 @@ import Colors from '../constants/Colors';
 
 const Stack = createStackNavigator();
 
-const StreetSoccerNavigator = ({navigation}) => {
+const StreetSoccerNavigator = ({navigation}) => { // Street Soccer Stack Navigator
     return <Stack.Navigator>
 
-    <Stack.Screen options = { {headerTintColor: Colors.black, headerRight: () => (<Button onPress = {() => {}} title = "Modules" color = "#fff" />), headerLeft: () => (<Button onPress={() => navigation.navigate('AboutUsScreen')} title = "About Us"
+    <Stack.Screen options = { {headerTintColor: Colors.black, headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = "#fff" />), headerLeft: () => (<Button onPress={() => {}} title = "Modules"
               color = {Colors.whiteColor}/>) , headerTitle: 'Street Soccer', headerStyle: {backgroundColor: Colors.secondaryColor}}} name = "Back" component = {EstablishHomeScreen}/>
     </Stack.Navigator>
 }

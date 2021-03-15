@@ -16,7 +16,7 @@ const EstablishHomeScreen = ({props, navigation, item}) => {
 
                 <Image />
 
-                <Card>
+                <Card style = {styles.cardStyle}>
                     <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} />
                 </Card>
 
@@ -28,6 +28,19 @@ const EstablishHomeScreen = ({props, navigation, item}) => {
 const styles = StyleSheet.create({
     defaultView: {
         flex: 1
+    },
+
+    cardStyle: {
+        padding: 10, 
+        paddingLeft: -40,
+        paddingBottom: -5,
+        marginBottom: 1,
+        width: 340,
+        height: 160,
+        marginLeft: 45,
+        marginTop: 35,
+        alignItems: 'center',
+        maxWidth: '100%'
     },
 
     titleWhat: {
