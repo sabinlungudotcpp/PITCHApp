@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {FlatList, Image, View, StyleSheet, Text, Platform, Modal, SafeAreaView, ScrollView} from 'react-native';
-import {Button} from 'react-native';
+import {Button} from 'react-native-elements';
 import Colors from '../../constants/Colors';
 import Card from '../../components/Card';
 import EstablishStreetSoccerData from '../../data/EstablishStreetSoccerData';
@@ -14,11 +14,15 @@ const EstablishHomeScreen = ({props, navigation, item}) => {
             <ScrollView>
                 <Text style = {styles.titleWhat}>{EstablishStreetSoccerData.map(data => data.title_what)}</Text>
 
-                <Image />
+                <Image style = {styles.streetSoccerImg} source = {(require('../../assets/Images/ImageStreetSoccer.png'))} />
 
                 <Card style = {styles.cardStyle}>
-                    <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} />
+                    <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.streetSoccerDescription}>{item.street_soccer_description}</Text>} />
                 </Card>
+
+                <View style = {styles.btnContainer}>
+                    <Button style = {styles.processesBtn} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "View Processes" />
+                </View>
 
             </ScrollView>
         </SafeAreaView>
@@ -26,8 +30,16 @@ const EstablishHomeScreen = ({props, navigation, item}) => {
 }
 
 const styles = StyleSheet.create({
+
     defaultView: {
         flex: 1
+    },
+
+    streetSoccerImg: {
+        width: 260,
+        height: 150,
+        marginLeft: 80,
+        marginTop: 20
     },
 
     cardStyle: {
@@ -48,6 +60,16 @@ const styles = StyleSheet.create({
         fontSize: 27,
         color: '#2e86de',
         marginTop: 60
+    },
+
+    streetSoccerDescription: {
+        marginTop: -5
+    },
+
+    processesBtn: {
+        width: 160,
+        marginTop: 50,
+        marginLeft: 130
     }
 });
 
