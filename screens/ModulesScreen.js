@@ -55,7 +55,6 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
             <View style = {styles.buttonContainer}>
                 <Button onPress = {() => navigation.navigate('EstablishHomeScreen')} style = {styles} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 200}} title = "View Module" />
             </View>
-
         </Card>
     </ScrollView>
     )

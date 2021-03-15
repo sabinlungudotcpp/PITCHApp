@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     titleWhat: {
         textAlign: 'center',
         fontSize: 27,
-        color: Colors.primaryColor,
+        color: '#2e86de',
         marginTop: 60
     }
 });

@@ -5,6 +5,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import HomeNavigator from './navigation/StackNavigator';
 import SlumSoccerStackNavigator from './navigation/SlumSoccerStackNavigator';
+import StreetSoccerNavigator from './navigation/StreetSoccerNavigator';
 import Colors from './constants/Colors';
 
 const Tab = createMaterialBottomTabNavigator(); // Creates the bottom tab navigator
@@ -25,7 +26,7 @@ const BottomTabs = () => { // Bottom Tab navigator component
     return <Tab.Navigator barStyle = {{backgroundColor: Colors.primaryColor, height: Platform.OS === 'android' ? SIZES.androidSize : SIZES.iosSize, marginBottom: TAB_SIZES.marginBottom, paddingTop: TAB_SIZES.paddingTop,}}>
         <Tab.Screen options = {{tabBarLabel: 'Home', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.homeIcon} color = {color} name = "account" size = {SIZES.tabScreenSize}/>}} name = "Home" component = {HomeNavigator}/>
         <Tab.Screen options = {{tabBarLabel: 'Slum Soccer', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.soccerIcon} color = {color} name = "soccer" size = {SIZES.tabScreenSize} /> }} name = "Slum Soccer" component = {SlumSoccerStackNavigator} />
-        <Tab.Screen options = {{tabBarLabel: 'Street Soccer', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.soccerIcon} color = {color} name = "football" size = {SIZES.tabScreenSize} />}} name = "Street Soccer" component = {HomeNavigator} />
+        <Tab.Screen options = {{tabBarLabel: 'Street Soccer', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.soccerIcon} color = 'black' name = "football" size = {SIZES.tabScreenSize} />}} name = "Street Soccer" component = {StreetSoccerNavigator} />
     </Tab.Navigator>
 }
 
