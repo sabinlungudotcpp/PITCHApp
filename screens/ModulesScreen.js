@@ -46,16 +46,6 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
             </View>
         </Card>
 
-
-        {/* Rendered card for establishing street soccer */}
-        <Card style = {styles.cardContainer}>
-            <FlatList data = {EstablishStreetSoccer} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.establishTxt}>{item.title}</Text>} />
-            <Image style = {styles.establishImg} source = {(require('../assets/Images/ImageEstablishStreetSoccer.jpg'))} />
-
-            <View style = {styles.buttonContainer}>
-                <Button onPress = {() => navigation.navigate('EstablishHomeScreen')} style = {styles} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 200}} title = "View Module" />
-            </View>
-        </Card>
     </ScrollView>
     )
 };
