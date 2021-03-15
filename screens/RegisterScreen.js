@@ -19,17 +19,25 @@ const RegisterScreen = ({navigation, props}) => { // Register Screen Component
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const validateEmail = () => {
+    const validateFields = () => { // Validates the input fields before registering a user
         if(email.trim() === "" || !email.includes('@')) {
             Alert.alert('You must provide a valid e-mail address');
+            setEmail('');
         }
 
         else if(email.length < 5) {
             Alert.alert('E-mail address is too short');
+            setEmail('');
+        }
+
+        else if(password.trim() === "" || password.length < 8) { // If the password field is empty
+            Alert.alert('Password invalid');
+            setPassword('');
         }
 
         else {
             setEmail(email);
+            setPassword(password);
         }
     }
 
@@ -48,7 +56,7 @@ const RegisterScreen = ({navigation, props}) => { // Register Screen Component
             <TextInput value = {password} autoCapitalize = {false} secureTextEntry = {true} placeholder = "Password" onChangeText = {(newPassword) => setPassword(newPassword)} style = {styles.passwordContainer}/>
 
         <View>
-            <Button onPress = {validateEmail} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 137 : null ,width: Platform.OS === 'android' ? 150 : 150 ,backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.registerBtn} title = "Register" />
+            <Button onPress = {validateFields} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 137 : null ,width: Platform.OS === 'android' ? 150 : 150 ,backgroundColor: '#F7B500', borderRadius: 200}} style = {styles.registerBtn} title = "Register" />
         </View>
 
         <View>
@@ -91,7 +99,7 @@ const styles = StyleSheet.create({ // Styles for the Register Screen
         marginBottom: 1,
     },
 
-    passwordTextContainer: {
+    passwordTextContainer: { // Styles for the password container
         left: 170,
         top: 2,
         marginTop: 15,
