@@ -5,7 +5,7 @@ import React from 'react';
 import Card from '../components/Card';
 import ModuleData from '../data/ModuleData';
 import Colors from '../constants/Colors';
-import EstablishStreetSoccer from '../data/EstablishStreetSoccer';
+import EstablishStreetSoccer from '../data/EstablishStreetSoccerData';
 
 const MODULE_SIZES = {
     defaultWidth: 200,
@@ -36,7 +36,6 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
             </View>
         </Card>
 
-
          {/* Renders a card that stores the title of the module, image and the button that allows users to view that module */}
          <Card style = {styles.cardContainer}>
             <FlatList data = {ModuleData} renderItem = {({item}) => <Text style = {styles.shaktiTitle}>{item.module_edukick}</Text>} /> 
@@ -47,17 +46,17 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
             </View>
         </Card>
 
+
         {/* Rendered card for establishing street soccer */}
         <Card style = {styles.cardContainer}>
             <FlatList data = {EstablishStreetSoccer} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.establishTxt}>{item.title}</Text>} />
             <Image style = {styles.establishImg} source = {(require('../assets/Images/ImageEstablishStreetSoccer.jpg'))} />
 
             <View style = {styles.buttonContainer}>
-                <Button style = {styles} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 200}} title = "View Module" />
+                <Button onPress = {() => navigation.navigate('EstablishHomeScreen')} style = {styles} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 200}} title = "View Module" />
             </View>
 
         </Card>
-
     </ScrollView>
     )
 };
@@ -108,7 +107,8 @@ const styles = StyleSheet.create({ // Styles for the module screen
 
     establishTxt: {
         fontSize: 27,
-        top: 1
+        top: 1,
+        color: Colors.primaryColor
     }
 });
 
