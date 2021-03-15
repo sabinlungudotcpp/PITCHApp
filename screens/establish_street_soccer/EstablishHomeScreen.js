@@ -13,29 +13,33 @@ const EstablishHomeScreen = ({props, navigation, item}) => {
         <SafeAreaView style = {styles.defaultView}>
             <ScrollView>
                 <Text style = {styles.titleWhat}>{EstablishStreetSoccerData.map(data => data.title_what)}</Text>
-
                 <Image style = {styles.streetSoccerImg} source = {(require('../../assets/Images/ImageStreetSoccer.png'))} />
 
-                <Modal transparent = {false} visible = {modalOpen} animationType = {"slide"}>
-                    <Text style = {styles.processTxt}>The Process</Text>
+            <Modal transparent = {false} visible = {modalOpen} animationType = {"slide"}>
+                <Text style = {styles.processTxt}>The Process</Text>
 
-                    <Card style = {styles.cardStyle}>
+                <Card style = {styles.cardStyle}>
+                    <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.processDescription}>{item.process_description}</Text>} />
+                </Card>
 
-                    </Card>
+                <View style = {styles.btnContainer}>
+                    <Button onPress = {() => {}} style = {styles.nextProcessBtn} buttonStyle = {{borderRadius: 200}} title = "Next Process" />
+                </View>
 
-                    <View style = {styles.btnContainer}>
-                        <Button style = {styles.modalBackBtn} buttonStyle = {{borderRadius: 200}} title = "Back" />
-                    </View>
+                <Text style = {styles.targetGroupsTxt}>Target Groups</Text>
 
-                </Modal>
+                <Card style = {styles.cardStyle}>
+                        <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} />
+                </Card>
+
+                <Button onPress = {() => setModalOpen(false)} buttonStyle = {{width: 150, borderRadius: 200, marginLeft: 140, marginTop: 40}} title = "Back" />
+            </Modal>
 
                 <Card style = {styles.cardStyle}>
                     <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.streetSoccerDescription}>{item.street_soccer_description}</Text>} />
                 </Card>
 
-                <View style = {styles.btnContainer}>
-                    <Button onPress = {() => setModalOpen(true)} style = {styles.processesBtn} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "View Processes" />
-                </View>
+                <Button onPress = {() => setModalOpen(true)} style = {styles.processesBtn} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "View Processes" />
 
             </ScrollView>
         </SafeAreaView>
@@ -80,7 +84,7 @@ const styles = StyleSheet.create({
     },
 
     processesBtn: {
-        width: 160,
+        width: 175,
         marginTop: 50,
         marginLeft: 130
     },
@@ -92,10 +96,42 @@ const styles = StyleSheet.create({
         color: Colors.secondaryColor
     },
 
-    modalBackBtn: {
-        width: 130,
-        marginLeft: 150,
-        marginTop: 60
+    btnContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingVertical: 40,
+        marginLeft: -90
+    },
+    
+    secondContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingVertical: 40,
+        marginLeft: -90
+    },
+
+    processDescription: {
+        marginTop: -8,
+        fontSize: 16
+    },
+
+    backBtn: {
+        width: 145,
+        marginTop: 10,
+    },
+
+    nextProcessBtn: {
+        width: 150,
+        marginLeft: 230,
+        marginRight: 30,
+        marginTop: 10
+    },
+
+    targetGroupsTxt: {
+        textAlign: 'center',
+        fontSize: 29,
+        color: Colors.secondaryColor,
+        marginTop: 20
     }
 });
 
