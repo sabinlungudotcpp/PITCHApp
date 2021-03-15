@@ -18,6 +18,15 @@ const EstablishHomeScreen = ({props, navigation, item}) => {
 
                 <Modal transparent = {false} visible = {modalOpen} animationType = {"slide"}>
                     <Text style = {styles.processTxt}>The Process</Text>
+
+                    <Card style = {styles.cardStyle}>
+
+                    </Card>
+
+                    <View style = {styles.btnContainer}>
+                        <Button style = {styles.modalBackBtn} buttonStyle = {{borderRadius: 200}} title = "Back" />
+                    </View>
+
                 </Modal>
 
                 <Card style = {styles.cardStyle}>
@@ -77,7 +86,16 @@ const styles = StyleSheet.create({
     },
 
     processTxt: {
-        textAlign: 'center'
+        textAlign: 'center',
+        marginTop: 80,
+        fontSize: 29,
+        color: Colors.secondaryColor
+    },
+
+    modalBackBtn: {
+        width: 130,
+        marginLeft: 150,
+        marginTop: 60
     }
 });
 
