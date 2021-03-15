@@ -10,7 +10,7 @@ const StreetSoccerNavigator = ({navigation}) => {
     return <Stack.Navigator>
 
     <Stack.Screen options = { {headerTintColor: Colors.black, headerRight: () => (<Button onPress = {() => {}} title = "Modules" color = "#fff" />), headerLeft: () => (<Button onPress={() => navigation.navigate('AboutUsScreen')} title = "About Us"
-              color = "#fff"/>) , headerTitle: 'Street Soccer', headerStyle: {backgroundColor: Colors.secondaryColor}}} name = "Back" component = {EstablishHomeScreen}/>
+              color = {Colors.whiteColor}/>) , headerTitle: 'Street Soccer', headerStyle: {backgroundColor: Colors.secondaryColor}}} name = "Back" component = {EstablishHomeScreen}/>
     </Stack.Navigator>
 }
 
