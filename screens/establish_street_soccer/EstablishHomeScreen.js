@@ -16,12 +16,16 @@ const EstablishHomeScreen = ({props, navigation, item}) => {
 
                 <Image style = {styles.streetSoccerImg} source = {(require('../../assets/Images/ImageStreetSoccer.png'))} />
 
+                <Modal transparent = {false} visible = {modalOpen} animationType = {"slide"}>
+                    <Text style = {styles.processTxt}>The Process</Text>
+                </Modal>
+
                 <Card style = {styles.cardStyle}>
                     <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.streetSoccerDescription}>{item.street_soccer_description}</Text>} />
                 </Card>
 
                 <View style = {styles.btnContainer}>
-                    <Button style = {styles.processesBtn} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "View Processes" />
+                    <Button onPress = {() => setModalOpen(true)} style = {styles.processesBtn} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "View Processes" />
                 </View>
 
             </ScrollView>
@@ -70,6 +74,10 @@ const styles = StyleSheet.create({
         width: 160,
         marginTop: 50,
         marginLeft: 130
+    },
+
+    processTxt: {
+        textAlign: 'center'
     }
 });
 
