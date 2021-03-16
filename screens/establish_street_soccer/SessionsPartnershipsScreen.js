@@ -57,12 +57,30 @@ const styles = StyleSheet.create({
         color: Colors.secondaryColor
     },
 
-    backBtn: {
+    btnContainer: {
+        width: 110,
+        height: 42,
+        textAlign: 'center',
+        borderRadius: 200,
+        marginLeft: -80,
+        marginTop: 35,
+        paddingHorizontal: -20,
+        justifyContent: 'space-between',
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingRight: 10,
+        marginBottom: 50  
+    },
 
+    backBtn: {
+        width: 130,
+        marginLeft: 150
     },
 
     viewMoreBtn: {
-        
+       width: 150,
+       marginLeft: 25
     }
 });
 
