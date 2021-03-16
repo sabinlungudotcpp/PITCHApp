@@ -13,7 +13,7 @@ const EstablishHomeScreen = ({props, navigation, item}) => {
         <SafeAreaView style = {styles.defaultView}>
             <ScrollView>
                 <Text style = {styles.titleWhat}>{EstablishStreetSoccerData.map(data => data.title_what)}</Text>
-                <Image style = {styles.streetSoccerImg} source = {(require('../../assets/Images/ImageStreetSoccer.png'))} />
+                    <Image style = {styles.streetSoccerImg} source = {(require('../../assets/Images/ImageStreetSoccer.png'))} />
 
             <Modal transparent = {false} visible = {modalOpen} animationType = {"slide"}>
                 <Text style = {styles.processTxt}>The Process</Text>
@@ -41,7 +41,7 @@ const EstablishHomeScreen = ({props, navigation, item}) => {
 
                 <View style = {styles.btnContainer}>
                     <Button onPress = {() => setModalOpen(true)} style = {styles.processesBtn} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "View Process" />
-                    <Button onPress = {() => {}} style = {styles.processNxtBtn} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "Next Process" />
+                    <Button onPress = {() => navigation.navigate('SessionsPartnershipsScreen')} style = {styles.processNxtBtn} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "Next Process" />
                 </View>
 
 

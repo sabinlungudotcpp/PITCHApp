@@ -17,7 +17,13 @@ const EST_STREET_SOCCER = [
 
     {
         "id": 3,
-        "target_group_text": "When considering establishing a Street Soccer programme thought needs to be given to the target groups that the programme will be providing for. This could be different depending on the demographics and need of the area, and could vary between cities, regions and countries. If the idea of participating in a specific tournament such as the Homeless World Cup or Street Child World Cup is appealing to you, consideration should be given to the numbers involved in the target area that meet the criteria."
+        "target_group_text": "When considering establishing a Street Soccer programme thought needs to be given to the target groups that the programme will be providing for. This could be different depending on the demographics and need of the area, and could vary between cities, regions and countries. If the idea of participating in a specific tournament such as the Homeless World Cup or Street Child World Cup is appealing to you, consideration should be given to the numbers involved in the target area that meet the criteria.\nIf the area you are thinking of has multiple issues then having an open door policy to enable as many people to participate could be the answer, however this could bring other issues such as area conflict, cultural issues so consider all these points prior to starting, so it is very important to do initial research and spend some time in the area speaking to local people and organisations."
+    },
+    
+    {
+        "id": 4,
+        "sessions_title": "Existing Sessions",
+        "existing_sessions_text": "Some areas may have existing sport programmes that provide an outlet and opportunity for the people in the area. There could also be football programmes"
     }
 ]
 
