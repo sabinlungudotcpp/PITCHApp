@@ -23,7 +23,7 @@ const EST_STREET_SOCCER = [
     {
         "id": 4,
         "sessions_title": "Existing Sessions",
-        "existing_sessions_text": "Some areas may have existing sport programmes that provide an outlet and opportunity for the people in the area. There could also be football programmes"
+        "existing_sessions_text": "Some areas may have existing sport programmes that provide an outlet and opportunity for the people in the area. There could also be football programmes/clubs who exist in the area, however it is likely that if they are Clubs they will expect their players to pay to play. If there are existing free sport sessions it is necessary to establish a SS programme here or should you approach them for potential partner working to offer more sessions or to reach a different group."
     },
 
     {

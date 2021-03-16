@@ -7,6 +7,7 @@ import Colors from '../../constants/Colors';
 import EstablishStreetSoccerData from '../../data/EstablishStreetSoccerData';
 
 const SessionsPartnershipsScreen = ({navigation, props}) => {
+    const [modalOpen, setModalOpen] = useState(false);
 
     return (
         <SafeAreaView>
@@ -14,13 +15,13 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
                 <Text style = {styles.existingSessionTxt}>{EstablishStreetSoccerData.map(title => title.sessions_title)}</Text>
 
                 <Card style = {styles.cardStyle}>
-                    <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} />
+                    <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.existingText}>{item.existing_sessions_text}</Text>}  />
                 </Card>
 
                 <Text style = {styles.partnershipTitle}>{EstablishStreetSoccerData.map(title => title.partnerships_title)}</Text>
 
                 <Card style = {styles.cardStyle}>
-                    <FlatList />
+                    <FlatList data = {EstablishStreetSoccerData} />
                 </Card>
 
 
@@ -40,6 +41,12 @@ const styles = StyleSheet.create({
         marginTop: 70,
         fontSize: 29,
         color: Colors.secondaryColor
+    },
+
+    existingText: {
+        fontSize: 16.5,
+        marginTop: -12,
+        padding: -5
     },
 
     cardStyle: {
