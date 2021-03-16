@@ -18,16 +18,19 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
                     <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.existingText}>{item.existing_sessions_text}</Text>}  />
                 </Card>
 
+                <Modal animationType = {"slide"} transparent = {false} visible = {modalOpen} >
+                    <Text style = {styles.facilitiesTitle}>{EstablishStreetSoccerData.map(title => title.facilities_title)}</Text>
+                </Modal>
+
                 <Text style = {styles.partnershipTitle}>{EstablishStreetSoccerData.map(title => title.partnerships_title)}</Text>
 
                 <Card style = {styles.cardStyle}>
-                    <FlatList data = {EstablishStreetSoccerData} />
+                    <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.partnershipTxt}>{item.partnerships_text} {item.partnerships_text_sub}</Text>} />
                 </Card>
 
-
                 <View style = {styles.btnContainer}>
-                    <Button style = {styles.backBtn} onPress = {() => {}} buttonStyle = {{borderRadius: 200}} title = "Back" />
-                    <Button style = {styles.viewMoreBtn} onPress = {() => {}} buttonStyle = {{borderRadius: 200}} title = "View More" />
+                    <Button style = {styles.backBtn} onPress = {() => navigation.navigate('EstablishHomeScreen')} buttonStyle = {{borderRadius: 200}} title = "Back" />
+                    <Button style = {styles.viewMoreBtn} onPress = {() => setModalOpen(true)} buttonStyle = {{borderRadius: 200}} title = "View More" />
                 </View>
 
             </ScrollView>
@@ -44,8 +47,8 @@ const styles = StyleSheet.create({
     },
 
     existingText: {
-        fontSize: 16.5,
-        marginTop: -12,
+        fontSize: 14,
+        marginTop: -11.5,
         padding: -5
     },
 
@@ -64,6 +67,11 @@ const styles = StyleSheet.create({
         color: Colors.secondaryColor
     },
 
+    partnershipTxt: {
+        marginTop: -14,
+        fontSize: 14
+    },
+
     btnContainer: {
         width: 110,
         height: 42,
@@ -78,6 +86,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingRight: 10,
         marginBottom: 50  
+    },
+
+    facilitiesTitle: {
+        fontSize: 29,
+        textAlign: 'center',
+        marginTop: 100,
+        color: Colors.secondaryColor
     },
 
     backBtn: {
