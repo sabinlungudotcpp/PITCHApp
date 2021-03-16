@@ -29,7 +29,7 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
                     <Text style = {styles.facilitiesTitle}>{EstablishStreetSoccerData.map(title => title.facilities_title)}</Text>
 
                     <Card style = {styles.cardStyle}>
-                        <FlatList />
+                        <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text>{item.facilities_text}</Text>} />
                     </Card>
 
                     <Text style = {styles.rentalTxtTitle}>{EstablishStreetSoccerData.map(title => title.rental_title)}</Text>

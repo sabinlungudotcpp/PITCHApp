@@ -36,7 +36,7 @@ const EST_STREET_SOCCER = [
     {
         "id": 6,
         "facilities_title": "Facilities",
-        "facilities_text": "Not every area has perfect playing facilities with all the amenities therefore when establishing where to host your sessions you need to consider"
+        "facilities_text": "Not every area has perfect playing facilities with all the amenities therefore when establishing where to host your sessions you need to consider where your target audience are available. The session should ideally be in the area that is within walking or cycling distance to the majority of your audience. The area itself should be flat and safe, do not be put off if the area needs to be cleared of grass/weeds/shrubs, this can be carried out by the participants under your supervision which in turn will enhance and improve the community, the size of the area will dictate the number of active participants you can work with. If there is a school or community building in the area could the kit be stored there?"
     },
 
     {
