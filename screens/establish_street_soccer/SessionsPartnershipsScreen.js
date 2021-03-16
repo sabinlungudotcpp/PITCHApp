@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, ScrollView, Text, Image, Platform, Modal, FlatList} from 'react-native';
+import {View, StyleSheet, ScrollView, Text, Platform, Modal, FlatList} from 'react-native';
 import {Button} from 'react-native-elements';
 import { SafeAreaView } from 'react-navigation';
 import Card from '../../components/Card';
@@ -28,7 +28,7 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
                     <Text style = {styles.rentalTxtTitle}>{EstablishStreetSoccerData.map(title => title.rental_title)}</Text>
 
                     <Card style = {styles.cardStyle}>
-                        <FlatList />
+                        <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} />
                     </Card>
             
                     <Button buttonStyle = {{width: 150, borderRadius: 200, marginLeft: 140, marginTop: 50}} onPress = {() => setModalOpen(false)} title = "Back"/>
