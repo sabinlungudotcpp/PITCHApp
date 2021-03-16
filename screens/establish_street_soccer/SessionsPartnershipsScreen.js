@@ -20,6 +20,12 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
 
                 <Modal animationType = {"slide"} transparent = {false} visible = {modalOpen} >
                     <Text style = {styles.facilitiesTitle}>{EstablishStreetSoccerData.map(title => title.facilities_title)}</Text>
+
+                    <Card style = {styles.cardStyle}>
+
+                    </Card>
+
+                    <Text style = {styles.rentalTxtTitle}>{EstablishStreetSoccerData.map(title => title.rental_title)}</Text>
                 </Modal>
 
                 <Text style = {styles.partnershipTitle}>{EstablishStreetSoccerData.map(title => title.partnerships_title)}</Text>
@@ -70,6 +76,14 @@ const styles = StyleSheet.create({
     partnershipTxt: {
         marginTop: -14,
         fontSize: 14
+    },
+
+    rentalTxtTitle: {
+        textAlign: 'center',
+        marginTop: 40,
+        marginRight: 10,
+        fontSize: 29,
+        color: Colors.secondaryColor
     },
 
     btnContainer: {

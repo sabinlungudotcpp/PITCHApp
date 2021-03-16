@@ -36,7 +36,13 @@ const EST_STREET_SOCCER = [
     {
         "id": 6,
         "facilities_title": "Facilities",
-        "facilities_text": ""
+        "facilities_text": "Not every area has perfect playing facilities with all the amenities therefore when establishing where to host your sessions you need to consider"
+    },
+
+    {
+        "id": 7,
+        "rental_title": "Rental",
+        "rental_text": "If there is an existing sport or football facility that meets your criteria there may be a cost to access and use the facility, it can be useful to speak with the managers and owners to explain the purpose of your programme and how this will bring the community to the facility and improve their living style, consider the times you wish to use this facility could this be off peak times when they are not being used.\nIf there is a cost to be paid could this be raised by involving local businesses or the council or government?"
     }
 ]
 
