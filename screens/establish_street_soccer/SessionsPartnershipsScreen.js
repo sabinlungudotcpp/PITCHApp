@@ -6,6 +6,13 @@ import Card from '../../components/Card';
 import Colors from '../../constants/Colors';
 import EstablishStreetSoccerData from '../../data/EstablishStreetSoccerData';
 
+const BUTTON_CONFIG = {
+    width: 150,
+    borderRadius: 200,
+    marginLeft: 140,
+    marginTop: 50
+}
+
 const SessionsPartnershipsScreen = ({navigation, props}) => {
     const [modalOpen, setModalOpen] = useState(true);
 
@@ -31,7 +38,7 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
                         <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} />
                     </Card>
             
-                    <Button buttonStyle = {{width: 150, borderRadius: 200, marginLeft: 140, marginTop: 50}} onPress = {() => setModalOpen(false)} title = "Back"/>
+                    <Button buttonStyle = {{width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: BUTTON_CONFIG.marginLeft, marginTop: BUTTON_CONFIG.marginTop}} onPress = {() => setModalOpen(false)} title = "Back"/>
 
                 </Modal>
 
