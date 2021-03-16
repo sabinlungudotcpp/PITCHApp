@@ -25,8 +25,8 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
 
 
                 <View style = {styles.btnContainer}>
-                    <Button title = "Back" />
-                    <Button title = "View More" />
+                    <Button style = {styles.backBtn} onPress = {() => {}} buttonStyle = {{borderRadius: 200}} title = "Back" />
+                    <Button style = {styles.viewMoreBtn} onPress = {() => {}} buttonStyle = {{borderRadius: 200}} title = "View More" />
                 </View>
 
             </ScrollView>
@@ -55,6 +55,14 @@ const styles = StyleSheet.create({
         marginTop: 40,
         fontSize: 29,
         color: Colors.secondaryColor
+    },
+
+    backBtn: {
+
+    },
+
+    viewMoreBtn: {
+        
     }
 });
 
