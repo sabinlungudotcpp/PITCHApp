@@ -17,7 +17,7 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
                     <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} />
                 </Card>
 
-                <Text></Text>
+                <Text style = {styles.partnershipTitle}>{EstablishStreetSoccerData.map(title => title.partnerships_title)}</Text>
 
 
             </ScrollView>
@@ -39,6 +39,13 @@ const styles = StyleSheet.create({
         height: 180,
         maxWidth: '100%',
         alignItems: 'center'
+    },
+
+    partnershipTitle: {
+        textAlign: 'center',
+        marginTop: 40,
+        fontSize: 29,
+        color: Colors.secondaryColor
     }
 });
 

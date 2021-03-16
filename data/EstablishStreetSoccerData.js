@@ -29,7 +29,8 @@ const EST_STREET_SOCCER = [
     {
         "id": 5,
         "partnerships_title": "Partnerships",
-        "partnerships_text": ""
+        "partnerships_text": "As mentioned above, partnerships with existing sports or football clubs can be beneficial to share costs, workloads and contacts. In areas where there are social issues there are normally existing organisations and programmes established to provide the support and services for the people of the area, it is important when researching the feasibility of establishing a Street Soccer programme to make contact with these organisations, ideallt with the people on the front line",
+        "partnerships_text_sub": "In making this contact it allows you to identify the key issues and people most in need in order that you confirm your thoughts on the target group it also allows you to promote the benefits of attending your programme for the community and the people involved, if you are successful in selling the idea these workers will promote your sessions and encourage participation with the people and families they work with.\nIdeally you should be able to promote these organisations to your attendees, this will provide 2 way benefits for the organisations plus it will help the community develop and grow positively."
     }
 ]
 
