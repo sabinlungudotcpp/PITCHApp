@@ -24,6 +24,12 @@ const EST_STREET_SOCCER = [
         "id": 4,
         "sessions_title": "Existing Sessions",
         "existing_sessions_text": "Some areas may have existing sport programmes that provide an outlet and opportunity for the people in the area. There could also be football programmes"
+    },
+
+    {
+        "id": 5,
+        "partnerships_title": "Partnerships",
+        "partnerships_text": ""
     }
 ]
 
