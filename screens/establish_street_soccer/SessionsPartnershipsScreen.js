@@ -7,7 +7,7 @@ import Colors from '../../constants/Colors';
 import EstablishStreetSoccerData from '../../data/EstablishStreetSoccerData';
 
 const SessionsPartnershipsScreen = ({navigation, props}) => {
-    const [modalOpen, setModalOpen] = useState(false);
+    const [modalOpen, setModalOpen] = useState(true);
 
     return (
         <SafeAreaView>
@@ -24,9 +24,16 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
                     <Card style = {styles.cardStyle}>
 
                     </Card>
-
                     <Text style = {styles.rentalTxtTitle}>{EstablishStreetSoccerData.map(title => title.rental_title)}</Text>
+
+                    <Card style = {styles.cardStyle}>
+
+                    </Card>
+            
+                        <Button buttonStyle = {{width: 150, borderRadius: 200, marginLeft: 140, marginTop: 50}} onPress = {() => setModalOpen(false)} title = "Back"/>
+
                 </Modal>
+
 
                 <Text style = {styles.partnershipTitle}>{EstablishStreetSoccerData.map(title => title.partnerships_title)}</Text>
 
