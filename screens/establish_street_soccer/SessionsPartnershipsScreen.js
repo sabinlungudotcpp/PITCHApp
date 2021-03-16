@@ -22,15 +22,16 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
                     <Text style = {styles.facilitiesTitle}>{EstablishStreetSoccerData.map(title => title.facilities_title)}</Text>
 
                     <Card style = {styles.cardStyle}>
-
+                        <FlatList />
                     </Card>
+
                     <Text style = {styles.rentalTxtTitle}>{EstablishStreetSoccerData.map(title => title.rental_title)}</Text>
 
                     <Card style = {styles.cardStyle}>
-
+                        <FlatList />
                     </Card>
             
-                        <Button buttonStyle = {{width: 150, borderRadius: 200, marginLeft: 140, marginTop: 50}} onPress = {() => setModalOpen(false)} title = "Back"/>
+                    <Button buttonStyle = {{width: 150, borderRadius: 200, marginLeft: 140, marginTop: 50}} onPress = {() => setModalOpen(false)} title = "Back"/>
 
                 </Modal>
 
