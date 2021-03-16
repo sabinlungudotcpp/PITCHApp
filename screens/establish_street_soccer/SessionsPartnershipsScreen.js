@@ -19,6 +19,15 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
 
                 <Text style = {styles.partnershipTitle}>{EstablishStreetSoccerData.map(title => title.partnerships_title)}</Text>
 
+                <Card style = {styles.cardStyle}>
+                    <FlatList />
+                </Card>
+
+
+                <View style = {styles.btnContainer}>
+                    <Button title = "Back" />
+                    <Button title = "View More" />
+                </View>
 
             </ScrollView>
         </SafeAreaView>
