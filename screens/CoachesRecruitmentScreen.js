@@ -5,6 +5,7 @@ import Card from "../components/Card";
 import Colors from "../constants/Colors";
 import EstablishStreetSoccerData from "../data/EstablishStreetSoccerData";
 import CustomModal from "../components/CustomModal";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const CoachesRecruitmentScreen = ({navigation, props}) => {
     const [modalOpen, setModalOpen] = useState(false);
@@ -13,6 +14,14 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
         if(!modalOpen) {
             setModalOpen(true);
         }
+    }
+
+    const renderCoachesImg = () => { // Renders the coaches image
+        return (
+            <TouchableOpacity>
+               <Image style = {styles.coachImg} source = {(require('../assets/Images/StreetSoccerCoachesImg.jpg'))} />
+            </TouchableOpacity>
+        )
     }
 
     const renderModal = () => { // Renders the modal to the screen   
@@ -39,6 +48,8 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
         <TouchableNativeFeedback>
             <ScrollView>
                 <Text style = {styles.coachesTitle}>{EstablishStreetSoccerData.map(title => title.coaches_title)}</Text>
+
+                {renderCoachesImg()}
 
                 <Card style = {styles.cardStyle}>
                     <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.coachesTextStyle}>{item.coaches_text}</Text>} />
@@ -135,6 +146,13 @@ const styles = StyleSheet.create({
         marginLeft: 40,
         marginBottom: -30,
         height: 150
+    },
+
+    coachImg: {
+        width: 300,
+        height: 180,
+        marginLeft: 65,
+        marginTop: 30
     },
 });
 

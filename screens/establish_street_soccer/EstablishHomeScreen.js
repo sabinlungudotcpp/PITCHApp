@@ -40,8 +40,8 @@ const EstablishHomeScreen = ({props, navigation, item}) => {
                 </Card>
 
                 <View style = {styles.btnContainer}>
-                    <Button onPress = {() => setModalOpen(true)} style = {styles.processesBtn} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "View Process" />
-                    <Button onPress = {() => navigation.navigate('SessionsPartnershipsScreen')} style = {styles.processNxtBtn} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "Next Process" />
+                    <Button onPress = {() => setModalOpen(true)} style = {styles.processesBtn} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 155 : null,width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "View Process" />
+                    <Button onPress = {() => navigation.navigate('SessionsPartnershipsScreen')} style = {styles.processNxtBtn} buttonStyle = {{width: Platform.OS === 'android' ? 130 : null, marginLeft: Platform.OS === 'android' ? 30: null, backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "Next Process" />
                 </View>
 
 

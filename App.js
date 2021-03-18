@@ -11,7 +11,7 @@ import Colors from './constants/Colors';
 const Tab = createMaterialBottomTabNavigator();
 
 const SIZES = {
-  androidSize: 40,
+  androidSize: 33,
   iosSize: 57,
   tabScreenSize: 26
 }
@@ -24,10 +24,10 @@ const TAB_SIZES = {
 
 const BottomTabs = () => { // Bottom Tab navigator component
 
-    return <Tab.Navigator activeColor = "red" labeled = {true} shifting = {true} initialRouteName = "Home" barStyle = {{backgroundColor: Colors.primaryColor, height: Platform.OS === 'android' ? SIZES.androidSize : SIZES.iosSize, paddingBottom: TAB_SIZES.paddingBottom, marginBottom: TAB_SIZES.marginBottom, paddingTop: TAB_SIZES.paddingTop}}>
+    return <Tab.Navigator activeColor = "red" labeled = {true} shifting = {true} initialRouteName = "Home" barStyle = {{backgroundColor: Colors.primaryColor, height: Platform.OS === 'android' ? SIZES.androidSize : SIZES.iosSize, paddingBottom: Platform.OS === 'android' ? TAB_SIZES.paddingBottom : TAB_SIZES.paddingBottom, marginBottom: TAB_SIZES.marginBottom, paddingTop: TAB_SIZES.paddingTop}}>
         <Tab.Screen shifting = {true} options = {{tabBarLabel: 'Home', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.homeIcon} color = {color} name = "account" size = {SIZES.tabScreenSize}/>}} name = "Home" component = {HomeNavigator}/>
         <Tab.Screen options = {{title: 'Slum Soccer', tabBarIcon: (color) => <MaterialCommunityIcons style = {style.soccerIcon} color = {color} name = "soccer" size = {SIZES.tabScreenSize} /> }} name = "Slum Soccer" component = {SlumSoccerStackNavigator} />
-        <Tab.Screen options = {{title: 'Street Soccer', tabBarColor: Colors.secondaryColor, tabBarIcon: (color) => <MaterialCommunityIcons style = {style.footballIcon} color = {color} name = "football" size = {SIZES.tabScreenSize} />}} name = "Street Soccer" component = {StreetSoccerNavigator} />
+        <Tab.Screen options = {{title: 'Street Soccer', tabBarColor: Colors.secondaryColor, tabBarIcon: (color) => <MaterialCommunityIcons style = {style.footballIcon} color = {color} name = "football" size = {Platform.OS === 'android' ? SIZES.tabScreenSize : SIZES.tabScreenSize} />}} name = "Street Soccer" component = {StreetSoccerNavigator} />
     </Tab.Navigator>
 }
 

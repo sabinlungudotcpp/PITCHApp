@@ -36,6 +36,14 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
         )
     }
 
+    const renderRentalImg = () => {
+        return (
+            <TouchableOpacity>
+                    <Image style = {styles.rentalImgStyle} source = {(require('../../assets/Images/StreetSoccerRentalImg.jpg'))} />
+            </TouchableOpacity>
+        )
+    }
+
     return (
         <SafeAreaView>
             <ScrollView>
@@ -62,6 +70,8 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
 
                 <Text style = {styles.rentalTxtTitle}>{EstablishStreetSoccerData.map(title => title.rental_title)}</Text>
 
+                {renderRentalImg()}
+
                 <Card style = {styles.cardStyle}>
                     <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.rentalTxt}>{item.rental_text}</Text>} />
                 </Card>
@@ -83,8 +93,8 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
                 </Card>
 
                 <View style = {styles.btnContainer}>
-                    <Button style = {styles.backBtn} onPress = {() => navigation.navigate('EstablishHomeScreen')} buttonStyle = {{borderRadius: 200}} title = "Back" />
-                    <Button style = {styles.viewMoreBtn} onPress = {() => setModalOpen(true)} buttonStyle = {{borderRadius: 200}} title = "View More" />
+                    <Button style = {styles.backBtn} onPress = {() => navigation.navigate('EstablishHomeScreen')} buttonStyle = {{width: Platform.OS === 'android' ? 130 : null,borderRadius: 200, marginLeft: Platform.OS === 'android' ? 30 : null}} title = "Back" />
+                    <Button style = {styles.viewMoreBtn} onPress = {() => setModalOpen(true)} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 30 : null ,width: Platform.OS === 'android' ? 130 : null ,marginRight: Platform.OS === 'android' ? 40 : null ,borderRadius: 200, alignItems: Platform.OS === 'android' ? 'center' : null}} title = "View More" />
                 </View>
 
             </ScrollView>
@@ -147,19 +157,16 @@ const styles = StyleSheet.create({
     },
 
     btnContainer: {
-        width: 110,
+        width: 130,
         height: 42,
-        textAlign: 'center',
         borderRadius: 200,
-        marginLeft: -80,
+        marginLeft: Platform.OS === 'android' ? 50 : -80,
         marginTop: 35,
-        paddingHorizontal: -20,
-        justifyContent: 'space-between',
-        flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
         paddingRight: 10,
-        marginBottom: 50  
+        marginRight: 40,
+        marginBottom: 100
     },
 
     buttonContainer: {
@@ -188,8 +195,8 @@ const styles = StyleSheet.create({
     },
 
     backBtn: {
-        width: 150,
-        marginLeft: 145
+        width: Platform.OS === 'android' ? 120 : 150,
+        marginLeft: Platform.OS === 'android' ? 145 : 145,
     },
 
     btnBack: {
@@ -214,6 +221,14 @@ const styles = StyleSheet.create({
         marginLeft: 55,
         marginTop: 20
     },
+
+    rentalImgStyle: {
+        width: 320,
+        height: 170,
+        marginLeft: 55,
+        marginTop: 20
+
+    }
 });
 
 export default SessionsPartnershipsScreen; // Ep
