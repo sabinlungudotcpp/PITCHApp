@@ -6,7 +6,7 @@ import Colors from "../constants/Colors";
 import EstablishStreetSoccerData from "../data/EstablishStreetSoccerData";
 import CustomModal from "../components/CustomModal";
 
-const CoachesRecruitmentScreen = (navigation, props) => {
+const CoachesRecruitmentScreen = ({navigation, props}) => {
     const [modalOpen, setModalOpen] = useState(false);
 
     function handleModal() {
@@ -53,7 +53,7 @@ const CoachesRecruitmentScreen = (navigation, props) => {
                 </Card>
             
                 <View style = {styles.containerCoachesButtons}>
-                    <Button style = {styles.backButtonCoaches} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200, width: 150, marginLeft: 140, marginTop: 50}} title = "Back"/>
+                    <Button onPress = {() => navigation.navigate('SessionsPartnershipsScreen')} style = {styles.backButtonCoaches} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200, width: 150, marginLeft: 140, marginTop: 50}} title = "Back"/>
                     <Button style = {styles.coachesNextBtnProcess} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200, width: 150, marginLeft: 140, marginTop: 50}} onPress = {handleModal} title = "View More"/>
                 </View>
 
