@@ -19,7 +19,18 @@ const CoachesRecruitmentScreen = (navigation, props) => {
         return (
         <Modal visible = {modalOpen} animationType = {"slide"} transparent = {false}>
             <Text style = {styles.timingTitleStyle}>{EstablishStreetSoccerData.map(title => title.timing_title)}</Text>
-            <Button style = {styles.modalBackButton} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 300, borderRadius: 200}} title = "Back" />
+
+            <Card style = {styles.modalCardStyle}>
+                <FlatList />
+            </Card>
+
+        <View style = {styles.modalButtonContainer}>
+
+            <Button style = {styles.modalBackButton} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, marginLeft: 30, borderRadius: 200}} title = "Back" />
+            <Button style = {styles.modalNextProcessBtn} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, borderRadius: 200}} title = "Next Process" />
+        </View>
+               
+
         </Modal>
         )
     }
@@ -92,14 +103,26 @@ const styles = StyleSheet.create({
 
     modalBackButton: {
         padding: 10,
-        marginLeft: 100,
+        marginLeft: 70,
         width: 200,
-        marginBottom: 20
+        marginTop: -130
+    },
+
+    modalButtonContainer: {
+        marginLeft: -60,
+        flexDirection: 'row'
     },
 
     coachesNextBtnProcess: {
         marginLeft: -100
-    }
+    },
+
+    modalNextProcessBtn: {
+        marginBottom: 90,
+        marginTop: -120,
+        width: 150,
+        marginLeft: 20
+    },
 });
 
 export default CoachesRecruitmentScreen;
