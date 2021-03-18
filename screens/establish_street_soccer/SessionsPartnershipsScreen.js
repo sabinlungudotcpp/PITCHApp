@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, ScrollView, Text, Platform, Modal, FlatList} from 'react-native';
+import {View, StyleSheet, ScrollView, Text, Platform, Modal, FlatList, Image, TouchableNativeFeedback} from 'react-native';
 import {Button} from 'react-native-elements';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-navigation';
 import Card from '../../components/Card';
 import Colors from '../../constants/Colors';
@@ -16,16 +17,29 @@ const BUTTON_CONFIG = {
 const SessionsPartnershipsScreen = ({navigation, props}) => {
     const [modalOpen, setModalOpen] = useState(false);
 
-
     function nextProcessHandler() {
         setModalOpen(false);
         navigation.navigate('CoachesRecruitmentScreen');
+    }
+
+    const renderImage = () => {
+        return (
+            <TouchableOpacity onPress = {() => {}}>
+                    <Image style = {styles.existingSessionsImg} source = {(require('../../assets/Images/StreetSoccerExistingSessionsImg.jpg'))} />
+            </TouchableOpacity>
+        )
+    }
+
+    const renderPartnershipsImg = () => {
+        
     }
 
     return (
         <SafeAreaView>
             <ScrollView>
                 <Text style = {styles.existingSessionTxt}>{EstablishStreetSoccerData.map(title => title.sessions_title)}</Text>
+                
+                {renderImage()}
 
                 <Card style = {styles.cardStyle}>
                     <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.existingText}>{item.existing_sessions_text}</Text>}  />
@@ -48,10 +62,11 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
                      <Button style = {styles.btnBack} buttonStyle = {{width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: BUTTON_CONFIG.marginLeft, marginTop: BUTTON_CONFIG.marginTop}} onPress = {() => setModalOpen(false)} title = "Back"/>
                      <Button style = {styles.processNextButton} buttonStyle = {{width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: BUTTON_CONFIG.marginLeft, marginTop: BUTTON_CONFIG.marginTop}} onPress = {nextProcessHandler} title = "Next Processes"/>
                 </View>
-
              </Modal>
 
                 <Text style = {styles.partnershipTitle}>{EstablishStreetSoccerData.map(title => title.partnerships_title)}</Text>
+
+                {renderPartnershipsImg()}
 
                 <Card style = {styles.cardStyle}>
                     <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.partnershipTxt}>{item.partnerships_text} {item.partnerships_text_sub}</Text>} />
@@ -79,6 +94,13 @@ const styles = StyleSheet.create({
         fontSize: 14,
         marginTop: -11.5,
         padding: -5
+    },
+
+    existingSessionsImg: {
+        width: 320,
+        height: 170,
+        marginLeft: 57,
+        marginTop: 20
     },
 
     cardStyle: {

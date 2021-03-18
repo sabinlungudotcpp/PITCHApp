@@ -9,29 +9,29 @@ import CustomModal from "../components/CustomModal";
 const CoachesRecruitmentScreen = ({navigation, props}) => {
     const [modalOpen, setModalOpen] = useState(false);
 
-    function handleModal() {
+    const handleModal = () => {
         if(!modalOpen) {
             setModalOpen(true);
         }
     }
 
     const renderModal = () => { // Renders the modal to the screen   
-        return (
+
+    return (
         <Modal visible = {modalOpen} animationType = {"slide"} transparent = {false}>
             <Text style = {styles.timingTitleStyle}>{EstablishStreetSoccerData.map(title => title.timing_title)}</Text>
 
             <Card style = {styles.modalCardStyle}>
-                <FlatList />
+                <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text>{item.timing_text}</Text>} />
             </Card>
 
-        <View style = {styles.modalButtonContainer}>
+            <View style = {styles.modalButtonContainer}>
 
-            <Button style = {styles.modalBackButton} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, marginLeft: 30, borderRadius: 200}} title = "Back" />
-            <Button style = {styles.modalNextProcessBtn} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, borderRadius: 200}} title = "Next Process" />
-        </View>
-               
-
+                <Button style = {styles.modalBackButton} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, marginLeft: 30, borderRadius: 200}} title = "Back" />
+                <Button style = {styles.modalNextProcessBtn} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, borderRadius: 200}} title = "Next Process" />
+            </View>
         </Modal>
+
         )
     }
 
@@ -41,7 +41,7 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
                 <Text style = {styles.coachesTitle}>{EstablishStreetSoccerData.map(title => title.coaches_title)}</Text>
 
                 <Card style = {styles.cardStyle}>
-                    <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} />
+                    <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.coachesTextStyle}>{item.coaches_text}</Text>} />
                 </Card>
 
                 {renderModal()}
@@ -75,6 +75,12 @@ const styles = StyleSheet.create({
         height: 150,
         marginLeft: 50,
         maxWidth: '100%'
+    },
+
+    coachesTextStyle: {
+        marginTop: -12,
+        fontSize: 15,
+        padding: -2
     },
 
     containerCoachesButtons: {
@@ -122,6 +128,13 @@ const styles = StyleSheet.create({
         marginTop: -120,
         width: 150,
         marginLeft: 20
+    },
+
+    modalCardStyle: {
+        width: 350,
+        marginLeft: 40,
+        marginBottom: -30,
+        height: 150
     },
 });
 
