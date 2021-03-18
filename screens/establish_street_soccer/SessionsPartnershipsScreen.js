@@ -14,7 +14,7 @@ const BUTTON_CONFIG = {
 }
 
 const SessionsPartnershipsScreen = ({navigation, props}) => {
-    const [modalOpen, setModalOpen] = useState(true);
+    const [modalOpen, setModalOpen] = useState(false);
 
     return (
         <SafeAreaView>
@@ -29,18 +29,20 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
                     <Text style = {styles.facilitiesTitle}>{EstablishStreetSoccerData.map(title => title.facilities_title)}</Text>
 
                     <Card style = {styles.cardStyle}>
-                        <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text>{item.facilities_text}</Text>} />
+                        <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.facilitiesTxt}>{item.facilities_text}</Text>} />
                     </Card>
 
                     <Text style = {styles.rentalTxtTitle}>{EstablishStreetSoccerData.map(title => title.rental_title)}</Text>
 
                     <Card style = {styles.cardStyle}>
-                        <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} />
+                        <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.rentalTxt}>{item.rental_text}</Text>} />
                     </Card>
-            
-                    <Button buttonStyle = {{width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: BUTTON_CONFIG.marginLeft, marginTop: BUTTON_CONFIG.marginTop}} onPress = {() => setModalOpen(false)} title = "Back"/>
 
-                </Modal>
+                <View style = {styles.buttonContainer}>
+                     <Button style = {styles.btnBack} buttonStyle = {{width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: BUTTON_CONFIG.marginLeft, marginTop: BUTTON_CONFIG.marginTop}} onPress = {() => setModalOpen(false)} title = "Back"/>
+                     <Button style = {styles.processNextButton} buttonStyle = {{width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: BUTTON_CONFIG.marginLeft, marginTop: BUTTON_CONFIG.marginTop}} onPress = {() => setModalOpen(false)} title = "Next Processes"/>
+                </View>
+             </Modal>
 
 
                 <Text style = {styles.partnershipTitle}>{EstablishStreetSoccerData.map(title => title.partnerships_title)}</Text>
@@ -101,6 +103,11 @@ const styles = StyleSheet.create({
         color: Colors.secondaryColor
     },
 
+    rentalTxt: {
+        marginTop: -12,
+        fontSize: 15
+    },
+
     btnContainer: {
         width: 110,
         height: 42,
@@ -117,6 +124,12 @@ const styles = StyleSheet.create({
         marginBottom: 50  
     },
 
+    buttonContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginLeft: -80
+    },
+
     facilitiesTitle: {
         fontSize: 29,
         textAlign: 'center',
@@ -124,9 +137,25 @@ const styles = StyleSheet.create({
         color: Colors.secondaryColor
     },
 
+    facilitiesTxt: {
+        marginTop: -12,
+        fontSize: 15
+    },
+
     backBtn: {
         width: 130,
         marginLeft: 150
+    },
+
+    btnBack: {
+        marginRight: 20,
+        marginBottom: 40
+    },
+
+    processNextButton: {
+        alignItems: 'center',
+        marginLeft: -130,
+        marginBottom: 40
     },
 
     viewMoreBtn: {
