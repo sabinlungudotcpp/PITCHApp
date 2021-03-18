@@ -31,7 +31,9 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
     }
 
     const renderPartnershipsImg = () => {
-        
+        return (
+            <Image style = {styles.partnershipImg} source = {(require('../../assets/Images/StreetSoccerPartnershipsImage.jpg'))} />
+        )
     }
 
     return (
@@ -163,6 +165,13 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 100,
         color: Colors.secondaryColor
+    },
+
+    partnershipImg: {
+        width: 320,
+        height: 170,
+        marginLeft: 57,
+        marginTop: 20
     },
 
     facilitiesTxt: {
