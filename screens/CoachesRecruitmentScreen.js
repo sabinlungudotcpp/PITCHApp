@@ -24,6 +24,22 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
         )
     }
 
+    const renderCoachesList = () => {
+        return (
+            <Card style = {styles.cardStyle}>
+                <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.coachesTextStyle}>{item.coaches_text}</Text>} />
+            </Card>
+        )
+    }
+
+    const renderRecruitmentImg = () => {
+        return (
+            <TouchableOpacity>
+                <Image style = {styles.recruitmentImg} source = {(require('../assets/Images/StreetSoccerRecruitmentImg.jpg'))} />
+            </TouchableOpacity>
+        )
+    }
+
     const renderModal = () => { // Renders the modal to the screen   
 
     return (
@@ -50,14 +66,13 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
                 <Text style = {styles.coachesTitle}>{EstablishStreetSoccerData.map(title => title.coaches_title)}</Text>
 
                 {renderCoachesImg()}
-
-                <Card style = {styles.cardStyle}>
-                    <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.coachesTextStyle}>{item.coaches_text}</Text>} />
-                </Card>
+                {renderCoachesList()}
 
                 {renderModal()}
 
                 <Text style = {styles.recruitmentTitle}>{EstablishStreetSoccerData.map(title => title.recruitment_title)}</Text>
+
+                {renderRecruitmentImg()}
 
                 <Card style = {styles.cardStyle}>
                     <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} />
@@ -154,6 +169,13 @@ const styles = StyleSheet.create({
         marginLeft: 65,
         marginTop: 30
     },
+
+    recruitmentImg: {
+        width: 300,
+        height: 180,
+        marginLeft: 65,
+        marginTop: 30
+    }
 });
 
 export default CoachesRecruitmentScreen;

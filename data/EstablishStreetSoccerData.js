@@ -54,7 +54,7 @@ const EST_STREET_SOCCER = [
     {
         "id": 9,
         "recruitment_title": "Recruitment",
-        "recruitment_text": ""
+        "recruitment_text": "Working with existing organisations in the community will give you contact with programmes that already engage with people from the community who may have become peer leaders and therefore could be trained as coaches to lead sessions or to be involved in the programem as a support worker. Local colleges or clubs may have people who want to support their community and want to gain experience in coaching for their career, if you find someone from there you need to ensure that they understand the purpose of Street Soccer and that the interaction with the player is the most important element"
     },
 
     {
