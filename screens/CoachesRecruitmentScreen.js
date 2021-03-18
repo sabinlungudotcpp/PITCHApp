@@ -3,6 +3,7 @@ import {View, StyleSheet, ScrollView, FlatList, Image, SafeAreaView, Platform, M
 import Card from "../components/Card";
 import Colors from "../constants/Colors";
 import EstablishStreetSoccerData from "../data/EstablishStreetSoccerData";
+import CustomModal from "../components/Modal";
 
 const CoachesRecruitmentScreen = (navigation, props) => {
     const [modalOpen, setModalOpen] = useState(false);
