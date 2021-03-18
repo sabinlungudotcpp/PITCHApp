@@ -43,6 +43,18 @@ const EST_STREET_SOCCER = [
         "id": 7,
         "rental_title": "Rental",
         "rental_text": "If there is an existing sport or football facility that meets your criteria there may be a cost to access and use the facility, it can be useful to speak with the managers and owners to explain the purpose of your programme and how this will bring the community to the facility and improve their living style, consider the times you wish to use this facility could this be off peak times when they are not being used.\nIf there is a cost to be paid could this be raised by involving local businesses or the council or government?"
+    },
+
+    {
+        "id": 8,
+        "coaches_title": "Coaches",
+        "coaches_text": "When initially establishing a Street Soccer programme you will most likely be involved in the coaching personally however there is a need to recruit new coaches to provide cover or to grow the programme. The coach is the first point of contact for your organisation and must therefore promote the best possible impression for the participants, as a result the level of coaching is not the priority but the way in which they interact with the players and support them in Street Soccer the football is only about 35% it is the personal development that makes up the rest.\nSo when recruiting coaches' consideration should be given to promoting players from the programme as they will understand the programe they will be able to relate to the players and they will feel part of the organisation."
+    },
+
+    {
+        "id": 9,
+        "recruitment_title": "Recruitment",
+        "recruitment_text": ""
     }
 ]
 

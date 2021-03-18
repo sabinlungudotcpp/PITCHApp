@@ -16,6 +16,11 @@ const BUTTON_CONFIG = {
 const SessionsPartnershipsScreen = ({navigation, props}) => {
     const [modalOpen, setModalOpen] = useState(false);
 
+    function nextProcessHandler() {
+        setModalOpen(false);
+        navigation.navigate('CoachesRecruitmentScreen');
+    }
+
     return (
         <SafeAreaView>
             <ScrollView>
@@ -40,10 +45,9 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
 
                 <View style = {styles.buttonContainer}>
                      <Button style = {styles.btnBack} buttonStyle = {{width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: BUTTON_CONFIG.marginLeft, marginTop: BUTTON_CONFIG.marginTop}} onPress = {() => setModalOpen(false)} title = "Back"/>
-                     <Button style = {styles.processNextButton} buttonStyle = {{width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: BUTTON_CONFIG.marginLeft, marginTop: BUTTON_CONFIG.marginTop}} onPress = {() => setModalOpen(false)} title = "Next Processes"/>
+                     <Button style = {styles.processNextButton} buttonStyle = {{width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: BUTTON_CONFIG.marginLeft, marginTop: BUTTON_CONFIG.marginTop}} onPress = {nextProcessHandler} title = "Next Processes"/>
                 </View>
              </Modal>
-
 
                 <Text style = {styles.partnershipTitle}>{EstablishStreetSoccerData.map(title => title.partnerships_title)}</Text>
 
