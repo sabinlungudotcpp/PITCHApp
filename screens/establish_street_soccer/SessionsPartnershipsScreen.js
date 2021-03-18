@@ -48,23 +48,31 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
                 </Card>
 
                 <Modal animationType = {"slide"} transparent = {false} visible = {modalOpen} >
-                    <Text style = {styles.facilitiesTitle}>{EstablishStreetSoccerData.map(title => title.facilities_title)}</Text>
 
-                    <Card style = {styles.cardStyle}>
-                        <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.facilitiesTxt}>{item.facilities_text}</Text>} />
-                    </Card>
+            <ScrollView>
+                <Text style = {styles.facilitiesTitle}>{EstablishStreetSoccerData.map(title => title.facilities_title)}</Text>
 
-                    <Text style = {styles.rentalTxtTitle}>{EstablishStreetSoccerData.map(title => title.rental_title)}</Text>
+                <TouchableOpacity>
+                    <Image style = {styles.modalFacilitiesImg} source = {(require('../../assets/Images/StreetSoccerFacilitiesImg.jpg'))} />
+                </TouchableOpacity>
 
-                    <Card style = {styles.cardStyle}>
-                        <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.rentalTxt}>{item.rental_text}</Text>} />
-                    </Card>
+                <Card style = {styles.cardStyle}>
+                    <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.facilitiesTxt}>{item.facilities_text}</Text>} />
+                </Card>
 
-                <View style = {styles.buttonContainer}>
-                     <Button style = {styles.btnBack} buttonStyle = {{width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: BUTTON_CONFIG.marginLeft, marginTop: BUTTON_CONFIG.marginTop}} onPress = {() => setModalOpen(false)} title = "Back"/>
-                     <Button style = {styles.processNextButton} buttonStyle = {{width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: BUTTON_CONFIG.marginLeft, marginTop: BUTTON_CONFIG.marginTop}} onPress = {nextProcessHandler} title = "Next Processes"/>
-                </View>
-             </Modal>
+                <Text style = {styles.rentalTxtTitle}>{EstablishStreetSoccerData.map(title => title.rental_title)}</Text>
+
+                <Card style = {styles.cardStyle}>
+                    <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.rentalTxt}>{item.rental_text}</Text>} />
+                </Card>
+
+             <View style = {styles.buttonContainer}>
+                <Button style = {styles.btnBack} buttonStyle = {{width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: BUTTON_CONFIG.marginLeft, marginTop: BUTTON_CONFIG.marginTop}} onPress = {() => setModalOpen(false)} title = "Back"/>
+                <Button style = {styles.processNextButton} buttonStyle = {{width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: BUTTON_CONFIG.marginLeft, marginTop: BUTTON_CONFIG.marginTop}} onPress = {nextProcessHandler} title = "Next Processes"/>
+                    </View>
+                </ScrollView>
+            </Modal>
+                    
 
                 <Text style = {styles.partnershipTitle}>{EstablishStreetSoccerData.map(title => title.partnerships_title)}</Text>
 
@@ -169,7 +177,7 @@ const styles = StyleSheet.create({
 
     partnershipImg: {
         width: 320,
-        height: 170,
+        height: 180,
         marginLeft: 57,
         marginTop: 20
     },
@@ -180,13 +188,13 @@ const styles = StyleSheet.create({
     },
 
     backBtn: {
-        width: 130,
-        marginLeft: 150
+        width: 150,
+        marginLeft: 145
     },
 
     btnBack: {
         marginRight: 20,
-        marginBottom: 40
+        marginBottom: 40,
     },
 
     processNextButton: {
@@ -198,7 +206,14 @@ const styles = StyleSheet.create({
     viewMoreBtn: {
        width: 150,
        marginLeft: 25
-    }
+    },
+
+    modalFacilitiesImg: {
+        width: 320,
+        height: 170,
+        marginLeft: 55,
+        marginTop: 20
+    },
 });
 
 export default SessionsPartnershipsScreen; // Ep
