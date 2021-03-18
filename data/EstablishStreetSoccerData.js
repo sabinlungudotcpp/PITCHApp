@@ -55,6 +55,17 @@ const EST_STREET_SOCCER = [
         "id": 9,
         "recruitment_title": "Recruitment",
         "recruitment_text": ""
+    },
+
+    {
+        "id": 10,
+        "timing_title": "Timing",
+        "timing_text": ""
+    },
+
+    {
+        "id": 11,
+        "kit_title": "Kit"
     }
 ]
 
