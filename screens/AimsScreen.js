@@ -11,22 +11,18 @@ const SIZES = {
 }
 
 const AimsScreen = ({props, navigation}) => { // Aims Screen Component
-    try {
+
+    const renderCardData = () => {
         return (
-            <ScrollView>
-                <Text style = {styles.aimsText}>{introductionData.map((value) => value.title_statement)}</Text>
-    
-            <Card style = {styles.cardStyle}>
-                <FlatList data = {introductionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.statementTxt}>{item.description_statement}</Text>} />
-            </Card>
-    
-            <Text style = {styles.aimsContainer}>{introductionData.map(value => value.title_aims)}</Text>
-    
             <Card style = {styles.cardStyle}>
                 <FlatList data = {introductionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.aimsTextContainer}>{item.description_aims}</Text>}/>
                 <FlatList data = {introductionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.aimsTextContainer}>{item.main_sub_description_aims}</Text>} />
             </Card>
-    
+        )
+    }
+
+    const renderButtons = () => {
+        return (
             <View style = {styles.btnContainers}>
                 <Button style = {styles.backBtn} buttonStyle = {{marginRight: Platform.OS === 'android' ? 30 : null ,width: Platform.OS === 'android' ? 140 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "Back" onPress = {() => navigation.navigate('IntroductionScreen')} />
 
@@ -34,6 +30,22 @@ const AimsScreen = ({props, navigation}) => { // Aims Screen Component
                      <Button style = {styles.policyBtn} buttonStyle = {{width: Platform.OS === 'android' ? 140 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} title = "View Policies"/>
                 </TouchableOpacity>
             </View>
+        )
+    }
+
+    try {
+        return (
+            <ScrollView>
+                <Text style = {styles.aimsText}>{introductionData.map((value) => value.title_statement)}</Text>
+    
+                <Card style = {styles.cardStyle}>
+                    <FlatList data = {introductionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.statementTxt}>{item.description_statement}</Text>} />
+                </Card>
+    
+            <Text style = {styles.aimsContainer}>{introductionData.map(value => value.title_aims)}</Text>
+    
+            {renderCardData()}
+            {renderButtons()}
             
         </ScrollView>
         )

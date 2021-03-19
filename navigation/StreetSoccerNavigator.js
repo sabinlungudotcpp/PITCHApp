@@ -4,7 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import EstablishHomeScreen from '../screens/establish_street_soccer/EstablishHomeScreen';
 import Colors from '../constants/Colors';
 import SessionsPartnershipsScreen from '../screens/establish_street_soccer/SessionsPartnershipsScreen';
-import CoachesRecruitmentScreen from '../screens/CoachesRecruitmentScreen';
+import CoachesRecruitmentScreen from '../screens/establish_street_soccer/CoachesRecruitmentScreen';
 
 const Stack = createStackNavigator();
 

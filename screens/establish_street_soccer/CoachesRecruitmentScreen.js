@@ -1,15 +1,15 @@
 import React, {useState} from "react";
 import {View, StyleSheet, ScrollView, FlatList, Image, SafeAreaView, Platform, Modal, TouchableNativeFeedback, Keyboard, Text} from "react-native";
 import {Button} from "react-native-elements";
-import Card from "../components/Card";
-import Colors from "../constants/Colors";
-import EstablishStreetSoccerData from "../data/EstablishStreetSoccerData";
-import CustomModal from "../components/CustomModal";
+import Card from "../../components/Card";
+import Colors from "../../constants/Colors";
+import EstablishStreetSoccerData from "../../data/EstablishStreetSoccerData";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-const CoachesRecruitmentScreen = ({navigation, props}) => {
+const CoachesRecruitmentScreen = ({navigation, props}) => { // Recruitment Screen Component
     const [modalOpen, setModalOpen] = useState(false);
 
+    // Function that handles the modal screen
     const handleModal = () => {
         if(!modalOpen) {
             setModalOpen(true);
@@ -19,12 +19,12 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
     const renderCoachesImg = () => { // Renders the coaches image
         return (
             <TouchableOpacity>
-               <Image style = {styles.coachImg} source = {(require('../assets/Images/StreetSoccerCoachesImg.jpg'))} />
+               <Image style = {styles.coachImg} source = {(require('../../assets/Images/StreetSoccerCoachesImg.jpg'))} />
             </TouchableOpacity>
         )
     }
 
-    const renderCoachesList = () => {
+    const renderCoachesList = () => { // Renders the data for the coaches in a flat list that renders JSON
         return (
             <Card style = {styles.cardStyle}>
                 <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.coachesTextStyle}>{item.coaches_text}</Text>} />
@@ -32,10 +32,18 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
         )
     }
 
-    const renderRecruitmentImg = () => {
+    const renderRecruitmentImg = () => { // Renders the recruitment image
         return (
             <TouchableOpacity>
-                <Image style = {styles.recruitmentImg} source = {(require('../assets/Images/StreetSoccerRecruitmentImg.jpg'))} />
+                <Image style = {styles.recruitmentImg} source = {(require('../../assets/Images/StreetSoccerRecruitmentImg.jpg'))} />
+            </TouchableOpacity>
+        )
+    }
+
+    const renderTimingImage = () => {
+        return (
+            <TouchableOpacity>
+                <Image style = {styles.timingImg} source = {(require('../../assets/Images/StreetSoccerTimingImg.jpeg'))} />
             </TouchableOpacity>
         )
     }
@@ -43,20 +51,30 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
     const renderModal = () => { // Renders the modal to the screen   
 
     return (
-        <Modal visible = {modalOpen} animationType = {"slide"} transparent = {false}>
+            <Modal visible = {modalOpen} animationType = {"slide"} transparent = {false}>
+
+        <ScrollView>
             <Text style = {styles.timingTitleStyle}>{EstablishStreetSoccerData.map(title => title.timing_title)}</Text>
+            {renderTimingImage()}
 
             <Card style = {styles.modalCardStyle}>
-                <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text>{item.timing_text}</Text>} />
+                <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.timingModalTxt}>{item.timing_text}</Text>} />
             </Card>
 
             <View style = {styles.modalButtonContainer}>
-
                 <Button style = {styles.modalBackButton} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, marginLeft: 30, borderRadius: 200}} title = "Back" />
                 <Button style = {styles.modalNextProcessBtn} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, borderRadius: 200}} title = "Next Process" />
             </View>
-        </Modal>
 
+            <Text style = {styles.kitTitle}>{EstablishStreetSoccerData.map(title => title.kit_title)}</Text>
+
+            <Card style = {styles.cardStyle}>
+
+            </Card>
+         </ScrollView>
+
+        </Modal>
+    
         )
     }
 
@@ -75,7 +93,7 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
                 {renderRecruitmentImg()}
 
                 <Card style = {styles.cardStyle}>
-                    <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} />
+                    <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.recruitmentTextStyle}>{item.recruitment_text}</Text>} />
                 </Card>
             
                 <View style = {styles.containerCoachesButtons}>
@@ -83,12 +101,13 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
                     <Button style = {styles.coachesNextBtnProcess} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200, width: 150, marginLeft: 140, marginTop: 50}} onPress = {handleModal} title = "View More"/>
                 </View>
 
+
             </ScrollView>
         </TouchableNativeFeedback>
     )
 };
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ // Stores the styles for the data
     coachesTitle: {
         textAlign: 'center',
         fontSize: 31,
@@ -174,6 +193,30 @@ const styles = StyleSheet.create({
         width: 300,
         height: 180,
         marginLeft: 65,
+        marginTop: 30
+    },
+
+    recruitmentTextStyle: {
+        marginTop: -13,
+        fontSize: 15
+    },
+
+    timingModalTxt: {
+        marginTop: -13,
+        fontSize: 16
+    },
+
+    kitTitle: {
+        textAlign: 'center',
+        fontSize: 29,
+        color: Colors.secondaryColor,
+        marginTop: -30
+    },
+
+    timingImg: {
+        width: 330,
+        height: 180,
+        marginLeft: 55,
         marginTop: 30
     }
 });

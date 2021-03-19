@@ -21,7 +21,29 @@ const SIZES = { // Sizez to be used throughout the application
     marginLeft: 35
 }
 
-const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment Guidelines component
+const RecruitmentGuidelines = ({props, navigation}) => { // Recruitment Guidelines component
+
+    const renderCard = () => {
+        return (
+            <Card style = {style.cardStyle}>
+                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id >= 14 || item.id <= 21 ? <Text style = {style.trainingItemListTxt}>{item.training_list}</Text> : null} />
+            </Card>
+        )
+    }
+
+    const renderButtons = () => {
+
+    return (
+        <View style = {style.buttonContainer}>
+            <Button onPress = {() => navigation.navigate('RecruitmentScreen')} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 20 : null, width: Platform.OS === 'android' ? 120 : null ,backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.backBtn} title = "Back"/>
+
+        <TouchableOpacity onPress = {() => navigation.navigate('AllegationsScreen')}>
+            <Button buttonStyle = {{marginLeft: Platform.OS === 'android' ? 30 : null, width: Platform.OS === 'android' ? 120 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.nextPolicyBtn} title = "Next Policy" />
+        </TouchableOpacity>
+
+        </View>
+        )
+    }
 
     try {
         return (
@@ -39,18 +61,9 @@ const RecruitmentGuidelines = ({props, navigation, items}) => { // Recruitment G
 
             <Text style = {style.trainingTxt}>{ChildProtectionData.map(data => data.guideline_training)}</Text>
 
-            <Card style = {style.cardStyle}>
-                <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id >= 14 || item.id <= 21 ? <Text style = {style.trainingItemListTxt}>{item.training_list}</Text> : null} />
-            </Card>
-
-            <View style = {style.buttonContainer}>
-                <Button onPress = {() => navigation.navigate('RecruitmentScreen')} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 20 : null, width: Platform.OS === 'android' ? 120 : null ,backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.backBtn} title = "Back"/>
-
-            <TouchableOpacity onPress = {() => navigation.navigate('AllegationsScreen')}>
-                <Button buttonStyle = {{marginLeft: Platform.OS === 'android' ? 30 : null, width: Platform.OS === 'android' ? 120 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {style.nextPolicyBtn} title = "Next Policy" />
-            </TouchableOpacity>
-
-            </View>
+            {renderCard()}
+            {renderButtons()}
+           
         </ScrollView>
 
         )
@@ -90,7 +103,7 @@ const style = StyleSheet.create({
         fontSize: SIZES.fontSize
     },
 
-    trainingTxt: {
+    trainingTxt: { // Styles for the training text
         textAlign: 'center',
         fontSize: 31,
         marginTop: 45,

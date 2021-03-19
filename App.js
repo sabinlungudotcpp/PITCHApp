@@ -8,7 +8,7 @@ import SlumSoccerStackNavigator from './navigation/SlumSoccerStackNavigator';
 import StreetSoccerNavigator from './navigation/StreetSoccerNavigator';
 import Colors from './constants/Colors';
 
-const Tab = createMaterialBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator(); // Function call to create the bottom tab navigator
 
 const SIZES = {
   androidSize: 33,
@@ -58,7 +58,7 @@ const style = StyleSheet.create({
   }
 })
 
-const App = () => {
+const App = () => { // Main App Component
   
   return (
 

@@ -60,7 +60,7 @@ const EST_STREET_SOCCER = [
     {
         "id": 10,
         "timing_title": "Timing",
-        "timing_text": ""
+        "timing_text": "The timing of the session should be driven by the availablity of the target audience, if the majority are free in the mornings then the session should be then if a facility is available consider that there is no point in holding a session at a time of day or on a day when the target group are available. Initial research should be carried out to clarify this."
     },
 
     {

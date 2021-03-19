@@ -29,7 +29,28 @@ const IMAGE_SIZES = {
     marginLeft: 50
 }
 
-const AllegationsScreen = ({item, navigation, props}) => { // The allegations screen used.
+const AllegationsScreen = ({navigation, props}) => { // The allegations screen used.
+
+    const renderCardData = () => {
+        return (
+            <Card style = {style.cardStyle}>
+                    <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.investigationTxt}>{item.allegation_investigation}</Text>} />
+                </Card>
+        )
+    }
+
+    const renderButtons = () => {
+        return (
+            <View style = {style.btnContainer}>
+                    <Button style = {style.backBtn} onPress = {() => navigation.navigate('RecruitmentGuidelines')} buttonStyle = {{marginRight: Platform.OS === 'android' ? 30 : null, marginLeft: Platform.OS === 'android' ? 15 : null, width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
+
+                    <TouchableOpacity onPress = {() => navigation.navigate('PoorPracticeScreen')}>
+                        <Button style = {style.nextPolicyBtn} buttonStyle = {{width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
+                    </TouchableOpacity>
+                </View>
+        )
+    }
+
     try {
         return (
             <ScrollView>
@@ -44,18 +65,9 @@ const AllegationsScreen = ({item, navigation, props}) => { // The allegations sc
                     <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.allegationTxt}>{item.allegations_sub_description}</Text>} />
                 </Card>
     
-                <Card style = {style.cardStyle}>
-                    <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {style.investigationTxt}>{item.allegation_investigation}</Text>} />
-                </Card>
-    
-                <View style = {style.btnContainer}>
-                    <Button style = {style.backBtn} onPress = {() => navigation.navigate('RecruitmentGuidelines')} buttonStyle = {{marginRight: Platform.OS === 'android' ? 30 : null, marginLeft: Platform.OS === 'android' ? 15 : null, width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
+                {renderCardData()}
 
-                    <TouchableOpacity onPress = {() => navigation.navigate('PoorPracticeScreen')}>
-                        <Button style = {style.nextPolicyBtn} buttonStyle = {{width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
-                    </TouchableOpacity>
-
-                </View>
+                {renderButtons()}
             </ScrollView>
         )
     } 

@@ -4,7 +4,8 @@ import introductionData from '../data/IntroductionData';
 import Colors from '../constants/Colors';
 import Card from '../components/Card';
 
-const AboutUsScreen = ({item, navigation}) => {
+const AboutUsScreen = ({navigation, props}) => { // About Us Screen component
+
     return (
 
     <ScrollView>

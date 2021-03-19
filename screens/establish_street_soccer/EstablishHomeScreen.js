@@ -5,16 +5,26 @@ import Colors from '../../constants/Colors';
 import Card from '../../components/Card';
 import EstablishStreetSoccerData from '../../data/EstablishStreetSoccerData';
 
-const EstablishHomeScreen = ({props, navigation, item}) => {
+/*
+    Component Name: Establish Home Screen
+    Parameters: props: Stores the properties of the component, naigation: Navigation prop for navigating between screens
+*/
 
-    const [modalOpen, setModalOpen] = useState(false);
+const EstablishHomeScreen = ({props, navigation}) => { // Establish Home Screen
 
-    return (
-        <SafeAreaView style = {styles.defaultView}>
-            <ScrollView>
-                <Text style = {styles.titleWhat}>{EstablishStreetSoccerData.map(data => data.title_what)}</Text>
-                    <Image style = {styles.streetSoccerImg} source = {(require('../../assets/Images/ImageStreetSoccer.png'))} />
+    const [modalOpen, setModalOpen] = useState(false); // State for managing the modal
 
+    const renderButtons = () => { // Renders the buttons on the screen
+        return (
+            <View style = {styles.btnContainer}>
+                <Button onPress = {() => setModalOpen(true)} style = {styles.processesBtn} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 155 : null,width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "View Process" />
+                <Button onPress = {() => navigation.navigate('SessionsPartnershipsScreen')} style = {styles.processNxtBtn} buttonStyle = {{width: Platform.OS === 'android' ? 130 : null, marginLeft: Platform.OS === 'android' ? 30: null, backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "Next Process" />
+            </View>
+        )
+    }
+
+    const renderModal = () => { // Function called to render the modal onto the screen
+        return (
             <Modal transparent = {false} visible = {modalOpen} animationType = {"slide"}>
                 <Text style = {styles.processTxt}>The Process</Text>
 
@@ -34,16 +44,24 @@ const EstablishHomeScreen = ({props, navigation, item}) => {
 
                 <Button onPress = {() => setModalOpen(false)} buttonStyle = {{width: 150, borderRadius: 200, marginLeft: 140, marginTop: 40}} title = "Back" />
             </Modal>
+        )
+    }
+
+    return (
+        <SafeAreaView style = {styles.defaultView}>
+
+            <ScrollView>
+
+                <Text style = {styles.titleWhat}>{EstablishStreetSoccerData.map(data => data.title_what)}</Text>
+                    <Image style = {styles.streetSoccerImg} source = {(require('../../assets/Images/ImageStreetSoccer.png'))} />
+
+                    {renderModal()}
 
                 <Card style = {styles.cardStyle}>
                     <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.streetSoccerDescription}>{item.street_soccer_description}</Text>} />
                 </Card>
 
-                <View style = {styles.btnContainer}>
-                    <Button onPress = {() => setModalOpen(true)} style = {styles.processesBtn} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 155 : null,width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "View Process" />
-                    <Button onPress = {() => navigation.navigate('SessionsPartnershipsScreen')} style = {styles.processNxtBtn} buttonStyle = {{width: Platform.OS === 'android' ? 130 : null, marginLeft: Platform.OS === 'android' ? 30: null, backgroundColor: Colors.secondaryColor, borderRadius: 200}} title = "Next Process" />
-                </View>
-
+                {renderButtons()}
 
             </ScrollView>
         </SafeAreaView>
@@ -52,19 +70,19 @@ const EstablishHomeScreen = ({props, navigation, item}) => {
 
 const styles = StyleSheet.create({
 
-    defaultView: {
+    defaultView: { // Default style view
         flex: 1
     },
 
-    streetSoccerImg: {
-        width: 260,
+    streetSoccerImg: { // Styles for the Street Soccer Image
+        width: 260, // Has a width of 260 pixels
         height: 150,
-        marginLeft: 80,
+        marginLeft: 80, // Margin left of 80 pixels
         marginTop: 20
     },
 
-    cardStyle: {
-        padding: 10, 
+    cardStyle: { // Styles for the card that contains the flat list
+        padding: 10,  // Padding of 10
         paddingLeft: -40,
         paddingBottom: -5,
         marginBottom: 1,
