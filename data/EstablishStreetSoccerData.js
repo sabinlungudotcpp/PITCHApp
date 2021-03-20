@@ -71,7 +71,14 @@ const EST_STREET_SOCCER = [
 
     {
         "id": 12,
-        "funding_title": "Funding"
+        "funding_title": "Funding",
+        "funding_text": "This is probably going to be the biggest issue in establishing a sustainable Street Soccer programme, from experience I can advise that there is almost certainly going to be a need to deliver a programme with no support or funding in the first few months in order to demonstrate to potential funders the benefits of running a programme. The sources of funding can vary from city to city and country to country.\n This needs to be researched fully and explored with the support of experienced Street Soccer experts, local NGO's or Government sources. When considering funding you need to be inventive and consider all avenues and sources, you should consider how you approach potential funders and why they should support or invest in you, this enables you to sell the concept easier."
+    },
+
+    {
+        "id": 13,
+        "me_title": "M & E",
+        "me_text": ""
     }
 ]
 
