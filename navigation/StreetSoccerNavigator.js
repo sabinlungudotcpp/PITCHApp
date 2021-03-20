@@ -5,6 +5,7 @@ import EstablishHomeScreen from '../screens/establish_street_soccer/EstablishHom
 import Colors from '../constants/Colors';
 import SessionsPartnershipsScreen from '../screens/establish_street_soccer/SessionsPartnershipsScreen';
 import CoachesRecruitmentScreen from '../screens/establish_street_soccer/CoachesRecruitmentScreen';
+import EstablishFundingScreen from '../screens/establish_street_soccer/EstablishFundingScreen';
 
 const Stack = createStackNavigator();
 
@@ -19,6 +20,9 @@ const StreetSoccerNavigator = ({navigation}) => { // Street Soccer Stack Navigat
 
     <Stack.Screen options = { {headerTintColor: Colors.black, headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = "#fff" />), headerLeft: () => (<Button onPress={() => {}} title = "Modules"
                 color = {Colors.whiteColor}/>) , headerTitle: 'Street Soccer', headerStyle: {backgroundColor: Colors.secondaryColor}}} name = "CoachesRecruitmentScreen" component = {CoachesRecruitmentScreen}/>
+
+<Stack.Screen options = { {headerTintColor: Colors.black, headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = "#fff" />), headerLeft: () => (<Button onPress={() => {}} title = "Modules"
+                color = {Colors.whiteColor}/>) , headerTitle: 'Street Soccer', headerStyle: {backgroundColor: Colors.secondaryColor}}} name = "EstablishFundingScreen" component = {EstablishFundingScreen}/>
     </Stack.Navigator>
 }
 

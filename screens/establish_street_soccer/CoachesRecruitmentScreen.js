@@ -59,8 +59,8 @@ const CoachesRecruitmentScreen = ({navigation, props}) => { // Recruitment Scree
 
     const handleCloseHandler = () => {
         const modalState = modalOpen;
-        setModalOpen(!modalState);
-        navigation.navigate('');
+        setModalOpen(!modalState); // Close the modal
+        navigation.navigate('EstablishFundingScreen');
     }
 
     const renderModal = () => { // Renders the modal to the screen   
