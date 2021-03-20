@@ -24,7 +24,7 @@ const EstablishFundingScreen = ({navigation, props}) => {
             <TouchableOpacity>
                 <Image style = {styles.fundingImg} source = {(require('../../assets/Images/ImgFunding.jpg'))} />
 
-                <Card>
+                <Card style = {styles.cardStyle}>
 
                 </Card>
             </TouchableOpacity>
@@ -57,7 +57,14 @@ const styles = StyleSheet.create({
         height: 150,
         marginLeft: 88,
         marginTop: 20
-    }
+    },
+
+    cardStyle: { // Styles for the card container
+        width: 340,
+        height: 150,
+        marginLeft: 50,
+        maxWidth: '100%'
+    },
 });
 
 export default EstablishFundingScreen;
