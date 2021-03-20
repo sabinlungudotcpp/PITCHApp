@@ -65,7 +65,8 @@ const EST_STREET_SOCCER = [
 
     {
         "id": 11,
-        "kit_title": "Kit"
+        "kit_title": "Kit",
+        "kit_description": ""
     }
 ]
 
