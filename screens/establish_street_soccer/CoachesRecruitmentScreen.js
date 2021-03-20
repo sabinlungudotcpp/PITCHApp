@@ -48,6 +48,15 @@ const CoachesRecruitmentScreen = ({navigation, props}) => { // Recruitment Scree
         )
     }
 
+    const renderModalButtons = () => {
+        return (
+            <View style = {styles.modalButtonContainer}>
+                <Button style = {styles.modalBackButton} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, marginLeft: 30, borderRadius: 200}} title = "Back" />
+                <Button style = {styles.modalNextProcessBtn} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, borderRadius: 200}} title = "Next Process" />
+            </View>
+        )
+    }
+
     const renderModal = () => { // Renders the modal to the screen   
 
     return (
@@ -62,16 +71,19 @@ const CoachesRecruitmentScreen = ({navigation, props}) => { // Recruitment Scree
                 <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.timingModalTxt}>{item.timing_text}</Text>} />
             </Card>
 
-            <View style = {styles.modalButtonContainer}>
-                <Button style = {styles.modalBackButton} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, marginLeft: 30, borderRadius: 200}} title = "Back" />
-                <Button style = {styles.modalNextProcessBtn} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, borderRadius: 200}} title = "Next Process" />
-            </View>
+            {renderModalButtons()}
 
             <Text style = {styles.kitTitle}>{EstablishStreetSoccerData.map(title => title.kit_title)}</Text>
+            <Image style = {styles.imageKit} source = {(require('../../assets/Images/ImageKit.jpeg'))} />
 
             <Card style = {styles.cardStyleModal}>
                 <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.itemKitStyle}>{item.kit_description}</Text>} />
             </Card>
+
+            <View style = {styles.modalButtonContainer}>
+                <Button style = {styles.modalBackButton} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, marginLeft: 30, borderRadius: 200}} title = "Back" />
+                <Button style = {styles.modalNextProcessBtn} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, borderRadius: 200}} title = "Next Process" />
+            </View>
 
          </ScrollView>
 
@@ -128,7 +140,7 @@ const styles = StyleSheet.create({ // Stores the styles for the data
         width: 340,
         height: 150,
         marginLeft: 50,
-        marginBottom: 200,
+        marginBottom: -55,
         maxWidth: '100%'
     },
 
@@ -233,6 +245,13 @@ const styles = StyleSheet.create({ // Stores the styles for the data
     itemKitStyle: {
         marginTop: -13,
         fontSize: 15
+    },
+
+    imageKit: {
+        width: 330,
+        height: 180,
+        marginLeft: 55,
+        marginTop: 30
     },
 
 });
