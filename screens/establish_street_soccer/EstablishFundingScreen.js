@@ -13,23 +13,35 @@ const EstablishFundingScreen = ({navigation, props}) => {
         setModalOpen(!modalOpen);
     };
 
-    const closeModal = () => {
-        setModalOpen(modalOpen);
+    const closeModal = () => { // Closes the modal
+        setModalOpen(!modalOpen);
     }
 
     const renderFundingButtons = () => {
         return (
             <View style = {styles.btnContainer}>
-            <Button buttonStyle = {{marginLeft: 160, borderRadius: 200, marginRight: 30, width: 130}} onPress = {closeModal} title = "Back"/>
-            <Button buttonStyle = {{borderRadius: 200, width: 140}} onPress = {toggleModalHandler} title = "View More"/>
-        </View>
+                <Button onPress = {() => navigation.navigate('CoachesRecruitmentScreen')} buttonStyle = {{marginLeft: 160, borderRadius: 200, marginRight: 30, width: 130}} title = "Back"/>
+                <Button buttonStyle = {{borderRadius: 200, width: 140}} onPress = {toggleModalHandler} title = "View More"/>
+            </View>
         )
     }
 
     const showModal = () => {
         return (
             <Modal visible = {modalOpen} transparent = {false} animationType = {"slide"}>
-                <Text></Text>
+                <Text style = {styles.meHeadingStyle}>{EstablishStreetSoccerData.map(title => title.me_title)}</Text>
+
+                <Card style = {styles.cardStyle}>
+                    <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.modalMeText}>{item.me_text}</Text>} />
+                </Card>
+
+                <View style = {styles.btnContainer}>
+                    <Button onPress = {closeModal} buttonStyle = {{marginLeft: 155, width: 120, borderRadius: 200}} title = "Back" />
+                    <Button buttonStyle = {{marginLeft: 40, marginRight: 200, borderRadius: 200, width: 140}} title = "View More" />
+                </View>
+
+                <Text style = {styles.supportStaffTxt}>{EstablishStreetSoccerData.map(title => title.supportstaff_title)}</Text>
+
             </Modal>
         )
     }
@@ -94,6 +106,25 @@ const styles = StyleSheet.create({
         paddingVertical: 40,
         marginLeft: -90
     },
+
+    meHeadingStyle: {
+        textAlign: 'center',
+        marginTop: 90,
+        fontSize: 29,
+        color: Colors.secondaryColor
+    },
+
+    modalMeText: {
+        marginTop: -13.2,
+        fontSize: 15.5
+    },
+
+    supportStaffTxt: {
+        textAlign: 'center',
+        fontSize: 29,
+        color: Colors.secondaryColor,
+        marginTop: 20
+    }
 });
 
 export default EstablishFundingScreen;

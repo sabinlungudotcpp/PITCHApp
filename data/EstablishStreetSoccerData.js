@@ -78,7 +78,12 @@ const EST_STREET_SOCCER = [
     {
         "id": 13,
         "me_title": "M & E",
-        "me_text": ""
+        "me_text": "Monitoring and evaluation is probably not at the top of your considerations when starting out however if you can identify and report on the benefits of Street Soccer from day 1 this provides you with evidence to gain further support. Simple things such as the numbers attending; player feedback, improved life skills, fitness improved; community feedback through observations and interviews will impress potential supporters with information that they can review to establish why they should invest in the programme."
+    },
+
+    {
+        "id": 14,
+        "supportstaff_title": "Support Staff"
     }
 ]
 
