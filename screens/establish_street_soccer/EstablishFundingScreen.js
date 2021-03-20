@@ -7,14 +7,23 @@ import EstablishStreetSoccerData from "../../data/EstablishStreetSoccerData";
 
 const EstablishFundingScreen = ({navigation, props}) => {
     return (
-        <ScrollView>
-            <Text>Establish Funding</Text>
+        <ScrollView style = {styles.defaultView}>
+            <Text style = {styles.fundingText}>{EstablishStreetSoccerData.map(title => title.funding_title)}</Text>
         </ScrollView>
     )
 };
 
 const styles = StyleSheet.create({
+    defaultView: {
+        flex: 1
+    },
 
+    fundingText: {
+        textAlign: 'center',
+        fontSize: 29,
+        color: Colors.secondaryColor,
+        marginTop: 50
+    }
 });
 
 export default EstablishFundingScreen;
