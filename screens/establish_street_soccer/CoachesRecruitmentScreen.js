@@ -57,6 +57,12 @@ const CoachesRecruitmentScreen = ({navigation, props}) => { // Recruitment Scree
         )
     }
 
+    const handleCloseHandler = () => {
+        const modalState = modalOpen;
+        setModalOpen(!modalState);
+        navigation.navigate('');
+    }
+
     const renderModal = () => { // Renders the modal to the screen   
 
     return (
@@ -82,7 +88,7 @@ const CoachesRecruitmentScreen = ({navigation, props}) => { // Recruitment Scree
 
             <View style = {styles.modalButtonContainer}>
                 <Button style = {styles.modalBackButton} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, marginLeft: 30, borderRadius: 200}} title = "Back" />
-                <Button style = {styles.modalNextProcessBtn} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, borderRadius: 200}} title = "Next Process" />
+                <Button onPress = {handleCloseHandler} style = {styles.modalNextProcessBtn} buttonStyle = {{marginTop: 230, borderRadius: 200}} title = "Next Process" />
             </View>
 
          </ScrollView>
