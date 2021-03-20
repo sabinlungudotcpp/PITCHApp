@@ -51,7 +51,8 @@ const CoachesRecruitmentScreen = ({navigation, props}) => { // Recruitment Scree
     const renderModal = () => { // Renders the modal to the screen   
 
     return (
-            <Modal visible = {modalOpen} animationType = {"slide"} transparent = {false}>
+
+     <Modal visible = {modalOpen} animationType = {"slide"} transparent = {false}>
 
         <ScrollView>
             <Text style = {styles.timingTitleStyle}>{EstablishStreetSoccerData.map(title => title.timing_title)}</Text>
@@ -69,7 +70,7 @@ const CoachesRecruitmentScreen = ({navigation, props}) => { // Recruitment Scree
             <Text style = {styles.kitTitle}>{EstablishStreetSoccerData.map(title => title.kit_title)}</Text>
 
             <Card style = {styles.cardStyleModal}>
-                <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text>{item.kit_description}</Text>} />
+                <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.itemKitStyle}>{item.kit_description}</Text>} />
             </Card>
 
          </ScrollView>
@@ -227,7 +228,13 @@ const styles = StyleSheet.create({ // Stores the styles for the data
         height: 180,
         marginLeft: 55,
         marginTop: 30
-    }
+    },
+
+    itemKitStyle: {
+        marginTop: -13,
+        fontSize: 15
+    },
+
 });
 
 export default CoachesRecruitmentScreen;
