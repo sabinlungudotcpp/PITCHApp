@@ -66,7 +66,7 @@ const EST_STREET_SOCCER = [
     {
         "id": 11,
         "kit_title": "Kit",
-        "kit_description": ""
+        "kit_description": "When establishing a Street Soccer session there is no need to have a brand new fully equipped kit, it would be nice to have! But to start a session a few balls, some markers, some bibs and a couple of goals is sufficient. It may be worthwhile contacting local schools or colleges for kit donations, or approaching local businesses for donations to purchase kit."
     }
 ]
 
