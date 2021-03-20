@@ -68,9 +68,10 @@ const CoachesRecruitmentScreen = ({navigation, props}) => { // Recruitment Scree
 
             <Text style = {styles.kitTitle}>{EstablishStreetSoccerData.map(title => title.kit_title)}</Text>
 
-            <Card style = {styles.cardStyle}>
-
+            <Card style = {styles.cardStyleModal}>
+                <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text>{item.kit_description}</Text>} />
             </Card>
+
          </ScrollView>
 
         </Modal>
@@ -119,6 +120,14 @@ const styles = StyleSheet.create({ // Stores the styles for the data
         width: 340,
         height: 150,
         marginLeft: 50,
+        maxWidth: '100%'
+    },
+
+    cardStyleModal: {
+        width: 340,
+        height: 150,
+        marginLeft: 50,
+        marginBottom: 200,
         maxWidth: '100%'
     },
 
