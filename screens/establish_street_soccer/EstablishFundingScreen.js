@@ -26,6 +26,11 @@ const EstablishFundingScreen = ({navigation, props}) => {
         )
     }
 
+    const handleNextProcess = () => {
+        setModalOpen(!modalOpen);
+        navigation.navigate('');
+    }
+
     const showModal = () => {
         return (
             <Modal visible = {modalOpen} transparent = {false} animationType = {"slide"}>
@@ -36,11 +41,18 @@ const EstablishFundingScreen = ({navigation, props}) => {
                 </Card>
 
                 <View style = {styles.btnContainer}>
-                    <Button onPress = {closeModal} buttonStyle = {{marginLeft: 155, width: 120, borderRadius: 200}} title = "Back" />
-                    <Button buttonStyle = {{marginLeft: 40, marginRight: 200, borderRadius: 200, width: 140}} title = "View More" />
+                    <Button onPress = {closeModal} buttonStyle = {{marginLeft: 245, width: 120, borderRadius: 200}} title = "Back" />
                 </View>
 
                 <Text style = {styles.supportStaffTxt}>{EstablishStreetSoccerData.map(title => title.supportstaff_title)}</Text>
+
+                <Card style = {styles.cardStyle}>
+                    <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.supportStaffContent}>{item.supportstaff_description}</Text>} />
+                </Card>
+
+                <View style = {styles.btnContainer}>
+                    <Button onPress = {handleNextProcess} buttonStyle = {{marginLeft: 238, borderRadius: 200, width: 140}} title = "View More" />
+                </View>
 
             </Modal>
         )
@@ -124,6 +136,11 @@ const styles = StyleSheet.create({
         fontSize: 29,
         color: Colors.secondaryColor,
         marginTop: 20
+    },
+
+    supportStaffContent: {
+        marginTop: -13,
+        fontSize: 15.5
     }
 });
 

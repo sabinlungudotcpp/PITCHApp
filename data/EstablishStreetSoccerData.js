@@ -83,7 +83,8 @@ const EST_STREET_SOCCER = [
 
     {
         "id": 14,
-        "supportstaff_title": "Support Staff"
+        "supportstaff_title": "Support Staff",
+        "supportstaff_description": "Once a street soccer programme is up and running with a regularly attending group there will be a need to look at 'other' staff to support off the pitch the work the coaches are doing on the pitch this can include the administration of the programme including M & E; offering support to the participants; recruiting new participants. These staff could be volunteers in the first instance however you may need to look for people who have specific skills who can enhance the programme and make your work easier."
     }
 ]
 
