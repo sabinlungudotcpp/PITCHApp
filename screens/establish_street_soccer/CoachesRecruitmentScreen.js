@@ -19,9 +19,14 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 const CoachesRecruitmentScreen = ({navigation, props}) => {
     const [modalOpen, setModalOpen] = useState(false); // State variable for the modal
 
+    /**
+     * @function: handleModal() - Function that is invoked when the user chooses to view additional information in a modal
+     * @param {}: N/A
+     */
+
     const handleModal = () => {
-        if(!modalOpen) {
-            setModalOpen(true);
+        if(!modalOpen) { // If the modal is not open
+            return setModalOpen(true); // Open it by setting the state to true
         }
     }
 
