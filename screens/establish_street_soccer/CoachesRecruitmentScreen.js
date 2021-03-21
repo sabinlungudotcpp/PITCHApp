@@ -7,11 +7,13 @@ import EstablishStreetSoccerData from "../../data/EstablishStreetSoccerData";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 /**
- * @fileoverview: This file is responsible for importing
+ * @fileoverview: This file is responsible for rendering the JSX code for the Coaching Recruitment screen which allows users to view information through a card and view additional information through a modal 
  * @author: Sabin Constantin Lungu
- * @param {navigation}: navigation prop pulled out of the props to enable effective navigation between screens
- * @param {props}: The props parameter is used to store the properties from other components 
+ * @param {navigation}: navigation: prop parameter used to pass data between components (if required)
+ * @param {props}: props: parameter is used to store the properties from other components 
  * @component CoachesRecruitmentScreen(): 
+ * @requires: npm install 
+ * @module: Card component module that is rendered throughout the screen to store a list of JSON data rendered from the file import above.
  */
 
 const CoachesRecruitmentScreen = ({navigation, props}) => {
