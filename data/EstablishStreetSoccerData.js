@@ -90,7 +90,7 @@ const EST_STREET_SOCCER = [
     {
         "id": 15,
         "community_title": "Community",
-        "community_description": ""
+        "community_description": "A Street Soccer programme will help the people attending on a personal level improving their lives in different ways, as a result this should cascade into the community and help improve the lifestyle and wellbeing of the community as a whole. This impact needs to be monitored, recorded and reported on to demonstrate to others the benefit of Street Soccer as a programme."
     }
 ]
 

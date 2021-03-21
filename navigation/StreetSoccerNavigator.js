@@ -6,6 +6,7 @@ import Colors from '../constants/Colors';
 import SessionsPartnershipsScreen from '../screens/establish_street_soccer/SessionsPartnershipsScreen';
 import CoachesRecruitmentScreen from '../screens/establish_street_soccer/CoachesRecruitmentScreen';
 import EstablishFundingScreen from '../screens/establish_street_soccer/EstablishFundingScreen';
+import EstablishFinalScreen from '../screens/establish_street_soccer/EstablishFinalScreen';
 
 const Stack = createStackNavigator();
 
@@ -21,8 +22,11 @@ const StreetSoccerNavigator = ({navigation}) => { // Street Soccer Stack Navigat
     <Stack.Screen options = { {headerTintColor: Colors.black, headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = "#fff" />), headerLeft: () => (<Button onPress={() => {}} title = "Modules"
                 color = {Colors.whiteColor}/>) , headerTitle: 'Street Soccer', headerStyle: {backgroundColor: Colors.secondaryColor}}} name = "CoachesRecruitmentScreen" component = {CoachesRecruitmentScreen}/>
 
-<Stack.Screen options = { {headerTintColor: Colors.black, headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = "#fff" />), headerLeft: () => (<Button onPress={() => {}} title = "Modules"
+    <Stack.Screen options = { {headerTintColor: Colors.black, headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = "#fff" />), headerLeft: () => (<Button onPress={() => {}} title = "Modules"
                 color = {Colors.whiteColor}/>) , headerTitle: 'Street Soccer', headerStyle: {backgroundColor: Colors.secondaryColor}}} name = "EstablishFundingScreen" component = {EstablishFundingScreen}/>
+
+<Stack.Screen options = { {headerTintColor: Colors.black, headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = "#fff" />), headerLeft: () => (<Button onPress={() => {}} title = "Modules"
+                color = {Colors.whiteColor}/>) , headerTitle: 'Street Soccer', headerStyle: {backgroundColor: Colors.secondaryColor}}} name = "EstablishFinalScreen" component = {EstablishFinalScreen}/>
     </Stack.Navigator>
 }
 

@@ -6,10 +6,17 @@ import Colors from "../../constants/Colors";
 import EstablishStreetSoccerData from "../../data/EstablishStreetSoccerData";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-const CoachesRecruitmentScreen = ({navigation, props}) => { // Recruitment Screen Component
-    const [modalOpen, setModalOpen] = useState(false);
+/**
+ * @fileoverview: This file is responsible for importing
+ * @author: Sabin Constantin Lungu
+ * @param {navigation}: navigation prop pulled out of the props to enable effective navigation between screens
+ * @param {props} The props parameter is used to store the properties from other components 
+ * @component CoachesRecruitmentScreen(): 
+ */
 
-    // Function that handles the modal screen
+const CoachesRecruitmentScreen = ({navigation, props}) => {
+    const [modalOpen, setModalOpen] = useState(false); // State variable for the modal
+
     const handleModal = () => {
         if(!modalOpen) {
             setModalOpen(true);

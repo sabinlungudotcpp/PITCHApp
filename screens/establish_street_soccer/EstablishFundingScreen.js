@@ -28,7 +28,7 @@ const EstablishFundingScreen = ({navigation, props}) => {
 
     const handleNextProcess = () => {
         setModalOpen(!modalOpen);
-        navigation.navigate('');
+        navigation.navigate('EstablishFinalScreen');
     }
 
     const showModal = () => {
