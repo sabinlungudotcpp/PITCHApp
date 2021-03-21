@@ -5,10 +5,13 @@ import Colors from '../../constants/Colors';
 import Card from '../../components/Card';
 import EstablishStreetSoccerData from '../../data/EstablishStreetSoccerData';
 
-/*
-    Component Name: Establish Home Screen
-    Parameters: props: Stores the properties of the component, naigation: Navigation prop for navigating between screens
-*/
+
+/**
+ * @fileoverview
+ * @author: Sabin Constantin Lungu
+ * @param {*} param0 
+ * @returns: 
+ */
 
 const EstablishHomeScreen = ({props, navigation}) => { // Establish Home Screen
 

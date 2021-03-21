@@ -10,7 +10,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
  * @fileoverview: This file is responsible for importing
  * @author: Sabin Constantin Lungu
  * @param {navigation}: navigation prop pulled out of the props to enable effective navigation between screens
- * @param {props} The props parameter is used to store the properties from other components 
+ * @param {props}: The props parameter is used to store the properties from other components 
  * @component CoachesRecruitmentScreen(): 
  */
 
@@ -87,7 +87,7 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
             {renderModalButtons()}
 
             <Text style = {styles.kitTitle}>{EstablishStreetSoccerData.map(title => title.kit_title)}</Text>
-            <Image style = {styles.imageKit} source = {(require('../../assets/Images/ImageKit.jpeg'))} />
+                <Image style = {styles.imageKit} source = {(require('../../assets/Images/ImageKit.jpeg'))} />
 
             <Card style = {styles.cardStyleModal}>
                 <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.itemKitStyle}>{item.kit_description}</Text>} />
