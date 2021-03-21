@@ -22,6 +22,7 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
     /**
      * @function: handleModal() - Function that is invoked when the user chooses to view additional information in a modal
      * @param {}: N/A
+     * @returns: True
      */
 
     const handleModal = () => {
@@ -61,6 +62,12 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
             </TouchableOpacity>
         )
     }
+
+    /**
+     * @function: renderModalButtons() - Function returns JSX to show the back and next process buttons in a modal window.
+     * @param {}: N/A
+     * @returns: JSX: Buttons inside a view container with styles
+     */
 
     const renderModalButtons = () => {
         return (

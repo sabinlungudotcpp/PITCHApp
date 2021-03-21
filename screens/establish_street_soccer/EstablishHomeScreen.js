@@ -9,8 +9,9 @@ import EstablishStreetSoccerData from '../../data/EstablishStreetSoccerData';
 /**
  * @fileoverview
  * @author: Sabin Constantin Lungu
- * @param {*} param0 
- * @returns: 
+ * @param {navigation}: navigation: prop parameter used to pass data between components (if required)
+ * @param {props}: props: parameter is used to store the properties from other components  
+ * @returns: A scrollview screen that renders a card that stores the necessary data rendered from a JSON file.
  */
 
 const EstablishHomeScreen = ({props, navigation}) => { // Establish Home Screen
