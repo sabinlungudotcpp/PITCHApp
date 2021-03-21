@@ -8,7 +8,16 @@ import CoachesRecruitmentScreen from '../screens/establish_street_soccer/Coaches
 import EstablishFundingScreen from '../screens/establish_street_soccer/EstablishFundingScreen';
 import EstablishFinalScreen from '../screens/establish_street_soccer/EstablishFinalScreen';
 
-const Stack = createStackNavigator();
+/**
+ * @fileoverview: 
+ * @author: Sabin Constantin Lungu
+ * @param {navigation}: navigation: prop parameter used to pass data between components (if required)
+ * @component CoachesRecruitmentScreen(): 
+ * @requires: npm install 
+ * @module: Card component module that is rendered throughout the screen to store a list of JSON data rendered from the file import above.
+ */
+
+const Stack = createStackNavigator(); // Creates the stack navigator
 
 const StreetSoccerNavigator = ({navigation}) => { // Street Soccer Stack Navigator
     return <Stack.Navigator>
