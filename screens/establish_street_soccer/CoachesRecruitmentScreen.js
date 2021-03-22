@@ -84,6 +84,12 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
         navigation.navigate('EstablishFundingScreen');
     }
 
+        /**
+     * @function: renderModal() - Function that shows the modal when the user clicks on View more
+     * @param {}: N/A
+     * @returns: JSX: Returns a <Modal></Modal> component from the react-native library
+     */
+
     const renderModal = () => { // Renders the modal to the screen   
 
     return (

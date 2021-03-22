@@ -12,9 +12,8 @@ import EstablishFinalScreen from '../screens/establish_street_soccer/EstablishFi
  * @fileoverview: 
  * @author: Sabin Constantin Lungu
  * @param {navigation}: navigation: prop parameter used to pass data between components (if required)
- * @component CoachesRecruitmentScreen(): 
+ * @component StreetSoccerNavigator()
  * @requires: npm install 
- * @module: Card component module that is rendered throughout the screen to store a list of JSON data rendered from the file import above.
  */
 
 const Stack = createStackNavigator(); // Creates the stack navigator
