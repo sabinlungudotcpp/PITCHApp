@@ -13,9 +13,18 @@ const MODULE_SIZES = {
     marginLeft: -1
 }
 
+/**
+ * @fileoverview
+ * @author: Sabin Constantin Lungu
+ * @param {navigation}: navigation: prop parameter used to pass data between components (if required)
+ * @param {props}: props: parameter is used to store the properties from other components  
+ * @returns: A scrollview screen that renders a card that stores the necessary data rendered from a JSON file.
+ */
+
 const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Component
-    return (
-        <ScrollView>
+
+    const renderChildProtectionModule = () => {
+        return (
             <Card style = {styles.cardContainer}>
                 <FlatList data = {ModuleData} renderItem = {({item}) => <Text style = {styles.protectionTitle}>{item.module_protection}</Text>} /> 
                 <Image style = {{width: 270, height: 190, marginTop: -215, marginBottom: 25}} source = {require('../assets/Images/ChildProtection.jpg')}/>
@@ -24,28 +33,42 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
                   <Button buttonStyle = {{backgroundColor: Colors.primaryColor, width: MODULE_SIZES.defaultWidth, borderRadius: MODULE_SIZES.borderRadius, marginLeft: -1}} title = "View Module" onPress = {() => navigation.navigate('ChildProtectionScreen')} />
             </View>
         </Card>
-        
+        )
+    }
 
-        {/* Renders a card that stores the title of the module, image and the button that allows users to view that module */}
+    const renderShaktiModule = () => {
+        return (
+            <Card style = {styles.cardContainer}>
+                <FlatList data = {ModuleData} renderItem = {({item}) => <Text style = {styles.shaktiTitle}>{item.module_shakti}</Text>} /> 
+                    <Image style = {{width: 270, height: 200, marginTop: -250, marginBottom: 15}} source = {require('../assets/Images/ShaktiImg.jpg')}/>
+
+                    <View style = {styles.buttonContainer}>
+                    <Button buttonStyle = {{backgroundColor: Colors.primaryColor, width: MODULE_SIZES.defaultWidth, borderRadius: MODULE_SIZES.borderRadius, marginLeft: MODULE_SIZES.marginLeft, marginTop: 5}} title = "View Module" onPress = {() => navigation.navigate('ShaktiFellowshipScreen')} />
+                </View>
+            </Card>
+        )
+    }
+
+    const renderEduKickModule = () => {
+        return (
+            
         <Card style = {styles.cardContainer}>
-            <FlatList data = {ModuleData} renderItem = {({item}) => <Text style = {styles.shaktiTitle}>{item.module_shakti}</Text>} /> 
-                <Image style = {{width: 270, height: 200, marginTop: -250, marginBottom: 15}} source = {require('../assets/Images/ShaktiImg.jpg')}/>
-
-                <View style = {styles.buttonContainer}>
-                  <Button buttonStyle = {{backgroundColor: Colors.primaryColor, width: MODULE_SIZES.defaultWidth, borderRadius: MODULE_SIZES.borderRadius, marginLeft: MODULE_SIZES.marginLeft, marginTop: 5}} title = "View Module" onPress = {() => navigation.navigate('ShaktiFellowshipScreen')} />
-            </View>
-        </Card>
-
-         {/* Renders a card that stores the title of the module, image and the button that allows users to view that module */}
-         <Card style = {styles.cardContainer}>
             <FlatList data = {ModuleData} renderItem = {({item}) => <Text style = {styles.shaktiTitle}>{item.module_edukick}</Text>} /> 
                 <Image style = {{width: 270, height: 180, marginTop: -230, marginBottom: 30}} source = {require('../assets/Images/EduKickImg.jpg')}/>
 
                 <View style = {styles.buttonContainer}>
-                  <Button buttonStyle = {{backgroundColor: Colors.primaryColor, width: 200, borderRadius: 200, marginLeft: -1}} title = "View Module" onPress = {() => navigation.navigate('EdukickScreen')} />
+                <Button buttonStyle = {{backgroundColor: Colors.primaryColor, width: 200, borderRadius: 200, marginLeft: -1}} title = "View Module" onPress = {() => navigation.navigate('EdukickScreen')} />
             </View>
         </Card>
 
+        )
+    }
+
+    return (
+        <ScrollView>
+            {renderChildProtectionModule()}
+            {renderShaktiModule()}
+            {renderEduKickModule()}
     </ScrollView>
     )
 };

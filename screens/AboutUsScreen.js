@@ -6,9 +6,21 @@ import Card from '../components/Card';
 
 const AboutUsScreen = ({navigation, props}) => { // About Us Screen component
 
+    const renderLastSection = () => {
+        return (
+
+         <View>
+            <Card style = {style.cardContainer}>
+                <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.missionTxtStyle}>{item.about_mission_description}</Text>} />
+            </Card>
+        </View>
+        )
+    }
+
     return (
 
     <ScrollView>
+
         <View>
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.aboutTitle}>{item.about_title}</Text>} keyExtractor = {(item) => item.id}/>
             <Image style = {{width: 330, height: 170, marginLeft: 40, marginTop: Platform.OS === 'android' ? -160 : -10}} source = {require('../assets/Images/SlumSoccer.jpg')}/>
@@ -24,17 +36,13 @@ const AboutUsScreen = ({navigation, props}) => { // About Us Screen component
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.about_sub}>{item.about_sub_description}</Text>} keyExtractor = {(item) => item.id}/>
         </Card>
 
-
         <View style = {style.subContainer}>
             <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.aboutMission}>{item.about_mission}</Text>} keyExtractor = {(item) => item.id}/>
         <Image style = {{width: 330, height: 200, marginLeft: 45, opacity: 0.9, backgroundColor: 'black', marginBottom: 10, marginTop: Platform.OS === 'android' ? -77 : 25}} source = {require('../assets/Images/missionimg.jpg')}/>
             </View>
        
-        <View>
-            <Card style = {style.cardContainer}>
-                <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {style.missionTxtStyle}>{item.about_mission_description}</Text>} />
-            </Card>
-        </View>
+        {renderLastSection()}
+        
     </ScrollView>
     
     )

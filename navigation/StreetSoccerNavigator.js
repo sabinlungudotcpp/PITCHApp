@@ -16,10 +16,19 @@ import EstablishFinalScreen from '../screens/establish_street_soccer/EstablishFi
  * @requires: npm install 
  */
 
+
 const Stack = createStackNavigator(); // Creates the stack navigator
+
+ /**
+  * @author: Sabin Constantin Lungu
+  * @param {navigation}: Allows users to navigate between the screens within the app
+  * @requires: npm install @react-navigation/native, npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+  * @component StreetSoccerNavigator()
+  */
 
 const StreetSoccerNavigator = ({navigation}) => { // Street Soccer Stack Navigator
     return <Stack.Navigator>
+
 
     <Stack.Screen options = { {headerTintColor: Colors.black, headerRight: () => (<Button onPress = {() => navigation.navigate('Register')} title = "Register" color = "#fff" />), headerLeft: () => (<Button onPress={() => {}} title = "Modules"
               color = {Colors.whiteColor}/>) , headerTitle: 'Street Soccer', headerStyle: {backgroundColor: Colors.secondaryColor}}} name = "EstablishHomeScreen" component = {EstablishHomeScreen}/>
