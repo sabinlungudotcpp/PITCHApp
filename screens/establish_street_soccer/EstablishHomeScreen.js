@@ -37,7 +37,7 @@ const EstablishHomeScreen = ({props, navigation}) => { // Establish Home Screen
                 </Card>
 
                 <View style = {styles.btnContainer}>
-                    <Button onPress = {() => {}} style = {styles.nextProcessBtn} buttonStyle = {{borderRadius: 200}} title = "Next Process" />
+                    <Button onPress = {() => {}} style = {styles.nextProcessBtn} buttonStyle = {{width: Platform.OS === 'android' ? 130 : null, marginLeft: Platform.OS === 'android' ? 235 : null , borderRadius: 200}} title = "Next Process" />
                 </View>
 
                 <Text style = {styles.targetGroupsTxt}>Target Groups</Text>
@@ -46,7 +46,7 @@ const EstablishHomeScreen = ({props, navigation}) => { // Establish Home Screen
                         <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.targetGroupTxtStyle}>{item.target_group_text}</Text>} />
                 </Card>
 
-                <Button onPress = {() => setModalOpen(false)} buttonStyle = {{width: 150, borderRadius: 200, marginLeft: 140, marginTop: 40}} title = "Back" />
+                <Button onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: Platform.OS === 'android' ? 130 : null ,width: 150, borderRadius: 200, marginLeft: 130, marginTop: 40}} title = "Back" />
             </Modal>
         )
     }

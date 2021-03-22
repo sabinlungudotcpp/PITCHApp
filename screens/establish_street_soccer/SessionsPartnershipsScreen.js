@@ -10,8 +10,8 @@ import EstablishStreetSoccerData from '../../data/EstablishStreetSoccerData';
 const BUTTON_CONFIG = {
     width: 150,
     borderRadius: 200,
-    marginLeft: 140,
-    marginTop: 50
+    marginLeft: 150,
+    marginTop: 75
 }
 
 const SessionsPartnershipsScreen = ({navigation, props}) => {
@@ -77,9 +77,10 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
                 </Card>
 
                 <View style = {styles.buttonContainer}>
-                    <Button style = {styles.btnBack} buttonStyle = {{width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: BUTTON_CONFIG.marginLeft, marginTop: BUTTON_CONFIG.marginTop}} onPress = {() => setModalOpen(false)} title = "Back"/>
-                    <Button style = {styles.processNextButton} buttonStyle = {{width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: BUTTON_CONFIG.marginLeft, marginTop: BUTTON_CONFIG.marginTop}} onPress = {nextProcessHandler} title = "Next Processes"/>
-                        </View>
+                    <Button style = {styles.btnBack} buttonStyle = {{marginRight: Platform.OS === 'android' ? 30 : null,width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: Platform.OS === 'android' ? BUTTON_CONFIG.marginLeft : null, marginTop: BUTTON_CONFIG.marginTop}} onPress = {() => setModalOpen(false)} title = "Back"/>
+                    <Button style = {styles.processNextButton} buttonStyle = {{marginTop: Platform.OS === 'android' ? -100 : null, padding: Platform.OS === 'android' ? 10 : null,marginBottom: Platform.OS === 'android' ? 100 : null, width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginRight: Platform.OS === 'android' ? BUTTON_CONFIG.marginLeft : null, marginTop: BUTTON_CONFIG.marginTop}} onPress = {nextProcessHandler} title = "Next Processes"/>
+                </View>
+
                     </ScrollView>
                 </Modal>
                         
@@ -164,15 +165,14 @@ const styles = StyleSheet.create({
         marginTop: 35,
         flexDirection: 'row',
         alignItems: 'center',
-        paddingRight: 10,
+        paddingRight: Platform.OS === 'android' ? -10 : 10,
         marginRight: 40,
         marginBottom: 100
     },
 
     buttonContainer: {
         flexDirection: 'row',
-        alignItems: 'center',
-        marginLeft: -80
+        marginLeft: -100,
     },
 
     facilitiesTitle: {
@@ -200,13 +200,13 @@ const styles = StyleSheet.create({
     },
 
     btnBack: {
-        marginRight: 20,
+        marginRight: 25,
         marginBottom: 40,
     },
 
     processNextButton: {
         alignItems: 'center',
-        marginLeft: -130,
+        marginLeft: Platform.OS === 'android' ? -130 : 100,
         marginBottom: 40
     },
 

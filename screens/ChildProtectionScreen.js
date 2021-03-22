@@ -13,6 +13,18 @@ const SIZES = {
 
 const ChildProtectionScreen = ({props, navigation, item}) => { // The child protection screen
 
+    const renderButtons = () => {
+        return (
+            <View style = {styles.btnContainers}>
+                <Button style = {styles.policyBtn} buttonStyle = {{width: Platform.OS === 'android' ? SIZES.width : null, marginLeft: Platform.OS === 'android' ? 15 : null, marginRight: Platform.OS === 'android' ? 30 : null, backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: SIZES.borderRadius}} title = "View Policy" onPress = {() => navigation.navigate('IntroductionScreen')} />
+
+                <TouchableOpacity onPress = {() => navigation.navigate('')}>
+                     <Button style = {styles.guidelineBtn} buttonStyle = {{width: Platform.OS === 'android' ? SIZES.width : null, backgroundColor: Colors.primaryColor, theme: 'dark', borderRadius: 200}} title = "Guidelines" />
+                </TouchableOpacity>
+            </View>
+        )
+    }
+
     return (
 
        <ScrollView>
@@ -26,14 +38,7 @@ const ChildProtectionScreen = ({props, navigation, item}) => { // The child prot
                 <FlatList data = {introductionData} renderItem = {({item}) => <Text style = {styles.childProtectionText}>{item.module_text}</Text>} keyExtractor = {(item) => item.id} />
             </Card>
 
-            <View style = {styles.btnContainers}>
-                <Button style = {styles.policyBtn} buttonStyle = {{width: Platform.OS === 'android' ? SIZES.width : null, marginLeft: Platform.OS === 'android' ? 15 : null, marginRight: Platform.OS === 'android' ? 30 : null, backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : Colors.primaryColor, theme: 'dark', borderRadius: SIZES.borderRadius}} title = "View Policy" onPress = {() => navigation.navigate('IntroductionScreen')} />
-
-                <TouchableOpacity onPress = {() => navigation.navigate('')}>
-                     <Button style = {styles.guidelineBtn} buttonStyle = {{width: Platform.OS === 'android' ? SIZES.width : null, backgroundColor: Colors.primaryColor, theme: 'dark', borderRadius: 200}} title = "Guidelines" />
-                </TouchableOpacity>
-
-            </View>
+            {renderButtons()}
         </ScrollView>
     )
 };
