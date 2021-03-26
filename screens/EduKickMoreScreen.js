@@ -8,12 +8,22 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const EduKickMoreScreen = ({props, navigation}) => {
     return (
+
         <ScrollView>
             <Text style = {styles.eduKickTitleMore}>{EduKickData.map(title => title.edu_title_more)}</Text>
 
             <Card style = {styles.cardStyle}>
                 <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.moreDetailsTxt}>{item.edu_more_description}</Text>} />
             </Card>
+
+            <Card style = {styles.cardStyle}>
+                <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.moreDetailsTxt}>{item.edu_more_description}</Text>} />
+            </Card>
+
+            <View style = {styles.btnContainer}>
+                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 150, marginLeft: 137}} title = "Back" />
+                <Button onPress = {() => {}} title = "Next" />
+            </View>
 
 
         </ScrollView>
@@ -36,7 +46,7 @@ const styles = StyleSheet.create({
 
     moreDetailsTxt: {
         marginTop: -12.5,
-        fontSize: 15
+        fontSize: 15.6
     }
 })
 
