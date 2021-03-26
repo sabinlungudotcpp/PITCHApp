@@ -22,7 +22,7 @@ const EduKickMoreScreen = ({props, navigation}) => {
             </Card>
 
             <Card style = {styles.cardStyle}>
-                <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.moreDetailsTxt}>{item.edu_more_description}</Text>} />
+                <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.moreDetailsTxt}>{item.edu_more_description_sub}</Text>} />
             </Card>
 
             <View style = {styles.btnContainer}>
