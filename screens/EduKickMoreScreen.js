@@ -4,7 +4,12 @@ import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
 import EduKickData from '../data/EduKickData';
 import Card from '../components/Card';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+
+const BUTTON_CONTAINER_SIZES = {
+    width: 110,
+    height: 42,
+    borderRadius: 200
+}
 
 const EduKickMoreScreen = ({props, navigation}) => {
     return (
@@ -21,8 +26,8 @@ const EduKickMoreScreen = ({props, navigation}) => {
             </Card>
 
             <View style = {styles.btnContainer}>
-                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 150, marginLeft: 137}} title = "Back" />
-                <Button onPress = {() => {}} title = "Next" />
+                <Button onPress = {() => navigation.navigate('EdukickScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 150, marginLeft: 210}} title = "Back" />
+                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 150, marginLeft: 30}} title = "Next" />
             </View>
 
 
@@ -47,6 +52,22 @@ const styles = StyleSheet.create({
     moreDetailsTxt: {
         marginTop: -12.5,
         fontSize: 15.6
+    },
+
+    btnContainer: {
+        width: BUTTON_CONTAINER_SIZES.width,
+        height: BUTTON_CONTAINER_SIZES.height,
+        textAlign: 'center',
+        borderRadius: 200,
+        marginLeft: -150,
+        marginTop: 25,
+        paddingHorizontal: -20,
+        justifyContent: 'space-between',
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingRight: 30,
+        marginBottom: 50
     }
 })
 
