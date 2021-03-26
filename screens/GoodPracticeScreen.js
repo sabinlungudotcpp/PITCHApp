@@ -36,7 +36,7 @@ const GoodPracticeScreen = ({props, navigation, item}) => { // The Good Practice
         </View>
     
         <Text style = {styles.avoidTxt}>{ChildProtectionData.map(data => data.title_avoid)}</Text>
-        <Image style = {styles.avoidImg} source = {require('../assets/Images/ImagePracticesToAvoid.jpg')}/>
+            <Image style = {styles.avoidImg} source = {require('../assets/Images/ImagePracticesToAvoid.jpg')}/>
     
         <Card style = {styles.cardStyle}>
             <FlatList data = {AvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.descriptionAvoidTxt}>{item.description_avoid}</Text>} />

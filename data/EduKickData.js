@@ -48,6 +48,12 @@ const EDU_KICK_DATA = [
         "id": 7,
         "edu_more_text": "Slum Soccer also identified through its own interventions that student studying in government schools were failing in math and their lack of interest in the subject was leading to increased dropouts",
         "isRendered": false
+    },
+
+    {
+        "id": 8,
+        "edu_title_what": "What is Edu Kick?",
+        "edu_what_description": "EduKick is an initiative by Slum Soccer which focuses on the promotion of primary education for the children from the underprivileged section of the society who don't get a chance to attend school and also for those who attend schools but their learning achievevments are very poor.\nProject Edu-Kick aims to improve and build upon the existing educational outcomes and to improve its efficiency."
     }
 ]
 
