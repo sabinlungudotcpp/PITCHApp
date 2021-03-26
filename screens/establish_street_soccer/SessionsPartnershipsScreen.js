@@ -78,7 +78,7 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
 
                 <View style = {styles.buttonContainer}>
                     <Button style = {styles.btnBack} buttonStyle = {{marginRight: Platform.OS === 'android' ? 30 : null,width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: Platform.OS === 'android' ? BUTTON_CONFIG.marginLeft : null, marginTop: BUTTON_CONFIG.marginTop}} onPress = {() => setModalOpen(false)} title = "Back"/>
-                    <Button style = {styles.processNextButton} buttonStyle = {{marginTop: Platform.OS === 'android' ? -100 : null, padding: Platform.OS === 'android' ? 10 : null,marginBottom: Platform.OS === 'android' ? 100 : null, width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginRight: Platform.OS === 'android' ? BUTTON_CONFIG.marginLeft : null, marginTop: BUTTON_CONFIG.marginTop}} onPress = {nextProcessHandler} title = "Next Processes"/>
+                    <Button style = {styles.processNextButton} buttonStyle = {{marginTop: Platform.OS === 'android' ? -100 : null, padding: Platform.OS === 'android' ? 10 : null,marginBottom: Platform.OS === 'android' ? 100 : null, width: BUTTON_CONFIG.width, borderRadius: 200, marginRight: Platform.OS === 'android' ? BUTTON_CONFIG.marginLeft : null, marginTop: BUTTON_CONFIG.marginTop}} onPress = {nextProcessHandler} title = "Next Processes"/>
                 </View>
 
                     </ScrollView>
@@ -161,18 +161,19 @@ const styles = StyleSheet.create({
         width: 130,
         height: 42,
         borderRadius: 200,
-        marginLeft: Platform.OS === 'android' ? 50 : -80,
+        marginLeft: Platform.OS === 'android' ? 30 : -80,
         marginTop: 35,
         flexDirection: 'row',
         alignItems: 'center',
-        paddingRight: Platform.OS === 'android' ? -10 : 10,
+        paddingRight: Platform.OS === 'android' ? -10 : 30,
         marginRight: 40,
         marginBottom: 100
     },
 
     buttonContainer: {
         flexDirection: 'row',
-        marginLeft: -100,
+        marginLeft: 10,
+        marginRight: 5
     },
 
     facilitiesTitle: {

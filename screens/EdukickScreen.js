@@ -7,7 +7,7 @@ import Colors from '../constants/Colors';
 const EdukickScreen = ({props, navigation, item}) => { // Edu Kick screen
     return (
         <ScrollView>
-            <Text style = {styles.title}>Edu Kick Screen</Text>
+            <Text style = {styles.title}>Edu Kick</Text>
         </ScrollView>
     )
 };

@@ -16,6 +16,13 @@ import { TouchableOpacity } from "react-native-gesture-handler";
  * @module: Card component module that is rendered throughout the screen to store a list of JSON data rendered from the file import above.
  */
 
+const BUTTON_CONFIG = {
+    width: 150,
+    borderRadius: 200,
+    marginLeft: 150,
+    marginTop: 75
+}
+
 const CoachesRecruitmentScreen = ({navigation, props}) => {
     const [modalOpen, setModalOpen] = useState(false); // State variable for the modal
 
@@ -29,6 +36,11 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
         if(!modalOpen) { // If the modal is not open
             return setModalOpen(true); // Open it by setting the state to true
         }
+    }
+
+    function nextProcessHandler() {
+        setModalOpen(false);
+        navigation.navigate('CoachesRecruitmentScreen');
     }
 
     const renderCoachesImg = () => { // Renders the coaches image
@@ -143,11 +155,10 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
                     <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.recruitmentTextStyle}>{item.recruitment_text}</Text>} />
                 </Card>
             
-                <View style = {styles.containerCoachesButtons}>
-                    <Button onPress = {() => navigation.navigate('SessionsPartnershipsScreen')} style = {styles.backButtonCoaches} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200, width: 150, marginLeft: 140, marginTop: 50}} title = "Back"/>
-                    <Button style = {styles.coachesNextBtnProcess} buttonStyle = {{backgroundColor: Colors.secondaryColor, borderRadius: 200, width: 150, marginLeft: 140, marginTop: 50}} onPress = {handleModal} title = "View More"/>
+                <View style = {styles.buttonContainer}>
+                    <Button style = {styles.btnBack} buttonStyle = {{marginRight: Platform.OS === 'android' ? 30 : 10,width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: Platform.OS === 'android' ? BUTTON_CONFIG.marginLeft : null, marginTop: BUTTON_CONFIG.marginTop}} onPress = {() => setModalOpen(false)} title = "Back"/>
+                    <Button style = {styles.processNextButton} buttonStyle = {{marginTop: Platform.OS === 'android' ? -100 : null, padding: Platform.OS === 'android' ? 10 : null, marginBottom: Platform.OS === 'android' ? 100 : 120, padding: 8, width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginRight: Platform.OS === 'android' ? BUTTON_CONFIG.marginLeft : null, marginTop: BUTTON_CONFIG.marginTop}} onPress = {handleModal} title = "Next Processes"/>
                 </View>
-
 
             </ScrollView>
         </TouchableNativeFeedback>
@@ -183,8 +194,11 @@ const styles = StyleSheet.create({ // Stores the styles for the data
         padding: -2
     },
 
-    containerCoachesButtons: {
-        flexDirection: 'row'
+    buttonContainer: {
+        flexDirection: 'row',
+        maxWidth: '100%',
+        marginLeft: 70,
+        marginTop: -40
     },
 
     recruitmentTitle: {
