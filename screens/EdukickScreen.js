@@ -43,7 +43,7 @@ const EdukickScreen = ({props, navigation}) => { // Edu Kick screen
                 <Text style = {{textAlign: 'center', marginBottom: 470, fontSize: 29, marginTop: -10, marginBottom: 10, color: Colors.primaryColor}}>Edu Kick Problems</Text>
 
                 <Card style = {styles.cardStyle}>
-                    <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id >= 0 && item.id <= 6 ? <Text>{item.edu_list_item}</Text> : null} />
+                    <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id >= 0 && item.id <= 7 ? <Text>{item.edu_list_item} {item.edu_more_text}</Text> : null} />
                 </Card>
 
                </ScrollView>
