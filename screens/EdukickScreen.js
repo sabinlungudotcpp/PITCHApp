@@ -27,8 +27,7 @@ const EdukickScreen = ({props, navigation}) => { // Edu Kick screen
     const toggleNextHandler = () => {
         const modalState = modal;
         setModalOpen(!modalState);
-        
-        navigation.navigate('')
+        navigation.navigate('EduKickMoreScreen');
     }
 
     const renderModal = () => { // Renders the modal to the screen

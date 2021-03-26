@@ -10,6 +10,7 @@ import ChildProtectionScreen from '../screens/ChildProtectionScreen';
 import Colors from '../constants/Colors';
 import ShaktiFellowshipScreen from '../screens/ShaktiFellowshipScreen';
 import EdukickScreen from '../screens/EdukickScreen';
+import EduKickMoreScreen from '../screens/EduKickMoreScreen';
 import EstablishHomeScreen from '../screens/establish_street_soccer/EstablishHomeScreen';
 
 const Stack = createStackNavigator(); // Creates a stack navigator
@@ -41,6 +42,9 @@ const StackNavigator = ({navigation}) => { // Stack Navigator Component
 
             <Stack.Screen options = {{title: 'Slum Soccer', headerTintColor: Colors.black, headerRight: () => (<Button color = '#fff' title = "Register" onPress = {() => navigation.navigate('Register')} />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
               color="#fff"/>) , headerTitle: 'Street Soccer', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "EstablishHomeScreen" component = {EstablishHomeScreen} />
+
+<Stack.Screen options = {{title: 'Slum Soccer', headerTintColor: Colors.black, headerRight: () => (<Button color = '#fff' title = "Register" onPress = {() => navigation.navigate('Register')} />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
+              color="#fff"/>) , headerTitle: 'Street Soccer', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "EduKickMoreScreen" component = {EduKickMoreScreen} />
 
         </Stack.Navigator>
     )
