@@ -24,21 +24,31 @@ const EdukickScreen = ({props, navigation}) => { // Edu Kick screen
         }
     };
 
-    const renderModal = () => {
+    const renderModal = () => { // Renders the modal to the screen
         return (
-        <Modal visible = {modal} animationType = {"slide"} transparent = {false}>
-            <Text style = {styles.eduTitleWhatTxt}>{EduKickData.map(title => title.edu_title_what)}</Text>
-
-            <Card style = {styles.cardStyle}>
-                <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.modalEduWhatTxt}>{item.edu_what_description}</Text>} />
-            </Card>
-
-            <View style = {styles.btnContainerModal}>
-                <Button buttonStyle = {{borderRadius: 200, width: 140, marginRight: 30, backgroundColor: Colors.primaryColor}} title = "Back" />
-                <Button buttonStyle = {{borderRadius: 200, width: 140, backgroundColor: Colors.primaryColor}} title = "View More"/>
-            </View>
             
-        </Modal>
+            <Modal visible = {modal} animationType = {"slide"} transparent = {false}>
+                <ScrollView>
+                <Text style = {styles.eduTitleWhatTxt}>{EduKickData.map(title => title.edu_title_what)}</Text>
+
+                <Card style = {styles.cardStyle}>
+                    <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.modalEduWhatTxt}>{item.edu_what_description}</Text>} />
+                </Card>
+
+                <View style = {styles.btnContainer}>
+                    <Button style = {styles.backBtnModal} onPress = {toggleModalHandler} buttonStyle = {{borderRadius: 200, width: 140, marginRight: 30, backgroundColor: Colors.primaryColor}} title = "Back" />
+                    <Button style = {styles.viewMoreModalBtn} buttonStyle = {{borderRadius: 200, width: 140, backgroundColor: Colors.primaryColor}} title = "View More"/>
+                </View>
+
+                <Text style = {{textAlign: 'center', marginBottom: 470, fontSize: 29, marginTop: -10, marginBottom: 10, color: Colors.primaryColor}}>Edu Kick Problems</Text>
+
+                <Card style = {styles.cardStyle}>
+                    <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id >= 0 && item.id <= 6 ? <Text>{item.edu_list_item}</Text> : null} />
+                </Card>
+
+               </ScrollView>
+            </Modal>
+        
         )
     }
 
@@ -47,7 +57,7 @@ const EdukickScreen = ({props, navigation}) => { // Edu Kick screen
         return (
 
             <View style = {styles.btnContainer}>
-                <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => {}} title = "Back" />
+                <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => setModalOpen(false)} title = "Back" />
                 <Button style = {styles.viewMoreBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {toggleModalHandler} title = "View More" />
             </View>
         )
@@ -114,22 +124,6 @@ const styles = StyleSheet.create({
         marginBottom: 50
     },
 
-    btnContainerModal: {
-        width: BUTTON_CONTAINER_SIZES.width,
-        height: BUTTON_CONTAINER_SIZES.height,
-        textAlign: 'center',
-        borderRadius: 200,
-        marginLeft: 60,
-        marginTop: -400,
-        paddingHorizontal: -20,
-        justifyContent: 'space-between',
-        flex: 1,
-        flexDirection: 'row',
-        alignItems: 'center',
-        paddingRight: 10,
-        marginBottom: 100
-    },
-
     backBtn: {
         width: 135,
         marginLeft: 10,
@@ -150,7 +144,18 @@ const styles = StyleSheet.create({
     modalEduWhatTxt: {
         marginTop: -12,
         fontSize: 15
+    },
+
+    backBtnModal: {
+        width: 135,
+        marginLeft: 10,
+        marginRight: 30
+    },
+
+    viewMoreModalBtn: {
+
     }
+
 })
 
 export default EdukickScreen;
