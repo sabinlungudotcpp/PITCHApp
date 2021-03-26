@@ -10,6 +10,12 @@ const EduKickMoreScreen = ({props, navigation}) => {
     return (
         <ScrollView>
             <Text style = {styles.eduKickTitleMore}>{EduKickData.map(title => title.edu_title_more)}</Text>
+
+            <Card style = {styles.cardStyle}>
+                <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.moreDetailsTxt}>{item.edu_more_description}</Text>} />
+            </Card>
+
+
         </ScrollView>
     )
 };
@@ -20,6 +26,17 @@ const styles = StyleSheet.create({
         marginTop: 50,
         fontSize: 28,
         color: Colors.primaryColor
+    },
+
+    cardStyle: {
+        width: 330,
+        height: 170,
+        marginLeft: 50
+    },
+
+    moreDetailsTxt: {
+        marginTop: -12.5,
+        fontSize: 15
     }
 })
 
