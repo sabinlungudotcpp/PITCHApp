@@ -54,6 +54,13 @@ const EDU_KICK_DATA = [
         "id": 8,
         "edu_title_what": "What is Edu Kick?",
         "edu_what_description": "EduKick is an initiative by Slum Soccer which focuses on the promotion of primary education for the children from the underprivileged section of the society who don't get a chance to attend school and also for those who attend schools but their learning achievevments are very poor.\nProject Edu-Kick aims to improve and build upon the existing educational outcomes and to improve its efficiency."
+    },
+
+    {
+        "id": 9,
+        "edu_title_more": "EduKick More",
+        "edu_more_description": "The uniqueness of this model lies in utilizing existing resource to reach a new point. The proposed impact however does not exist to direct beneficiaries of the project but also teachers and coaches at the school. This project is an innovation in a way it uses technology very uniquely.\nThe use of sport to teach life skills is nothing new, however, sports being used to increase educational outcome is just being considered a pedagogical tool with many implications.",
+        "edu_more_description_sub": "We have designed soccer games based on Mathematical topics such as Number System, Tables, Even & Odd Numbers, BODMAS and profit & loss. Furthermore, it alsso has games designed on child rights, language, football skills, health and hygiene etc. Through this program, we target children coming from slum areas and villages where they do not get good primary education and as a result they are ignored by the mainstream society.\nBy using this program we would like to work on one of the MDG of UN which says that every child has a right to primary education and it also comes under the right to education act in the constitution of India."
     }
 ]
 

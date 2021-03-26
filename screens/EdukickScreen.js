@@ -52,7 +52,7 @@ const EdukickScreen = ({props, navigation}) => { // Edu Kick screen
                     <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => item.id >= 0 && item.id <= 7 ? <Text>{item.edu_list_item} {item.edu_more_text}</Text> : null} />
                 </Card>
 
-                <Button onPress = {toggleNextHandler} buttonStyle = {{borderRadius: 200, backgroundColor: Colors.primaryColor, width: 150, marginLeft: 130, marginTop: 35}} title = "Next" />
+                <Button onPress = {toggleNextHandler} buttonStyle = {{borderRadius: 200, backgroundColor: Colors.primaryColor, width: 150, marginLeft: 138, marginTop: 35}} title = "Next" />
 
                </ScrollView>
             </Modal>

@@ -9,9 +9,18 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 const EduKickMoreScreen = ({props, navigation}) => {
     return (
         <ScrollView>
-            <Text>Edu Kick More Screen</Text>
+            <Text style = {styles.eduKickTitleMore}>{EduKickData.map(title => title.edu_title_more)}</Text>
         </ScrollView>
     )
 };
+
+const styles = StyleSheet.create({
+    eduKickTitleMore: {
+        textAlign: 'center',
+        marginTop: 50,
+        fontSize: 28,
+        color: Colors.primaryColor
+    }
+})
 
 export default EduKickMoreScreen
