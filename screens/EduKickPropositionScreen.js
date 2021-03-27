@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {View, StyleSheet, Text, Image, Platform, ScrollView, FlatList, Modal} from 'react-native';
+import React from 'react';
+import {View, StyleSheet, Text, Image, Platform, ScrollView, FlatList} from 'react-native';
 import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
 import EduKickData from '../data/EduKickData';
@@ -14,12 +14,12 @@ const EduKickPropositionScreen = ({props, navigation}) => {
             <Image style = {styles.propositionImg} source = {(require('../assets/Images/ImageProposition.jpg'))} />
 
             <Card style = {styles.cardStyle}>
-                <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text></Text>} />
+                <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.propositionDescriptionTxt}>{item.edu_proposition_description}</Text>} />
             </Card>
 
             <View style = {styles.btnContainer}>
-                <Button title = "Back" />
-                <Button title = "View More" />
+                <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 130}} onPress = {() => navigation.navigate('EduKickMoreScreen')} title = "Back" />
+                <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 150}} onPress = {() => {}} title = "View More" />
             </View>
 
 
@@ -33,6 +33,11 @@ const styles = StyleSheet.create({
         marginTop: 60,
         fontSize: 30,
         color: Colors.primaryColor
+    },
+
+    propositionDescriptionTxt: {
+        marginTop: -13,
+        fontSize: 15
     },
 
     propositionImg: {
@@ -49,7 +54,9 @@ const styles = StyleSheet.create({
     },
 
     btnContainer: {
-        
+        flexDirection: 'row',
+        marginLeft: 80,
+        marginVertical: 15
     }
 })
 

@@ -72,6 +72,7 @@ const EdukickScreen = ({props, navigation}) => { // Edu Kick screen
     }
 
     return (
+        
         <ScrollView>
             <Text style = {styles.title}>{EduKickData.map(title => title.edu_title)}</Text>
 
