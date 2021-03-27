@@ -20,12 +20,12 @@ const EduKickPropositionScreen = ({props, navigation}) => {
                 <Text style = {styles.modalPropositionsTxt}>{EduKickData.map(title => title.propositions)}</Text>
 
                 <Card style = {styles.cardStyle}>
-
+                    <FlatList />
                 </Card>
 
                 <View style = {styles.btnContainer}>
-                    <Button onPress = {() => {}} title = "Back" />
-                    <Button onPress = {() => {}} title = "View More" />
+                    <Button onPress = {handleToggleModalHandler} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 130}} title = "Back" />
+                    <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 135, marginLeft: 30, marginTop: 1}} title = "View More" />
                 </View>
             </Modal>
         )
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     btnContainer: {
         flexDirection: 'row',
         marginLeft: 70,
-        marginVertical: 15
+        marginVertical: 25
     },
 
     modalPropositionsTxt: {

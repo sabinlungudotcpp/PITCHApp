@@ -35,12 +35,12 @@ const GoodPracticeScreen = ({props, navigation, item}) => { // The Good Practice
 
         </View>
     
-        <Text style = {styles.avoidTxt}>{ChildProtectionData.map(data => data.title_avoid)}</Text>
-            <Image style = {styles.avoidImg} source = {require('../assets/Images/ImagePracticesToAvoid.jpg')}/>
+            <Text style = {styles.avoidTxt}>{ChildProtectionData.map(data => data.title_avoid)}</Text>
+                <Image style = {styles.avoidImg} source = {require('../assets/Images/ImagePracticesToAvoid.jpg')}/>
     
-        <Card style = {styles.cardStyle}>
-            <FlatList data = {AvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.descriptionAvoidTxt}>{item.description_avoid}</Text>} />
-        </Card>
+            <Card style = {styles.cardStyle}>
+                <FlatList data = {AvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.descriptionAvoidTxt}>{item.description_avoid}</Text>} />
+            </Card>
     
         <View style = {styles.btnContainer}>
             <Button onPress = {() => navigation.navigate('PracticesAvoidScreen')} style = {styles.guidelinesBtn} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 10 : null ,width: Platform.OS === 'android' ? 130 : null  , backgroundColor: Colors.primaryColor, borderRadius: BUTTON_CONTAINER_SIZES.borderRadius}} title = "Guidelines"/>
