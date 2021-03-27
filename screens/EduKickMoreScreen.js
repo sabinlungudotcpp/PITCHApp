@@ -27,7 +27,7 @@ const EduKickMoreScreen = ({props, navigation}) => {
 
             <View style = {styles.btnContainer}>
                 <Button onPress = {() => navigation.navigate('EdukickScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 150, marginLeft: 210}} title = "Back" />
-                <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 150, marginLeft: 30}} title = "Next" />
+                <Button onPress = {() => navigation.navigate('EduKickPropositionScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 150, marginLeft: 30}} title = "Next" />
             </View>
 
 
