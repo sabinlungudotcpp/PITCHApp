@@ -8,15 +8,24 @@ import Card from '../components/Card';
 const EduKickPropositionScreen = ({props, navigation}) => {
     const [modalOpen, setModalOpen] = useState(false); // Modal State
 
-    const toggleModalHandler = () => { // Toggles the modal form open
-
+    const handleToggleModalHandler = () => { // Toggles the modal form open
+        const modalState = modalOpen;
+        setModalOpen(!modalState);
     };
+
+    const renderModal = () => {
+        return (
+            <Modal visible = {modalOpen} transparent = {false} animationType = {"slide"}>
+                 <Button onPress = {handleToggleModalHandler} buttonStyle = {{marginTop: 400}} title = "Back" />
+            </Modal>
+        )
+    }
 
     const renderButtons = () => {
         return (
             <View style = {styles.btnContainer}>
                 <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 130, marginRight: 30}} onPress = {() => navigation.navigate('EduKickMoreScreen')} title = "Back" />
-                <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 150}} onPress = {() => {}} title = "View More" />
+                <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 150}} onPress = {handleToggleModalHandler} title = "View More" />
             </View>
 
         )
@@ -37,6 +46,7 @@ const EduKickPropositionScreen = ({props, navigation}) => {
                 <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.propositionDescriptionTxt}>{item.edu_proposition_description_more}</Text>} />
             </Card>
 
+            {renderModal()}
             {renderButtons()}
         </ScrollView>
     )
@@ -70,7 +80,7 @@ const styles = StyleSheet.create({
 
     btnContainer: {
         flexDirection: 'row',
-        marginLeft: 80,
+        marginLeft: 70,
         marginVertical: 15
     }
 })
