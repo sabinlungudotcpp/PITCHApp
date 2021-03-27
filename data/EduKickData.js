@@ -68,6 +68,7 @@ const EDU_KICK_DATA = [
         "edu_title_proposition": "Our Proposition",
         "edu_proposition_description": "We would like to focus our efforts in Municipal and Zilla Parishad Schools in Nagpur, Mumbai, Yawatmal and Wardha cities in which have more than 50,000 students in 4th Grade to 5th Grade, among which there is 40% of girls. We would like to implement the project in 20 schools of above mentioned cities",
         "edu_proposition_description_more": "These schools need a program like Edukick because most of these schools do not have access to sports and do not take part in physical activities on a regular basis. We found that teachers from these schools, had difficulties retaining the attention of the students long enough to impact learning. As a result a bulk of these studnets start falling back in studies as early as 4th class. For most of the students attending these schools it is a daily struggle to eevn come to the school given their economic and social background.\nOur experience and interactions with local community have shown us that these school and their students, with no sporting facilities are marginalised on multiple levels",
+        "propositions": "Propositions",
         "edu_proposition_item": "1. They lack confidence and communication skills"
     },
 

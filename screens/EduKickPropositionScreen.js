@@ -13,10 +13,20 @@ const EduKickPropositionScreen = ({props, navigation}) => {
         setModalOpen(!modalState);
     };
 
-    const renderModal = () => {
+    const renderModal = () => { // Renders the modal to the screen
         return (
+
             <Modal visible = {modalOpen} transparent = {false} animationType = {"slide"}>
-                 <Button onPress = {handleToggleModalHandler} buttonStyle = {{marginTop: 400}} title = "Back" />
+                <Text style = {styles.modalPropositionsTxt}>{EduKickData.map(title => title.propositions)}</Text>
+
+                <Card style = {styles.cardStyle}>
+
+                </Card>
+
+                <View style = {styles.btnContainer}>
+                    <Button onPress = {() => {}} title = "Back" />
+                    <Button onPress = {() => {}} title = "View More" />
+                </View>
             </Modal>
         )
     }
@@ -27,7 +37,6 @@ const EduKickPropositionScreen = ({props, navigation}) => {
                 <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 130, marginRight: 30}} onPress = {() => navigation.navigate('EduKickMoreScreen')} title = "Back" />
                 <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 150}} onPress = {handleToggleModalHandler} title = "View More" />
             </View>
-
         )
     }
 
@@ -82,6 +91,13 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginLeft: 70,
         marginVertical: 15
+    },
+
+    modalPropositionsTxt: {
+       textAlign: 'center',
+       marginTop: 100,
+       color: Colors.primaryColor,
+       fontSize: 28
     }
 })
 
