@@ -1,11 +1,17 @@
-import React from 'react';
-import {View, StyleSheet, Text, Image, Platform, ScrollView, FlatList} from 'react-native';
+import React, {useState} from 'react';
+import {View, StyleSheet, Text, Image, Platform, ScrollView, FlatList, Modal} from 'react-native';
 import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
 import EduKickData from '../data/EduKickData';
 import Card from '../components/Card';
 
 const EduKickPropositionScreen = ({props, navigation}) => {
+    const [modalOpen, setModalOpen] = useState(false); // Modal State
+
+    const toggleModalHandler = () => {
+
+    };
+
     return (
 
         <ScrollView>
@@ -15,6 +21,10 @@ const EduKickPropositionScreen = ({props, navigation}) => {
 
             <Card style = {styles.cardStyle}>
                 <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.propositionDescriptionTxt}>{item.edu_proposition_description}</Text>} />
+            </Card>
+
+            <Card style = {styles.cardStyle}>
+                <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.propositionDescriptionTxt}>{item.edu_proposition_description_more}</Text>} />
             </Card>
 
             <View style = {styles.btnContainer}>
@@ -60,4 +70,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default EduKickPropositionScreen;
+export default EduKickPropositionScreen; // Export the screen
