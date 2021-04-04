@@ -216,6 +216,16 @@ const EDU_KICK_DATA = [
     {
         "id": 38,
         "edu_project_timeline_item": "7. Regular attendance at school\n"
+    },
+
+    {
+        "id": 39,
+        "edu_project_timeline_item": "8. Improved communication skills.\n"
+    },
+
+    {
+        "id": 40,
+        "edu_project_timeline_item": "9. Decrease in drop-out rates.\n"
     }
 ]
 
