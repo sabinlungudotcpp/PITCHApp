@@ -14,6 +14,12 @@ const EduProgramActivities = ({props, navigation}) => {
         setModalOpen(!modalState);
     };
 
+    const handleNextScreenChange = () => {
+        const modalState = !modalOpen;
+        setModalOpen(modalState);
+        return navigation.navigate('EduChildrenProfile');
+    }
+
     const renderModal = () => {
         return (
             <Modal visible = {modalOpen} transparent = {false} animationType = {"slide"}>
@@ -26,7 +32,7 @@ const EduProgramActivities = ({props, navigation}) => {
 
                 <View style = {styles.btnContainerModal}>
                     <Button onPress = {handleModalToggle} title = "Back" buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 130, marginRight: 30}} />
-                    <Button onPress = {() => {}} title = "View More" buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 135}} />
+                    <Button onPress = {handleNextScreenChange} title = "View More" buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 135}} />
                 </View>
 
             </Modal>
