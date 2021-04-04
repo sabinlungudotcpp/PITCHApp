@@ -165,6 +165,11 @@ const EDU_KICK_DATA = [
     {
         "id": 28,
         "edu_children_profile_list": "4. Almost 95 children said they do have a first-aid box and are taken care of in case of accidents of injuries\n",
+    },
+
+    {
+        "id": 29,
+        "edu_children_profile_list": "5. 63 children said they did not know about child rights’ while 45 had not heard/did not answer this question. But now they are familiar with this word.\n"
     }
 ]
 
