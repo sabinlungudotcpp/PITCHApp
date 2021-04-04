@@ -175,6 +175,16 @@ const EDU_KICK_DATA = [
     {
         "id": 30,
         "edu_children_profile_list": "6. All the 40 schools wouldn’t conduct PE classes of student but now it has been taking place on daily basis.\n"
+    },
+
+    {
+        "id": 31,
+        "edu_children_profile_list": "7. 100 out of 110 student said the slum soccer method of teaching is more easier than schools."
+    },
+
+    {
+        "id": 32,
+        "edu_project_timeline": "Project Timelines"
     }
 ]
 

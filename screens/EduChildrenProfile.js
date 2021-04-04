@@ -7,6 +7,7 @@ import Card from '../components/Card';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const EduChildrenProfile = ({props, navigation}) => {
+    
     return (
         <ScrollView>
             <Text style = {styles.childrenProfile}>{EduKickData.map(title => title.edu_children_profile)}</Text>
@@ -19,9 +20,12 @@ const EduChildrenProfile = ({props, navigation}) => {
                 <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.eduChildrenTxtList}>{item.edu_children_profile_list}</Text>} />
             </Card>
 
+            <Text style = {styles.projectTimelineTxt}>{EduKickData.map(title => title.edu_project_timeline)}</Text>
+
             <View style = {styles.btnContainer}>
-                <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 130}} title = "Back" />
+                <Button onPress = {() => navigation.navigate('EduProgramActivities')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 130}} title = "Back" />
             </View>
+
 
         </ScrollView>
     )
@@ -55,6 +59,13 @@ const styles = StyleSheet.create({
     eduChildrenTxtList: {
         marginTop: -13.5,
         fontSize: 15.5
+    },
+
+    projectTimelineTxt: {
+        textAlign: 'center',
+        marginTop: 30,
+        fontSize: 28,
+        color: Colors.primaryColor
     }
 })
 
