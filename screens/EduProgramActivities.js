@@ -24,8 +24,7 @@ const EduProgramActivities = ({props, navigation}) => {
 
                 <Image style = {styles.stats2} source = {(require('../assets/Images/ImageStatistics2.png'))} />
 
-                <View>
-
+                <View style = {styles.btnContainerModal}>
                     <Button onPress = {() => {}} title = "Back" buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 130}} />
                     <Button onPress = {() => {}} title = "View More" buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 135}} />
 
@@ -116,6 +115,12 @@ const styles = StyleSheet.create({
         width: 350,
         height: 200,
         marginLeft: 35
+    },
+
+    btnContainerModal: {
+        flexDirection: 'row',
+        marginLeft: 80,
+        marginTop: 30
     }
 });
 
