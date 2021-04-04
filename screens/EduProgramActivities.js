@@ -25,7 +25,7 @@ const EduProgramActivities = ({props, navigation}) => {
                 <Image style = {styles.stats2} source = {(require('../assets/Images/ImageStatistics2.png'))} />
 
                 <View style = {styles.btnContainerModal}>
-                    <Button onPress = {() => {}} title = "Back" buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 130}} />
+                    <Button onPress = {handleModalToggle} title = "Back" buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 130, marginRight: 30}} />
                     <Button onPress = {() => {}} title = "View More" buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 135}} />
 
                 </View>
