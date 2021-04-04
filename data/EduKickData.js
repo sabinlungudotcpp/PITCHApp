@@ -240,12 +240,12 @@ const EDU_KICK_DATA = [
 
     {
         "id": 43,
-        "edu_project_timeline_item": "12. Improved physically and be aware of life skills at primary level."
+        "edu_project_timeline_item": "12. Improved physically and be aware of life skills at primary level.\n"
     },
 
     {
         "id": 44,
-        "edu_project_timeline_item": "13. Coaches training"
+        "edu_project_timeline_item": "13. Coaches training.\n"
     }
 ]
 
