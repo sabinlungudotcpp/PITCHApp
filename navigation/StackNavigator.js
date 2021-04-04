@@ -14,6 +14,7 @@ import EduKickMoreScreen from '../screens/EduKickMoreScreen';
 import EstablishHomeScreen from '../screens/establish_street_soccer/EstablishHomeScreen';
 import EduKickPropositionScreen from '../screens/EduKickPropositionScreen';
 import EduProgramActivities from '../screens/EduProgramActivities';
+import EduChildrenProfile from '../screens/EduChildrenProfile';
 
 const Stack = createStackNavigator(); // Creates a stack navigator
 
@@ -51,8 +52,11 @@ const StackNavigator = ({navigation}) => { // Stack Navigator Component
           <Stack.Screen options = {{title: 'Slum Soccer', headerTintColor: Colors.black, headerRight: () => (<Button color = '#fff' title = "Register" onPress = {() => navigation.navigate('Register')} />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
                         color="#fff"/>) , headerTitle: 'Street Soccer', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "EduKickPropositionScreen" component = {EduKickPropositionScreen} />
 
-<Stack.Screen options = {{title: 'Slum Soccer', headerTintColor: Colors.black, headerRight: () => (<Button color = '#fff' title = "Register" onPress = {() => navigation.navigate('Register')} />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
+          <Stack.Screen options = {{title: 'Slum Soccer', headerTintColor: Colors.black, headerRight: () => (<Button color = '#fff' title = "Register" onPress = {() => navigation.navigate('Register')} />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
                         color="#fff"/>) , headerTitle: 'Street Soccer', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "EduProgramActivities" component = {EduProgramActivities} />
+
+<Stack.Screen options = {{title: 'Slum Soccer', headerTintColor: Colors.black, headerRight: () => (<Button color = '#fff' title = "Register" onPress = {() => navigation.navigate('Register')} />), headerLeft: () => (<Button onPress={() => navigation.navigate('ModulesScreen')} title = "Modules"
+                        color="#fff"/>) , headerTitle: 'Street Soccer', headerStyle: {backgroundColor: Colors.primaryColor}}} name = "EduChildrenProfile" component = {EduChildrenProfile} />
 
         </Stack.Navigator>
     )

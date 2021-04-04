@@ -28,7 +28,7 @@ const EduProgramActivities = ({props, navigation}) => {
                     <Button onPress = {handleModalToggle} title = "Back" buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 130, marginRight: 30}} />
                     <Button onPress = {() => {}} title = "View More" buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 135}} />
                 </View>
-                
+
             </Modal>
         )
     }
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
 
     btnContainerModal: {
         flexDirection: 'row',
-        marginLeft: 80,
+        marginLeft: 65,
         marginTop: 30
     }
 });
