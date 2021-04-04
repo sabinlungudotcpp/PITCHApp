@@ -26,8 +26,8 @@ const EduProgramActivities = ({props, navigation}) => {
 
                 <View>
 
-                    <Button title = "Back" buttonStyle = {{backgroundColor: Colors.primaryColor}} />
-                    <Button title = "View More" />
+                    <Button onPress = {() => {}} title = "Back" buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 130}} />
+                    <Button onPress = {() => {}} title = "View More" buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 135}} />
 
                 </View>
             </Modal>
