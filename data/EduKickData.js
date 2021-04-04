@@ -184,7 +184,7 @@ const EDU_KICK_DATA = [
 
     {
         "id": 32,
-        "edu_project_timeline": "Project Timelines",
+        "edu_project_timeline": "Project Timelines & Output",
         "edu_project_timeline_item": "1. A session of around 45 mins to an hour.\n"
     },
 
@@ -235,7 +235,17 @@ const EDU_KICK_DATA = [
 
     {
         "id": 42,
-        "edu_project_timeline_item": "11. Generate interst in playing football.\n"
+        "edu_project_timeline_item": "11. Generate interest in playing football.\n"
+    },
+
+    {
+        "id": 43,
+        "edu_project_timeline_item": "12. Improved physically and be aware of life skills at primary level."
+    },
+
+    {
+        "id": 44,
+        "edu_project_timeline_item": "13. Coaches training"
     }
 ]
 
