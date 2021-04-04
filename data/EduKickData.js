@@ -143,7 +143,28 @@ const EDU_KICK_DATA = [
 
     {
         "id": 24,
-        "edu_children_profile": "EduKick Children Profile"
+        "edu_children_profile": "EduKick Children Profile",
+        "edu_children_profile_text": "Till the date with the support of Sony Pictures Networks India, we have worked with more than 2000 children. Through our half of the invervention we come to know the following findings: (Sample 110 children)"
+    },
+
+    {
+        "id": 25,
+        "edu_children_profile_list": "1. Almost all children 109 in number said that they like playing and out of these 105 children said that they enjoy outdoor games more than indoors\n",
+    },
+
+    {
+        "id": 26,
+        "edu_children_profile_list": "2. All the 40 schools we have been working previously didn’t have sports equipment. But now they have available and easily accessible for children to play.\n"
+    },
+
+    {
+        "id": 27,
+        "edu_children_profile_list": "3. This is the first time they have got a curiculum to conduct PE sessions in schools. This indicates the sustainability of the program.\n"
+    },
+
+    {
+        "id": 28,
+        "edu_children_profile_list": "4. Almost 95 children said they do have a first-aid box and are taken care of in case of accidents of injuries\n",
     }
 ]
 

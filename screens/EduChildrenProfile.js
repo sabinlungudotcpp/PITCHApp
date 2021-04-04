@@ -12,7 +12,11 @@ const EduChildrenProfile = ({props, navigation}) => {
             <Text style = {styles.childrenProfile}>{EduKickData.map(title => title.edu_children_profile)}</Text>
 
             <Card style = {styles.cardStyle}>
-                <FlatList />
+                <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item }) => <Text style = {styles.profileTxt}>{item.edu_children_profile_text}</Text>} />
+            </Card>
+
+            <Card style = {styles.cardStyle}>
+                <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.eduChildrenTxtList}>{item.edu_children_profile_list}</Text>} />
             </Card>
 
             <View style = {styles.btnContainer}>
@@ -41,6 +45,16 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginLeft: 145,
         marginTop: 50
+    },
+
+    profileTxt: {
+        marginTop: -13.5,
+        fontSize: 15.3
+    },
+
+    eduChildrenTxtList: {
+        marginTop: -13.5,
+        fontSize: 15.5
     }
 })
 
