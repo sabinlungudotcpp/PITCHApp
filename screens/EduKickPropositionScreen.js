@@ -13,6 +13,12 @@ const EduKickPropositionScreen = ({props, navigation}) => {
         setModalOpen(!modalState);
     };
 
+    const changeScreen = () => {
+        const modalState = !modalOpen;
+        setModalOpen(modalState);
+        return navigation.navigate('EduProgramActivities');
+    }
+
     const renderModal = () => { // Renders the modal to the screen
         return (
 
@@ -20,13 +26,14 @@ const EduKickPropositionScreen = ({props, navigation}) => {
                 <Text style = {styles.modalPropositionsTxt}>{EduKickData.map(title => title.propositions)}</Text>
 
                 <Card style = {styles.cardStyle}>
-                    <FlatList />
+                    <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.propositionItemTxt}>{item.edu_proposition_item}</Text>} />
                 </Card>
 
                 <View style = {styles.btnContainer}>
                     <Button onPress = {handleToggleModalHandler} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 130}} title = "Back" />
-                    <Button onPress = {() => {}} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 135, marginLeft: 30, marginTop: 1}} title = "View More" />
+                    <Button onPress = {changeScreen} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 135, marginLeft: 30, marginTop: 1}} title = "View More" />
                 </View>
+
             </Modal>
         )
     }
@@ -34,7 +41,7 @@ const EduKickPropositionScreen = ({props, navigation}) => {
     const renderButtons = () => {
         return (
             <View style = {styles.btnContainer}>
-                <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 130, marginRight: 30}} onPress = {() => navigation.navigate('EduKickMoreScreen')} title = "Back" />
+                <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 130, marginRight: 25}} onPress = {() => navigation.navigate('EduKickMoreScreen')} title = "Back" />
                 <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 150}} onPress = {handleToggleModalHandler} title = "View More" />
             </View>
         )
@@ -90,7 +97,8 @@ const styles = StyleSheet.create({
     btnContainer: {
         flexDirection: 'row',
         marginLeft: 70,
-        marginVertical: 25
+        marginVertical: 25,
+        marginBottom: 90
     },
 
     modalPropositionsTxt: {
@@ -98,6 +106,23 @@ const styles = StyleSheet.create({
        marginTop: 100,
        color: Colors.primaryColor,
        fontSize: 28
+    },
+
+    propositionItemTxt: {
+        marginTop: -12,
+        fontSize: 15.5
+    },
+
+    objectivesTitle: {
+        textAlign: 'center',
+        fontSize: 28,
+        color: Colors.primaryColor
+    },
+
+    objectiveTxt: {
+        marginTop: -230,
+        fontSize: 15.5
+        
     }
 })
 

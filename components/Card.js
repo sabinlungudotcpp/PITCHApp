@@ -1,7 +1,14 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 
-const Card = props => { // Card Component
+/**
+ * 
+ * @param {} props - Takes in properties from other components
+ * @author: Sabin Constantin Lungu
+ * Date of Last Modification: 31/03/2021
+ */
+
+const Card = props => { // Card Component that returns a view with the styles destructured
     return (
         <View style = {{...styles.card, ...props.style}}>{props.children}</View>
     )
