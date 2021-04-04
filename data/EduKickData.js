@@ -230,12 +230,12 @@ const EDU_KICK_DATA = [
 
     {
         "id": 41,
-        "edu_project_timeline_item": "10. Generate interest in mathematics and language especially in English"
+        "edu_project_timeline_item": "10. Generate interest in mathematics and language especially in English.\n"
     },
 
     {
         "id": 42,
-        "edu_project_timeline_item": "11. Generate interst in playing football."
+        "edu_project_timeline_item": "11. Generate interst in playing football.\n"
     }
 ]
 
