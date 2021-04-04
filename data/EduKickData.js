@@ -170,6 +170,11 @@ const EDU_KICK_DATA = [
     {
         "id": 29,
         "edu_children_profile_list": "5. 63 children said they did not know about child rights’ while 45 had not heard/did not answer this question. But now they are familiar with this word.\n"
+    },
+
+    {
+        "id": 30,
+        "edu_children_profile_list": "6. All the 40 schools wouldn’t conduct PE classes of student but now it has been taking place on daily basis.\n"
     }
 ]
 
