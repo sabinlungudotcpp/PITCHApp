@@ -186,6 +186,26 @@ const EDU_KICK_DATA = [
         "id": 32,
         "edu_project_timeline": "Project Timelines",
         "edu_project_timeline_item": "1. A session of around 45 mins to an hour."
+    },
+
+    {
+        "id": 33,
+        "edu_project_timeline_item": "2. We will conduct 2 sessions in each school per week."
+    },
+
+    {
+        "id": 34,
+        "edu_project_timeline_item": "3. Usually the project timeline for a single school / locality is around one year."
+    },
+
+    {
+        "id": 35,
+        "edu_project_timeline_item": "4. Visit and confirming the schools."
+    },
+
+    {
+        "id": 36,
+        "edu_project_timeline_item": "5. Coaches selection and training."
     }
 ]
 
