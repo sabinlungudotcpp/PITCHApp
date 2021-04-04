@@ -206,6 +206,16 @@ const EDU_KICK_DATA = [
     {
         "id": 36,
         "edu_project_timeline_item": "5. Coaches selection and training."
+    },
+
+    {
+        "id": 37,
+        "edu_project_timeline_item": "6. Improved subject scores"
+    },
+
+    {
+        "id": 38,
+        "edu_project_timeline_item": "7. Regular attendance at school"
     }
 ]
 
