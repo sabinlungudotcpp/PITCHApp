@@ -73,7 +73,8 @@ const styles = StyleSheet.create({
     },
 
     projectTimelineItemTxt: {
-        marginTop: -10
+        marginTop: -13.5,
+        fontSize: 15.5
     }
 })
 
