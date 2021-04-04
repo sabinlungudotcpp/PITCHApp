@@ -23,7 +23,7 @@ const EduProgramActivities = ({props, navigation}) => {
     const renderModal = () => {
         return (
             <Modal visible = {modalOpen} transparent = {false} animationType = {"slide"}>
-                <Text style = {styles.eduFindings}>{EduKickData.map(title => title.edu_findings_stats)}</Text>
+            <Text style = {styles.eduFindings}>{EduKickData.map(title => title.edu_findings_stats)}</Text>
                 <Image style = {styles.stats1} source = {(require("../assets/Images/ImageStatistics1.png"))} />
 
                 <Text style = {styles.eduFindsText}>{EduKickData.map(text => text.edu_findings_text)}</Text>

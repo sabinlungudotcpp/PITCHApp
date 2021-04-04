@@ -139,6 +139,11 @@ const EDU_KICK_DATA = [
         "id": 23,
         "edu_findings_stats": "Our Findings",
         "edu_findings_text": "We ran the programme for 6 months and conducted a post test and found a remarkable growth in the children performances"
+    },
+
+    {
+        "id": 24,
+        "edu_children_profile": "EduKick Children Profile"
     }
 ]
 

@@ -9,9 +9,18 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 const EduChildrenProfile = ({props, navigation}) => {
     return (
         <ScrollView>
-            
+            <Text style = {styles.childrenProfile}>{EduKickData.map(title => title.edu_children_profile)}</Text>
         </ScrollView>
     )
 };
+
+const styles = StyleSheet.create({
+    childrenProfile: {
+        textAlign: 'center',
+        marginTop: 50,
+        color: Colors.primaryColor,
+        fontSize: 26
+    }
+})
 
 export default EduChildrenProfile;
