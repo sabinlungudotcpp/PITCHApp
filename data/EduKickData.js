@@ -185,37 +185,37 @@ const EDU_KICK_DATA = [
     {
         "id": 32,
         "edu_project_timeline": "Project Timelines",
-        "edu_project_timeline_item": "1. A session of around 45 mins to an hour."
+        "edu_project_timeline_item": "1. A session of around 45 mins to an hour.\n"
     },
 
     {
         "id": 33,
-        "edu_project_timeline_item": "2. We will conduct 2 sessions in each school per week."
+        "edu_project_timeline_item": "2. We will conduct 2 sessions in each school per week.\n"
     },
 
     {
         "id": 34,
-        "edu_project_timeline_item": "3. Usually the project timeline for a single school / locality is around one year."
+        "edu_project_timeline_item": "3. Usually the project timeline for a single school / locality is around one year.\n"
     },
 
     {
         "id": 35,
-        "edu_project_timeline_item": "4. Visit and confirming the schools."
+        "edu_project_timeline_item": "4. Visit and confirming the schools.\n"
     },
 
     {
         "id": 36,
-        "edu_project_timeline_item": "5. Coaches selection and training."
+        "edu_project_timeline_item": "5. Coaches selection and training.\n"
     },
 
     {
         "id": 37,
-        "edu_project_timeline_item": "6. Improved subject scores"
+        "edu_project_timeline_item": "6. Improved subject scores\n"
     },
 
     {
         "id": 38,
-        "edu_project_timeline_item": "7. Regular attendance at school"
+        "edu_project_timeline_item": "7. Regular attendance at school\n"
     }
 ]
 

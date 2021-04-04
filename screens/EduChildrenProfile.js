@@ -23,7 +23,7 @@ const EduChildrenProfile = ({props, navigation}) => {
             <Text style = {styles.projectTimelineTxt}>{EduKickData.map(title => title.edu_project_timeline)}</Text>
 
             <Card style = {styles.cardStyle}>
-                <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} />
+                <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.projectTimelineItemTxt}>{item.edu_project_timeline_item}</Text>} />
             </Card>
 
             <View style = {styles.btnContainer}>
@@ -70,6 +70,10 @@ const styles = StyleSheet.create({
         marginTop: 30,
         fontSize: 28,
         color: Colors.primaryColor
+    },
+
+    projectTimelineItemTxt: {
+        marginTop: -10
     }
 })
 
