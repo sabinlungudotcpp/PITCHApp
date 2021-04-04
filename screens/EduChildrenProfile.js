@@ -52,7 +52,8 @@ const styles = StyleSheet.create({
     btnContainer: {
         flexDirection: 'row',
         marginLeft: 145,
-        marginTop: 20
+        marginTop: 20,
+        marginBottom: 60
     },
 
     profileTxt: {
