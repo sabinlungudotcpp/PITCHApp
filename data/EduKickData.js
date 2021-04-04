@@ -184,7 +184,8 @@ const EDU_KICK_DATA = [
 
     {
         "id": 32,
-        "edu_project_timeline": "Project Timelines"
+        "edu_project_timeline": "Project Timelines",
+        "edu_project_timeline_item": "1. A session of around 45 mins to an hour."
     }
 ]
 
