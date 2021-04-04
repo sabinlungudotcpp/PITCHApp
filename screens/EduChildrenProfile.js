@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, StyleSheet, Text, Image, Platform, ScrollView, FlatList, Modal} from 'react-native';
 import {Button} from 'react-native-elements';
 import Colors from '../constants/Colors';
@@ -7,7 +7,7 @@ import Card from '../components/Card';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const EduChildrenProfile = ({props, navigation}) => {
-    
+
     return (
         <ScrollView>
             <Text style = {styles.childrenProfile}>{EduKickData.map(title => title.edu_children_profile)}</Text>
@@ -22,8 +22,12 @@ const EduChildrenProfile = ({props, navigation}) => {
 
             <Text style = {styles.projectTimelineTxt}>{EduKickData.map(title => title.edu_project_timeline)}</Text>
 
+            <Card style = {styles.cardStyle}>
+                <FlatList data = {EduKickData} keyExtractor = {(item) => item.id} />
+            </Card>
+
             <View style = {styles.btnContainer}>
-                <Button onPress = {() => navigation.navigate('EduProgramActivities')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 130}} title = "Back" />
+                <Button onPress = {() => navigation.navigate('EduProgramActivities')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: 145}} title = "Back" />
             </View>
 
 
@@ -48,7 +52,7 @@ const styles = StyleSheet.create({
     btnContainer: {
         flexDirection: 'row',
         marginLeft: 145,
-        marginTop: 50
+        marginTop: 20
     },
 
     profileTxt: {
