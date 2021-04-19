@@ -126,11 +126,9 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
                 </Card>
 
             <View style = {styles.modalButtonContainer}>
-                <Button style = {styles.modalBackButton} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 130, marginLeft: 30, borderRadius: 200}} title = "Back" />
+                <Button style = {styles.modalBackButton} onPress = {() => setModalOpen(false)} buttonStyle = {{width: Platform.OS === 'android' ? 120 : null ,marginTop: 130, marginLeft: 30, borderRadius: 200, marginLeft: Platform.OS === 'android' ? 30 : null}} title = "Back" />
 
-                <TouchableOpacity onPress = {handleCloseHandler}>
-                    <Button style = {styles.modalNextProcessBtn} buttonStyle = {{marginTop: 130, borderRadius: 200, marginBottom: 100, marginLeft: 30}} title = "Next Process" />
-                </TouchableOpacity>
+                    <Button onPress = {handleCloseHandler} style = {styles.modalNextProcessBtn} buttonStyle = {{width: Platform.OS === 'android' ? 150 : null , marginTop: 130, borderRadius: 200, marginBottom: 100, marginLeft: 30}} title = "Next Process" />
 
             </View>
 
