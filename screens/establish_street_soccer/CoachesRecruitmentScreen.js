@@ -84,8 +84,8 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
     const renderModalButtons = () => {
         return (
             <View style = {styles.modalButtonContainer}>
-                <Button style = {styles.modalBackButton} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, marginLeft: 30, borderRadius: 200}} title = "Back" />
-                <Button style = {styles.modalNextProcessBtn} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, borderRadius: 200}} title = "Next Process" />
+                <Button style = {styles.modalBackButton} onPress = {() => setModalOpen(false)} buttonStyle = {{width: Platform.OS === 'android' ? 125 : null ,marginTop: Platform.OS === 'android' ? 120 : null, marginLeft: Platform.OS === 'android' ? 15 : null, borderRadius: 200, marginBottom: Platform.OS === 'android' ? 50 : null , marginRight: Platform.OS === 'android' ? 30 : null}} title = "Back" />
+                <Button style = {styles.modalNextProcessBtn} onPress = {() => setModalOpen(false)} buttonStyle = {{width: Platform.OS === 'android' ? 130 : null ,marginTop: 120, borderRadius: 200}} title = "Next Process" />
             </View>
         )
     }
@@ -121,13 +121,17 @@ const CoachesRecruitmentScreen = ({navigation, props}) => {
             <Text style = {styles.kitTitle}>{EstablishStreetSoccerData.map(title => title.kit_title)}</Text>
                 <Image style = {styles.imageKit} source = {(require('../../assets/Images/ImageKit.jpeg'))} />
 
-            <Card style = {styles.cardStyleModal}>
-                <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.itemKitStyle}>{item.kit_description}</Text>} />
-            </Card>
+                <Card style = {styles.cardStyleModal}>
+                    <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.itemKitStyle}>{item.kit_description}</Text>} />
+                </Card>
 
             <View style = {styles.modalButtonContainer}>
-                <Button style = {styles.modalBackButton} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 230, marginLeft: 30, borderRadius: 200}} title = "Back" />
-                <Button onPress = {handleCloseHandler} style = {styles.modalNextProcessBtn} buttonStyle = {{marginTop: 230, borderRadius: 200}} title = "Next Process" />
+                <Button style = {styles.modalBackButton} onPress = {() => setModalOpen(false)} buttonStyle = {{marginTop: 130, marginLeft: 30, borderRadius: 200}} title = "Back" />
+
+                <TouchableOpacity onPress = {handleCloseHandler}>
+                    <Button style = {styles.modalNextProcessBtn} buttonStyle = {{marginTop: 130, borderRadius: 200, marginBottom: 100, marginLeft: 30}} title = "Next Process" />
+                </TouchableOpacity>
+
             </View>
 
          </ScrollView>
@@ -229,8 +233,9 @@ const styles = StyleSheet.create({ // Stores the styles for the data
     },
 
     modalButtonContainer: {
-        marginLeft: -60,
-        flexDirection: 'row'
+        marginLeft: 50,
+        flexDirection: 'row',
+        marginTop: -50
     },
 
     coachesNextBtnProcess: {
@@ -271,7 +276,7 @@ const styles = StyleSheet.create({ // Stores the styles for the data
     },
 
     timingModalTxt: {
-        marginTop: -13,
+        marginTop: Platform.OS === 'android' ? -19 : -13,
         fontSize: 16
     },
 
@@ -290,7 +295,7 @@ const styles = StyleSheet.create({ // Stores the styles for the data
     },
 
     itemKitStyle: {
-        marginTop: -13,
+        marginTop: Platform.OS === 'android' ? -19 : -13,
         fontSize: 15
     },
 
