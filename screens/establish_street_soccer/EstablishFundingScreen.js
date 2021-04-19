@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     },
 
     fundingStyleTxt: {
-        marginTop: -13,
+        marginTop: Platform.OS === 'android' ? -19.8 : -13,
         fontSize: 15.5
     },
 
