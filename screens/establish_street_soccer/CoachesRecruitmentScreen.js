@@ -19,7 +19,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 const BUTTON_CONFIG = {
     width: 150,
     borderRadius: 200,
-    marginLeft: 150,
+    marginLeft: 2,
     marginTop: 75
 }
 
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({ // Stores the styles for the data
     },
 
     coachesTextStyle: {
-        marginTop: -12,
+        marginTop: Platform.OS === 'android' ? -18.5 : -12,
         fontSize: 15,
         padding: -2
     },
@@ -266,7 +266,7 @@ const styles = StyleSheet.create({ // Stores the styles for the data
     },
 
     recruitmentTextStyle: {
-        marginTop: -13,
+        marginTop: Platform.OS === 'android' ? -18.8 : -13,
         fontSize: 15
     },
 

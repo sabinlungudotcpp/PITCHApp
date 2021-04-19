@@ -8,10 +8,10 @@ import Colors from '../../constants/Colors';
 import EstablishStreetSoccerData from '../../data/EstablishStreetSoccerData';
 
 const BUTTON_CONFIG = {
-    width: 150,
+    width: 140,
     borderRadius: 200,
-    marginLeft: 150,
-    marginTop: 75
+    marginLeft: 50,
+    marginTop: 70
 }
 
 const SessionsPartnershipsScreen = ({navigation, props}) => {
@@ -31,6 +31,7 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
     }
 
     const renderPartnershipsImg = () => {
+
         return (
             <Image style = {styles.partnershipImg} source = {(require('../../assets/Images/StreetSoccerPartnershipsImage.jpg'))} />
         )
@@ -77,7 +78,7 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
                 </Card>
 
                 <View style = {styles.buttonContainer}>
-                    <Button style = {styles.btnBack} buttonStyle = {{marginRight: Platform.OS === 'android' ? 30 : null,width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: Platform.OS === 'android' ? BUTTON_CONFIG.marginLeft : null, marginTop: BUTTON_CONFIG.marginTop}} onPress = {() => setModalOpen(false)} title = "Back"/>
+                    <Button style = {styles.btnBack} buttonStyle = {{marginBottom: Platform.OS === 'android' ? 30 : null ,marginRight: Platform.OS === 'android' ? 30 : null,width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: Platform.OS === 'android' ? BUTTON_CONFIG.marginLeft : null, marginTop: BUTTON_CONFIG.marginTop}} onPress = {() => setModalOpen(false)} title = "Back"/>
                     <Button style = {styles.processNextButton} buttonStyle = {{marginTop: Platform.OS === 'android' ? -100 : null, padding: Platform.OS === 'android' ? 10 : null,marginBottom: Platform.OS === 'android' ? 100 : null, width: BUTTON_CONFIG.width, borderRadius: 200, marginRight: Platform.OS === 'android' ? BUTTON_CONFIG.marginLeft : null, marginTop: BUTTON_CONFIG.marginTop}} onPress = {nextProcessHandler} title = "Next Processes"/>
                 </View>
 

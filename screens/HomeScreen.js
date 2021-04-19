@@ -3,7 +3,6 @@ import {View, StyleSheet, Text, ScrollView, Platform} from 'react-native';
 import {Button} from 'react-native-elements';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Colors from '../constants/Colors';
-import buttonData from '../data/buttons/buttonData';
 
 // The platform sizes
 const PLATFORM_SIZES = {

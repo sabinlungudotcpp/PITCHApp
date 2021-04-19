@@ -24,7 +24,7 @@ const EdukickScreen = ({props, navigation}) => { // Edu Kick screen
         }
     };
 
-    const toggleNextHandler = () => {
+    const toggleNextHandler = () => { // Toggles the modal
         const modalState = modal;
         setModalOpen(!modalState);
         navigation.navigate('EduKickMoreScreen');
@@ -60,13 +60,17 @@ const EdukickScreen = ({props, navigation}) => { // Edu Kick screen
         )
     }
 
-    const renderButtons = () => {
+    const renderButtons = () => { // Function that renders the buttons on the screen
 
         return (
 
             <View style = {styles.btnContainer}>
-                <Button style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => setModalOpen(false)} title = "Back" />
-                <Button style = {styles.viewMoreBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {toggleModalHandler} title = "View More" />
+                <Button style = {styles.backBtn} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 15 : null ,marginRight: Platform.OS === 'android' ? 30 : null ,width: Platform.OS === 'android' ? 115 : null,backgroundColor: Colors.primaryColor, borderRadius: 200}} onPress = {() => setModalOpen(false)} title = "Back" />
+
+                <TouchableOpacity onPress = {toggleModalHandler}>
+                     <Button style = {styles.viewMoreBtn} buttonStyle = {{width: Platform.OS === 'android' ? 125: null ,backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "View More" />
+                </TouchableOpacity>
+
             </View>
         )
     }
@@ -86,6 +90,7 @@ const EdukickScreen = ({props, navigation}) => { // Edu Kick screen
 
             {renderModal()}
             {renderButtons()}
+
         </ScrollView>
     )
 };

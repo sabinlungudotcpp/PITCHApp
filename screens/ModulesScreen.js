@@ -73,7 +73,7 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
     )
 };
 
-const styles = StyleSheet.create({ // Styles for the module screen
+const styles = StyleSheet.create({ // Styles for the modules screen
     protectionTitle: {
         textAlign: 'center',
         fontSize: 27,

@@ -25,8 +25,12 @@ const BullyingScreen = ({item, navigation}) => { // Bullying Screen
             </Card>
 
             <View style = {styles.btnContainer}>
-                <Button onPress = {() => navigation.navigate('EnquiriesActionScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} title = "Back" />
-                <Button onPress = {() => navigation.navigate('ReportingConcernsScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.nextPolicyBtn} title = "Next Policy" />
+                <Button onPress = {() => navigation.navigate('EnquiriesActionScreen')} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius, width: Platform.OS === 'android' ? 115 : null, marginRight: 40, marginLeft: 10}} style = {styles.backBtn} title = "Back" />
+
+                <TouchableOpacity onPress = {() => navigation.navigate('ReportingConcernsScreen')} >
+                    <Button buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius, width: Platform.OS === 'android' ? 125 : null}} style = {styles.nextPolicyBtn} title = "Next Policy" />
+                </TouchableOpacity>
+
             </View>
 
         </ScrollView>
@@ -62,7 +66,7 @@ const styles = StyleSheet.create({
 
     bullyingText: {
         fontSize: 15,
-        marginTop: -13.5
+        marginTop: Platform.OS === 'android' ? -19.5 : -13.5
     },
 
     bullyingImg: {

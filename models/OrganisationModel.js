@@ -30,8 +30,8 @@ organisationSchema.pre('save', function(next) {
     }
 });
 
-organisationSchema.methods.comparePassword = function(candidatePassword) {
-    const organisation = this;
+organisationSchema.methods.comparePassword = function(candidatePassword, currentPassword) {
+    return bcrypt.compare(candidatePassword, currentPassword); // Compare the passwords
 }
 
 mongoose.model('Organisation', organisationSchema); // Create an organisation model

@@ -56,10 +56,10 @@ const EnquiriesActionScreen = ({props, navigation, item}) => { // Enquiries and 
             </Card>
 
             <View style = {styles.btnContainer}>
-                <Button onPress = {() => navigation.navigate('PoorPracticeScreen')} title = {`${BUTTON_NAMES.backBtn}`} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} />
+                <Button onPress = {() => navigation.navigate('PoorPracticeScreen')} title = {`${BUTTON_NAMES.backBtn}`} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius, width: Platform.OS === 'android' ? 120 : null, marginLeft: 20, marginRight: 40}} style = {styles.backBtn} />
 
                 <TouchableOpacity onPress = {() => navigation.navigate('BullyingScreen')}>
-                        <Button title = {`${BUTTON_NAMES.nextPolicy}`} style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} />
+                        <Button title = {`${BUTTON_NAMES.nextPolicy}`} style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius, width: Platform.OS === 'android' ? 130 : null}} />
                 </TouchableOpacity>
             </View>
 
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
     },
 
     allegationSubTxt: {
-        marginTop: -13
+        marginTop: Platform.OS === 'android' ? -18 : -13
     }
 });
 

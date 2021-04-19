@@ -25,10 +25,10 @@ const ReportingConcernsScreen = ({props, navigation, item}) => {
                 </Card>
 
                 <View style = {styles.btnContainer}>
-                    <Button onPress = {() => navigation.navigate('BullyingScreen')} style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Back" />
+                    <Button onPress = {() => navigation.navigate('BullyingScreen')} style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: Platform.OS === 'android' ? 110 : null, marginLeft: 15}} title = "Back" />
 
                     <TouchableOpacity onPress = {() => navigation.navigate('ProvidingInformationScreen')} >
-                            <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200}} title = "Next Policy" />
+                            <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: Platform.OS === 'android' ? 120 : null, marginLeft: 30}} title = "Next Policy" />
                     </TouchableOpacity>
                 </View>
 
