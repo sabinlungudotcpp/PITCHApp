@@ -28,11 +28,6 @@ const GoodPracticeScreen = ({props, navigation, item}) => { // The Good Practice
     
         <View style = {styles.btnContainer}>
             <Button style = {styles.firstGuidelineBtn} buttonStyle =  {{marginRight: Platform.OS === 'android' ? 30 : null , width: Platform.OS === 'android' ? 130 : null ,backgroundColor: Colors.primaryColor, theme: 'dark', borderRadius: BUTTON_CONTAINER_SIZES.borderRadius}} title = "Guidelines" onPress = {() => navigation.navigate('GoodPracticeGuidelines')} /> 
-
-            <TouchableOpacity>
-                <Button style = {styles.nextPolicyBtn} buttonStyle =  {{width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.primaryColor, theme: 'dark', borderRadius: BUTTON_CONTAINER_SIZES.borderRadius}} title = "View More" /> 
-            </TouchableOpacity>
-
         </View>
     
             <Text style = {styles.avoidTxt}>{ChildProtectionData.map(data => data.title_avoid)}</Text>
@@ -42,7 +37,7 @@ const GoodPracticeScreen = ({props, navigation, item}) => { // The Good Practice
                 <FlatList data = {AvoidData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.descriptionAvoidTxt}>{item.description_avoid}</Text>} />
             </Card>
     
-        <View style = {styles.btnContainer}>
+        <View style = {styles.btnContainerTwo}>
             <Button onPress = {() => navigation.navigate('PracticesAvoidScreen')} style = {styles.guidelinesBtn} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 10 : null ,width: Platform.OS === 'android' ? 130 : null  , backgroundColor: Colors.primaryColor, borderRadius: BUTTON_CONTAINER_SIZES.borderRadius}} title = "Guidelines"/>
 
             <TouchableOpacity onPress = {() => navigation.navigate('PhotographyFilmingScreen')}>
@@ -110,12 +105,12 @@ const styles = StyleSheet.create({
         maxWidth: '100%'
     },
 
-    btnContainer: {
+    btnContainer: { // Button container styles
         width: BUTTON_CONTAINER_SIZES.width,
         height: BUTTON_CONTAINER_SIZES.height,
         textAlign: 'center',
         borderRadius: 200,
-        marginLeft: 50,
+        marginLeft: 130,
         marginTop: 10,
         paddingHorizontal: -20,
         justifyContent: 'space-between',
@@ -124,6 +119,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingRight: 10,
         marginBottom: 50
+    },
+
+    btnContainerTwo: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginLeft: 60
     },
 
     firstGuidelineBtn: { // Stylings for the first guideline button

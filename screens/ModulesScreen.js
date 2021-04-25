@@ -50,10 +50,12 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
     }
 
     const renderEduKickModule = () => {
+
         return (
             
         <Card style = {styles.cardContainer}>
-            <FlatList data = {ModuleData} renderItem = {({item}) => <Text style = {styles.shaktiTitle}>{item.module_edukick}</Text>} /> 
+
+            <FlatList data = {ModuleData} renderItem = {({item}) => <Text style = {styles.eduKickTitle}>{item.module_edukick}</Text>} /> 
                 <Image style = {{width: 270, height: 180, marginTop: -230, marginBottom: 30}} source = {require('../assets/Images/EduKickImg.jpg')}/>
 
                 <View style = {styles.buttonContainer}>
@@ -87,7 +89,7 @@ const styles = StyleSheet.create({ // Styles for the modules screen
         textAlign: 'center',
         fontSize: 27,
         marginTop: -5,
-        marginBottom: -20,
+        marginBottom: Platform.OS === 'android' ? -19 : -20,
         left: -1,
         color: '#F7B500'
     },
@@ -121,6 +123,15 @@ const styles = StyleSheet.create({ // Styles for the modules screen
         fontSize: 27,
         top: 1,
         color: Colors.primaryColor
+    },
+
+    eduKickTitle: {
+        textAlign: 'center',
+        fontSize: 27,
+        marginTop: -5,
+        marginBottom: Platform.OS === 'android' ? -20 : -20,
+        left: -1,
+        color: '#F7B500'
     }
 });
 

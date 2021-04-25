@@ -34,9 +34,6 @@ const EnquiriesActionScreen = ({props, navigation, item}) => { // Enquiries and 
 
                 <Button onPress = {() => navigation.navigate('PoorPracticeScreen')} title = {`${BUTTON_NAMES.backBtn}`} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 10 : null, marginRight: Platform.OS === 'android' ? 40 : null, width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} style = {styles.backBtn} />
 
-                <TouchableOpacity onPress = {() => {}}>
-                        <Button title = {`${BUTTON_NAMES.nextPolicy}`} style = {styles.nextPolicyBtn} buttonStyle = {{width: Platform.OS === 'android' ? 130 : null, backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius}} />
-                </TouchableOpacity>
             </View>
 
             <Text style = {styles.aftermathHeading}>{ChildProtectionData.map(title => title.id === 29 ? title.enquiries_heading : null)}</Text>
@@ -55,8 +52,8 @@ const EnquiriesActionScreen = ({props, navigation, item}) => { // Enquiries and 
                 <FlatList data = {ChildProtectionData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.allegationSubTxt}>{item.enquiries_sub_last}</Text>} />
             </Card>
 
-            <View style = {styles.btnContainer}>
-                <Button onPress = {() => navigation.navigate('PoorPracticeScreen')} title = {`${BUTTON_NAMES.backBtn}`} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius, width: Platform.OS === 'android' ? 120 : null, marginLeft: 20, marginRight: 40}} style = {styles.backBtn} />
+            <View style = {styles.btnContainerTwo}>
+                <Button onPress = {() => navigation.navigate('PoorPracticeScreen')} title = {`${BUTTON_NAMES.backBtn}`} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius, width: Platform.OS === 'android' ? 120 : null, marginLeft: 20, marginRight: 40}} style = {styles.backBtnTwo} />
 
                 <TouchableOpacity onPress = {() => navigation.navigate('BullyingScreen')}>
                         <Button title = {`${BUTTON_NAMES.nextPolicy}`} style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: SIZES.borderRadius, width: Platform.OS === 'android' ? 130 : null}} />
@@ -104,7 +101,7 @@ const styles = StyleSheet.create({
         height: 42,
         textAlign: 'center',
         borderRadius: 200,
-        marginLeft: 47,
+        marginLeft: 125,
         marginTop: 35,
         paddingHorizontal: -20,
         justifyContent: 'space-between',
@@ -115,19 +112,33 @@ const styles = StyleSheet.create({
         marginBottom: 50
     },
 
+    btnContainerTwo: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginLeft: 40,
+        marginTop: 30,
+        marginBottom: 70,
+    },
+
     enquiriesSubTxt: {
         marginTop: Platform.OS === 'android' ? -18.1 : -13.5,
         padding: -1,
     },
 
     backBtn: {
-        width: 150,
+        width: 160,
         marginLeft: 5
     },
 
     nextPolicyBtn: {
         marginLeft: 30,
         width: 150
+    },
+
+    backBtnTwo: {
+        width: 200,
+        marginRight: -40
     },
 
     aftermathHeading: {
