@@ -36,6 +36,11 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
         )
     }
 
+    /**
+     * @author: Sabin Constantin Lungu
+     * @returns: A card container with a flat list that renders JSON data for the Shakti Module
+     */
+
     const renderShaktiModule = () => {
         return (
             <Card style = {styles.cardContainer}>
@@ -49,6 +54,11 @@ const ModulesScreen = ({props, navigation, item}) => { // Modules Screen Compone
         )
     }
 
+     /**
+     * @author: Sabin Constantin Lungu
+     * @returns: A card container with a flat list that renders JSON data for the Shakti Module
+     */
+    
     const renderEduKickModule = () => {
 
         return (

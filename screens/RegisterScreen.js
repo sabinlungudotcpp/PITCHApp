@@ -4,22 +4,38 @@ import {TextInput} from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import {Button} from 'react-native-elements';
 
-const generateRandomString = () => { // Generate random string to store in the Username input
-    let characters = 'abcdefgh12345'; // Random characters to generate
-    let output = ''; // Output of the generated string
+/**
+ * @fileoverview: Register Screen file contains all of the code to register a user
+ * @author: Sabin Constantin Lungu
+ * @description: The function stores two variables, the characters to randomly jumble and generate, an output variable which stores the generated random string in the output
+ * @description: Loops over the length of the characters and concatenates the output variable to a randomly generated string
+ * @returns: The random generated string gets outputted
+ */
 
-    for(var i = 0; i < characters.length; i++) { // Loop through the length of the characters string
+const generateRandomString = () => { 
+    let characters = 'abcdefgh12345'; 
+    let output = ''; 
+
+    for(var i = 0; i < characters.length; i++) { 
        output += characters.charAt(Math.floor(Math.random() * characters.length));
     }
 
-    return output; // Returns the generated string
+    return output; 
 }
 
-const RegisterScreen = ({navigation, props}) => { // Register Screen Component
+/**
+ * @fileoverview: Register Screen file contains all of the code to register a user
+ * @author: Sabin Constantin Lungu
+ * @description: The function stores two variables, the characters to randomly jumble and generate, an output variable which stores the generated random string in the output
+ * @description: Loops over the length of the characters and concatenates the output variable to a randomly generated string
+ * @returns: The random generated string gets outputted
+ */
+
+const RegisterScreen = ({navigation, props}) => { 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const validateFields = () => { // Validates the input fields before registering a user
+    const validateFields = () => { 
         if(email.trim() === "" || !email.includes('@')) {
             Alert.alert('You must provide a valid e-mail address');
             setEmail('');
