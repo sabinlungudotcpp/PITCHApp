@@ -56,7 +56,7 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
                     <FlatList data = {EstablishStreetSoccerData} keyExtractor = {(item) => item.id} renderItem = {({item}) => <Text style = {styles.existingText}>{item.existing_sessions_text}</Text>}  />
                 </Card>
 
-                <Modal animationType = {"slide"} transparent = {false} visible = {modalOpen} >
+        <Modal animationType = {"slide"} transparent = {false} visible = {modalOpen} >
 
             <ScrollView>
                 <Text style = {styles.facilitiesTitle}>{EstablishStreetSoccerData.map(title => title.facilities_title)}</Text>
@@ -79,11 +79,11 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
 
                 <View style = {styles.buttonContainer}>
                     <Button style = {styles.btnBack} buttonStyle = {{marginBottom: Platform.OS === 'android' ? 30 : null ,marginRight: Platform.OS === 'android' ? 30 : null,width: BUTTON_CONFIG.width, borderRadius: BUTTON_CONFIG.borderRadius, marginLeft: Platform.OS === 'android' ? BUTTON_CONFIG.marginLeft : null, marginTop: BUTTON_CONFIG.marginTop}} onPress = {() => setModalOpen(false)} title = "Back"/>
-                    <Button style = {styles.processNextButton} buttonStyle = {{marginTop: Platform.OS === 'android' ? -100 : null, padding: Platform.OS === 'android' ? 10 : null,marginBottom: Platform.OS === 'android' ? 100 : null, width: BUTTON_CONFIG.width, borderRadius: 200, marginRight: Platform.OS === 'android' ? BUTTON_CONFIG.marginLeft : null, marginTop: BUTTON_CONFIG.marginTop}} onPress = {nextProcessHandler} title = "Next Processes"/>
+                    <Button style = {styles.processNextButton} buttonStyle = {{marginTop: Platform.OS === 'android' ? 50 : null, padding: Platform.OS === 'android' ? 50 : null,marginBottom: Platform.OS === 'android' ? 100 : null, width: BUTTON_CONFIG.width, borderRadius: 200, marginRight: Platform.OS === 'android' ? BUTTON_CONFIG.marginLeft : null, marginTop: BUTTON_CONFIG.marginTop}} onPress = {nextProcessHandler} title = "Next Processes"/>
                 </View>
 
                     </ScrollView>
-                </Modal>
+            </Modal>
                         
 
                 <Text style = {styles.partnershipTitle}>{EstablishStreetSoccerData.map(title => title.partnerships_title)}</Text>
@@ -95,7 +95,7 @@ const SessionsPartnershipsScreen = ({navigation, props}) => {
                 </Card>
 
                 <View style = {styles.btnContainer}>
-                    <Button style = {styles.backBtn} onPress = {() => navigation.navigate('EstablishHomeScreen')} buttonStyle = {{width: Platform.OS === 'android' ? 130 : null,borderRadius: 200, marginLeft: Platform.OS === 'android' ? 30 : null}} title = "Back" />
+                    <Button style = {styles.backBtn} onPress = {() => navigation.navigate('EstablishHomeScreen')} buttonStyle = {{width: Platform.OS === 'android' ? 130 : null, borderRadius: 200, marginLeft: Platform.OS === 'android' ? 50 : null}} title = "Back" />
                     <Button style = {styles.viewMoreBtn} onPress = {() => setModalOpen(true)} buttonStyle = {{marginLeft: Platform.OS === 'android' ? 30 : null ,width: Platform.OS === 'android' ? 130 : null ,marginRight: Platform.OS === 'android' ? 40 : null ,borderRadius: 200, alignItems: Platform.OS === 'android' ? 'center' : null}} title = "View More" />
                 </View>
 
@@ -173,8 +173,10 @@ const styles = StyleSheet.create({
 
     buttonContainer: {
         flexDirection: 'row',
-        marginLeft: 10,
-        marginRight: 5
+        alignItems: 'center',
+        marginLeft: 50,
+        marginRight: 20,
+        marginTop: -30
     },
 
     facilitiesTitle: {
@@ -202,14 +204,15 @@ const styles = StyleSheet.create({
     },
 
     btnBack: {
-        marginRight: 25,
+        marginRight: 10,
         marginBottom: 40,
     },
 
     processNextButton: {
         alignItems: 'center',
-        marginLeft: Platform.OS === 'android' ? -130 : 100,
-        marginBottom: 40
+        marginLeft: Platform.OS === 'android' ? -130 : 50,
+        marginBottom: 40,
+        marginLeft: 30
     },
 
     viewMoreBtn: {

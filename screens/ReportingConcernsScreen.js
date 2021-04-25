@@ -28,7 +28,7 @@ const ReportingConcernsScreen = ({props, navigation, item}) => {
                     <Button onPress = {() => navigation.navigate('BullyingScreen')} style = {styles.backBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: Platform.OS === 'android' ? 110 : null, marginLeft: 15}} title = "Back" />
 
                     <TouchableOpacity onPress = {() => navigation.navigate('ProvidingInformationScreen')} >
-                            <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: Platform.OS === 'android' ? 120 : null, marginLeft: 30}} title = "Next Policy" />
+                            <Button style = {styles.nextPolicyBtn} buttonStyle = {{backgroundColor: Colors.primaryColor, borderRadius: 200, width: Platform.OS === 'android' ? 150 : null, marginLeft: 30}} title = "Next Policy" />
                     </TouchableOpacity>
                 </View>
 
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
         height: 42,
         textAlign: 'center',
         borderRadius: 200,
-        marginLeft: 47,
+        marginLeft: 35,
         marginTop: 35,
         paddingHorizontal: -20,
         justifyContent: 'space-between',
@@ -96,14 +96,15 @@ const styles = StyleSheet.create({
         paddingRight: 10,
         marginBottom: 50
     },
+
     backBtn: {
         width: 150,
         marginLeft: 10,
-        marginRight: 20
+        marginRight: 5
     },
 
     nextPolicyBtn: {
-        width: 155
+        width: 180
     },
 
     modalBtn: {
