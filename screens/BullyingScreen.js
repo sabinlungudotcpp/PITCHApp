@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
         height: 42,
         textAlign: 'center',
         borderRadius: 200,
-        marginLeft: 47,
+        marginLeft: 30,
         marginTop: 35,
         paddingHorizontal: -20,
         justifyContent: 'space-between',
@@ -99,8 +99,9 @@ const styles = StyleSheet.create({
     },
 
     backBtn: {
-        width: 150,
-        marginLeft: 10
+        width: 190,
+        marginLeft: 30,
+        marginRight: -30
     },
 
     nextPolicyBtn: {
